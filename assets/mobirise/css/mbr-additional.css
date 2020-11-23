@@ -836,8 +836,6 @@ a {
 .cid-sh8MkyCqAI {
   z-index: 1000;
   width: 100%;
-  position: relative;
-  min-height: 60px;
 }
 .cid-sh8MkyCqAI nav.navbar {
   position: fixed;
@@ -937,8 +935,7 @@ a {
   min-height: 70px;
   transition: all 0.3s;
   border-bottom: 1px solid transparent;
-  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
-  background: #000000;
+  background: rgba(0, 0, 0, 0.9);
 }
 .cid-sh8MkyCqAI .navbar.opened {
   transition: all 0.3s;
@@ -1202,8 +1199,6 @@ a {
 .cid-sh8MkyCqAI {
   z-index: 1000;
   width: 100%;
-  position: relative;
-  min-height: 60px;
 }
 .cid-sh8MkyCqAI nav.navbar {
   position: fixed;
@@ -1303,8 +1298,7 @@ a {
   min-height: 70px;
   transition: all 0.3s;
   border-bottom: 1px solid transparent;
-  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
-  background: #000000;
+  background: rgba(0, 0, 0, 0.9);
 }
 .cid-sh8MkyCqAI .navbar.opened {
   transition: all 0.3s;
