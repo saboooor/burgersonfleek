@@ -1418,7 +1418,7 @@ a {
   min-height: 70px;
   transition: all 0.3s;
   border-bottom: 1px solid transparent;
-  background: rgba(0, 0, 0, 0.3);
+  background: rgba(0, 0, 0, 0);
 }
 .cid-sh8MkyCqAI .navbar.opened {
   transition: all 0.3s;
