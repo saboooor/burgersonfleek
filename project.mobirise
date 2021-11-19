@@ -1,7 +1,7 @@
 {
   "settings": {
     "name": "Burgers On Fleek",
-    "currentPage": "menu.html",
+    "currentPage": "index.html",
     "theme": {
       "name": "mobirise5",
       "title": "Mobirise 5",
@@ -73,7 +73,7 @@
         "header_custom": "",
         "footer_custom": "",
         "html_before": "",
-        "meta_image": "@PROJECT_PATH@/assets/images/unnamed-2000x1506.png"
+        "meta_image": "@PROJECT_PATH@/assets/images/untitled-2000x1506.png"
       },
       "components": [
         {
@@ -716,7 +716,7 @@
         "title": "Menu",
         "order": 1,
         "meta_descr": "",
-        "meta_image": "@PROJECT_PATH@/assets/images/unnamed-2000x1506.png"
+        "meta_image": "@PROJECT_PATH@/assets/images/untitled-2000x1506.png"
       },
       "components": [
         {
