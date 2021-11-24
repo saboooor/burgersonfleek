@@ -761,6 +761,15 @@ a {
 .cid-sPaYwfmnEH .google-map[data-state="loading"] [data-state-details] {
   display: none;
 }
+.cid-sPDM4PfjmD {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  background-color: #232323;
+  overflow: hidden;
+}
+.cid-sPDM4PfjmD .media-container-row .mbr-text {
+  color: #bbbbbb;
+}
 .cid-sPaZl5u9w0 {
   background-image: url("../../../assets/images/untitled-2000x1506.png");
 }
@@ -774,4 +783,16 @@ a {
 }
 .cid-sPaZl5u9w0 img {
   width: 100%;
+}
+.cid-sPaZl5u9w0 .mbr-description {
+  color: #bbbbbb;
+}
+.cid-sPDM4PfjmD {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  background-color: #232323;
+  overflow: hidden;
+}
+.cid-sPDM4PfjmD .media-container-row .mbr-text {
+  color: #bbbbbb;
 }
