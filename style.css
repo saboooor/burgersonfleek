@@ -1,13 +1,3 @@
-@font-face {
-    font-family: NunitoSemiBold;
-    src: url(/assets/fonts/Nunito-SemiBold.ttf);
-}
-
-@font-face {
-    font-family: NunitoBold;
-    src: url(/assets/fonts/Nunito-Bold.ttf);
-}
-
 html {
     height: 100%;
     width: 100%;
@@ -15,7 +5,8 @@ html {
     background-color: #0a0a0a;
     display: grid;
     place-items: center;
-    transition: 1s;
+    transition: 0.2s;
+    font-family: Nunito;
 }
 
 body {
@@ -33,7 +24,7 @@ body {
 .item {
     width: 100%;
     text-align: center;
-    font-family: NunitoBold;
+    font-weight: 700;
 }
 
 .item h1 {
@@ -42,7 +33,7 @@ body {
 }
 
 .item h2, h3, p {
-    font-family: NunitoSemiBold;
+    font-weight: 600;
     color: gray;
     margin: 10px;
 }
@@ -65,7 +56,7 @@ body {
 a {
     color: gray;
     text-decoration: underline;
-    transition: 0.4s;
+    transition: 0.2s;
 }
 
 a:hover {
@@ -75,8 +66,4 @@ a:hover {
 img {
     vertical-align: middle;
     margin-bottom: 3px;
-}
-
-#menu {
-    width: 100%;
 }
