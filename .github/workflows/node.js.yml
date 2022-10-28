@@ -3,8 +3,11 @@ on:
   - pull_request
 
 jobs:
-  cache-and-install:
+  build:
     runs-on: ubuntu-latest
+    permissions:
+      id-token: write
+      contents: read
 
     steps:
       - name: Checkout
@@ -41,12 +44,6 @@ jobs:
 
       - name: Build
         run: pnpm run build
-
-      - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist
 
       - name: Setup Pages
         uses: actions/configure-pages@v2
