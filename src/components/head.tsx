@@ -13,11 +13,14 @@ export const RouterHead = component$(() => {
       <title>Burgers on Fleek - {head.title}</title>
 
       <link rel="canonical" href={loc.href} />
+      <link rel="icon" href="icon.svg" />
+      <link rel="mask-icon" href="mask-icon.svg" color="#c37f0c" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <meta content="Burgers On Fleek" property="og:title" />
       <meta content="Premium Quality Gourmet Burgers, Steak Sandwiches, Fries, and more. Only serving Halal حلال" property="og:description" />
-      <meta content="/assets/images/icon.png" property="og:image" />
-      <meta content="#c37f0c" data-react-helmet="true" name="theme-color" />
+      <meta content="icon.svg" property="og:image" />
+      <meta content="#c37f0c" name="theme-color" />
+
       {head.meta.map((m) => (
         <meta {...m} />
       ))}
