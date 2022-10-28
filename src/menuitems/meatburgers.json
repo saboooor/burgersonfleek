@@ -1,0 +1,70 @@
+[
+  {
+    "name": "The Basic",
+    "description": "Beef patty with lettuce, tomato, pickles, sautéed onions, and On Fleek sauce.",
+    "price": "$8.75",
+    "double": "$13.75"
+  },
+  {
+    "name": "The Classic",
+    "description": "Beef patty with cheddar cheese, lettuce, tomato, pickles, sautéed onions, and On Fleek sauce.",
+    "price": "$9.75",
+    "double": "$15.25"
+  },
+  {
+    "name": "Bae",
+    "description": "Beef patty with cheddar cheese, beef bacon, lettuce, tomato, pickles, sautéed onions, and On Fleek sauce.",
+    "price": "$10.75",
+    "double": "$16.75"
+  },
+  {
+    "name": "Bromance",
+    "description": "Beef patty with mozzarela cheese, topped with fried chicken thigh, grilled jalapeños, sautéed onions, lettuce, tomato, and chipotle sauce.",
+    "price": "$14.99"
+  },
+  {
+    "name": "Godzilla",
+    "description": "Three beef patties with cheddar cheese, beef bacon, lettuce, tomato, sautéed onions, grilled jalapeños, and On Fleek sauce, between two grilled cheese buns.",
+    "price": "$23.00"
+  },
+  {
+    "name": "Mashup",
+    "description": "Beef patty with jalapeño havarti cheese, lettuce, tomato, pickles, onion rings, fried egg, pico de gallo, and chipotle sauce.",
+    "price": "$12.99"
+  },
+  {
+    "name": "Shook",
+    "description": "Beef patty with cheddar cheese, crusted portobello mushroom stuffed with cheese, lettuce, tomato, pickles, and garlic mayo.",
+    "price": "$13.99"
+  },
+  {
+    "name": "Snatched",
+    "description": "Beef patty with mozzarella cheese, crusted cheese, lettuce, tomato, roasted peppers, guacamole, pico de gallo, and chipotle sauce.",
+    "price": "$13.99"
+  },
+  {
+    "name": "Mood",
+    "description": "Beef patty with cheddar cheese, three crusted jalapeños filled with cheese, lettuce, tomato, pickles, guacamole, pico de gallo, and chipotle sauce.",
+    "price": "$13.50"
+  },
+  {
+    "name": "Aloha",
+    "description": "Beef patty with jalapeño havarti cheese, grilled pineapple, lettuce, beef bacon, and BBQ sauce.",
+    "price": "$12.50"
+  },
+  {
+    "name": "The Melt",
+    "description": "Beef patty with swiss cheese, mushrooms, sautéed onions, lettuce, tomato, and garlic mayo.",
+    "price": "$13.50"
+  },
+  {
+    "name": "The Original",
+    "description": "Fried chicken burger (dark meat) with lettuce, tomato, and chipotle sauce.",
+    "price": "$11.99"
+  },
+  {
+    "name": "G.O.A.T",
+    "description": "Fried chicken burger (dark meat) with melted cheese, lettuce, tomato, roasted peppers, pico de gallo, chipotle sauce, and garlic mayo.",
+    "price": "$14.99"
+  }
+]

@@ -1,0 +1,37 @@
+[
+  {
+    "name": "Fries",
+    "price": {
+      "medium": "$3.99",
+      "large": "$7.75"
+    }
+  },
+  {
+    "name": "Poutine",
+    "price": {
+      "medium": "$6.50",
+      "large": "$11.50"
+    }
+  },
+  {
+    "name": "Chicken Poutine",
+    "price": {
+      "medium": "$11.50",
+      "large": "$16.00"
+    }
+  },
+  {
+    "name": "Sweet Potato Fries",
+    "price": {
+      "medium": "$6.50",
+      "large": "$12.00"
+    }
+  },
+  {
+    "name": "Onion Rings",
+    "price": {
+      "medium": "$6.00",
+      "large": "$11.00"
+    }
+  }
+]

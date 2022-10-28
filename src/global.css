@@ -1,0 +1,35 @@
+/**
+ * WHAT IS THIS FILE?
+ *
+ * Globally applied styles. No matter which components are in the page or matching route,
+ * the styles in here will be applied to the Document, without any sort of CSS scoping.
+ *
+ */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .animation-delay-2000 { animation-delay: 2s; }
+  .animation-delay-4000 { animation-delay: 4s; }
+}
+
+html {
+  overflow: overlay;
+}
+
+* { scroll-behavior: smooth; }
+*::-webkit-scrollbar {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 8px;
+}
+*::-webkit-scrollbar-track {
+  background-color: #00000000;
+  border-radius: 3px;
+}
+*::-webkit-scrollbar-thumb {
+  background-color: #ffffff60;
+  border-radius: 2px;
+}

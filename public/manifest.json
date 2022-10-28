@@ -1,0 +1,9 @@
+{
+  "$schema": "https://json.schemastore.org/web-manifest-combined.json",
+  "name": "burgersonfleek",
+  "short_name": "Burgers on Fleek",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#000",
+  "description": "Burgers on Fleek"
+}

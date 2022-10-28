@@ -1,0 +1,58 @@
+[
+  {
+    "name": "Beef Bacon",
+    "price": "$3.00"
+  },
+  {
+    "name": "Fried Egg",
+    "price": "$1.50"
+  },
+  {
+    "name": "Crusted Cheese",
+    "price": "$3.50"
+  },
+  {
+    "name": "Extra Cheese",
+    "price": "$1.25"
+  },
+  {
+    "name": "Extra Sauce",
+    "price": "$0.50"
+  },
+  {
+    "name": "Melted Cheese",
+    "price": "$3.50"
+  },
+  {
+    "name": "Gluten Free Bun",
+    "price": "$2.00"
+  },
+  {
+    "name": "Grilled Cheese Bun (2 buns)",
+    "price": "$3.00"
+  },
+  {
+    "name": "Keto Bun",
+    "price": "$3.00"
+  },
+  {
+    "name": "Grilled Jalapeños",
+    "price": "$1.25"
+  },
+  {
+    "name": "Grilled Mushrooms",
+    "price": "$1.25"
+  },
+  {
+    "name": "Grilled Pineapple (slice)",
+    "price": "$1.00"
+  },
+  {
+    "name": "Guacamole",
+    "price": "$2.00"
+  },
+  {
+    "name": "Gravy",
+    "price": "$2.00"
+  }
+]
