@@ -38,6 +38,11 @@ export default component$(() => {
               +1 (905) 427 4377
             </a>
           </div>
+          <div class="ml-3 rounded-md shadow">
+            <a href="https://maps.app.goo.gl/Unrrg3uda7AQQs4DA" class="flex transition duration-200 w-full items-center justify-center rounded-xl sm:rounded-3xl border border-transparent bg-amber-900/50 px-8 py-3 text-base font-medium text-gray-200 hover:bg-amber-900 md:py-4 md:px-10 md:text-lg whitespace-nowrap">
+              Location
+            </a>
+          </div>
         </div>
         <div class="mt-3 flex justify-center ">
           <div class="mt-0 rounded-md shadow">
