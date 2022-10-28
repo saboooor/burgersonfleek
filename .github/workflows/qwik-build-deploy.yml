@@ -3,7 +3,7 @@ on:
   - pull_request
 
 jobs:
-  build:
+  qwik-build-deploy:
     runs-on: ubuntu-latest
     environment:
       name: github-pages
