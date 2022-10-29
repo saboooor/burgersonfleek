@@ -20,11 +20,12 @@ export default component$(() => {
         <h1 class="font-bold tracking-tight text-white text-3xl sm:text-5xl">
           Hours
         </h1>
-        <p class="mt-5 text-2xl text-gray-400">
-          Tuesday to Sunday<br/>
-          12 PM to 8:45 PM<br/>
-          Monday - CLOSED
-        </p>
+        <div class="grid grid-cols-2 mt-5 text-gray-400">
+          <p class="text-left text-xl md:text-2xl">Monday:</p>
+          <p class="text-right text-xl md:text-2xl">CLOSED</p>
+          <p class="text-left text-xl md:text-2xl">Tuesday - Sunday:</p>
+          <p class="text-right text-xl md:text-2xl">12 PM - 8:45 PM</p>
+        </div>
         <div class="flex justify-center mt-10">
           <div class="rounded-md shadow">
             <a href="/menu" class="flex transition duration-200 w-full items-center justify-center rounded-xl sm:rounded-3xl border border-transparent bg-amber-800 px-8 py-3 text-base font-bold text-gray-200 hover:bg-amber-700 md:py-4 md:px-10 md:text-lg">
