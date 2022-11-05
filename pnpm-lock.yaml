@@ -1,7 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
-  '@builder.io/qwik': 0.12.0
+  '@builder.io/qwik': 0.12.1
   '@builder.io/qwik-city': 0.0.118
   '@types/eslint': 8.4.9
   '@types/node': latest
@@ -9,7 +9,7 @@ specifiers:
   '@typescript-eslint/parser': 5.41.0
   autoprefixer: 10.4.13
   eslint: 8.26.0
-  eslint-plugin-qwik: 0.12.0
+  eslint-plugin-qwik: 0.12.1
   node-fetch: 3.2.10
   postcss: ^8.4.18
   prettier: 2.7.1
@@ -19,7 +19,7 @@ specifiers:
   vite-tsconfig-paths: 3.5.2
 
 devDependencies:
-  '@builder.io/qwik': 0.12.0
+  '@builder.io/qwik': 0.12.1
   '@builder.io/qwik-city': 0.0.118
   '@types/eslint': 8.4.9
   '@types/node': 18.11.7
@@ -27,7 +27,7 @@ devDependencies:
   '@typescript-eslint/parser': 5.41.0_wyqvi574yv7oiwfeinomdzmc3m
   autoprefixer: 10.4.13_postcss@8.4.18
   eslint: 8.26.0
-  eslint-plugin-qwik: 0.12.0_eslint@8.26.0
+  eslint-plugin-qwik: 0.12.1_eslint@8.26.0
   node-fetch: 3.2.10
   postcss: 8.4.18
   prettier: 2.7.1
@@ -49,8 +49,8 @@ packages:
       - supports-color
     dev: true
 
-  /@builder.io/qwik/0.12.0:
-    resolution: {integrity: sha512-iIsbGO8bZhOMOJ/MmHcaXdsWWVCQIKD1LNQTERtePA695RB3jlmj7HQq4wMSNRRFEdeMKB2t/vmYFDjRJQWRNw==}
+  /@builder.io/qwik/0.12.1:
+    resolution: {integrity: sha512-ePxm9tr6qa+cNySuIhXOElozkkqdRfyPvEPEV659QJSq704C031/VC0S2lqqvKsc9+ZogBlejGuYWLmtRrsT6w==}
     engines: {node: '>=16'}
     hasBin: true
     dev: true
@@ -883,8 +883,8 @@ packages:
     engines: {node: '>=10'}
     dev: true
 
-  /eslint-plugin-qwik/0.12.0_eslint@8.26.0:
-    resolution: {integrity: sha512-mjOnqwr3yhEnn+pXbxXamClCRWZdl861S9CR5YSKrevaUgms5iQQZwd1Wqx8Ba3uvpHneZUS9dyqbjsS56pQdw==}
+  /eslint-plugin-qwik/0.12.1_eslint@8.26.0:
+    resolution: {integrity: sha512-Hp0b3CT9UodRz3kvYXz6ckryooHp7C60g6riRpvGX6lpMWrOJaqfhmIKHWgRi9/Xhm8awdI9NcaeIa7t34CNtg==}
     engines: {node: '>=16'}
     peerDependencies:
       eslint: '>= 8'

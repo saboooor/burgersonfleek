@@ -23,7 +23,7 @@
     "qwik": "qwik"
   },
   "devDependencies": {
-    "@builder.io/qwik": "0.12.0",
+    "@builder.io/qwik": "0.12.1",
     "@builder.io/qwik-city": "0.0.118",
     "@types/eslint": "8.4.9",
     "@types/node": "latest",
@@ -31,7 +31,7 @@
     "@typescript-eslint/parser": "5.41.0",
     "autoprefixer": "10.4.13",
     "eslint": "8.26.0",
-    "eslint-plugin-qwik": "0.12.0",
+    "eslint-plugin-qwik": "0.12.1",
     "node-fetch": "3.2.10",
     "postcss": "^8.4.18",
     "prettier": "2.7.1",
