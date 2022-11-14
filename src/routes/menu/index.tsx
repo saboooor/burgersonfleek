@@ -12,7 +12,7 @@ export default component$(() => {
   return (
     <>
         <section class="grid gap-6 grid-cols-1 sm:grid-cols-3 lg:grid-cols-4 2xl:grid-cols-5 mx-auto max-w-screen-2xl px-4 sm:px-6 pt-12" style="min-height: calc(100vh - 64px);">
-            <aside class="w-full sm:h-1 align-middle sm:sticky sm:top-28" aria-label="Sidebar">
+            <aside class="z-10 w-full sm:h-1 align-middle sm:sticky sm:top-28" aria-label="Sidebar">
                 <p class="text-3xl font-bold mb-5 text-white">Menu</p>
                 <div class="overflow-y-auto py-4 px-3 rounded-2xl bg-gray-800">
                     <ul class="space-y-2">
@@ -55,11 +55,11 @@ export default component$(() => {
                 </div>
             </aside>
             <div class="sm:col-span-2 lg:col-span-3 2xl:col-span-4">
-                <h1 class="font-bold tracking-tight text-white text-4xl transition duration-300 opacity-0 -translate-x-80 blur-md" id="beefburgers">Beef & Chicken Burgers</h1>
+                <h1 class="font-bold tracking-tight text-white text-4xl transition duration-300 opacity-0 -translate-x-40" id="beefburgers">Beef & Chicken Burgers</h1>
                 <div class="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 py-10">
                     {meatburgers.map((meatburger, i) => {
                         return (
-                            <div class="bg-gray-800 rounded-2xl p-6 transition duration-300 opacity-0 -translate-x-80 blur-md" style={{ transitionDelay: `${i * 20}ms` }}>
+                            <div class="bg-gray-800 rounded-2xl p-6 transition duration-300 opacity-0 -translate-x-40" style={{ transitionDelay: `${i * 20}ms` }}>
                                 <h1 class="font-bold tracking-tight text-white text-2xl">{meatburger.name}</h1>
                                 <p class="text-amber-400 text-md">{meatburger.price}</p>
                                 {meatburger.double && <p class="text-gray-400 text-md">Double: <span class="text-amber-400">{meatburger.double}</span></p>}
@@ -68,11 +68,11 @@ export default component$(() => {
                         )
                     })}
                 </div>
-                <h1 class="font-bold tracking-tight text-white text-4xl transition duration-300 opacity-0 -translate-x-80 blur-md" id="veggieburgers">Vegetarian Burgers</h1>
+                <h1 class="font-bold tracking-tight text-white text-4xl transition duration-300 opacity-0 -translate-x-40" id="veggieburgers">Vegetarian Burgers</h1>
                 <div class="grid grid-cols-2 gap-6 py-10">
                     {veggieburgers.map((veggieburger, i) => {
                         return (
-                            <div class="bg-gray-800 rounded-2xl p-6 transition duration-300 opacity-0 -translate-x-80 blur-md" style={{ transitionDelay: `${i * 20}ms` }}>
+                            <div class="bg-gray-800 rounded-2xl p-6 transition duration-300 opacity-0 -translate-x-40" style={{ transitionDelay: `${i * 20}ms` }}>
                                 <h1 class="font-bold tracking-tight text-white text-2xl">{veggieburger.name}</h1>
                                 <p class="text-amber-400 text-md">{veggieburger.price}</p>
                                 <p class="text-gray-400 text-md mt-5">{veggieburger.description}</p>
@@ -80,11 +80,11 @@ export default component$(() => {
                         )
                     })}
                 </div>
-                <h1 class="font-bold tracking-tight text-white text-4xl transition duration-300 opacity-0 -translate-x-80 blur-md" id="steaksandwiches">Steak Sandwiches</h1>
+                <h1 class="font-bold tracking-tight text-white text-4xl transition duration-300 opacity-0 -translate-x-40" id="steaksandwiches">Steak Sandwiches</h1>
                 <div class="grid grid-cols-2 lg:grid-cols-3 gap-6 py-10">
                     {steaksandwiches.map((steaksandwich, i) => {
                         return (
-                            <div class="bg-gray-800 rounded-2xl p-6 transition duration-300 opacity-0 -translate-x-80 blur-md" style={{ transitionDelay: `${i * 20}ms` }}>
+                            <div class="bg-gray-800 rounded-2xl p-6 transition duration-300 opacity-0 -translate-x-40" style={{ transitionDelay: `${i * 20}ms` }}>
                                 <h1 class="font-bold tracking-tight text-white text-2xl">{steaksandwich.name}</h1>
                                 <p class="text-amber-400 text-md">{steaksandwich.price}</p>
                                 <p class="text-gray-400 text-md mt-5">{steaksandwich.description}</p>
@@ -92,22 +92,22 @@ export default component$(() => {
                         )
                     })}
                 </div>
-                <h1 class="font-bold tracking-tiught text-white text-4xl transition duration-300 opacity-0 -translate-x-80 blur-md" id="extras">Extras</h1>
+                <h1 class="font-bold tracking-tiught text-white text-4xl transition duration-300 opacity-0 -translate-x-40" id="extras">Extras</h1>
                 <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6 py-10">
                     {extras.map((extra, i) => {
                         return (
-                            <div class="bg-gray-800 rounded-2xl p-6 transition duration-300 opacity-0 -translate-x-80 blur-md" style={{ transitionDelay: `${i * 20}ms` }}>
+                            <div class="bg-gray-800 rounded-2xl p-6 transition duration-300 opacity-0 -translate-x-40" style={{ transitionDelay: `${i * 20}ms` }}>
                                 <h1 class="font-bold tracking-tight text-white text-2xl">{extra.name}</h1>
                                 <p class="text-amber-400 text-md">{extra.price}</p>
                             </div>
                         )
                     })}
                 </div>
-                <h1 class="font-bold tracking-tiught text-white text-4xl transition duration-300 opacity-0 -translate-x-80 blur-md" id="sides">Sides</h1>
+                <h1 class="font-bold tracking-tiught text-white text-4xl transition duration-300 opacity-0 -translate-x-40" id="sides">Sides</h1>
                 <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6 py-10">
                     {sides.map((side, i) => {
                         return (
-                            <div class="bg-gray-800 rounded-2xl p-6 transition duration-300 opacity-0 -translate-x-80 blur-md" style={{ transitionDelay: `${i * 20}ms` }}>
+                            <div class="bg-gray-800 rounded-2xl p-6 transition duration-300 opacity-0 -translate-x-40" style={{ transitionDelay: `${i * 20}ms` }}>
                                 <h1 class="font-bold tracking-tight text-white text-2xl">{side.name}</h1>
                                 <p class="text-gray-400 text-md">
                                     Medium: <span class="text-amber-400">{side.price.medium}</span><br/>
@@ -117,11 +117,11 @@ export default component$(() => {
                         )
                     })}
                 </div>
-                <h1 class="font-bold tracking-tight text-white text-4xl transition duration-300 opacity-0 -translate-x-80 blur-md" id="drinks">Drinks</h1>
+                <h1 class="font-bold tracking-tight text-white text-4xl transition duration-300 opacity-0 -translate-x-40" id="drinks">Drinks</h1>
                 <div class="grid grid-cols-2 gap-6 py-10">
                     {drinks.map((drink, i) => {
                         return (
-                            <div class="bg-gray-800 rounded-2xl p-6 transition duration-300 opacity-0 -translate-x-80 blur-md" style={{ transitionDelay: `${i * 20}ms` }}>
+                            <div class="bg-gray-800 rounded-2xl p-6 transition duration-300 opacity-0 -translate-x-40" style={{ transitionDelay: `${i * 20}ms` }}>
                                 <h1 class="font-bold tracking-tight text-white text-2xl">{drink.name}</h1>
                                 <p class="text-amber-400 text-md">{drink.price}</p>
                             </div>
@@ -130,7 +130,7 @@ export default component$(() => {
                 </div>
             </div>
         </section>
-        <script src="/scroll.js" />
+        <script src="/scrooll.js" />
     </>
   );
 });

@@ -2,7 +2,7 @@ import { component$ } from '@builder.io/qwik';
 
 export default component$(() => {
   return (
-    <nav class="z-10 fixed top-0 w-screen my-3 pointer-events-none">
+    <nav class="z-20 fixed top-0 w-screen my-3 pointer-events-none">
       <div class="mx-auto max-w-7xl px-6 lg:px-8">
         <div class="relative flex h-16 items-center justify-between">
           <div class="flex flex-1 items-center sm:items-stretch justify-start">
