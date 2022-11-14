@@ -1,5 +1,5 @@
 import { component$ } from '@builder.io/qwik';
-import type { DocumentHead } from '@builder.io/qwik-city';
+import { DocumentHead, Link } from '@builder.io/qwik-city';
 
 export default component$(() => {
   return (
@@ -28,9 +28,9 @@ export default component$(() => {
         </div>
         <div class="flex justify-center mt-10">
           <div class="rounded-md shadow">
-            <a href="/menu" class="flex transition duration-200 w-full items-center justify-center rounded-2xl sm:rounded-3xl border border-transparent bg-amber-800 px-6 py-3 text-base font-bold text-white hover:bg-amber-700 md:py-4 md:px-10 md:text-lg">
+            <Link href="/menu" class="flex transition duration-200 w-full items-center justify-center rounded-2xl sm:rounded-3xl border border-transparent bg-amber-800 px-6 py-3 text-base font-bold text-white hover:bg-amber-700 md:py-4 md:px-10 md:text-lg">
               View the menu
-            </a>
+            </Link>
           </div>
         </div>
         <div class="mt-3 flex justify-center">

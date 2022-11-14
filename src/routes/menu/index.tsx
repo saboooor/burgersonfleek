@@ -16,37 +16,37 @@ export default component$(() => {
             <div class="overflow-y-auto py-4 px-3 rounded-2xl bg-gray-800">
                 <ul class="space-y-2">
                     <li>
-                        <a href="#beefburgers" class="flex flex-1 items-center p-2 text-base font-normal rounded-xl text-white hover:bg-gray-700">
+                        <a href="#beefburgers" class="flex flex-1 items-center p-2 text-base font-normal rounded-xl text-white hover:bg-gray-700 transition duration-200">
                             Beef & Chicken Burgers
                         </a>
                     </li>
                     <li>
-                        <a href="#veggieburgers" class="flex flex-1 items-center p-2 text-base font-normal rounded-xl text-white hover:bg-gray-700">
+                        <a href="#veggieburgers" class="flex flex-1 items-center p-2 text-base font-normal rounded-xl text-white hover:bg-gray-700 transition duration-200">
                             Vegetarian Burgers
                         </a>
                     </li>
                     <li>
-                        <a href="#steaksandwiches" class="flex flex-1 items-center p-2 text-base font-normal rounded-xl text-white hover:bg-gray-700">
+                        <a href="#steaksandwiches" class="flex flex-1 items-center p-2 text-base font-normal rounded-xl text-white hover:bg-gray-700 transition duration-200">
                             Steak Sandwiches
                         </a>
                     </li>
                     <li>
-                        <a href="#extras" class="flex flex-1 items-center p-2 text-base font-normal rounded-xl text-white hover:bg-gray-700">
+                        <a href="#extras" class="flex flex-1 items-center p-2 text-base font-normal rounded-xl text-white hover:bg-gray-700 transition duration-200">
                             Extras
                         </a>
                     </li>
                     <li>
-                        <a href="#sides" class="flex flex-1 items-center p-2 text-base font-normal rounded-xl text-white hover:bg-gray-700">
+                        <a href="#sides" class="flex flex-1 items-center p-2 text-base font-normal rounded-xl text-white hover:bg-gray-700 transition duration-200">
                             Sides
                         </a>
                     </li>
                     <li>
-                        <a href="#drinks" class="flex flex-1 items-center p-2 text-base font-normal rounded-xl text-white hover:bg-gray-700">
+                        <a href="#drinks" class="flex flex-1 items-center p-2 text-base font-normal rounded-xl text-white hover:bg-gray-700 transition duration-200">
                             Drinks
                         </a>
                     </li>
                     <li>
-                        <a href="/menu.jpeg" class="flex flex-1 items-center p-2 text-base font-normal rounded-xl text-white hover:bg-gray-700">
+                        <a href="/menu.jpeg" class="flex flex-1 items-center p-2 text-base font-normal rounded-xl text-white hover:bg-gray-700 transition duration-200">
                             View Paper Menu
                         </a>
                     </li>
