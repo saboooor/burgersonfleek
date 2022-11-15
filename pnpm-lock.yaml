@@ -15,7 +15,7 @@ specifiers:
   prettier: 2.7.1
   tailwindcss: 3.2.4
   typescript: 4.8.4
-  vite: 3.2.3
+  vite: 3.2.4
   vite-tsconfig-paths: 3.5.2
 
 devDependencies:
@@ -33,8 +33,8 @@ devDependencies:
   prettier: 2.7.1
   tailwindcss: 3.2.4_postcss@8.4.19
   typescript: 4.8.4
-  vite: 3.2.3_@types+node@18.11.9
-  vite-tsconfig-paths: 3.5.2_vite@3.2.3
+  vite: 3.2.4_@types+node@18.11.9
+  vite-tsconfig-paths: 3.5.2_vite@3.2.4
 
 packages:
 
@@ -2527,7 +2527,7 @@ packages:
       vfile-message: 3.1.2
     dev: true
 
-  /vite-tsconfig-paths/3.5.2_vite@3.2.3:
+  /vite-tsconfig-paths/3.5.2_vite@3.2.4:
     resolution: {integrity: sha512-xJMgHA2oJ28QCG2f+hXrcqzo7IttrSRK4A//Tp94CfuX5eetOx33qiwXHUdi3FwkHP2ocpxHuvE45Ix67gwEmQ==}
     peerDependencies:
       vite: '>2.0.0-0'
@@ -2536,13 +2536,13 @@ packages:
       globrex: 0.1.2
       recrawl-sync: 2.2.3
       tsconfig-paths: 4.1.0
-      vite: 3.2.3_@types+node@18.11.9
+      vite: 3.2.4_@types+node@18.11.9
     transitivePeerDependencies:
       - supports-color
     dev: true
 
-  /vite/3.2.3_@types+node@18.11.9:
-    resolution: {integrity: sha512-h8jl1TZ76eGs3o2dIBSsvXDLb1m/Ec1iej8ZMdz+PsaFUsftZeWe2CZOI3qogEsMNaywc17gu0q6cQDzh/weCQ==}
+  /vite/3.2.4_@types+node@18.11.9:
+    resolution: {integrity: sha512-Z2X6SRAffOUYTa+sLy3NQ7nlHFU100xwanq1WDwqaiFiCe+25zdxP1TfCS5ojPV2oDDcXudHIoPnI1Z/66B7Yw==}
     engines: {node: ^14.18.0 || >=16.0.0}
     hasBin: true
     peerDependencies:
