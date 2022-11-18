@@ -13,7 +13,7 @@ export default component$(() => {
     <>
         <section class="grid gap-6 grid-cols-1 sm:grid-cols-3 lg:grid-cols-4 2xl:grid-cols-5 mx-auto max-w-screen-2xl px-4 sm:px-6 pt-12" style="min-height: calc(100vh - 64px);">
             <aside class="z-10 w-full sm:h-1 align-middle sm:sticky sm:top-28" aria-label="Sidebar">
-                <p class="text-3xl font-bold mb-5 text-white">Menu</p>
+                <p class="text-3xl font-bold mb-5 text-orange-300" style={{ filter: 'drop-shadow(-0.5rem 0.5rem 2rem rgba(253, 186, 116, 1));' }}>Menu</p>
                 <div class="overflow-y-auto py-4 px-3 rounded-2xl bg-gray-800">
                     <ul class="space-y-2">
                         <li>
@@ -47,7 +47,7 @@ export default component$(() => {
                             </a>
                         </li>
                         <li>
-                            <a href="/menu.jpeg" class="flex flex-1 items-center p-2 text-base font-normal rounded-xl text-white hover:bg-gray-700 transition duration-200">
+                            <a href="/menu.pdf" class="flex flex-1 items-center p-2 text-base font-normal rounded-xl text-white hover:bg-gray-700 transition duration-200">
                                 View Paper Menu
                             </a>
                         </li>
@@ -55,8 +55,9 @@ export default component$(() => {
                 </div>
             </aside>
             <div class="sm:col-span-2 lg:col-span-3 2xl:col-span-4">
-                <h1 class="font-bold tracking-tight text-white text-4xl transition duration-300 opacity-0 -translate-x-40" id="beefburgers">Beef & Chicken Burgers</h1>
-                <div class="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 py-10">
+                <h1 class="font-bold tracking-tight text-orange-300 text-4xl transition duration-300 opacity-0 -translate-x-40" id="beefburgers" style={{ filter: 'drop-shadow(-0.5rem 0.5rem 3rem rgba(253, 186, 116, 1));' }}>Beef & Chicken Burgers</h1>
+                <h2 class="text-gray-400 text-xl transition duration-300 opacity-0 -translate-x-40">* Make it a combo with fries and pop for $5.25</h2>
+                <div class="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 pt-10 pb-6">
                     {meatburgers.map((meatburger, i) => {
                         return (
                             <div class="bg-gray-800 rounded-2xl p-6 transition duration-300 opacity-0 -translate-x-40" style={{ transitionDelay: `${i * 20}ms` }}>
@@ -68,7 +69,10 @@ export default component$(() => {
                         )
                     })}
                 </div>
-                <h1 class="font-bold tracking-tight text-white text-4xl transition duration-300 opacity-0 -translate-x-40" id="veggieburgers">Vegetarian Burgers</h1>
+                <h2 class="text-gray-400 text-md transition duration-300 opacity-0 -translate-x-40">* Our beef burgers are made with premium quality meat, cut & grounded in-house & handpressed on the grill.</h2>
+                <h2 class="text-gray-400 text-md transition duration-300 opacity-0 -translate-x-40 pb-10">* Our chicken burgers are made using boneless leg/thigh marinated in our special spice blend (mild spicy) & deep fried.</h2>
+                <h1 class="font-bold tracking-tight text-orange-300 text-4xl transition duration-300 opacity-0 -translate-x-40" id="veggieburgers" style={{ filter: 'drop-shadow(-0.5rem 0.5rem 3rem rgba(253, 186, 116, 1));' }}>Vegetarian Burgers</h1>
+                <h2 class="tracking-tight text-gray-400 text-xl transition duration-300 opacity-0 -translate-x-40" id="beefburgers">* Make it a combo with fries and pop for $5.25</h2>
                 <div class="grid grid-cols-2 gap-6 py-10">
                     {veggieburgers.map((veggieburger, i) => {
                         return (
@@ -80,7 +84,8 @@ export default component$(() => {
                         )
                     })}
                 </div>
-                <h1 class="font-bold tracking-tight text-white text-4xl transition duration-300 opacity-0 -translate-x-40" id="steaksandwiches">Steak Sandwiches</h1>
+                <h1 class="font-bold tracking-tight text-orange-300 text-4xl transition duration-300 opacity-0 -translate-x-40" id="steaksandwiches">Steak Sandwiches</h1>
+                <h2 class="tracking-tight text-gray-400 text-xl transition duration-300 opacity-0 -translate-x-40" id="beefburgers" style={{ filter: 'drop-shadow(-0.5rem 0.5rem 3rem rgba(253, 186, 116, 1));' }}>* Make it a combo with fries and pop for $5.25</h2>
                 <div class="grid grid-cols-2 lg:grid-cols-3 gap-6 py-10">
                     {steaksandwiches.map((steaksandwich, i) => {
                         return (
@@ -92,7 +97,7 @@ export default component$(() => {
                         )
                     })}
                 </div>
-                <h1 class="font-bold tracking-tiught text-white text-4xl transition duration-300 opacity-0 -translate-x-40" id="extras">Extras</h1>
+                <h1 class="font-bold tracking-tiught text-orange-300 text-4xl transition duration-300 opacity-0 -translate-x-40" id="extras" style={{ filter: 'drop-shadow(-0.5rem 0.5rem 3rem rgba(253, 186, 116, 1));' }}>Extras</h1>
                 <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6 py-10">
                     {extras.map((extra, i) => {
                         return (
@@ -103,7 +108,7 @@ export default component$(() => {
                         )
                     })}
                 </div>
-                <h1 class="font-bold tracking-tiught text-white text-4xl transition duration-300 opacity-0 -translate-x-40" id="sides">Sides</h1>
+                <h1 class="font-bold tracking-tiught text-orange-300 text-4xl transition duration-300 opacity-0 -translate-x-40" id="sides" style={{ filter: 'drop-shadow(-0.5rem 0.5rem 3rem rgba(253, 186, 116, 1));' }}>Sides</h1>
                 <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6 py-10">
                     {sides.map((side, i) => {
                         return (
@@ -117,7 +122,7 @@ export default component$(() => {
                         )
                     })}
                 </div>
-                <h1 class="font-bold tracking-tight text-white text-4xl transition duration-300 opacity-0 -translate-x-40" id="drinks">Drinks</h1>
+                <h1 class="font-bold tracking-tight text-orange-300 text-4xl transition duration-300 opacity-0 -translate-x-40" id="drinks" style={{ filter: 'drop-shadow(-0.5rem 0.5rem 3rem rgba(253, 186, 116, 1));' }}>Drinks</h1>
                 <div class="grid grid-cols-2 gap-6 py-10">
                     {drinks.map((drink, i) => {
                         return (

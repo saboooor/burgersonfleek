@@ -25,11 +25,11 @@
   },
   {
     "name": "Gluten Free Bun",
-    "price": "$2.00"
+    "price": "$2.50"
   },
   {
-    "name": "Grilled Cheese Bun (2 buns)",
-    "price": "$3.00"
+    "name": "Grilled Cheese Bun",
+    "price": "$3.50"
   },
   {
     "name": "Keto Bun",
@@ -53,6 +53,6 @@
   },
   {
     "name": "Gravy",
-    "price": "$2.00"
+    "price": "$3.00"
   }
 ]
