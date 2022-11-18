@@ -17,7 +17,10 @@ export default component$(() => {
           <div class="absolute bottom-5 w-32 h-32 bg-yellow-400 rounded-full opacity-10 animate-blob ease-in-out filter blur-xl animation-delay-4000" style="left: 40%"></div>
           <img class="z-10 animate-float ease-in-out" src="./logo.svg" style="max-width: 60%" alt="Burgers on Fleek" />
         </div>
-        <h1 class="font-bold tracking-tight text-white text-3xl sm:text-5xl">
+        <h1 class="font-bold tracking-tight text-orange-100 text-3xl sm:text-5xl mb-6 animate-float sm:animate-none ease-in-out" style="filter: drop-shadow(0 2rem 2rem rgba(251, 146, 60, 0.5));">
+          The <span class="text-amber-500">burgers</span><br/>you are <span class="text-orange-300">craving.</span>
+        </h1>
+        <h1 class="font-bold tracking-tight text-gray-100 text-xl sm:text-3xl">
           Hours
         </h1>
         <div class="grid grid-cols-2 mt-5 text-gray-400">
