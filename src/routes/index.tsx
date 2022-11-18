@@ -8,14 +8,14 @@ export default component$(() => {
         <div class="absolute top-10 left-10 w-72 h-72 bg-orange-400 rounded-full opacity-10 animate-blob ease-in-out filter blur-2xl"></div>
         <div class="absolute top-10 right-10 w-72 h-72 bg-amber-400 rounded-full opacity-10 animate-blob ease-in-out filter blur-2xl animation-delay-2000"></div>
         <div class="absolute bottom-5 left-32 w-72 h-72 bg-yellow-400 rounded-full opacity-10 animate-blob ease-in-out filter blur-2xl animation-delay-4000"></div>
-        <img class="z-10 animate-float ease-in-out" width={1024} src={`/logo.svg`} alt="Burgers on Fleek" />
+        <img class="z-10 animate-float ease-in-out" width={676} height={900} src={`/logo.svg`} alt="Burgers on Fleek" />
       </div>
       <div class="text-center justify-center" style="filter: drop-shadow(0 2rem 10rem rgba(251, 146, 60, 0.5));">
         <div class="flex sm:hidden relative justify-center align-center mb-10" style="width: 100%;">
           <div class="absolute top-10 w-32 h-32 bg-orange-400 rounded-full opacity-10 animate-blob ease-in-out filter blur-xl" style="left: 45%"></div>
           <div class="absolute top-10 w-32 h-32 bg-amber-400 rounded-full opacity-10 animate-blob ease-in-out filter blur-xl animation-delay-2000" style="right: 50%"></div>
           <div class="absolute bottom-5 w-32 h-32 bg-yellow-400 rounded-full opacity-10 animate-blob ease-in-out filter blur-xl animation-delay-4000" style="left: 40%"></div>
-          <img class="z-10 animate-float ease-in-out" src="./logo.svg" style="max-width: 60%" alt="Burgers on Fleek" />
+          <img class="z-10 animate-float ease-in-out" src="./logo.svg" width={338} height={450} style="max-width: 60%" alt="Burgers on Fleek" />
         </div>
         <h1 class="font-bold tracking-tight text-orange-100 text-3xl sm:text-5xl mb-6 animate-float sm:animate-none ease-in-out" style="filter: drop-shadow(0 2rem 2rem rgba(251, 146, 60, 0.5));">
           The <span class="text-amber-500">burgers</span><br/>you are <span class="text-orange-300">craving.</span>
