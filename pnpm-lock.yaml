@@ -2,7 +2,7 @@ lockfileVersion: 5.4
 
 specifiers:
   '@builder.io/qwik': 0.13.3
-  '@builder.io/qwik-city': 0.0.122
+  '@builder.io/qwik-city': 0.0.127
   '@types/eslint': 8.4.10
   '@types/node': latest
   '@typescript-eslint/eslint-plugin': 5.43.0
@@ -20,7 +20,7 @@ specifiers:
 
 devDependencies:
   '@builder.io/qwik': 0.13.3
-  '@builder.io/qwik-city': 0.0.122
+  '@builder.io/qwik-city': 0.0.127
   '@types/eslint': 8.4.10
   '@types/node': 18.11.9
   '@typescript-eslint/eslint-plugin': 5.43.0_nqj4bdx4ekws7aecttskpih4py
@@ -38,13 +38,13 @@ devDependencies:
 
 packages:
 
-  /@builder.io/qwik-city/0.0.122:
-    resolution: {integrity: sha512-p1fMVvzREKjEnq2Mf2F4D272OaguA4uSj9qxmCXHZmvG5T355QFRGlq6tTgC7nJAqwlTAB8thhB/3kykfBO/Ng==}
+  /@builder.io/qwik-city/0.0.127:
+    resolution: {integrity: sha512-YvB4MZ8Hm+B+L9SQMKibcqe23EbQuRHUQ9IfZ6aUWgWKA2fMYDIcU/XO9nLtjUabr23Y5ALpx1Ak2Mu9WAe/7g==}
     dependencies:
       '@mdx-js/mdx': 2.1.5
       '@types/mdx': 2.0.3
       source-map: 0.7.4
-      vfile: 5.3.5
+      vfile: 5.3.6
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -133,7 +133,7 @@ packages:
       unist-util-position-from-estree: 1.1.1
       unist-util-stringify-position: 3.0.2
       unist-util-visit: 4.1.1
-      vfile: 5.3.5
+      vfile: 5.3.6
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -2415,7 +2415,7 @@ packages:
       is-buffer: 2.0.5
       is-plain-obj: 4.1.0
       trough: 2.1.0
-      vfile: 5.3.5
+      vfile: 5.3.6
     dev: true
 
   /unist-builder/3.0.0:
@@ -2508,7 +2508,7 @@ packages:
     resolution: {integrity: sha512-JDxPlTbZrZCQXogGheBHjbRWjESSPEak770XwWPfw5mTc1v1nWGLB/apzZxsx8a0SJVfF8HK8ql8RD308vXRUw==}
     dependencies:
       '@types/unist': 2.0.6
-      vfile: 5.3.5
+      vfile: 5.3.6
     dev: true
 
   /vfile-message/3.1.2:
@@ -2518,8 +2518,8 @@ packages:
       unist-util-stringify-position: 3.0.2
     dev: true
 
-  /vfile/5.3.5:
-    resolution: {integrity: sha512-U1ho2ga33eZ8y8pkbQLH54uKqGhFJ6GYIHnnG5AhRpAh3OWjkrRHKa/KogbmQn8We+c0KVV3rTOgR9V/WowbXQ==}
+  /vfile/5.3.6:
+    resolution: {integrity: sha512-ADBsmerdGBs2WYckrLBEmuETSPyTD4TuLxTrw0DvjirxW1ra4ZwkbzG8ndsv3Q57smvHxo677MHaQrY9yxH8cA==}
     dependencies:
       '@types/unist': 2.0.6
       is-buffer: 2.0.5
