@@ -1,7 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
-  '@builder.io/qwik': 0.13.3
+  '@builder.io/qwik': 0.14.1
   '@builder.io/qwik-city': 0.0.127
   '@types/eslint': 8.4.10
   '@types/node': latest
@@ -19,7 +19,7 @@ specifiers:
   vite-tsconfig-paths: 3.6.0
 
 devDependencies:
-  '@builder.io/qwik': 0.13.3
+  '@builder.io/qwik': 0.14.1
   '@builder.io/qwik-city': 0.0.127
   '@types/eslint': 8.4.10
   '@types/node': 18.11.9
@@ -49,8 +49,8 @@ packages:
       - supports-color
     dev: true
 
-  /@builder.io/qwik/0.13.3:
-    resolution: {integrity: sha512-revtQDBww5lYM6oEsmdRk0n+Z38sFghxjbpyNZFjN3h20FHoym7fXwxSUag+0wdeU9c3CRWDKoLJFtnngcLfCg==}
+  /@builder.io/qwik/0.14.1:
+    resolution: {integrity: sha512-bHAWSK2kaJ8VxYsR85/0cj/dbzp2dfzjWZDWoH8gKy2PZw+PYGh+vIsQE0H+Xu3WIkwkkyi8PdWA1H/Qp9MSng==}
     engines: {node: '>=16'}
     hasBin: true
     dev: true
