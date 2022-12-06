@@ -9,7 +9,7 @@ specifiers:
   '@typescript-eslint/parser': 5.44.0
   autoprefixer: 10.4.13
   eslint: 8.28.0
-  eslint-plugin-qwik: 0.14.1
+  eslint-plugin-qwik: 0.15.2
   node-fetch: 3.3.0
   postcss: 8.4.19
   prettier: 2.8.0
@@ -27,7 +27,7 @@ devDependencies:
   '@typescript-eslint/parser': 5.44.0_hsf322ms6xhhd4b5ne6lb74y4a
   autoprefixer: 10.4.13_postcss@8.4.19
   eslint: 8.28.0
-  eslint-plugin-qwik: 0.14.1_eslint@8.28.0
+  eslint-plugin-qwik: 0.15.2_eslint@8.28.0
   node-fetch: 3.3.0
   postcss: 8.4.19
   prettier: 2.8.0
@@ -884,8 +884,8 @@ packages:
     engines: {node: '>=10'}
     dev: true
 
-  /eslint-plugin-qwik/0.14.1_eslint@8.28.0:
-    resolution: {integrity: sha512-cxwhUgsAxRehnZBcvdT08KWjY1yjmaNHKp4U8njC9fWUEH2qBDEileWVS3QSN+hnVHADPS2BvOvWBg+0wEuIcg==}
+  /eslint-plugin-qwik/0.15.2_eslint@8.28.0:
+    resolution: {integrity: sha512-Urx815iGUeS/tZuGorQtK65y+0qWi2hEABQULQvoQ6UQwycg8sM0yiaS4lnfecNdkkVHIA5ekNPSkGiG2PuMQw==}
     engines: {node: '>=16'}
     peerDependencies:
       eslint: '>= 8'
