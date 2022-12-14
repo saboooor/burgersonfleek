@@ -42,6 +42,6 @@ jobs:
           path: './dist'
 
       - name: Deploy to GitHub Pages
+        if: github.event_name != 'pull_request'
         id: deployment
-        if: github.ref == 'refs/heads/main'
         uses: actions/deploy-pages@v1
