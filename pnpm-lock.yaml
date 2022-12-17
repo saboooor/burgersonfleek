@@ -1,7 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
-  '@builder.io/qwik': 0.15.2
+  '@builder.io/qwik': 0.16.1
   '@builder.io/qwik-city': 0.0.128
   '@types/eslint': 8.4.10
   '@types/node': latest
@@ -19,10 +19,10 @@ specifiers:
   vite-tsconfig-paths: 4.0.2
 
 devDependencies:
-  '@builder.io/qwik': 0.15.2
+  '@builder.io/qwik': 0.16.1
   '@builder.io/qwik-city': 0.0.128
   '@types/eslint': 8.4.10
-  '@types/node': 18.11.15
+  '@types/node': 18.11.16
   '@typescript-eslint/eslint-plugin': 5.46.1_imrg37k3svwu377c6q7gkarwmi
   '@typescript-eslint/parser': 5.46.1_ha6vam6werchizxrnqvarmz2zu
   autoprefixer: 10.4.13_postcss@8.4.20
@@ -33,7 +33,7 @@ devDependencies:
   prettier: 2.8.1
   tailwindcss: 3.2.4_postcss@8.4.20
   typescript: 4.9.4
-  vite: 4.0.1_@types+node@18.11.15
+  vite: 4.0.1_@types+node@18.11.16
   vite-tsconfig-paths: 4.0.2_rftvpiefqgupx5rdsozqbqx3tq
 
 packages:
@@ -49,10 +49,12 @@ packages:
       - supports-color
     dev: true
 
-  /@builder.io/qwik/0.15.2:
-    resolution: {integrity: sha512-zLdpDbOqKn66JHp8+xjnt0O3Tr/Q3C0p73gfRmuHD3VkDMohfmboVBDDOZmvoKYtC+V8V+t4DYPxpDkQ/nHrBw==}
+  /@builder.io/qwik/0.16.1:
+    resolution: {integrity: sha512-Ksd4v+m9jleCl4ru+aSihuX9/Ck2SWkGqa0EdhkbZdFXcTLYVdWfSrP07TRO/KDFGQbLeoc2+9slco+VzXA4AQ==}
     engines: {node: '>=16'}
     hasBin: true
+    dependencies:
+      undici: 5.14.0
     dev: true
 
   /@esbuild/android-arm/0.16.6:
@@ -388,8 +390,8 @@ packages:
     resolution: {integrity: sha512-iiUgKzV9AuaEkZqkOLDIvlQiL6ltuZd9tGcW3gwpnX8JbuiuhFlEGmmFXEXkN50Cvq7Os88IY2v0dkDqXYWVgA==}
     dev: true
 
-  /@types/node/18.11.15:
-    resolution: {integrity: sha512-VkhBbVo2+2oozlkdHXLrb3zjsRkpdnaU2bXmX8Wgle3PUi569eLRaHGlgETQHR7lLL1w7GiG3h9SnePhxNDecw==}
+  /@types/node/18.11.16:
+    resolution: {integrity: sha512-6T7P5bDkRhqRxrQtwj7vru+bWTpelgtcETAZEUSdq0YISKz8WKdoBukQLYQQ6DFHvU9JRsbFq0JH5C51X2ZdnA==}
     dev: true
 
   /@types/semver/7.3.13:
@@ -661,6 +663,13 @@ packages:
       electron-to-chromium: 1.4.284
       node-releases: 2.0.6
       update-browserslist-db: 1.0.10_browserslist@4.21.4
+    dev: true
+
+  /busboy/1.6.0:
+    resolution: {integrity: sha512-8SFQbg/0hQ9xy3UNTB0YEnsNBbWfhf7RtnzpL7TkBiTBRfrQ9Fxcnz7VJsleJpyp6rVLvXiuORqjlHi5q+PYuA==}
+    engines: {node: '>=10.16.0'}
+    dependencies:
+      streamsearch: 1.1.0
     dev: true
 
   /callsites/3.1.0:
@@ -2174,6 +2183,11 @@ packages:
     resolution: {integrity: sha512-ekwEbFp5aqSPKaqeY1PGrlGQxPNaq+Cnx4+bE2D8sciBQrHpbwoBbawqTN2+6jPs9IdWxxiUcN0K2pkczD3zmw==}
     dev: true
 
+  /streamsearch/1.1.0:
+    resolution: {integrity: sha512-Mcc5wHehp9aXz1ax6bZUyY5afg9u2rv5cqQI3mRrYkGC8rW2hM02jWuwjtL++LS5qinSyhj2QfLyNsuc+VsExg==}
+    engines: {node: '>=10.0.0'}
+    dev: true
+
   /stringify-entities/4.0.3:
     resolution: {integrity: sha512-BP9nNHMhhfcMbiuQKCqMjhDP5yBCAxsPu4pHFFzJ6Alo9dZgY4VLDPutXqIjpRiMoKdp7Av85Gr73Q5uH9k7+g==}
     dependencies:
@@ -2309,6 +2323,13 @@ packages:
     hasBin: true
     dev: true
 
+  /undici/5.14.0:
+    resolution: {integrity: sha512-yJlHYw6yXPPsuOH0x2Ib1Km61vu4hLiRRQoafs+WUgX1vO64vgnxiCEN9dpIrhZyHFsai3F0AEj4P9zy19enEQ==}
+    engines: {node: '>=12.18'}
+    dependencies:
+      busboy: 1.6.0
+    dev: true
+
   /unified/10.1.2:
     resolution: {integrity: sha512-pUSWAi/RAnVy1Pif2kAoeWNBa3JVrx0MId2LASj8G+7AiHWoKZNTomq6LG326T68U7/e263X6fTdcXIy7XnF7Q==}
     dependencies:
@@ -2438,13 +2459,13 @@ packages:
       debug: 4.3.4
       globrex: 0.1.2
       tsconfck: 2.0.1_typescript@4.9.4
-      vite: 4.0.1_@types+node@18.11.15
+      vite: 4.0.1_@types+node@18.11.16
     transitivePeerDependencies:
       - supports-color
       - typescript
     dev: true
 
-  /vite/4.0.1_@types+node@18.11.15:
+  /vite/4.0.1_@types+node@18.11.16:
     resolution: {integrity: sha512-kZQPzbDau35iWOhy3CpkrRC7It+HIHtulAzBhMqzGHKRf/4+vmh8rPDDdv98SWQrFWo6//3ozwsRmwQIPZsK9g==}
     engines: {node: ^14.18.0 || >=16.0.0}
     hasBin: true
@@ -2469,7 +2490,7 @@ packages:
       terser:
         optional: true
     dependencies:
-      '@types/node': 18.11.15
+      '@types/node': 18.11.16
       esbuild: 0.16.6
       postcss: 8.4.20
       resolve: 1.22.1
