@@ -1,5 +1,5 @@
 import { component$, useStyles$ } from '@builder.io/qwik';
-import { QwikCity, RouterOutlet, ServiceWorkerRegister } from '@builder.io/qwik-city';
+import { QwikCityProvider, RouterOutlet, ServiceWorkerRegister } from '@builder.io/qwik-city';
 import { RouterHead } from './components/head';
 
 import globalStyles from './global.css?inline';
@@ -14,7 +14,7 @@ export default component$(() => {
   useStyles$(globalStyles);
 
   return (
-    <QwikCity>
+    <QwikCityProvider>
       <head>
         <meta charSet="utf-8" />
         <link rel="manifest" href="/manifest.json" />
@@ -24,6 +24,6 @@ export default component$(() => {
         <RouterOutlet />
         <ServiceWorkerRegister />
       </body>
-    </QwikCity>
+    </QwikCityProvider>
   );
 });

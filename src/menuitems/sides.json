@@ -7,20 +7,6 @@
     }
   },
   {
-    "name": "Poutine",
-    "price": {
-      "medium": "$6.99",
-      "large": "$12.99"
-    }
-  },
-  {
-    "name": "Chicken Poutine",
-    "price": {
-      "medium": "$12.50",
-      "large": "$18.00"
-    }
-  },
-  {
     "name": "Sweet Potato Fries",
     "price": {
       "medium": "$6.99",
@@ -32,6 +18,27 @@
     "price": {
       "medium": "$6.50",
       "large": "$11.99"
+    }
+  },
+  {
+    "name": "Poutine",
+    "price": {
+      "medium": "$6.99",
+      "large": "$12.99"
+    }
+  },
+  {
+    "name": "Beef Chili Cheese Fries",
+    "price": {
+      "medium": "$8.99",
+      "large": "$16.99"
+    }
+  },
+  {
+    "name": "Chicken Poutine",
+    "price": {
+      "medium": "$12.50",
+      "large": "$18.00"
     }
   }
 ]

@@ -4,7 +4,8 @@ import type { DocumentHead } from '@builder.io/qwik-city';
 import drinks from '../../menuitems/drinks.json';
 import extras from '../../menuitems/extras.json';
 import sides from '../../menuitems/sides.json';
-import meatburgers from '../../menuitems/meatburgers.json';
+import beefburgers from '../../menuitems/beefburgers.json';
+import chickenburgers from '../../menuitems/chickenburgers.json';
 import steaksandwiches from '../../menuitems/steaksandwiches.json';
 import veggieburgers from '../../menuitems/veggieburgers.json';
 
@@ -18,7 +19,12 @@ export default component$(() => {
                     <ul class="space-y-2">
                         <li>
                             <a href="#beefburgers" class="flex flex-1 items-center p-2 text-base font-normal rounded-xl text-white hover:bg-gray-700 transition duration-200">
-                                Beef & Chicken Burgers
+                                Beef Burgers
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#chickenburgers" class="flex flex-1 items-center p-2 text-base font-normal rounded-xl text-white hover:bg-gray-700 transition duration-200">
+                                Chicken Burgers
                             </a>
                         </li>
                         <li>
@@ -55,21 +61,34 @@ export default component$(() => {
                 </div>
             </aside>
             <div class="sm:col-span-2 lg:col-span-3 2xl:col-span-4">
-                <h1 class="font-bold tracking-tight text-orange-300 text-4xl transition duration-300" id="beefburgers" style={{ filter: 'drop-shadow(0 0.5rem 3rem rgba(253, 186, 116, 1));' }}>Beef & Chicken Burgers</h1>
+                <h1 class="font-bold tracking-tight text-orange-300 text-4xl transition duration-300" id="beefburgers" style={{ filter: 'drop-shadow(0 0.5rem 3rem rgba(253, 186, 116, 1));' }}>Beef Burgers</h1>
                 <h2 class="text-gray-400 text-xl transition duration-300">* Make it a combo with fries and pop for $5.50</h2>
                 <div class="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 pt-10 pb-6">
-                    {meatburgers.map((meatburger, i) => {
+                    {beefburgers.map((beefburger, i) => {
                         return (
                             <div class="bg-gray-800 rounded-2xl p-6 transition duration-300" style={{ transitionDelay: `${i * 20}ms` }}>
-                                <h1 class="font-bold tracking-tight text-white text-2xl">{meatburger.name}</h1>
-                                <p class="text-amber-400 text-md">{meatburger.price}</p>
-                                {meatburger.double && <p class="text-gray-400 text-md">Double: <span class="text-amber-400">{meatburger.double}</span></p>}
-                                <p class="text-gray-400 text-md mt-5">{meatburger.description}</p>
+                                <h1 class="font-bold tracking-tight text-white text-2xl">{beefburger.name}</h1>
+                                <p class="text-amber-400 text-md">{beefburger.price}</p>
+                                {beefburger.double && <p class="text-gray-400 text-md">Double: <span class="text-amber-400">{beefburger.double}</span></p>}
+                                <p class="text-gray-400 text-md mt-5">{beefburger.description}</p>
                             </div>
                         )
                     })}
                 </div>
-                <h2 class="text-gray-400 text-md transition duration-300">* Our beef burgers are made with premium quality meat, cut & grounded in-house & handpressed on the grill.</h2>
+                <h2 class="text-gray-400 text-md transition duration-300 pb-10">* Our beef burgers are made with premium quality meat, cut & grounded in-house & handpressed on the grill.</h2>
+                <h1 class="font-bold tracking-tight text-orange-300 text-4xl transition duration-300" id="chickenburgers" style={{ filter: 'drop-shadow(0 0.5rem 3rem rgba(253, 186, 116, 1));' }}>Chicken Burgers</h1>
+                <h2 class="text-gray-400 text-xl transition duration-300">* Make it a combo with fries and pop for $5.50</h2>
+                <div class="grid grid-cols-2 gap-6 pt-10 pb-6">
+                    {chickenburgers.map((chickenburger, i) => {
+                        return (
+                            <div class="bg-gray-800 rounded-2xl p-6 transition duration-300" style={{ transitionDelay: `${i * 20}ms` }}>
+                                <h1 class="font-bold tracking-tight text-white text-2xl">{chickenburger.name}</h1>
+                                <p class="text-amber-400 text-md">{chickenburger.price}</p>
+                                <p class="text-gray-400 text-md mt-5">{chickenburger.description}</p>
+                            </div>
+                        )
+                    })}
+                </div>
                 <h2 class="text-gray-400 text-md transition duration-300 pb-10">* Our chicken burgers are made using boneless leg/thigh marinated in our special spice blend (mild spicy) & deep fried.</h2>
                 <h1 class="font-bold tracking-tight text-orange-300 text-4xl transition duration-300" id="veggieburgers" style={{ filter: 'drop-shadow(0 0.5rem 3rem rgba(253, 186, 116, 1));' }}>Vegetarian Burgers</h1>
                 <h2 class="tracking-tight text-gray-400 text-xl transition duration-300" id="beefburgers">* Make it a combo with fries and pop for $5.25</h2>
@@ -103,13 +122,16 @@ export default component$(() => {
                         return (
                             <div class="bg-gray-800 rounded-2xl p-6 transition duration-300" style={{ transitionDelay: `${i * 20}ms` }}>
                                 <h1 class="font-bold tracking-tight text-white text-2xl">{extra.name}</h1>
-                                <p class="text-amber-400 text-md">{extra.price}</p>
+                                {typeof extra.price == 'string' && <p class="text-amber-400 text-md">{extra.price}</p>}
+                                {typeof extra.price != 'string' && Object.entries(extra.price).map(([option, price]) => {
+                                    return <p class="text-md">{option}: <span class="text-amber-400">{price}</span></p>
+                                })}
                             </div>
                         )
                     })}
                 </div>
                 <h1 class="font-bold tracking-tiught text-orange-300 text-4xl transition duration-300" id="sides" style={{ filter: 'drop-shadow(0 0.5rem 3rem rgba(253, 186, 116, 1));' }}>Sides</h1>
-                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6 py-10">
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6 py-10">
                     {sides.map((side, i) => {
                         return (
                             <div class="bg-gray-800 rounded-2xl p-6 transition duration-300" style={{ transitionDelay: `${i * 20}ms` }}>
