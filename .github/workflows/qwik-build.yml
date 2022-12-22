@@ -7,17 +7,8 @@ on:
       - "main"
 
 jobs:
-  qwik-build-deploy:
+  qwik-build:
     runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-
-    permissions:
-      contents: read
-      pages: write
-      deployments: write
-      id-token: write
 
     steps:
       - name: Checkout
@@ -35,17 +26,3 @@ jobs:
 
       - name: Build
         run: pnpm run build
-
-      - name: Setup Pages
-        uses: actions/configure-pages@v2
-
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v1
-        with:
-          # Dist folder
-          path: './dist'
-
-      - name: Deploy to GitHub Pages
-        if: github.event_name != 'pull_request'
-        id: deployment
-        uses: actions/deploy-pages@v1
