@@ -1,64 +1,45 @@
 import { component$ } from '@builder.io/qwik';
 import type { DocumentHead } from '@builder.io/qwik-city';
 
-import drinks from '../../menuitems/drinks.json';
-import extras from '../../menuitems/extras.json';
-import sides from '../../menuitems/sides.json';
-import beefburgers from '../../menuitems/beefburgers.json';
-import chickenburgers from '../../menuitems/chickenburgers.json';
-import steaksandwiches from '../../menuitems/steaksandwiches.json';
-import veggieburgers from '../../menuitems/veggieburgers.json';
+import drinks from '~/menuitems/drinks.json';
+import extras from '~/menuitems/extras.json';
+import sides from '~/menuitems/sides.json';
+import beefburgers from '~/menuitems/beefburgers.json';
+import chickenburgers from '~/menuitems/chickenburgers.json';
+import steaksandwiches from '~/menuitems/steaksandwiches.json';
+import veggieburgers from '~/menuitems/veggieburgers.json';
+
+import * as Menu from '~/components/menu';
 
 export default component$(() => {
   return (
     <section class="grid gap-6 grid-cols-1 sm:grid-cols-3 lg:grid-cols-4 2xl:grid-cols-5 mx-auto max-w-screen-2xl px-4 sm:px-6 pt-12" style="min-height: calc(100vh - 64px);">
-        <aside class="z-10 w-full sm:h-1 align-middle sm:sticky sm:top-28" aria-label="Sidebar">
-            <p class="text-3xl font-bold mb-5 text-orange-300" style={{ filter: 'drop-shadow(0 0.5rem 2rem rgba(253, 186, 116, 1));' }}>Menu</p>
-            <div class="overflow-y-auto py-4 px-3 rounded-2xl bg-gray-800">
-                <ul class="space-y-2">
-                    <li>
-                        <a href="#beefburgers" class="flex flex-1 items-center p-2 text-base font-normal rounded-xl text-white hover:bg-gray-700 transition duration-200">
-                            Beef Burgers
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#chickenburgers" class="flex flex-1 items-center p-2 text-base font-normal rounded-xl text-white hover:bg-gray-700 transition duration-200">
-                            Chicken Burgers
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#veggieburgers" class="flex flex-1 items-center p-2 text-base font-normal rounded-xl text-white hover:bg-gray-700 transition duration-200">
-                            Vegetarian Burgers
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#steaksandwiches" class="flex flex-1 items-center p-2 text-base font-normal rounded-xl text-white hover:bg-gray-700 transition duration-200">
-                            Steak Sandwiches
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#extras" class="flex flex-1 items-center p-2 text-base font-normal rounded-xl text-white hover:bg-gray-700 transition duration-200">
-                            Extras
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#sides" class="flex flex-1 items-center p-2 text-base font-normal rounded-xl text-white hover:bg-gray-700 transition duration-200">
-                            Sides
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#drinks" class="flex flex-1 items-center p-2 text-base font-normal rounded-xl text-white hover:bg-gray-700 transition duration-200">
-                            Drinks
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/menu.pdf" class="flex flex-1 items-center p-2 text-base font-normal rounded-xl text-white hover:bg-gray-700 transition duration-200">
-                            View Paper Menu
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </aside>
+        <Menu.Nav>
+            <Menu.Item href="#beefburgers">
+                Beef Burgers
+            </Menu.Item>
+            <Menu.Item href="#chickenburgers">
+                Chicken Burgers
+            </Menu.Item>
+            <Menu.Item href="#veggieburgers">
+                Vegetarian Burgers
+            </Menu.Item>
+            <Menu.Item href="#steaksandwiches">
+                Steak Sandwiches
+            </Menu.Item>
+            <Menu.Item href="#extras">
+                Extras
+            </Menu.Item>
+            <Menu.Item href="#sides">
+                Sides
+            </Menu.Item>
+            <Menu.Item href="#drinks">
+                Drinks
+            </Menu.Item>
+            <Menu.Item href="/menu.pdf">
+                View Paper Menu
+            </Menu.Item>
+        </Menu.Nav>
         <div class="sm:col-span-2 lg:col-span-3 2xl:col-span-4">
             <h1 class="font-bold tracking-tight text-orange-300 text-4xl transition duration-300" id="beefburgers" style={{ filter: 'drop-shadow(0 0.5rem 3rem rgba(253, 186, 116, 1));' }}>Beef Burgers</h1>
             <h2 class="text-gray-400 text-xl transition duration-300">* Make it a combo with fries and pop for $5.50</h2>
