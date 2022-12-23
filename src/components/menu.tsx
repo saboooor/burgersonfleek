@@ -3,7 +3,7 @@ import { component$, Slot } from '@builder.io/qwik';
 export const Nav = component$(() => {
     return (
         <aside class="z-10 w-full sm:h-1 align-middle sm:sticky sm:top-28" aria-label="Sidebar">
-            <p class="text-3xl font-bold mb-5 text-orange-300" style={{ filter: 'drop-shadow(0 0.5rem 2rem rgba(253, 186, 116, 1));' }}>Menu</p>
+            <p class="text-3xl font-bold mb-5 text-orange-300">Menu</p>
             <div class="overflow-y-auto py-4 px-3 rounded-2xl bg-gray-800">
                 <ul class="space-y-2">
                     <Slot />
@@ -20,5 +20,13 @@ export const Item = component$(({ href }: any) => {
                 <Slot />
             </a>
         </li>
+    );
+});
+
+export const Title = component$(({ id }: any) => {
+    return (
+      <h1 class="font-bold tracking-tight text-orange-300 text-4xl transition duration-300" id={id}>
+        <Slot />
+      </h1>
     );
 });
