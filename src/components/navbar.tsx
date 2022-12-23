@@ -15,8 +15,7 @@ export default component$(() => {
             <div class="sm:ml-6 sm:block">
               <div class="pointer-events-auto flex space-x-4">
                 <a href="/" class="transition duration-200 hidden sm:flex text-gray-300 bg-gray-900 hover:bg-gray-800 hover:text-white hover:drop-shadow-2xl px-3 py-2 rounded-full text-sm font-medium">Home</a>
-                <a href="/menu" class="transition duration-200 text-gray-300 bg-gray-900 hover:bg-gray-800 hover:text-white hover:drop-shadow-2xl px-3 py-2 rounded-full text-sm font-medium">Menu (a)</a>
-                <a href="/menu" class="transition duration-200 text-gray-300 bg-gray-900 hover:bg-gray-800 hover:text-white hover:drop-shadow-2xl px-3 py-2 rounded-full text-sm font-medium">Menu (a)</a>
+                <a href="/menu" class="transition duration-200 text-gray-300 bg-gray-900 hover:bg-gray-800 hover:text-white hover:drop-shadow-2xl px-3 py-2 rounded-full text-sm font-medium">Menu</a>
               </div>
             </div>
           </div>
