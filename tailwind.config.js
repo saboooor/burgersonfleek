@@ -13,11 +13,17 @@ const gray = {
  900: "hsl(0deg, 0%, 5%)"
 };
 
+const burger = {
+  100: "rgb(201, 128, 33)",
+  200: "rgb(145, 93, 24)",
+  300: "rgb(94, 60, 15)",
+}
+
 module.exports = {
   content: ['./src/**/*.{js,ts,jsx,tsx}'],
   theme: {
     extend: {
-      colors: { gray },
+      colors: { gray, burger },
       animation: {
         blob: "blob 16s infinite",
         float: "float 6s infinite"

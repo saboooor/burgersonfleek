@@ -37,31 +37,31 @@ export default component$(() => {
         </div>
         <div class="flex justify-center mt-10">
           <div class="rounded-md shadow">
-            <a href="/menu" class="flex transition duration-200 w-full items-center justify-center rounded-2xl sm:rounded-3xl border border-transparent bg-amber-800 px-6 py-3 text-base font-bold text-white hover:bg-amber-700 md:py-4 md:px-10 md:text-lg">
+            <a href="/menu" class="flex transition duration-200 w-full items-center justify-center rounded-2xl sm:rounded-3xl border border-transparent bg-burger-100/80 px-6 py-3 text-base font-bold text-white hover:bg-burger-100 md:py-4 md:px-10 md:text-lg">
               View the menu
             </a>
           </div>
         </div>
         <div class="mt-3 flex justify-center">
           <div class="rounded-md shadow">
-            <a href="tel:+1 (905) 427 4377" class="flex transition duration-200 w-full items-center justify-center rounded-2xl sm:rounded-3xl border border-transparent bg-amber-900/50 px-6 py-3 text-base font-medium text-gray-200 hover:bg-amber-900 md:py-4 md:px-10 md:text-lg whitespace-nowrap">
+            <a href="tel:+1 (905) 427 4377" class="flex transition duration-200 w-full items-center justify-center rounded-2xl sm:rounded-3xl border border-transparent bg-burger-200/80 px-6 py-3 text-base font-medium text-white hover:bg-burger-200 md:py-4 md:px-10 md:text-lg whitespace-nowrap">
               +1 (905) 427 4377
             </a>
           </div>
           <div class="ml-3 rounded-md shadow">
-            <a href="https://maps.app.goo.gl/Unrrg3uda7AQQs4DA" class="flex transition duration-200 w-full items-center justify-center rounded-2xl sm:rounded-3xl border border-transparent bg-amber-900/50 px-6 py-3 text-base font-medium text-gray-200 hover:bg-amber-900 md:py-4 md:px-10 md:text-lg whitespace-nowrap">
+            <a href="https://maps.app.goo.gl/Unrrg3uda7AQQs4DA" class="flex transition duration-200 w-full items-center justify-center rounded-2xl sm:rounded-3xl border border-transparent bg-burger-200/80 px-6 py-3 text-base font-medium text-white hover:bg-burger-200 md:py-4 md:px-10 md:text-lg whitespace-nowrap">
               Location
             </a>
           </div>
         </div>
         <div class="mt-3 flex justify-center ">
           <div class="mt-0 rounded-md shadow">
-            <a href="https://instagram.com/burgersonfleek.ca" class="flex transition duration-200 w-full items-center justify-center rounded-2xl sm:rounded-3xl border border-transparent bg-amber-900/20 px-8 py-3 text-base font-medium text-gray-200 hover:bg-amber-900/60 md:py-4 md:px-10 md:text-lg">
+            <a href="https://instagram.com/burgersonfleek.ca" class="flex transition duration-200 w-full items-center justify-center rounded-2xl sm:rounded-3xl border border-transparent bg-burger-300/80 px-8 py-3 text-base font-medium text-white hover:bg-burger-300 md:py-4 md:px-10 md:text-lg">
               Instagram
             </a>
           </div>
           <div class="mt-0 ml-3 rounded-md shadow">
-            <a href="https://facebook.com/burgersonfleek.ca" class="flex transition duration-200 w-full items-center justify-center rounded-2xl sm:rounded-3xl border border-transparent bg-amber-900/20 px-8 py-3 text-base font-medium text-gray-200 hover:bg-amber-900/60 md:py-4 md:px-10 md:text-lg">
+            <a href="https://facebook.com/burgersonfleek.ca" class="flex transition duration-200 w-full items-center justify-center rounded-2xl sm:rounded-3xl border border-transparent bg-burger-300/80 px-8 py-3 text-base font-medium text-white hover:bg-burger-300 md:py-4 md:px-10 md:text-lg">
               Facebook
             </a>
           </div>
