@@ -13,7 +13,7 @@ import * as Menu from '~/components/Menu';
 
 export default component$(() => {
   return (
-    <section class="grid gap-6 grid-cols-1 sm:grid-cols-3 lg:grid-cols-4 2xl:grid-cols-5 mx-auto max-w-screen-2xl px-4 sm:px-6 pt-12" style="min-height: calc(100vh - 64px);">
+    <section class="grid gap-6 grid-cols-1 sm:grid-cols-3 lg:grid-cols-4 2xl:grid-cols-5 mx-auto max-w-screen-2xl px-4 sm:px-6 pt-12" style="min-height: calc(100lvh - 64px - 64px);">
         <Menu.Nav>
             <Menu.Item id="beefburgers">
                 Beef Burgers
