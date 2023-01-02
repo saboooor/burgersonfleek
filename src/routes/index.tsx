@@ -6,7 +6,7 @@ import { ClockIcon, FileTextIcon, PhoneCallIcon, MapPinIcon, InstagramIcon, Face
 
 export default component$(() => {
   return (
-    <section class="flex mx-auto max-w-6xl px-6 items-center justify-center" style="min-height: calc(100vh - 64px);">
+    <section class="flex mx-auto max-w-6xl px-6 items-center justify-center" style="min-height: calc(100vh - 192px);">
       <div class="hidden sm:flex relative justify-start align-center mr-auto" style="max-width: 50%;">
         <div class="absolute top-10 left-10 w-72 h-72 bg-orange-400 rounded-full opacity-10 animate-blob ease-in-out filter blur-2xl"></div>
         <div class="absolute top-10 right-10 w-72 h-72 bg-amber-400 rounded-full opacity-10 animate-blob ease-in-out filter blur-2xl animation-delay-2000"></div>
