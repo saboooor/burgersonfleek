@@ -1,6 +1,6 @@
 {
   "$schema": "https://json.schemastore.org/web-manifest-combined.json",
-  "theme_color" : "#c37f0c",
+  "theme_color" : "#000",
   "background_color" : "#000",
   "name": "Burgers on Fleek",
   "short_name": "Burgers on Fleek",
