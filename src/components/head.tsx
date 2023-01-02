@@ -10,7 +10,7 @@ export const RouterHead = component$(() => {
 
   return (
     <>
-      <title>Burgers on Fleek - {head.title}</title>
+      <title>{`Burgers on Fleek - ${head.title}`}</title>
       <meta content="Premium Quality Gourmet Burgers, Steak Sandwiches, Fries, and more. Only serving Halal حلال" name="description" />
 
       <link rel="canonical" href={loc.href} />
@@ -21,7 +21,7 @@ export const RouterHead = component$(() => {
       <meta content="Burgers On Fleek" property="og:title" />
       <meta content="Premium Quality Gourmet Burgers, Steak Sandwiches, Fries, and more. Only serving Halal حلال" property="og:description" />
       <meta content="https://burgersonfleek.ca/logo.png" property="og:image" />
-      <meta content="#c37f0c" name="theme-color" />
+      <meta content="#0D0D0D" name="theme-color" />
 
       {head.meta.map((m) => (
         <meta {...m} />
