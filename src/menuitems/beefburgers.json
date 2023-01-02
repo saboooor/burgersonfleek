@@ -1,19 +1,19 @@
 [
   {
     "name": "The Basic",
-    "description": "Beef patty with lettuce, tomato, pickles, sautéed onions, and On Fleek sauce.",
+    "description": "Beef patty with lettuce, tomato, pickles, sautéed onions, and On Fleek Sauce.",
     "price": "$8.90",
     "double": "$13.90"
   },
   {
     "name": "The Classic",
-    "description": "Beef patty with cheddar cheese, lettuce, tomato, pickles, sautéed onions, and On Fleek sauce.",
+    "description": "Beef patty with cheddar cheese, lettuce, tomato, pickles, sautéed onions, and On Fleek Sauce.",
     "price": "$9.90",
     "double": "$15.90"
   },
   {
     "name": "Bae",
-    "description": "Beef patty with cheddar cheese, beef bacon, lettuce, tomato, pickles, sautéed onions, and On Fleek sauce.",
+    "description": "Beef patty with cheddar cheese, beef bacon, lettuce, tomato, pickles, sautéed onions, and On Fleek Sauce.",
     "price": "$10.90",
     "double": "$16.90"
   },
@@ -24,7 +24,7 @@
   },
   {
     "name": "Godzilla",
-    "description": "Three beef patties with cheddar cheese, beef bacon, lettuce, tomato, sautéed onions, grilled jalapeños, and On Fleek sauce, between two grilled cheese buns.",
+    "description": "Three beef patties with cheddar cheese, beef bacon, lettuce, tomato, sautéed onions, grilled jalapeños, and On Fleek Sauce, between two grilled cheese buns.",
     "price": "$23.00"
   },
   {
