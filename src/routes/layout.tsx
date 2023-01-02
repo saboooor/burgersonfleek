@@ -6,7 +6,7 @@ export default component$(() => {
   return (
     <main>
       <Nav />
-      <section style="padding-top: 64px">
+      <section class="pt-16">
         <Slot />
       </section>
       <Footer />
