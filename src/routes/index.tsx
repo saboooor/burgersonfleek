@@ -36,33 +36,25 @@ export default component$(() => {
           <p class="text-left text-xl md:text-2xl">Tuesday - Sunday:</p>
           <p class="text-right text-xl md:text-2xl">12 PM - 8:45 PM</p>
         </div>
-        <div class="flex justify-center mt-10">
-          <div class="rounded-md shadow">
-            <Link href="/menu" class="flex transition duration-200 rounded-2xl backdrop-blur-lg bg-burger-100/80 hover:bg-burger-100 border-2 border-burger-100 px-6 py-3 font-bold text-red-100 md:py-4 md:px-8 text-sm md:text-lg whitespace-nowrap gap-4 items-center">
+        <div class="mt-10 space-y-3 min-h-[11.25rem]">
+          <div class="flex justify-center">
+            <Link href="/menu" class="flex transition duration-200 rounded-2xl shadow-lg backdrop-blur-lg bg-burger-100/80 hover:bg-burger-100 border-2 border-burger-100 px-6 py-3 font-bold text-red-100 md:py-4 md:px-8 text-sm md:text-lg whitespace-nowrap gap-4 items-center">
               <FileTextIcon/> View the menu
             </Link>
           </div>
-        </div>
-        <div class="mt-3 flex justify-center">
-          <div class="rounded-md shadow">
-            <a href="tel:+1 (905) 427 4377" class="flex transition duration-200 rounded-2xl backdrop-blur-lg bg-burger-200/80 hover:bg-burger-200 border-2 border-burger-200 px-6 py-3 font-bold text-red-100 md:py-4 md:px-8 text-sm md:text-lg whitespace-nowrap gap-4 items-center">
+          <div class="flex gap-2 justify-center">
+            <a href="tel:+1 (905) 427 4377" class="flex transition duration-200 rounded-2xl shadow-lg backdrop-blur-lg bg-burger-200/80 hover:bg-burger-200 border-2 border-burger-200 px-6 py-3 font-bold text-red-100 md:py-4 md:px-8 text-sm md:text-lg whitespace-nowrap gap-4 items-center">
               <PhoneCallIcon/> +1 (905) 427 4377
             </a>
-          </div>
-          <div class="ml-2 rounded-md shadow">
-            <a href="https://maps.app.goo.gl/Unrrg3uda7AQQs4DA" class="flex transition duration-200 rounded-2xl backdrop-blur-lg bg-burger-200/80 hover:bg-burger-200 border-2 border-burger-200 px-6 py-3 font-bold text-red-100 md:py-4 md:px-8 text-sm md:text-lg whitespace-nowrap gap-4 items-center">
+            <a href="https://maps.app.goo.gl/Unrrg3uda7AQQs4DA" class="flex transition duration-200 rounded-2xl shadow-lg backdrop-blur-lg bg-burger-200/80 hover:bg-burger-200 border-2 border-burger-200 px-6 py-3 font-bold text-red-100 md:py-4 md:px-8 text-sm md:text-lg whitespace-nowrap gap-4 items-center">
               <MapPinIcon/> Location
             </a>
           </div>
-        </div>
-        <div class="mt-3 flex justify-center ">
-          <div class="mt-0 rounded-md shadow">
-            <a href="https://instagram.com/burgersonfleek.ca" class="flex transition duration-200 rounded-2xl backdrop-blur-lg bg-burger-300/80 hover:bg-burger-300 border-2 border-burger-300 px-6 py-3 font-bold text-red-100 md:py-4 md:px-8 text-sm md:text-lg whitespace-nowrap gap-4 items-center">
+          <div class="flex gap-2 justify-center">
+            <a href="https://instagram.com/burgersonfleek.ca" class="flex transition duration-200 rounded-2xl shadow-lg backdrop-blur-lg bg-burger-300/80 hover:bg-burger-300 border-2 border-burger-300 px-6 py-3 font-bold text-red-100 md:py-4 md:px-8 text-sm md:text-lg whitespace-nowrap gap-4 items-center">
               <InstagramIcon/> Instagram
             </a>
-          </div>
-          <div class="mt-0 ml-2 rounded-md shadow">
-            <a href="https://facebook.com/burgersonfleek.ca" class="flex transition duration-200 rounded-2xl backdrop-blur-lg bg-burger-300/80 hover:bg-burger-300 border-2 border-burger-300 px-6 py-3 font-bold text-red-100 md:py-4 md:px-8 text-sm md:text-lg whitespace-nowrap gap-4 items-center">
+            <a href="https://facebook.com/burgersonfleek.ca" class="flex transition duration-200 rounded-2xl shadow-lg backdrop-blur-lg bg-burger-300/80 hover:bg-burger-300 border-2 border-burger-300 px-6 py-3 font-bold text-red-100 md:py-4 md:px-8 text-sm md:text-lg whitespace-nowrap gap-4 items-center">
               <FacebookIcon/> Facebook
             </a>
           </div>
