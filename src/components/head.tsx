@@ -16,6 +16,7 @@ export const RouterHead = component$(() => {
       <link rel="canonical" href={loc.href} />
       <link rel="icon" href="/icon.svg" />
       <link rel="mask-icon" href="/mask-icon.svg" color="#c37f0c" />
+      <link rel="apple-touch-icon" href="/apple-icon.png" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <meta content="Burgers On Fleek" property="og:title" />
       <meta content="Premium Quality Gourmet Burgers, Steak Sandwiches, Fries, and more. Only serving Halal حلال" property="og:description" />
