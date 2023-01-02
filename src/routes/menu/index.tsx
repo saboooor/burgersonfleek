@@ -1,5 +1,5 @@
 import { component$ } from '@builder.io/qwik';
-import type { DocumentHead } from '@builder.io/qwik-city';
+import { DocumentHead } from '@builder.io/qwik-city';
 
 import drinks from '~/menuitems/drinks.json';
 import extras from '~/menuitems/extras.json';
@@ -9,31 +9,31 @@ import chickenburgers from '~/menuitems/chickenburgers.json';
 import steaksandwiches from '~/menuitems/steaksandwiches.json';
 import veggieburgers from '~/menuitems/veggieburgers.json';
 
-import * as Menu from '~/components/menu';
+import * as Menu from '~/components/Menu';
 
 export default component$(() => {
   return (
     <section class="grid gap-6 grid-cols-1 sm:grid-cols-3 lg:grid-cols-4 2xl:grid-cols-5 mx-auto max-w-screen-2xl px-4 sm:px-6 pt-12" style="min-height: calc(100vh - 64px);">
         <Menu.Nav>
-            <Menu.Item href="#beefburgers">
+            <Menu.Item id="beefburgers">
                 Beef Burgers
             </Menu.Item>
-            <Menu.Item href="#chickenburgers">
+            <Menu.Item id="chickenburgers">
                 Chicken Burgers
             </Menu.Item>
-            <Menu.Item href="#veggieburgers">
+            <Menu.Item id="veggieburgers">
                 Vegetarian Burgers
             </Menu.Item>
-            <Menu.Item href="#steaksandwiches">
+            <Menu.Item id="steaksandwiches">
                 Steak Sandwiches
             </Menu.Item>
-            <Menu.Item href="#extras">
+            <Menu.Item id="extras">
                 Extras
             </Menu.Item>
-            <Menu.Item href="#sides">
+            <Menu.Item id="sides">
                 Sides
             </Menu.Item>
-            <Menu.Item href="#drinks">
+            <Menu.Item id="drinks">
                 Drinks
             </Menu.Item>
             <Menu.Item href="/menu.pdf">
