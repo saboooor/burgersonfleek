@@ -20,7 +20,7 @@ export default component$(() => {
           <div class="absolute top-10 w-32 h-32 bg-orange-400 rounded-full opacity-10 animate-blob ease-in-out filter blur-xl" style="left: 45%"></div>
           <div class="absolute top-10 w-32 h-32 bg-amber-400 rounded-full opacity-10 animate-blob ease-in-out filter blur-xl animation-delay-2000" style="right: 50%"></div>
           <div class="absolute bottom-5 w-32 h-32 bg-yellow-400 rounded-full opacity-10 animate-blob ease-in-out filter blur-xl animation-delay-4000" style="left: 40%"></div>
-          <div class="z-10 animate-float ease-in-out" style="max-width: 60%" >
+          <div class="z-10" style="max-width: 60%" >
             <Logo width="100%" height="100%" id="mobile" />
           </div>
         </div>
