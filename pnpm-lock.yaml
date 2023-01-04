@@ -9,7 +9,7 @@ specifiers:
   '@typescript-eslint/parser': 5.47.1
   autoprefixer: 10.4.13
   eslint: 8.31.0
-  eslint-plugin-qwik: 0.16.1
+  eslint-plugin-qwik: 0.16.2
   node-fetch: 3.3.0
   postcss: 8.4.20
   qwik-feather-icons: ^1.2.0
@@ -28,7 +28,7 @@ devDependencies:
   '@typescript-eslint/parser': 5.47.1_iukboom6ndih5an6iafl45j2fe
   autoprefixer: 10.4.13_postcss@8.4.20
   eslint: 8.31.0
-  eslint-plugin-qwik: 0.16.1_eslint@8.31.0
+  eslint-plugin-qwik: 0.16.2_eslint@8.31.0
   node-fetch: 3.3.0
   postcss: 8.4.20
   qwik-feather-icons: 1.2.0
@@ -1327,8 +1327,8 @@ packages:
     engines: {node: '>=10'}
     dev: true
 
-  /eslint-plugin-qwik/0.16.1_eslint@8.31.0:
-    resolution: {integrity: sha512-4BcA8gqnFGAovMcjhjm1sekUq8P2uBjiXkrGIlXeWGwWJyUyGFzjjvb6zqknIqpxTjIWlcwYJujIj3hwgjiKFg==}
+  /eslint-plugin-qwik/0.16.2_eslint@8.31.0:
+    resolution: {integrity: sha512-Jn4J8fPr7x6ghz8eAwcDpfDkOcLdZ6rN7ZEuhQc/A+gSwGnMaDbpI3/+OIEiPeXU7GElzeUPAGyiNQtFYNJCoQ==}
     engines: {node: '>=16'}
     peerDependencies:
       eslint: '>= 8'
