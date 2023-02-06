@@ -42,7 +42,8 @@ export default component$(() => {
         </Menu.Nav>
         <div class="sm:col-span-2 lg:col-span-3 2xl:col-span-4">
             <Menu.Title id="beefburgers">Beef Burgers</Menu.Title>
-            <div class="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 pt-10 pb-6">
+            <h2 class="text-gray-400 text-xl transition duration-300">* Our beef burgers are made with premium quality meat, cut & grounded in-house & handpressed on the grill.</h2>
+            <div class="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 py-10">
                 {beefburgers.map((beefburger, i) => {
                     return (
                         <div class="bg-gray-800 border-2 border-gray-700 rounded-xl p-6 transition duration-300" style={{ transitionDelay: `${i * 20}ms` }}>
@@ -54,9 +55,9 @@ export default component$(() => {
                     )
                 })}
             </div>
-            <h2 class="text-gray-400 text-md transition duration-300 pb-10">* Our beef burgers are made with premium quality meat, cut & grounded in-house & handpressed on the grill.</h2>
             <Menu.Title id="chickenburgers">Chicken Burgers</Menu.Title>
-            <div class="grid grid-cols-2 gap-6 pt-10 pb-6">
+            <h2 class="text-gray-400 text-xl transition duration-300">* Our chicken burgers are made using boneless leg/thigh marinated in our special spice blend (mild spicy) & deep fried.</h2>
+            <div class="grid grid-cols-2 gap-6 py-10">
                 {chickenburgers.map((chickenburger, i) => {
                     return (
                         <div class="bg-gray-800 border-2 border-gray-700 rounded-xl p-6 transition duration-300" style={{ transitionDelay: `${i * 20}ms` }}>
@@ -67,7 +68,6 @@ export default component$(() => {
                     )
                 })}
             </div>
-            <h2 class="text-gray-400 text-md transition duration-300 pb-10">* Our chicken burgers are made using boneless leg/thigh marinated in our special spice blend (mild spicy) & deep fried.</h2>
             <Menu.Title id="veggieburgers">Vegetarian Burgers</Menu.Title>
             <div class="grid grid-cols-2 gap-6 py-10">
                 {veggieburgers.map((veggieburger, i) => {
