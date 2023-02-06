@@ -4,7 +4,11 @@
     "price": "$2.25"
   },
   {
-    "name": "Milkshakes",
-    "price": "$6.00"
+    "name": "Chocolate/Vanilla Milkshake",
+    "price": "$6.50"
+  },
+  {
+    "name": "Ferrero Rocher Milkshake",
+    "price": "$7.99"
   }
 ]

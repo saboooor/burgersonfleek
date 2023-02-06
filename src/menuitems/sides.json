@@ -2,43 +2,43 @@
   {
     "name": "Fries",
     "price": {
-      "medium": "$4.25",
-      "large": "$8.00"
+      "medium": "$4.50",
+      "large": "$8.50"
     }
   },
   {
     "name": "Sweet Potato Fries",
     "price": {
-      "medium": "$6.99",
-      "large": "$12.99"
+      "medium": "$7.50",
+      "large": "$14.50"
     }
   },
   {
     "name": "Onion Rings",
     "price": {
-      "medium": "$6.50",
-      "large": "$11.99"
+      "medium": "$6.99",
+      "large": "$13.50"
     }
   },
   {
     "name": "Poutine",
     "price": {
-      "medium": "$6.99",
-      "large": "$12.99"
+      "medium": "$7.75",
+      "large": "$15.00"
     }
   },
   {
     "name": "Beef Chili Cheese Fries",
     "price": {
-      "medium": "$8.99",
-      "large": "$16.99"
+      "medium": "$9.50",
+      "large": "$18.50"
     }
   },
   {
     "name": "Chicken Poutine",
     "price": {
-      "medium": "$12.50",
-      "large": "$18.00"
+      "medium": "$12.75",
+      "large": "$22.00"
     }
   }
 ]

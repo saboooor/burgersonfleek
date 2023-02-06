@@ -42,7 +42,6 @@ export default component$(() => {
         </Menu.Nav>
         <div class="sm:col-span-2 lg:col-span-3 2xl:col-span-4">
             <Menu.Title id="beefburgers">Beef Burgers</Menu.Title>
-            <h2 class="text-gray-400 text-xl transition duration-300">* Make it a combo with fries and pop for $5.50</h2>
             <div class="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 pt-10 pb-6">
                 {beefburgers.map((beefburger, i) => {
                     return (
@@ -57,7 +56,6 @@ export default component$(() => {
             </div>
             <h2 class="text-gray-400 text-md transition duration-300 pb-10">* Our beef burgers are made with premium quality meat, cut & grounded in-house & handpressed on the grill.</h2>
             <Menu.Title id="chickenburgers">Chicken Burgers</Menu.Title>
-            <h2 class="text-gray-400 text-xl transition duration-300">* Make it a combo with fries and pop for $5.50</h2>
             <div class="grid grid-cols-2 gap-6 pt-10 pb-6">
                 {chickenburgers.map((chickenburger, i) => {
                     return (
@@ -71,7 +69,6 @@ export default component$(() => {
             </div>
             <h2 class="text-gray-400 text-md transition duration-300 pb-10">* Our chicken burgers are made using boneless leg/thigh marinated in our special spice blend (mild spicy) & deep fried.</h2>
             <Menu.Title id="veggieburgers">Vegetarian Burgers</Menu.Title>
-            <h2 class="tracking-tight text-gray-400 text-xl transition duration-300" id="beefburgers">* Make it a combo with fries and pop for $5.25</h2>
             <div class="grid grid-cols-2 gap-6 py-10">
                 {veggieburgers.map((veggieburger, i) => {
                     return (
@@ -84,8 +81,7 @@ export default component$(() => {
                 })}
             </div>
             <Menu.Title id="steaksandwiches">Steak Sandwiches</Menu.Title>
-            <h2 class="tracking-tight text-gray-400 text-xl transition duration-300" id="beefburgers" style={{ filter: 'drop-shadow(0 0.5rem 3rem rgba(253, 186, 116, 1));' }}>* Make it a combo with fries and pop for $5.25</h2>
-            <div class="grid grid-cols-2 lg:grid-cols-3 gap-6 py-10">
+            <div class="grid lg:grid-cols-3 gap-6 py-10">
                 {steaksandwiches.map((steaksandwich, i) => {
                     return (
                         <div class="bg-gray-800 border-2 border-gray-700 rounded-xl p-6 transition duration-300" style={{ transitionDelay: `${i * 20}ms` }}>
@@ -111,6 +107,7 @@ export default component$(() => {
                 })}
             </div>
             <Menu.Title id="sides">Sides</Menu.Title>
+            <h2 class="text-gray-400 text-xl transition duration-300">* Add a drink for $1.50</h2>
             <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6 py-10">
                 {sides.map((side, i) => {
                     return (
@@ -125,7 +122,7 @@ export default component$(() => {
                 })}
             </div>
             <Menu.Title id="drinks">Drinks</Menu.Title>
-            <div class="grid grid-cols-2 gap-6 py-10">
+            <div class="grid lg:grid-cols-3 gap-6 py-10">
                 {drinks.map((drink, i) => {
                     return (
                         <div class="bg-gray-800 border-2 border-gray-700 rounded-xl p-6 transition duration-300" style={{ transitionDelay: `${i * 20}ms` }}>
