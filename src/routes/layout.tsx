@@ -6,7 +6,7 @@ export default component$(() => {
   return (
     <main>
       <Nav />
-      <section class="pt-16">
+      <section class="pt-20">
         <Slot />
       </section>
       <Footer />

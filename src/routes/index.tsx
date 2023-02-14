@@ -6,7 +6,7 @@ import { ClockIcon, FileTextIcon, PhoneCallIcon, MapPinIcon, InstagramIcon, Face
 
 export default component$(() => {
   return (
-    <section class="flex mx-auto max-w-6xl px-6 items-center justify-center" style="min-height: calc(100lvh - 64px - 64px);">
+    <section class="flex mx-auto max-w-6xl px-6 items-center justify-center" style="min-height: calc(100lvh - 80px - 80px);">
       <div class="hidden sm:flex relative justify-start align-center mr-auto" style="max-width: 50%;">
         <div class="absolute top-10 left-10 w-72 h-72 bg-orange-400 rounded-full opacity-10 animate-blob ease-in-out filter blur-2xl"></div>
         <div class="absolute top-10 right-10 w-72 h-72 bg-amber-400 rounded-full opacity-10 animate-blob ease-in-out filter blur-2xl animation-delay-2000"></div>
@@ -20,17 +20,19 @@ export default component$(() => {
           <div class="absolute top-10 w-32 h-32 bg-orange-400 rounded-full opacity-10 animate-blob ease-in-out filter blur-xl" style="left: 45%"></div>
           <div class="absolute top-10 w-32 h-32 bg-amber-400 rounded-full opacity-10 animate-blob ease-in-out filter blur-xl animation-delay-2000" style="right: 50%"></div>
           <div class="absolute bottom-5 w-32 h-32 bg-yellow-400 rounded-full opacity-10 animate-blob ease-in-out filter blur-xl animation-delay-4000" style="left: 40%"></div>
-          <div class="z-10" style="max-width: 60%" >
-            <Logo width="100%" height="100%" id="mobile" />
+          <div class="z-10">
+            <h1 class="font-bold tracking-tight text-orange-100 text-4xl mb-6 ease-in-out" style="filter: drop-shadow(0 2rem 2rem rgba(251, 146, 60, 0.5));">
+              The <span class="text-amber-500">burgers</span><br/>you are <span class="text-orange-300">craving.</span>
+            </h1>
           </div>
         </div>
-        <h1 class="font-bold tracking-tight text-orange-100 text-3xl sm:text-5xl mb-6 ease-in-out" style="filter: drop-shadow(0 2rem 2rem rgba(251, 146, 60, 0.5));">
+        <h1 class="hidden sm:block font-bold tracking-tight text-orange-100 text-5xl mb-6 ease-in-out" style="filter: drop-shadow(0 2rem 2rem rgba(251, 146, 60, 0.5));">
           The <span class="text-amber-500">burgers</span><br/>you are <span class="text-orange-300">craving.</span>
         </h1>
-        <h1 class="font-bold tracking-tight text-gray-100 text-xl sm:text-3xl flex gap-4 items-center justify-center">
+        <h1 class="font-bold tracking-tight text-gray-100 text-2xl sm:text-3xl flex gap-2 items-center justify-center">
           <ClockIcon/> Hours
         </h1>
-        <div class="grid grid-cols-2 mt-5 text-gray-400">
+        <div class="grid grid-cols-2 mt-5 mx-5 text-gray-400">
           <p class="text-left text-xl md:text-2xl">Monday:</p>
           <p class="text-right text-xl md:text-2xl">CLOSED</p>
           <p class="text-left text-xl md:text-2xl">Tuesday - Sunday:</p>
@@ -38,24 +40,24 @@ export default component$(() => {
         </div>
         <div class="mt-10 space-y-3 min-h-[11.25rem]">
           <div class="flex justify-center">
-            <Link href="/menu" class="flex transition duration-200 rounded-2xl shadow-lg backdrop-blur-lg bg-burger-100/80 hover:bg-burger-100 border-2 border-burger-100 px-6 py-3 font-bold text-red-100 md:py-4 md:px-8 text-sm md:text-lg whitespace-nowrap gap-4 items-center">
-              <FileTextIcon/> View the menu
+            <Link href="/menu" class="flex transition duration-200 rounded-2xl shadow-lg backdrop-blur-lg bg-burger-100/80 hover:bg-burger-100 border-2 border-burger-100 px-6 py-3 font-bold text-red-100 md:py-4 md:px-8 text-sm md:text-lg whitespace-nowrap gap-3 items-center">
+              <FileTextIcon size={18}/> View the menu
             </Link>
           </div>
           <div class="flex gap-2 justify-center">
-            <a href="tel:+1 (905) 427 4377" class="flex transition duration-200 rounded-2xl shadow-lg backdrop-blur-lg bg-burger-200/80 hover:bg-burger-200 border-2 border-burger-200 px-6 py-3 font-bold text-red-100 md:py-4 md:px-8 text-sm md:text-lg whitespace-nowrap gap-4 items-center">
-              <PhoneCallIcon/> +1 (905) 427 4377
+            <a href="tel:+1 (905) 427 4377" class="flex transition duration-200 rounded-2xl shadow-lg backdrop-blur-lg bg-burger-200/80 hover:bg-burger-200 border-2 border-burger-200 px-4 py-3 font-bold text-red-100 md:py-4 md:px-8 text-xs md:text-lg whitespace-nowrap gap-3 items-center">
+              <PhoneCallIcon size={18}/> +1 (905) 427 4377
             </a>
-            <a href="https://maps.app.goo.gl/Unrrg3uda7AQQs4DA" class="flex transition duration-200 rounded-2xl shadow-lg backdrop-blur-lg bg-burger-200/80 hover:bg-burger-200 border-2 border-burger-200 px-6 py-3 font-bold text-red-100 md:py-4 md:px-8 text-sm md:text-lg whitespace-nowrap gap-4 items-center">
-              <MapPinIcon/> Location
+            <a href="https://maps.app.goo.gl/Unrrg3uda7AQQs4DA" class="flex transition duration-200 rounded-2xl shadow-lg backdrop-blur-lg bg-burger-200/80 hover:bg-burger-200 border-2 border-burger-200 px-4 py-3 font-bold text-red-100 md:py-4 md:px-8 text-xs md:text-lg whitespace-nowrap gap-3 items-center">
+              <MapPinIcon size={18}/> Location
             </a>
           </div>
           <div class="flex gap-2 justify-center">
-            <a href="https://instagram.com/burgersonfleek.ca" class="flex transition duration-200 rounded-2xl shadow-lg backdrop-blur-lg bg-burger-300/80 hover:bg-burger-300 border-2 border-burger-300 px-6 py-3 font-bold text-red-100 md:py-4 md:px-8 text-sm md:text-lg whitespace-nowrap gap-4 items-center">
-              <InstagramIcon/> Instagram
+            <a href="https://instagram.com/burgersonfleek.ca" class="flex transition duration-200 rounded-2xl shadow-lg backdrop-blur-lg bg-burger-300/80 hover:bg-burger-300 border-2 border-burger-300 px-4 py-3 font-bold text-red-100 md:py-4 md:px-8 text-sm md:text-lg whitespace-nowrap gap-3 items-center">
+              <InstagramIcon size={18}/> Instagram
             </a>
-            <a href="https://facebook.com/burgersonfleek.ca" class="flex transition duration-200 rounded-2xl shadow-lg backdrop-blur-lg bg-burger-300/80 hover:bg-burger-300 border-2 border-burger-300 px-6 py-3 font-bold text-red-100 md:py-4 md:px-8 text-sm md:text-lg whitespace-nowrap gap-4 items-center">
-              <FacebookIcon/> Facebook
+            <a href="https://facebook.com/burgersonfleek.ca" class="flex transition duration-200 rounded-2xl shadow-lg backdrop-blur-lg bg-burger-300/80 hover:bg-burger-300 border-2 border-burger-300 px-4 py-3 font-bold text-red-100 md:py-4 md:px-8 text-sm md:text-lg whitespace-nowrap gap-3 items-center">
+              <FacebookIcon size={18}/> Facebook
             </a>
           </div>
         </div>
