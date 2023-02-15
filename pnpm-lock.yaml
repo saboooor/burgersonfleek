@@ -1,15 +1,15 @@
 lockfileVersion: 5.4
 
 specifiers:
-  '@builder.io/qwik': 0.17.5
-  '@builder.io/qwik-city': 0.1.1
-  '@types/eslint': 8.21.0
+  '@builder.io/qwik': 0.18.1
+  '@builder.io/qwik-city': 0.2.1
+  '@types/eslint': 8.21.1
   '@types/node': latest
   '@typescript-eslint/eslint-plugin': 5.52.0
   '@typescript-eslint/parser': 5.52.0
   autoprefixer: 10.4.13
   eslint: 8.34.0
-  eslint-plugin-qwik: 0.17.5
+  eslint-plugin-qwik: 0.18.1
   node-fetch: 3.3.0
   postcss: 8.4.21
   qwik-feather-icons: ^1.2.0
@@ -21,15 +21,15 @@ specifiers:
   wrangler: latest
 
 devDependencies:
-  '@builder.io/qwik': 0.17.5_undici@5.19.1
-  '@builder.io/qwik-city': 0.1.1_@builder.io+qwik@0.17.5
-  '@types/eslint': 8.21.0
+  '@builder.io/qwik': 0.18.1_undici@5.19.1
+  '@builder.io/qwik-city': 0.2.1_@builder.io+qwik@0.18.1
+  '@types/eslint': 8.21.1
   '@types/node': 18.13.0
   '@typescript-eslint/eslint-plugin': 5.52.0_6cfvjsbua5ptj65675bqcn6oza
   '@typescript-eslint/parser': 5.52.0_7kw3g6rralp5ps6mg3uyzz6azm
   autoprefixer: 10.4.13_postcss@8.4.21
   eslint: 8.34.0
-  eslint-plugin-qwik: 0.17.5_eslint@8.34.0
+  eslint-plugin-qwik: 0.18.1_eslint@8.34.0
   node-fetch: 3.3.0
   postcss: 8.4.21
   qwik-feather-icons: 1.2.0
@@ -42,23 +42,23 @@ devDependencies:
 
 packages:
 
-  /@builder.io/qwik-city/0.1.1_@builder.io+qwik@0.17.5:
-    resolution: {integrity: sha512-1KVxfAkhvxtb9hE5uzq94VoyauU6HmOkg+aiOMx0YzmOtmlvyFuzQxWkUbw/Z5trnzjTghypX5W5ON2BCJwzsA==}
+  /@builder.io/qwik-city/0.2.1_@builder.io+qwik@0.18.1:
+    resolution: {integrity: sha512-g+ZC4Neo1XYQ/8uquUp6GKwr0eagpuCyQ3LkAtFhaIARaO67+cZfR6EFLJzf9wz5AVSt8/0QSD7wJEpni1i4IA==}
     peerDependencies:
       '@builder.io/qwik': '>=0.17.0'
     dependencies:
-      '@builder.io/qwik': 0.17.5_undici@5.19.1
-      '@mdx-js/mdx': 2.2.1
+      '@builder.io/qwik': 0.18.1_undici@5.19.1
+      '@mdx-js/mdx': 2.3.0
       '@types/mdx': 2.0.3
       source-map: 0.7.4
-      vfile: 5.3.6
-      zod: 3.20.5
+      vfile: 5.3.7
+      zod: 3.20.6
     transitivePeerDependencies:
       - supports-color
     dev: true
 
-  /@builder.io/qwik/0.17.5_undici@5.19.1:
-    resolution: {integrity: sha512-eckU4GHo98hVgGfFIh72LZo2e3aj4eIvM2zDvJ+7gW1sQheiUGX70zUrKYTC4/+k6wsYp82ItwoyhJhL3SqpbQ==}
+  /@builder.io/qwik/0.18.1_undici@5.19.1:
+    resolution: {integrity: sha512-11qx5Wh6WRxgvHDJDppJORhykzkACUYuu9qRKEGdS3vTkBQ2Rr8NFDjYon2x6+8Wu9WukHk84ANywWnS91gS/w==}
     engines: {node: '>=16.8.0'}
     hasBin: true
     peerDependencies:
@@ -528,8 +528,8 @@ packages:
     resolution: {integrity: sha512-trnsAYxU3xnS1gPHPyU961coFyLkh4gAD/0zQ5mymY4yOZ+CYvsPqUbOFSw0aDM4y0tV7tiFxL/1XfXPNC6IPg==}
     dev: true
 
-  /@mdx-js/mdx/2.2.1:
-    resolution: {integrity: sha512-hZ3ex7exYLJn6FfReq8yTvA6TE53uW9UHJQM9IlSauOuS55J9y8RtA7W+dzp6Yrzr00/U1sd7q+Wf61q6SfiTQ==}
+  /@mdx-js/mdx/2.3.0:
+    resolution: {integrity: sha512-jLuwRlz8DQfQNiUCJR50Y09CGPq3fLtmtUQfVrj79E0JWu3dvsVcxVIcfhR5h0iXu+/z++zDrYeiJqifRynJkA==}
     dependencies:
       '@types/estree-jsx': 1.0.0
       '@types/mdx': 2.0.3
@@ -547,7 +547,7 @@ packages:
       unist-util-position-from-estree: 1.1.1
       unist-util-stringify-position: 3.0.2
       unist-util-visit: 4.1.1
-      vfile: 5.3.6
+      vfile: 5.3.7
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -762,8 +762,8 @@ packages:
       '@types/ms': 0.7.31
     dev: true
 
-  /@types/eslint/8.21.0:
-    resolution: {integrity: sha512-35EhHNOXgxnUgh4XCJsGhE7zdlDhYDN/aMG6UbkByCFFNgQ7b3U+uVoqBpicFydR8JEfgdjCF7SJ7MiJfzuiTA==}
+  /@types/eslint/8.21.1:
+    resolution: {integrity: sha512-rc9K8ZpVjNcLs8Fp0dkozd5Pt2Apk1glO4Vgz8ix1u6yFByxfqo5Yavpy65o+93TAe24jr7v+eSBtFLvOQtCRQ==}
     dependencies:
       '@types/estree': 1.0.0
       '@types/json-schema': 7.0.11
@@ -1356,8 +1356,8 @@ packages:
     engines: {node: '>=10'}
     dev: true
 
-  /eslint-plugin-qwik/0.17.5_eslint@8.34.0:
-    resolution: {integrity: sha512-hjqxmTtB3+fWLIIhnAC0bhGqg6uheuQYks3omyMASFsk8QCoU4lv7T4FBMDTA8p0eUVga5wfMgUMmpwe3FT5DA==}
+  /eslint-plugin-qwik/0.18.1_eslint@8.34.0:
+    resolution: {integrity: sha512-1dBx3iBpl4QdADiT3V1J8XNlcOf/3YqBl8WZc149ZfttVjbg56UMphgmqPKq0Tp4Fhw88Clf8B78U5bdF3XHig==}
     engines: {node: '>=16'}
     peerDependencies:
       eslint: '>= 8'
@@ -3037,7 +3037,7 @@ packages:
       is-buffer: 2.0.5
       is-plain-obj: 4.1.0
       trough: 2.1.0
-      vfile: 5.3.6
+      vfile: 5.3.7
     dev: true
 
   /unist-builder/3.0.0:
@@ -3141,7 +3141,7 @@ packages:
     resolution: {integrity: sha512-JDxPlTbZrZCQXogGheBHjbRWjESSPEak770XwWPfw5mTc1v1nWGLB/apzZxsx8a0SJVfF8HK8ql8RD308vXRUw==}
     dependencies:
       '@types/unist': 2.0.6
-      vfile: 5.3.6
+      vfile: 5.3.7
     dev: true
 
   /vfile-message/3.1.2:
@@ -3151,8 +3151,8 @@ packages:
       unist-util-stringify-position: 3.0.2
     dev: true
 
-  /vfile/5.3.6:
-    resolution: {integrity: sha512-ADBsmerdGBs2WYckrLBEmuETSPyTD4TuLxTrw0DvjirxW1ra4ZwkbzG8ndsv3Q57smvHxo677MHaQrY9yxH8cA==}
+  /vfile/5.3.7:
+    resolution: {integrity: sha512-r7qlzkgErKjobAmyNIkkSpizsFPYiUPuJb5pNW1RB4JcYVZhs4lIbVqk8XPk033CV/1z8ss5pkax8SuhGpcG8g==}
     dependencies:
       '@types/unist': 2.0.6
       is-buffer: 2.0.5
@@ -3302,8 +3302,8 @@ packages:
       stack-trace: 0.0.10
     dev: true
 
-  /zod/3.20.5:
-    resolution: {integrity: sha512-BTAAliwfoB9dWf2hC+TXlyWKk/YTqRGZjHQR0WLC2A2pzierWo7KuQ1ebjS4SNaFaxg/lDItzl9/QTgLjcHbgw==}
+  /zod/3.20.6:
+    resolution: {integrity: sha512-oyu0m54SGCtzh6EClBVqDDlAYRz4jrVtKwQ7ZnsEmMI9HnzuZFj8QFwAY1M5uniIYACdGvv0PBWPF2kO0aNofA==}
     dev: true
 
   /zwitch/2.0.2:
