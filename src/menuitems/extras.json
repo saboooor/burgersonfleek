@@ -1,11 +1,11 @@
 [
   {
     "name": "Beef Bacon",
-    "price": "$3.00"
+    "price": "$3.25"
   },
   {
     "name": "Fried Egg",
-    "price": "$1.50"
+    "price": "$1.75"
   },
   {
     "name": "Extra Sauce",
@@ -14,7 +14,7 @@
   {
     "name": "Cheese",
     "price": {
-      "Extra Cheese": "$1.25",
+      "Extra Cheese": "$1.50",
       "Crusted Cheese": "$3.50",
       "Melted Cheese": "$3.50"
     }
@@ -22,9 +22,9 @@
   {
     "name": "Alternative Bun",
     "price": {
-      "Gluten Free Bun": "$2.50",
-      "Grilled Cheese Bun": "$3.50",
-      "Keto Bun": "$3.00"
+      "Gluten Free Buns": "$2.50",
+      "Grilled Cheese Buns": "$3.50",
+      "Keto Buns": "$3.00"
     }
   },
   {

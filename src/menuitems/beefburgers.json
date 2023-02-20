@@ -2,25 +2,25 @@
   {
     "name": "The Basic",
     "description": "Beef patty with lettuce, tomato, pickles, sautéed onions, and On Fleek Sauce.",
-    "price": "$9.15",
-    "double": "$14.15"
+    "price": "$9.25",
+    "double": "$14.25"
   },
   {
     "name": "The Classic",
     "description": "Beef patty with cheddar cheese, lettuce, tomato, pickles, sautéed onions, and On Fleek Sauce.",
-    "price": "$10.15",
-    "double": "$16.15"
+    "price": "$10.25",
+    "double": "$16.25"
   },
   {
     "name": "Bae",
     "description": "Beef patty with cheddar cheese, beef bacon, lettuce, tomato, pickles, sautéed onions, and On Fleek Sauce.",
-    "price": "$11.15",
-    "double": "$17.15"
+    "price": "$11.25",
+    "double": "$17.25"
   },
   {
     "name": "Bromance",
     "description": "Beef patty with mozzarela cheese, topped with fried chicken thigh, grilled jalapeños, sautéed onions, lettuce, tomato, and chipotle sauce.",
-    "price": "$15.50"
+    "price": "$15.99"
   },
   {
     "name": "Godzilla",
@@ -35,26 +35,26 @@
   {
     "name": "Shook",
     "description": "Beef patty with cheddar cheese, crusted portobello mushroom stuffed with cheese, lettuce, tomato, pickles, and garlic mayo.",
-    "price": "$14.75"
+    "price": "$14.99"
   },
   {
     "name": "Snatched",
     "description": "Beef patty with mozzarella cheese, crusted cheese, lettuce, tomato, roasted peppers, guacamole, pico de gallo, and chipotle sauce.",
-    "price": "$14.75"
+    "price": "$14.99"
   },
   {
     "name": "Mood",
     "description": "Beef patty with cheddar cheese, three crusted jalapeños filled with cheese, lettuce, tomato, pickles, guacamole, pico de gallo, and chipotle sauce.",
-    "price": "$14.25"
+    "price": "$14.50"
   },
   {
     "name": "Aloha",
     "description": "Beef patty with jalapeño havarti cheese, grilled pineapple, lettuce, beef bacon, and BBQ sauce.",
-    "price": "$13.50"
+    "price": "$13.75"
   },
   {
     "name": "The Melt",
     "description": "Beef patty with swiss cheese, mushrooms, sautéed onions, lettuce, tomato, and garlic mayo.",
-    "price": "$14.25"
+    "price": "$14.50"
   }
 ]
