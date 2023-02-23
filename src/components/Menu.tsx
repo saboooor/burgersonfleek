@@ -12,7 +12,7 @@ export const Nav = component$(() => {
     );
 });
 
-export const Category = component$(({ name }) => {
+export const Category = component$(({ name }: any) => {
     return (
         <div class="space-y-4 mb-4">
             <span class="m-2">{name}</span>
