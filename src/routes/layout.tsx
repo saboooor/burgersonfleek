@@ -5,7 +5,7 @@ import Footer from '~/components/footer';
 export default component$(() => {
   return (
     <main>
-      <Nav />
+      <Nav/>
       <section class="pt-20">
         <Slot />
       </section>

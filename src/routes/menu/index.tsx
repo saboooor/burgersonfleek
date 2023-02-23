@@ -13,29 +13,35 @@ import * as Menu from '~/components/Menu';
 
 export default component$(() => {
   return (
-    <section class="grid gap-6 grid-cols-1 sm:grid-cols-3 lg:grid-cols-4 2xl:grid-cols-5 mx-auto max-w-screen-2xl px-4 sm:px-6 pt-12" style="min-height: calc(100lvh - 80px);">
+    <section class="grid gap-6 grid-cols-1 sm:grid-cols-3 lg:grid-cols-4 2xl:grid-cols-5 mx-auto max-w-screen-2xl px-4 sm:px-6 pt-6 sm:pt-12 min-h-[calc(100lvh-80px)]">
         <Menu.Nav>
-            <Menu.Item id="beefburgers">
-                Beef Burgers
-            </Menu.Item>
-            <Menu.Item id="chickenburgers">
-                Chicken Burgers
-            </Menu.Item>
-            <Menu.Item id="veggieburgers">
-                Vegetarian Burgers
-            </Menu.Item>
-            <Menu.Item id="steaksandwiches">
-                Steak Sandwiches
-            </Menu.Item>
-            <Menu.Item id="extras">
-                Extras
-            </Menu.Item>
-            <Menu.Item id="sides">
-                Sides
-            </Menu.Item>
-            <Menu.Item id="drinks">
-                Drinks
-            </Menu.Item>
+            <Menu.Category name="BURGERS">
+                <Menu.Item id="beefburgers">
+                    Beef
+                </Menu.Item>
+                <Menu.Item id="chickenburgers">
+                    Chicken
+                </Menu.Item>
+                <Menu.Item id="veggieburgers">
+                    Vegetarian
+                </Menu.Item>
+            </Menu.Category>
+            <Menu.Category name="SANDWICHES">
+                <Menu.Item id="steaksandwiches">
+                    Steak
+                </Menu.Item>
+            </Menu.Category>
+            <Menu.Category name="OTHER">
+                <Menu.Item id="extras">
+                    Extras
+                </Menu.Item>
+                <Menu.Item id="sides">
+                    Sides
+                </Menu.Item>
+                <Menu.Item id="drinks">
+                    Drinks
+                </Menu.Item>
+            </Menu.Category>
             <Menu.Item href="/menu.pdf">
                 View Paper Menu
             </Menu.Item>
@@ -139,5 +145,4 @@ export default component$(() => {
 
 export const head: DocumentHead = {
   title: 'Menu',
-
 };

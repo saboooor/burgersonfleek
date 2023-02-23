@@ -6,7 +6,7 @@ import { ClockIcon, FileTextIcon, PhoneCallIcon, MapPinIcon, InstagramIcon, Face
 
 export default component$(() => {
   return (
-    <section class="flex mx-auto max-w-6xl px-6 items-center justify-center" style="min-height: calc(100lvh - 80px);">
+    <section class="flex mx-auto max-w-6xl px-6 items-center justify-center min-h-[calc(100lvh-80px)]">
       <div class="hidden sm:flex relative justify-start align-center mr-auto" style="max-width: 50%;">
         <div class="absolute top-10 left-10 w-72 h-72 bg-orange-400 rounded-full opacity-10 animate-blob ease-in-out filter blur-2xl"></div>
         <div class="absolute top-10 right-10 w-72 h-72 bg-amber-400 rounded-full opacity-10 animate-blob ease-in-out filter blur-2xl animation-delay-2000"></div>
@@ -40,23 +40,23 @@ export default component$(() => {
         </div>
         <div class="mt-10 space-y-3 min-h-[11.25rem]">
           <div class="flex justify-center">
-            <Link href="/menu" class="flex transition duration-200 rounded-2xl shadow-lg backdrop-blur-lg bg-burger-100/80 hover:bg-burger-100 border-2 border-burger-100 px-6 py-3 font-bold text-red-100 md:py-4 md:px-8 text-sm md:text-lg whitespace-nowrap gap-3 items-center">
+            <Link href="/menu" class="flex transition duration-200 rounded-xl shadow-lg backdrop-blur-lg bg-gradient-to-b from-burger-100/80 to-burger-200/80 hover:bg-burger-100 px-6 py-3 font-bold text-red-100 md:py-4 md:px-8 text-sm md:text-lg whitespace-nowrap gap-3 items-center">
               <FileTextIcon size={18}/> View the menu
             </Link>
           </div>
           <div class="flex gap-2 justify-center">
-            <a href="tel:+1 (905) 427 4377" class="flex transition duration-200 rounded-2xl shadow-lg backdrop-blur-lg bg-burger-200/80 hover:bg-burger-200 border-2 border-burger-200 px-4 py-3 font-bold text-red-100 md:py-4 md:px-8 text-xs md:text-lg whitespace-nowrap gap-3 items-center">
+            <a href="tel:+1 (905) 427 4377" class="flex transition duration-200 rounded-xl shadow-lg backdrop-blur-lg bg-gradient-to-b from-burger-200/80 to-burger-300/80 hover:bg-burger-200 px-4 py-3 font-bold text-red-100 md:py-4 md:px-8 text-xs md:text-lg whitespace-nowrap gap-3 items-center">
               <PhoneCallIcon size={18}/> +1 (905) 427 4377
             </a>
-            <a href="https://maps.app.goo.gl/Unrrg3uda7AQQs4DA" class="flex transition duration-200 rounded-2xl shadow-lg backdrop-blur-lg bg-burger-200/80 hover:bg-burger-200 border-2 border-burger-200 px-4 py-3 font-bold text-red-100 md:py-4 md:px-8 text-xs md:text-lg whitespace-nowrap gap-3 items-center">
+            <a href="https://maps.app.goo.gl/Unrrg3uda7AQQs4DA" class="flex transition duration-200 rounded-xl shadow-lg backdrop-blur-lg bg-gradient-to-b from-burger-200/80 to-burger-300/80 hover:bg-burger-200 px-4 py-3 font-bold text-red-100 md:py-4 md:px-8 text-xs md:text-lg whitespace-nowrap gap-3 items-center">
               <MapPinIcon size={18}/> Location
             </a>
           </div>
           <div class="flex gap-2 justify-center">
-            <a href="https://instagram.com/burgersonfleek.ca" class="flex transition duration-200 rounded-2xl shadow-lg backdrop-blur-lg bg-burger-300/80 hover:bg-burger-300 border-2 border-burger-300 px-4 py-3 font-bold text-red-100 md:py-4 md:px-8 text-sm md:text-lg whitespace-nowrap gap-3 items-center">
+            <a href="https://instagram.com/burgersonfleek.ca" class="flex transition duration-200 rounded-xl shadow-lg backdrop-blur-lg bg-gradient-to-b from-burger-300/80 via-burger-300/80 to-pink-900/80 hover:bg-burger-300 px-4 py-3 font-bold text-red-100 md:py-4 md:px-8 text-sm md:text-lg whitespace-nowrap gap-3 items-center">
               <InstagramIcon size={18}/> Instagram
             </a>
-            <a href="https://facebook.com/burgersonfleek.ca" class="flex transition duration-200 rounded-2xl shadow-lg backdrop-blur-lg bg-burger-300/80 hover:bg-burger-300 border-2 border-burger-300 px-4 py-3 font-bold text-red-100 md:py-4 md:px-8 text-sm md:text-lg whitespace-nowrap gap-3 items-center">
+            <a href="https://facebook.com/burgersonfleek.ca" class="flex transition duration-200 rounded-xl shadow-lg backdrop-blur-lg bg-gradient-to-b from-burger-300/80 via-burger-300/80 to-indigo-900/80 hover:bg-burger-300 px-4 py-3 font-bold text-red-100 md:py-4 md:px-8 text-sm md:text-lg whitespace-nowrap gap-3 items-center">
               <FacebookIcon size={18}/> Facebook
             </a>
           </div>
