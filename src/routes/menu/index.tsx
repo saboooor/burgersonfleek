@@ -9,45 +9,45 @@ import chickenburgers from '~/menuitems/chickenburgers.json';
 import steaksandwiches from '~/menuitems/steaksandwiches.json';
 import veggieburgers from '~/menuitems/veggieburgers.json';
 
-import * as Menu from '~/components/Menu';
+import { MenuIndex, MenuCategory, MenuItem, MenuTitle } from '~/components/Menu';
 
 export default component$(() => {
   return (
     <section class="grid gap-6 grid-cols-1 sm:grid-cols-3 lg:grid-cols-4 2xl:grid-cols-5 mx-auto max-w-screen-2xl px-4 sm:px-6 pt-6 sm:pt-12 min-h-[calc(100lvh-80px)]">
-        <Menu.Nav>
-            <Menu.Category name="BURGERS">
-                <Menu.Item id="beefburgers">
+        <MenuIndex>
+            <MenuCategory name="BURGERS">
+                <MenuItem href="#beefburgers">
                     Beef
-                </Menu.Item>
-                <Menu.Item id="chickenburgers">
+                </MenuItem>
+                <MenuItem href="#chickenburgers">
                     Chicken
-                </Menu.Item>
-                <Menu.Item id="veggieburgers">
+                </MenuItem>
+                <MenuItem href="#veggieburgers">
                     Vegetarian
-                </Menu.Item>
-            </Menu.Category>
-            <Menu.Category name="SANDWICHES">
-                <Menu.Item id="steaksandwiches">
+                </MenuItem>
+            </MenuCategory>
+            <MenuCategory name="SANDWICHES">
+                <MenuItem href="#steaksandwiches">
                     Steak
-                </Menu.Item>
-            </Menu.Category>
-            <Menu.Category name="OTHER">
-                <Menu.Item id="extras">
+                </MenuItem>
+            </MenuCategory>
+            <MenuCategory name="OTHER">
+                <MenuItem href="#extras">
                     Extras
-                </Menu.Item>
-                <Menu.Item id="sides">
+                </MenuItem>
+                <MenuItem href="#sides">
                     Sides
-                </Menu.Item>
-                <Menu.Item id="drinks">
+                </MenuItem>
+                <MenuItem href="#drinks">
                     Drinks
-                </Menu.Item>
-            </Menu.Category>
-            <Menu.Item href="/menu.pdf">
+                </MenuItem>
+            </MenuCategory>
+            <MenuItem href="/Menupdf">
                 View Paper Menu
-            </Menu.Item>
-        </Menu.Nav>
+            </MenuItem>
+        </MenuIndex>
         <div class="sm:col-span-2 lg:col-span-3 2xl:col-span-4">
-            <Menu.Title id="beefburgers">Beef Burgers</Menu.Title>
+            <MenuTitle id="beefburgers">Beef Burgers</MenuTitle>
             <h2 class="text-gray-400 text-xl transition duration-300">* Our beef burgers are made with premium quality meat, cut & grounded in-house & handpressed on the grill.</h2>
             <div class="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 py-10">
                 {beefburgers.map((beefburger, i) => {
@@ -61,7 +61,7 @@ export default component$(() => {
                     )
                 })}
             </div>
-            <Menu.Title id="chickenburgers">Chicken Burgers</Menu.Title>
+            <MenuTitle id="chickenburgers">Chicken Burgers</MenuTitle>
             <h2 class="text-gray-400 text-xl transition duration-300">* Our chicken burgers are made using boneless leg/thigh marinated in our special spice blend (mild spicy) & deep fried.</h2>
             <div class="grid grid-cols-2 gap-6 py-10">
                 {chickenburgers.map((chickenburger, i) => {
@@ -74,7 +74,7 @@ export default component$(() => {
                     )
                 })}
             </div>
-            <Menu.Title id="veggieburgers">Vegetarian Burgers</Menu.Title>
+            <MenuTitle id="veggieburgers">Vegetarian Burgers</MenuTitle>
             <div class="grid grid-cols-2 gap-6 py-10">
                 {veggieburgers.map((veggieburger, i) => {
                     return (
@@ -86,7 +86,7 @@ export default component$(() => {
                     )
                 })}
             </div>
-            <Menu.Title id="steaksandwiches">Steak Sandwiches</Menu.Title>
+            <MenuTitle id="steaksandwiches">Steak Sandwiches</MenuTitle>
             <div class="grid lg:grid-cols-3 gap-6 py-10">
                 {steaksandwiches.map((steaksandwich, i) => {
                     return (
@@ -98,7 +98,7 @@ export default component$(() => {
                     )
                 })}
             </div>
-            <Menu.Title id="extras">Extras</Menu.Title>
+            <MenuTitle id="extras">Extras</MenuTitle>
             <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6 py-10">
                 {extras.map((extra, i) => {
                     return (
@@ -112,7 +112,7 @@ export default component$(() => {
                     )
                 })}
             </div>
-            <Menu.Title id="sides">Sides</Menu.Title>
+            <MenuTitle id="sides">Sides</MenuTitle>
             <h2 class="text-gray-400 text-xl transition duration-300">* Add a drink for $1.50</h2>
             <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6 py-10">
                 {sides.map((side, i) => {
@@ -127,7 +127,7 @@ export default component$(() => {
                     )
                 })}
             </div>
-            <Menu.Title id="drinks">Drinks</Menu.Title>
+            <MenuTitle id="drinks">Drinks</MenuTitle>
             <div class="grid lg:grid-cols-3 gap-6 py-10">
                 {drinks.map((drink, i) => {
                     return (

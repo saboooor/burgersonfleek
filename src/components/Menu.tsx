@@ -1,7 +1,6 @@
 import { component$, Slot } from '@builder.io/qwik';
-import scrollTo from '~/components/util/scrollTo';
 
-export const Nav = component$(() => {
+export const MenuIndex = component$(() => {
     return (
         <aside class="z-10 w-full sm:h-1 align-middle sm:sticky sm:top-32" aria-label="Sidebar">
             <p class="text-3xl font-bold mb-5 text-orange-200">Index</p>
@@ -12,7 +11,7 @@ export const Nav = component$(() => {
     );
 });
 
-export const Category = component$(({ name }: any) => {
+export const MenuCategory = component$(({ name }: any) => {
     return (
         <div class="space-y-4 mb-4">
             <span class="m-2">{name}</span>
@@ -24,24 +23,15 @@ export const Category = component$(({ name }: any) => {
     );
 });
 
-export const Item = component$(({ id, href }: any) => {
+export const MenuItem = component$(({ href }: any) => {
     return (
-        <>
-            { id &&
-                <div class="cursor-pointer transition duration-200 hover:bg-gray-700 hover:text-white hover:drop-shadow-2xl border-2 border-transparent hover:border-gray-600 px-4 py-2 rounded-lg text-md font-bold flex items-center gap-4" onClick$={() => scrollTo(id)}>
-                    <Slot />
-                </div>
-            }
-            { href &&
-                <a href={href} class="transition duration-200 hover:bg-gray-700 hover:text-white hover:drop-shadow-2xl border-2 border-transparent hover:border-gray-600 px-4 py-2 rounded-lg text-md font-bold flex items-center gap-4">
-                    <Slot />
-                </a>
-            }
-        </>
+        <a href={href} class="transition duration-200 hover:bg-gray-700 hover:text-white hover:drop-shadow-2xl border-2 border-transparent hover:border-gray-600 px-4 py-2 rounded-lg text-md font-bold flex items-center gap-4">
+            <Slot />
+        </a>
     );
 });
 
-export const Title = component$(({ id }: any) => {
+export const MenuTitle = component$(({ id }: any) => {
     return (
         <>
             <span id={id} class="block h-24 -mt-24" />

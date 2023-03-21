@@ -23,17 +23,17 @@ export const RouterHead = component$(() => {
       <meta content="https://burgersonfleek.ca/logo.png" property="og:image" />
       <meta content="#0D0D0D" name="theme-color" />
 
-      {head.meta.map((m) => (
+      {head.meta.map((m) => <>
         <meta {...m} />
-      ))}
+      </>)}
 
-      {head.links.map((l) => (
+      {head.links.map((l) => <>
         <link {...l} />
-      ))}
+      </>)}
 
-      {head.styles.map((s) => (
+      {head.styles.map((s) => <>
         <style {...s.props} dangerouslySetInnerHTML={s.style} />
-      ))}
+      </>)}
     </>
   );
 });
