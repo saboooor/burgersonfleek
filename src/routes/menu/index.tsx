@@ -42,7 +42,7 @@ export default component$(() => {
                     Drinks
                 </MenuItem>
             </MenuCategory>
-            <MenuItem href="/Menupdf">
+            <MenuItem href="/menu.pdf">
                 View Paper Menu
             </MenuItem>
         </MenuIndex>
