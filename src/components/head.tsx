@@ -13,7 +13,7 @@ export const RouterHead = component$(() => {
       <title>{`Burgers on Fleek - ${head.title}`}</title>
       <meta content="Premium Quality Gourmet Burgers, Steak Sandwiches, Fries, and more. Only serving Halal حلال" name="description" />
 
-      <link rel="canonical" href={loc.href} />
+      <link rel="canonical" href={loc.url.href} />
       <link rel="icon" href="/icon.svg" />
       <link rel="mask-icon" href="/mask-icon.svg" color="#c37f0c" />
       <link rel="apple-touch-icon" href="/apple-icon.png" />
