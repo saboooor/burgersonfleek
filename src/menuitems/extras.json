@@ -40,6 +40,14 @@
     "price": "$1.00"
   },
   {
+    "name": "Roasted Peppers",
+    "price": "$1.25"
+  },
+  {
+    "name": "Sautéed Onions",
+    "price": "$1.00"
+  },
+  {
     "name": "Guacamole",
     "price": "$2.00"
   },

@@ -2,25 +2,25 @@
   {
     "name": "The Basic",
     "description": "Beef patty with lettuce, tomato, pickles, sautéed onions, and On Fleek Sauce.",
-    "price": "$9.25",
-    "double": "$14.25"
+    "price": "$9.50",
+    "double": "$14.50"
   },
   {
     "name": "The Classic",
     "description": "Beef patty with cheddar cheese, lettuce, tomato, pickles, sautéed onions, and On Fleek Sauce.",
-    "price": "$10.25",
-    "double": "$16.25"
+    "price": "$10.50",
+    "double": "$16.50"
   },
   {
     "name": "Bae",
     "description": "Beef patty with cheddar cheese, beef bacon, lettuce, tomato, pickles, sautéed onions, and On Fleek Sauce.",
-    "price": "$11.25",
-    "double": "$17.25"
+    "price": "$11.50",
+    "double": "$17.50"
   },
   {
     "name": "Bromance",
     "description": "Beef patty with mozzarela cheese, topped with fried chicken thigh, grilled jalapeños, sautéed onions, lettuce, tomato, and chipotle sauce.",
-    "price": "$15.99"
+    "price": "$16.25"
   },
   {
     "name": "Godzilla",
@@ -30,7 +30,7 @@
   {
     "name": "Mashup",
     "description": "Beef patty with jalapeño havarti cheese, lettuce, tomato, pickles, onion rings, fried egg, pico de gallo, and chipotle sauce.",
-    "price": "$13.25"
+    "price": "$13.50"
   },
   {
     "name": "Shook",
@@ -45,7 +45,7 @@
   {
     "name": "Mood",
     "description": "Beef patty with cheddar cheese, three crusted jalapeños filled with cheese, lettuce, tomato, pickles, guacamole, pico de gallo, and chipotle sauce.",
-    "price": "$14.50"
+    "price": "$14.75"
   },
   {
     "name": "Aloha",
@@ -55,6 +55,6 @@
   {
     "name": "The Melt",
     "description": "Beef patty with swiss cheese, mushrooms, sautéed onions, lettuce, tomato, and garlic mayo.",
-    "price": "$14.50"
+    "price": "$14.99"
   }
 ]

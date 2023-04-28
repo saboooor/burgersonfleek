@@ -28,16 +28,9 @@
     }
   },
   {
-    "name": "Beef Chili Cheese Fries",
-    "price": {
-      "medium": "$9.50",
-      "large": "$18.50"
-    }
-  },
-  {
     "name": "Chicken Poutine",
     "price": {
-      "medium": "$12.75",
+      "medium": "$13.00",
       "large": "$22.00"
     }
   }

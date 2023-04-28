@@ -7,11 +7,11 @@
   {
     "name": "Hookup",
     "description": "Thinly sliced AAA rib-eye steak with sautéed onions, roasted peppers, mushrooms, lettuce, tomatoes, pickles, melted cheese, and garlic mayo.",
-    "price": "$16.99"
+    "price": "$17.25"
   },
   {
     "name": "Hangry",
     "description": "Thinly sliced AAA rib-eye steak with sautéed onions, roasted peppers, jalapeños, muchrooms, melted cheese, topped with fried chicken and chipotle sauce.",
-    "price": "$21.00"
+    "price": "$22.00"
   }
 ]

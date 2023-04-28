@@ -25,7 +25,7 @@ export const MenuCategory = component$(({ name }: any) => {
 
 export const MenuItem = component$(({ href }: any) => {
     return (
-        <a href={href} class="transition duration-200 hover:bg-gray-700 hover:text-white hover:drop-shadow-2xl border-2 border-transparent hover:border-gray-600 px-4 py-2 rounded-lg text-md font-bold flex items-center gap-4">
+        <a href={href} class="transition  hover:bg-gray-700 hover:text-white hover:drop-shadow-2xl border-2 border-transparent hover:border-gray-600 px-4 py-2 rounded-lg text-md font-bold flex items-center gap-4">
             <Slot />
         </a>
     );

@@ -2,7 +2,7 @@ import { component$ } from '@builder.io/qwik';
 import { DocumentHead, Link } from '@builder.io/qwik-city';
 
 import Logo from '~/components/svg/Logo';
-import { ClockIcon, FileTextIcon, PhoneCallIcon, MapPinIcon, InstagramIcon, FacebookIcon } from 'qwik-feather-icons';
+import { InClock, InOpenBook, InPhoneOutcome, InMap, InInstagram, InFacebook } from '@qwikest/icons/iconoir';
 
 export default component$(() => {
   return (
@@ -29,8 +29,8 @@ export default component$(() => {
         <h1 class="hidden sm:block font-bold tracking-tight text-orange-100 text-5xl mb-6 ease-in-out" style="filter: drop-shadow(0 2rem 2rem rgba(251, 146, 60, 0.5));">
           The <span class="text-amber-500">burgers</span><br/>you are <span class="text-orange-300">craving.</span>
         </h1>
-        <h1 class="font-bold tracking-tight text-gray-100 text-2xl sm:text-3xl flex gap-2 items-center justify-center">
-          <ClockIcon/> Hours
+        <h1 class="font-bold tracking-tight text-gray-100 text-2xl sm:text-3xl flex gap-4 items-center justify-center">
+          <InClock/> Hours
         </h1>
         <div class="grid grid-cols-2 mt-5 mx-5 text-gray-400">
           <p class="text-left text-xl md:text-2xl">Monday:</p>
@@ -40,24 +40,24 @@ export default component$(() => {
         </div>
         <div class="mt-10 space-y-3 min-h-[11.25rem]">
           <div class="flex justify-center">
-            <Link href="/menu" class="flex transition duration-200 rounded-xl shadow-lg backdrop-blur-lg bg-gradient-to-b from-burger-100/80 to-burger-200/80 hover:bg-burger-100 px-6 py-3 font-bold text-red-100 md:py-4 md:px-8 text-sm md:text-lg whitespace-nowrap gap-3 items-center">
-              <FileTextIcon size={18}/> View the menu
+            <Link href="/menu" class="flex transition rounded-xl shadow-lg backdrop-blur-lg bg-gradient-to-b from-burger-100/80 to-burger-200/80 hover:bg-burger-100 px-6 py-3 font-bold text-red-100 md:py-4 md:px-8 text-sm md:text-lg whitespace-nowrap gap-3 items-center">
+              <InOpenBook class="text-2xl"/> View the menu
             </Link>
           </div>
           <div class="flex gap-2 justify-center">
-            <a href="tel:+1 (905) 427 4377" class="flex transition duration-200 rounded-xl shadow-lg backdrop-blur-lg bg-gradient-to-b from-burger-200/80 to-burger-300/80 hover:bg-burger-200 px-4 py-3 font-bold text-red-100 md:py-4 md:px-8 text-xs md:text-lg whitespace-nowrap gap-3 items-center">
-              <PhoneCallIcon size={18}/> +1 (905) 427 4377
+            <a href="tel:+1 (905) 427 4377" class="flex transition rounded-xl shadow-lg backdrop-blur-lg bg-gradient-to-b from-burger-200/80 to-burger-300/80 hover:bg-burger-200 px-4 py-3 font-bold text-red-100 md:py-4 md:px-8 text-xs md:text-lg whitespace-nowrap gap-3 items-center">
+              <InPhoneOutcome class="text-2xl"/> +1 (905) 427 4377
             </a>
-            <a href="https://maps.app.goo.gl/Unrrg3uda7AQQs4DA" class="flex transition duration-200 rounded-xl shadow-lg backdrop-blur-lg bg-gradient-to-b from-burger-200/80 to-burger-300/80 hover:bg-burger-200 px-4 py-3 font-bold text-red-100 md:py-4 md:px-8 text-xs md:text-lg whitespace-nowrap gap-3 items-center">
-              <MapPinIcon size={18}/> Location
+            <a href="https://maps.app.goo.gl/Unrrg3uda7AQQs4DA" class="flex transition rounded-xl shadow-lg backdrop-blur-lg bg-gradient-to-b from-burger-200/80 to-burger-300/80 hover:bg-burger-200 px-4 py-3 font-bold text-red-100 md:py-4 md:px-8 text-xs md:text-lg whitespace-nowrap gap-3 items-center">
+              <InMap class="text-2xl"/> Location
             </a>
           </div>
           <div class="flex gap-2 justify-center">
-            <a href="https://instagram.com/burgersonfleek.ca" class="flex transition duration-200 rounded-xl shadow-lg backdrop-blur-lg bg-gradient-to-b from-burger-300/80 via-burger-300/80 to-pink-700/60 hover:bg-burger-300 px-4 py-3 font-bold text-red-100 md:py-4 md:px-8 text-sm md:text-lg whitespace-nowrap gap-3 items-center">
-              <InstagramIcon size={18}/> Instagram
+            <a href="https://instagram.com/burgersonfleek.ca" class="flex transition rounded-xl shadow-lg backdrop-blur-lg bg-gradient-to-b from-burger-300/80 via-burger-300/80 to-pink-700/60 hover:bg-burger-300 px-4 py-3 font-bold text-red-100 md:py-4 md:px-8 text-sm md:text-lg whitespace-nowrap gap-3 items-center">
+              <InInstagram class="text-2xl"/> Instagram
             </a>
-            <a href="https://facebook.com/burgersonfleek.ca" class="flex transition duration-200 rounded-xl shadow-lg backdrop-blur-lg bg-gradient-to-b from-burger-300/80 via-burger-300/80 to-indigo-700/60 hover:bg-burger-300 px-4 py-3 font-bold text-red-100 md:py-4 md:px-8 text-sm md:text-lg whitespace-nowrap gap-3 items-center">
-              <FacebookIcon size={18}/> Facebook
+            <a href="https://facebook.com/burgersonfleek.ca" class="flex transition rounded-xl shadow-lg backdrop-blur-lg bg-gradient-to-b from-burger-300/80 via-burger-300/80 to-indigo-700/60 hover:bg-burger-300 px-4 py-3 font-bold text-red-100 md:py-4 md:px-8 text-sm md:text-lg whitespace-nowrap gap-3 items-center">
+              <InFacebook class="text-2xl"/> Facebook
             </a>
           </div>
         </div>
