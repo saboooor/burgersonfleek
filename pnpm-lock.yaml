@@ -1,8 +1,8 @@
 lockfileVersion: 5.4
 
 specifiers:
-  '@builder.io/qwik': 0.102.0
-  '@builder.io/qwik-city': 0.102.0
+  '@builder.io/qwik': 1.0.0
+  '@builder.io/qwik-city': 1.0.0
   '@qwikest/icons': ^0.0.6
   '@types/eslint': 8.37.0
   '@types/node': latest
@@ -10,7 +10,7 @@ specifiers:
   '@typescript-eslint/parser': 5.59.1
   autoprefixer: 10.4.14
   eslint: 8.39.0
-  eslint-plugin-qwik: 0.104.0
+  eslint-plugin-qwik: 1.0.0
   node-fetch: 3.3.1
   postcss: 8.4.23
   qwik-feather-icons: ^1.2.1
@@ -23,25 +23,25 @@ specifiers:
   zod: ^3.21.4
 
 devDependencies:
-  '@builder.io/qwik': 0.102.0_undici@5.22.0
-  '@builder.io/qwik-city': 0.102.0_@builder.io+qwik@0.102.0
-  '@qwikest/icons': 0.0.6_@builder.io+qwik@0.102.0
+  '@builder.io/qwik': 1.0.0_undici@5.22.0
+  '@builder.io/qwik-city': 1.0.0
+  '@qwikest/icons': 0.0.6_@builder.io+qwik@1.0.0
   '@types/eslint': 8.37.0
-  '@types/node': 18.16.2
+  '@types/node': 18.16.3
   '@typescript-eslint/eslint-plugin': 5.59.1_2utyh6gct5glvuz6qwradubqqa
   '@typescript-eslint/parser': 5.59.1_iacogk7kkaymxepzhgcbytyi7q
   autoprefixer: 10.4.14_postcss@8.4.23
   eslint: 8.39.0
-  eslint-plugin-qwik: 0.104.0_eslint@8.39.0
+  eslint-plugin-qwik: 1.0.0_eslint@8.39.0
   node-fetch: 3.3.1
   postcss: 8.4.23
   qwik-feather-icons: 1.2.1
   tailwindcss: 3.3.2
   typescript: 5.0.4
   undici: 5.22.0
-  vite: 4.0.4_@types+node@18.16.2
+  vite: 4.0.4_@types+node@18.16.3
   vite-tsconfig-paths: 4.2.0_qo52jrbbl2xoh2ww6sewwytn4y
-  wrangler: 2.17.0
+  wrangler: 2.18.0
   zod: 3.21.4
 
 packages:
@@ -51,15 +51,12 @@ packages:
     engines: {node: '>=10'}
     dev: true
 
-  /@builder.io/qwik-city/0.102.0_@builder.io+qwik@0.102.0:
-    resolution: {integrity: sha512-41MnJVr/YNTvPR6Sl5xh8hQFRwIy30L517qWh/XjFMUHb1IXz3HLF+ER5l692YKl372CElGzPEkf31IFcdxlnA==}
+  /@builder.io/qwik-city/1.0.0:
+    resolution: {integrity: sha512-nHlDsvYHRWpSmRgg3bb93shn0p1OeMLvBYyIINitGDPxRSK1RyddtJXFAE24MlEEwzetF82xSte3SiC55oPUaQ==}
     engines: {node: '>=16.8.0 <18.0.0 || >=18.11'}
-    peerDependencies:
-      '@builder.io/qwik': '>=0.22.0'
     dependencies:
-      '@builder.io/qwik': 0.102.0_undici@5.22.0
       '@mdx-js/mdx': 2.3.0
-      '@types/mdx': 2.0.4
+      '@types/mdx': 2.0.5
       source-map: 0.7.4
       vfile: 5.3.7
       zod: 3.21.4
@@ -67,8 +64,8 @@ packages:
       - supports-color
     dev: true
 
-  /@builder.io/qwik/0.102.0_undici@5.22.0:
-    resolution: {integrity: sha512-27Q6ObitiyXtT/M0YyJdrmhCHk2VKBqFAnjuxbf1N3XivD4k8+0uMuwyPvlc3ee2s6OjfbAfzmM1YMNIf3BAjQ==}
+  /@builder.io/qwik/1.0.0_undici@5.22.0:
+    resolution: {integrity: sha512-U1eTIKTBUiW2dbPMCaTzS7K1bMCI9ovtfsvdduwnVThGXRSrX+v2X4U/UmHHPzfOjC55X5wYLc17cw5EwFBVVA==}
     engines: {node: '>=16.8.0 <18.0.0 || >=18.11'}
     hasBin: true
     peerDependencies:
@@ -416,7 +413,7 @@ packages:
     resolution: {integrity: sha512-jLuwRlz8DQfQNiUCJR50Y09CGPq3fLtmtUQfVrj79E0JWu3dvsVcxVIcfhR5h0iXu+/z++zDrYeiJqifRynJkA==}
     dependencies:
       '@types/estree-jsx': 1.0.0
-      '@types/mdx': 2.0.4
+      '@types/mdx': 2.0.5
       estree-util-build-jsx: 2.2.0
       estree-util-is-identifier-name: 2.0.1
       estree-util-to-js: 1.1.0
@@ -628,13 +625,13 @@ packages:
       fastq: 1.13.0
     dev: true
 
-  /@qwikest/icons/0.0.6_@builder.io+qwik@0.102.0:
+  /@qwikest/icons/0.0.6_@builder.io+qwik@1.0.0:
     resolution: {integrity: sha512-Du7IszdHaJcPXxtPAov9E25yB0IJR5MSFp9VUhFikF1HmL4If9GFTx5CuAb3fMbsZBdR43z32lseW1IRdp8T6A==}
     engines: {node: '>=15.0.0'}
     peerDependencies:
       '@builder.io/qwik': '>=0.19.0 <1.0.0'
     dependencies:
-      '@builder.io/qwik': 0.102.0_undici@5.22.0
+      '@builder.io/qwik': 1.0.0_undici@5.22.0
       simple-icons: 8.11.0
       tsm: 2.3.0
     dev: true
@@ -648,7 +645,7 @@ packages:
   /@types/better-sqlite3/7.6.3:
     resolution: {integrity: sha512-YS64N9SNDT/NAvou3QNdzAu3E2om/W/0dhORimtPGLef+zSK5l1vDzfsWb4xgXOgfhtOI5ZDTRxnvRPb22AIVQ==}
     dependencies:
-      '@types/node': 18.16.2
+      '@types/node': 18.16.3
     dev: true
 
   /@types/debug/4.1.7:
@@ -690,16 +687,16 @@ packages:
       '@types/unist': 2.0.6
     dev: true
 
-  /@types/mdx/2.0.4:
-    resolution: {integrity: sha512-qCYrNdpKwN6YO6FVnx+ulfqifKlE3lQGsNhvDaW9Oxzyob/cRLBJWow8GHBBD4NxQ7BVvtsATgLsX0vZAWmtrg==}
+  /@types/mdx/2.0.5:
+    resolution: {integrity: sha512-76CqzuD6Q7LC+AtbPqrvD9AqsN0k8bsYo2bM2J8pmNldP1aIPAbzUQ7QbobyXL4eLr1wK5x8FZFe8eF/ubRuBg==}
     dev: true
 
   /@types/ms/0.7.31:
     resolution: {integrity: sha512-iiUgKzV9AuaEkZqkOLDIvlQiL6ltuZd9tGcW3gwpnX8JbuiuhFlEGmmFXEXkN50Cvq7Os88IY2v0dkDqXYWVgA==}
     dev: true
 
-  /@types/node/18.16.2:
-    resolution: {integrity: sha512-GQW/JL/5Fz/0I8RpeBG9lKp0+aNcXEaVL71c0D2Q0QHDTFvlYKT7an0onCUXj85anv7b4/WesqdfchLc0jtsCg==}
+  /@types/node/18.16.3:
+    resolution: {integrity: sha512-OPs5WnnT1xkCBiuQrZA4+YAV4HEJejmHneyraIaxsbev5yCEr6KMwINNFP9wQeFIw8FWcoTqF3vQsa5CDaI+8Q==}
     dev: true
 
   /@types/semver/7.3.13:
@@ -1503,8 +1500,8 @@ packages:
     engines: {node: '>=10'}
     dev: true
 
-  /eslint-plugin-qwik/0.104.0_eslint@8.39.0:
-    resolution: {integrity: sha512-8R4kJ3yyGWmM3j/h5bYjoQ2FmG088Srkz7psIR8pdcSYXOFMadeyhTsuomn3ht50Q+WLeH48c7pC7Bo7pORA3A==}
+  /eslint-plugin-qwik/1.0.0_eslint@8.39.0:
+    resolution: {integrity: sha512-IdnMPpVMEkL/QqBEypitdEpKCZWqeu+DSfJi39FGxnCvzsKTAKGv38Ro/+AEfHgYaAV0CH3sxLzxrr05tlG3+g==}
     engines: {node: '>=16'}
     peerDependencies:
       eslint: '>= 8'
@@ -3643,13 +3640,13 @@ packages:
       debug: 4.3.4
       globrex: 0.1.2
       tsconfck: 2.1.1_typescript@5.0.4
-      vite: 4.0.4_@types+node@18.16.2
+      vite: 4.0.4_@types+node@18.16.3
     transitivePeerDependencies:
       - supports-color
       - typescript
     dev: true
 
-  /vite/4.0.4_@types+node@18.16.2:
+  /vite/4.0.4_@types+node@18.16.3:
     resolution: {integrity: sha512-xevPU7M8FU0i/80DMR+YhgrzR5KS2ORy1B4xcX/cXLsvnUWvfHuqMmVU6N0YiJ4JWGRJJsLCgjEzKjG9/GKoSw==}
     engines: {node: ^14.18.0 || >=16.0.0}
     hasBin: true
@@ -3674,7 +3671,7 @@ packages:
       terser:
         optional: true
     dependencies:
-      '@types/node': 18.16.2
+      '@types/node': 18.16.3
       esbuild: 0.16.3
       postcss: 8.4.23
       resolve: 1.22.2
@@ -3723,8 +3720,8 @@ packages:
     engines: {node: '>=0.10.0'}
     dev: true
 
-  /wrangler/2.17.0:
-    resolution: {integrity: sha512-ucmVHP5BAUVyC/18hReEKgxGSgU0EOxGd+ElHRHVBeGH6LPcsOoC1TolTaDYYnbOuZMbYmHAR5OH1agayr3kZg==}
+  /wrangler/2.18.0:
+    resolution: {integrity: sha512-e+WJ019AbioAf9u4YiOxjrfKqzOP8K3kDAM9v+lGQa+WKsae/UVcMb3Hn5iMIlIt2fc622WefZfuSNRpkAzrSA==}
     engines: {node: '>=16.13.0'}
     hasBin: true
     dependencies:
