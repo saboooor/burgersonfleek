@@ -3,7 +3,7 @@
 import { component$, Slot } from '@builder.io/qwik';
 import { Link, useNavigate } from '@builder.io/qwik-city';
 
-import { InInstagram, InFacebook, InTiktok, InNavArrowDown, InMenu, InHomeAlt, InOpenBook } from '@qwikest/icons/iconoir';
+import { LogoInstagram, LogoFacebook, LogoTiktok, ArrowDown, Menu, Home, Book } from 'qwik-ionicons'
 
 import Icon from '~/components/svg/Icon';
 
@@ -12,44 +12,44 @@ export default component$(() => {
     <Nav>
       <MainNav>
         <NavButton href="/" extraClass="hidden sm:flex">
-          <InHomeAlt class="text-2xl"/> Home
+          <Home width="24" class="fill-current" /> Home
         </NavButton>
         <NavButton href="/menu" extraClass="hidden sm:flex">
-          <InOpenBook class="text-2xl"/> Menu
+          <Book width="24" class="fill-current" /> Menu
         </NavButton>
         <NavButton external icon href="https://instagram.com/burgersonfleek.ca" title="Instagram" extraClass="hidden sm:flex">
-          <InInstagram />
+          <LogoInstagram width="24" class="fill-current" />
         </NavButton>
         <NavButton external icon href="https://facebook.com/burgersonfleek.ca" title="Facebook" extraClass="hidden sm:flex">
-          <InFacebook />
+          <LogoFacebook width="24" class="fill-current" />
         </NavButton>
         <NavButton external icon href="https://tiktok.com/@burgersonfleek.ca" title="TikTok" extraClass="hidden sm:flex">
-          <InTiktok />
+          <LogoTiktok width="24" class="fill-current" />
         </NavButton>
         <button id="mobile-menu-button" type="button" title="Menu" onClick$={() => {
           const classList = document.getElementById('mobile-menu')?.classList;
           if (classList?.contains('hidden')) classList.replace('hidden', 'flex');
           else classList?.replace('flex', 'hidden');
         }} class="transition  ease-in-out hover:bg-gray-800 hover:text-white px-4 py-2 rounded-lg text-3xl sm:hidden">
-          <InMenu />
+          <Menu width="24" class="fill-current" />
         </button>
       </MainNav>
       <MobileNav>
         <NavButton mobile href="/" extraClass="flex sm:hidden">
-          <InHomeAlt class="text-2xl"/> Home
+          <Home width="24" class="fill-current" /> Home
         </NavButton>
         <NavButton mobile href="/menu" extraClass="flex sm:hidden">
-          <InOpenBook class="text-2xl"/> Menu
+          <Book width="24" class="fill-current" /> Menu
         </NavButton>
         <div class="flex flex-row">
           <NavButton external mobile icon href="https://instagram.com/burgersonfleek.ca" title="Instagram" extraClass="flex sm:hidden">
-            <InInstagram />
+            <LogoInstagram width="24" class="fill-current" />
           </NavButton>
           <NavButton external mobile icon href="https://facebook.com/burgersonfleek.ca" title="Facebook" extraClass="flex sm:hidden">
-            <InFacebook />
+            <LogoFacebook width="24" class="fill-current" />
           </NavButton>
           <NavButton external mobile icon href="https://tiktok.com/@burgersonfleek.ca" title="TikTok" extraClass="flex sm:hidden">
-            <InTiktok />
+            <LogoTiktok width="24" class="fill-current" />
           </NavButton>
         </div>
       </MobileNav>
@@ -119,7 +119,7 @@ export const Dropdown = component$(({ name, extraClass }: any) => {
     <div class={`cursor-pointer transition  ease-in-out ${extraClass} hover:bg-gray-800 hover:text-white drop-shadow-2xl group rounded-lg items-center gap-4`}>
       <div class="px-4 py-3 flex gap-2 items-center">
         {name}
-        <InNavArrowDown class="transform group-hover:-rotate-180 transition duration-300 ease-in-out text-2xl" />
+        <ArrowDown class="transform group-hover:-rotate-180 transition duration-300 ease-in-out text-2xl" />
       </div>
       <div class="absolute top-12 left-0 z-10 hidden group-hover:flex pt-4 text-base">
         <div class="bg-black rounded-xl px-3 py-4 flex flex-col gap-2 font-medium whitespace-nowrap overflow-y-auto max-h-[calc(100svh-128px)]">
