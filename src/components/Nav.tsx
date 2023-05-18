@@ -1,21 +1,22 @@
 // LuminescentDev Navbar Component Apr 28
 
 import { component$, Slot } from '@builder.io/qwik';
-import { Link, useNavigate } from '@builder.io/qwik-city';
+import { Link, useLocation } from '@builder.io/qwik-city';
 
-import { LogoInstagram, LogoFacebook, LogoTiktok, ArrowDown, Menu, Home, Book } from 'qwik-ionicons'
+import { LogoInstagram, LogoFacebook, LogoTiktok, Menu, HomeOutline, BookOutline } from 'qwik-ionicons';
 
 import Icon from '~/components/svg/Icon';
+import LoadingIcon from './svg/LoadingIcon';
 
 export default component$(() => {
   return (
     <Nav>
       <MainNav>
-        <NavButton href="/" extraClass="hidden sm:flex">
-          <Home width="24" class="fill-current" /> Home
+        <NavButton href="/" extraClass="hidden sm:flex gap-3">
+          <HomeOutline width="24" class="fill-current" /> Home
         </NavButton>
-        <NavButton href="/menu" extraClass="hidden sm:flex">
-          <Book width="24" class="fill-current" /> Menu
+        <NavButton href="/menu" extraClass="hidden sm:flex gap-3">
+          <BookOutline width="24" class="fill-current" /> Menu
         </NavButton>
         <NavButton external icon href="https://instagram.com/burgersonfleek.ca" title="Instagram" extraClass="hidden sm:flex">
           <LogoInstagram width="24" class="fill-current" />
@@ -35,13 +36,13 @@ export default component$(() => {
         </button>
       </MainNav>
       <MobileNav>
-        <NavButton mobile href="/" extraClass="flex sm:hidden">
-          <Home width="24" class="fill-current" /> Home
+        <NavButton mobile href="/" extraClass="flex gap-3">
+          <HomeOutline width="24" class="fill-current" /> Home
         </NavButton>
-        <NavButton mobile href="/menu" extraClass="flex sm:hidden">
-          <Book width="24" class="fill-current" /> Menu
+        <NavButton mobile href="/menu" extraClass="flex gap-3">
+          <BookOutline width="24" class="fill-current" /> Menu
         </NavButton>
-        <div class="flex flex-row">
+        <div class="flex justify-evenly">
           <NavButton external mobile icon href="https://instagram.com/burgersonfleek.ca" title="Instagram" extraClass="flex sm:hidden">
             <LogoInstagram width="24" class="fill-current" />
           </NavButton>
@@ -68,10 +69,14 @@ export const Nav = component$(() => {
 });
 
 export const Brand = component$(() => {
+  const location = useLocation();
   return (
-    <div class="flex flex-1 items-center justify-start">
-      <Link href="/" class="transition  ease-in-out text-gray-300 hover:bg-gray-800 hover:text-white drop-shadow-2xl px-3 pt-3 pb-2 rounded-lg text-lg flex items-center whitespace-nowrap">
-        <Icon width={32} height={32} /> <span class="font-bold mr-1 ml-4">BURGERS</span> ON FLEEK
+    <div class="flex items-center justify-start">
+      <Link href="/" class="transition ease-in-out text-gray-300 hover:bg-gray-800 hover:text-white drop-shadow-2xl px-3 py-3 rounded-lg text-lg flex gap-2 items-center whitespace-nowrap">
+        <Icon width={32} height={32} /> <span class="font-bold ml-1">BURGERS</span> ON FLEEK
+        <div class={`${location.isNavigating ? '' : '-ml-10 opacity-0'} transition-all`}>
+          <LoadingIcon/>
+        </div>
       </Link>
     </div>
   );
@@ -98,34 +103,17 @@ export const MobileNav = component$(() => {
   );
 });
 
-export const NavButton = component$(({ href, title, icon, external, extraClass }: any) => {
-  const nav = useNavigate();
+export const NavButton = component$(({ href, title, icon, external, extraClass, style }: any) => {
   return <>
     {external &&
-      <a href={href} title={title} class={`group transition ease-in-out ${extraClass} hover:bg-gray-800 hover:text-white py-2 rounded-lg ${icon ? 'text-3xl px-2' : 'text-lg gap-4 px-4'} items-center font-bold`}>
+      <a href={href} title={title} style={style} class={`group transition ease-in-out hover:bg-gray-800 hover:text-white ${icon ? 'text-3xl px-2' : 'px-4'} py-2 rounded-lg items-center ${extraClass}`}>
         <Slot />
       </a>
     }
     {!external &&
-      <button onClick$={() => { document.getElementById('mobile-menu')?.classList.replace('flex', 'hidden'); nav(href); }} title={title} class={`group transition ease-in-out ${extraClass} hover:bg-gray-800 hover:text-white py-2 rounded-lg ${icon ? 'text-3xl px-2' : 'text-lg gap-4 px-4'} items-center font-bold`}>
+      <Link href={href} onClick$={async () => { document.getElementById('mobile-menu')?.classList.replace('flex', 'hidden'); }} title={title} style={style} class={`group transition ease-in-out hover:bg-gray-800 hover:text-white ${icon ? 'text-3xl px-2' : 'px-4'} py-2 rounded-lg items-center ${extraClass}`}>
         <Slot />
-      </button>
+      </Link>
     }
   </>;
-});
-
-export const Dropdown = component$(({ name, extraClass }: any) => {
-  return (
-    <div class={`cursor-pointer transition  ease-in-out ${extraClass} hover:bg-gray-800 hover:text-white drop-shadow-2xl group rounded-lg items-center gap-4`}>
-      <div class="px-4 py-3 flex gap-2 items-center">
-        {name}
-        <ArrowDown class="transform group-hover:-rotate-180 transition duration-300 ease-in-out text-2xl" />
-      </div>
-      <div class="absolute top-12 left-0 z-10 hidden group-hover:flex pt-4 text-base">
-        <div class="bg-black rounded-xl px-3 py-4 flex flex-col gap-2 font-medium whitespace-nowrap overflow-y-auto max-h-[calc(100svh-128px)]">
-          <Slot/>
-        </div>
-      </div>
-    </div>
-  );
 });

@@ -1,17 +1,17 @@
 import { component$ } from '@builder.io/qwik';
 
 export default component$(({ width, height }: any) => {
-    return (
-        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 338 338" width={width} height={height}>
-            <defs>
-                <linearGradient id="linear-gradient" x1="0.5" y1="1" x2="0.5" gradientUnits="objectBoundingBox" gradientTransform="rotate(10)">
-                    <stop offset="0" stop-color="rgb(94,60,15)"/>
-                    <stop offset="1" stop-color="rgb(201,128,33)"/>
-                </linearGradient>
-            </defs>
-            <g fill="url(#linear-gradient)">
-                <path transform="translate(-252,-129)" stroke="url(#linear-gradient)" stroke-width="5"
-                d="M560.7,337.1l-261.2,0.1c-3.9,0-7.5-0.9-10.7-2.5c1.3-2.3,2.8-4.5,4.7-6.4c2.6-2.7,5.7-4.9,9.3-6.4
+  return (
+    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 338 338" width={width} height={height}>
+      <defs>
+        <linearGradient id="linear-gradient" x1="0.5" y1="1" x2="0.5" gradientUnits="objectBoundingBox" gradientTransform="rotate(10)">
+          <stop offset="0" stop-color="rgb(94,60,15)"/>
+          <stop offset="1" stop-color="rgb(201,128,33)"/>
+        </linearGradient>
+      </defs>
+      <g fill="url(#linear-gradient)">
+        <path transform="translate(-252,-129)" stroke="url(#linear-gradient)" stroke-width="5"
+          d="M560.7,337.1l-261.2,0.1c-3.9,0-7.5-0.9-10.7-2.5c1.3-2.3,2.8-4.5,4.7-6.4c2.6-2.7,5.7-4.9,9.3-6.4
                     c3.5-1.5,7.4-2.4,11.7-2.4l228.1-0.4h0c10.1,0,19.3-4.1,26-10.8c6.6-6.6,10.8-15.8,10.8-26c0-10.1-4.1-19.3-10.8-26
                     c-0.2-0.2-0.4-0.4-0.6-0.6c0.7-3,1.1-6.1,1.1-9.2c0-5.9-1.3-11.9-4-17.6c-12.9-27-33.1-49-58-64.2c-24.9-15.2-54.5-23.7-86.2-23.7
                     c-31.2,0-62.9,8.9-89.8,26.1c-26.9,17.2-49.1,42.7-60.5,75.7c-0.4,1.2-0.6,2.5-0.6,3.8c0,3.1,1.3,6,3.3,8.1c2,2.1,5,3.5,8.2,3.5
@@ -26,8 +26,8 @@ export default component$(({ width, height }: any) => {
                     c-0.1,0.2-0.2,0.3-0.3,0.5C276.6,322.5,275.1,317.9,275.1,312.9z M504.8,417.6c-24.7,15.8-54.3,24.1-84,24.1
                     c-29.4,0-56.7-7.8-79.7-21.8c-22.9-14-41.4-34.1-53.3-58.8c-2-4.2-2.9-8.4-2.9-12.5c0-0.7,0.1-1.3,0.1-1.9
                     c4.4,1.9,9.2,2.9,14.3,2.9v-6.2l0,6.2l260-0.1C548.8,379.1,529.2,402,504.8,417.6z"
-                />
-            </g>
-        </svg>
-    );
+        />
+      </g>
+    </svg>
+  );
 });
