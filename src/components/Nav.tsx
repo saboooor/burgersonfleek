@@ -74,7 +74,10 @@ export const Brand = component$(() => {
     <div class="flex items-center justify-start">
       <Link href="/" class="transition ease-in-out text-gray-300 hover:bg-gray-800 hover:text-white drop-shadow-2xl px-3 py-3 rounded-lg text-lg flex gap-2 items-center whitespace-nowrap">
         <Icon width={32} height={32} /> <span class="font-bold ml-1">BURGERS</span> ON FLEEK
-        <div class={`${location.isNavigating ? '' : '-ml-10 opacity-0'} transition-all`}>
+        <div class={{
+          'transition-all': true,
+          '-ml-9 opacity-0': !location.isNavigating,
+        }}>
           <LoadingIcon/>
         </div>
       </Link>
