@@ -7,7 +7,7 @@ export default component$(() => {
     menu: false,
   });
   return (
-    <aside class="w-full align-middle sm:sticky sm:h-1 sm:top-32" aria-label="Sidebar">
+    <aside class="w-full align-middle sm:sticky sm:h-1 sm:top-32 pt-24 sm:pt-0" aria-label="Sidebar">
       <div class="flex items-center mb-8">
         <div class="flex-1">
           <p class="text-3xl font-bold text-orange-200">Menu</p>

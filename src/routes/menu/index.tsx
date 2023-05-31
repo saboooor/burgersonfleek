@@ -47,7 +47,7 @@ export default component$(() => {
             View Paper Menu
         </MenuItem>
       </Menu>
-      <div class="sm:col-span-2 lg:col-span-3 2xl:col-span-4 pt-22 sm:pt-28">
+      <div class="sm:col-span-2 lg:col-span-3 2xl:col-span-4 sm:pt-28">
         <MenuTitle id="beefburgers">Beef Burgers</MenuTitle>
         <h2 class="text-gray-400 text-xl transition">* Our beef burgers are made with premium quality meat, cut & grounded in-house & handpressed on the grill.</h2>
         <div class="flex flex-wrap gap-4 pt-5 pb-10">
