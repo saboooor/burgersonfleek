@@ -1,19 +1,27 @@
-import { component$ } from '@builder.io/qwik';
+import { component$, useStore, useVisibleTask$ } from '@builder.io/qwik';
 import type { DocumentHead } from '@builder.io/qwik-city';
-import { Link, routeLoader$ } from '@builder.io/qwik-city';
+import { Link, server$ } from '@builder.io/qwik-city';
+import type { Hours } from '@prisma/client/edge';
 import { PrismaClient } from '@prisma/client/edge';
 
 import Logo from '~/components/svg/Logo';
 import { LogoInstagram, LogoFacebook, TimeOutline, BookOutline, CallOutline, MapOutline } from 'qwik-ionicons';
+import LoadingIcon from '~/components/svg/LoadingIcon';
 
-export const useGetHours = routeLoader$(async ({ env }) => {
-  const prisma = new PrismaClient({ datasources: { db: { url: env.get('DATABASE_URL') } } });
+export const getHours = server$(async function() {
+  const prisma = new PrismaClient({ datasources: { db: { url: this.env.get('DATABASE_URL') } } });
   const hours = await prisma.hours.findMany();
   return hours;
 });
 
 export default component$(() => {
-  const hours = useGetHours();
+  const store = useStore({
+    hours: [] as Hours[],
+  });
+
+  useVisibleTask$(async () => {
+    store.hours = await getHours();
+  });
 
   return (
     <section class="flex mx-auto max-w-6xl px-6 items-center justify-center min-h-[calc(100lvh)] pt-22 sm:pt-28">
@@ -42,18 +50,18 @@ export default component$(() => {
         <h1 class="font-bold text-gray-100 text-2xl sm:text-3xl flex gap-4 items-center justify-center">
           <TimeOutline width="32" class="fill-current" /> Hours
         </h1>
-        <div class="grid grid-cols-2 mt-5 mx-5 text-gray-400">
+        <div class="flex flex-col mt-5 mx-5 text-gray-400">
           {
-            hours.value.map((day) => <>
+            store.hours[0] ? store.hours.map((day, i) => <div key={i} class="flex gap-2">
               <p class={{
                 'text-left text-xl md:text-2xl': true,
                 'text-yellow-500': day.special,
               }}>{day.day}:</p>
               <p class={{
-                'text-right text-xl md:text-2xl': true,
+                'flex-1 text-right text-xl md:text-2xl': true,
                 'text-yellow-500': day.special,
               }}>{day.closed ? 'CLOSED' : `${day.openTime} - ${day.closeTime}`}</p>
-            </>)
+            </div>) : <LoadingIcon width="36" />
           }
         </div>
         <div class="mt-10 space-y-3 min-h-[11.25rem]" style="filter: drop-shadow(0 2rem 10rem rgba(251, 146, 60, 0.5));">
