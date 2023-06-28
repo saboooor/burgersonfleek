@@ -1,11 +1,20 @@
 import { component$ } from '@builder.io/qwik';
 import type { DocumentHead } from '@builder.io/qwik-city';
-import { Link } from '@builder.io/qwik-city';
+import { Link, routeLoader$ } from '@builder.io/qwik-city';
+import { PrismaClient } from '@prisma/client/edge';
 
 import Logo from '~/components/svg/Logo';
 import { LogoInstagram, LogoFacebook, TimeOutline, BookOutline, CallOutline, MapOutline } from 'qwik-ionicons';
 
+export const useGetHours = routeLoader$(async ({ env }) => {
+  const prisma = new PrismaClient({ datasources: { db: { url: env.get('DATABASE_URL') } } });
+  const hours = await prisma.hours.findMany();
+  return hours;
+});
+
 export default component$(() => {
+  const hours = useGetHours();
+
   return (
     <section class="flex mx-auto max-w-6xl px-6 items-center justify-center min-h-[calc(100lvh)] pt-22 sm:pt-28">
       <div class="hidden sm:flex relative justify-start align-center mr-auto" style="max-width: 50%;">
@@ -34,12 +43,18 @@ export default component$(() => {
           <TimeOutline width="32" class="fill-current" /> Hours
         </h1>
         <div class="grid grid-cols-2 mt-5 mx-5 text-gray-400">
-          <p class="text-left text-xl md:text-2xl">Monday:</p>
-          <p class="text-right text-xl md:text-2xl">CLOSED</p>
-          <p class="text-left text-xl md:text-2xl">Tuesday - Sunday:</p>
-          <p class="text-right text-xl md:text-2xl">12 PM - 8:45 PM</p>
-          <p class="text-left text-xl text-yellow-500 md:text-2xl">Eid:</p>
-          <p class="text-right text-xl text-yellow-500 md:text-2xl">12 PM - 5 PM</p>
+          {
+            hours.value.map((day) => <>
+              <p class={{
+                'text-left text-xl md:text-2xl': true,
+                'text-yellow-500': day.special,
+              }}>{day.day}:</p>
+              <p class={{
+                'text-right text-xl md:text-2xl': true,
+                'text-yellow-500': day.special,
+              }}>{day.closed ? 'CLOSED' : `${day.openTime} - ${day.closeTime}`}</p>
+            </>)
+          }
         </div>
         <div class="mt-10 space-y-3 min-h-[11.25rem]" style="filter: drop-shadow(0 2rem 10rem rgba(251, 146, 60, 0.5));">
           <div class="flex justify-center">
