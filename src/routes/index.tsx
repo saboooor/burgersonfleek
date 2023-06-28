@@ -38,6 +38,8 @@ export default component$(() => {
           <p class="text-right text-xl md:text-2xl">CLOSED</p>
           <p class="text-left text-xl md:text-2xl">Tuesday - Sunday:</p>
           <p class="text-right text-xl md:text-2xl">12 PM - 8:45 PM</p>
+          <p class="text-left text-xl text-yellow-500 md:text-2xl">Eid:</p>
+          <p class="text-right text-xl text-yellow-500 md:text-2xl">12 PM - 5 PM</p>
         </div>
         <div class="mt-10 space-y-3 min-h-[11.25rem]" style="filter: drop-shadow(0 2rem 10rem rgba(251, 146, 60, 0.5));">
           <div class="flex justify-center">
