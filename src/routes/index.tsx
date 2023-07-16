@@ -79,10 +79,10 @@ export default component$(() => {
             </a>
           </div>
           <div class="flex gap-2 justify-center">
-            <a href="https://instagram.com/burgersonfleek.ca" class="flex transition rounded-xl shadow-lg backdrop-blur-lg bg-gradient-to-b from-burger-300/80 via-burger-300/80 to-pink-700/60 hover:bg-burger-300 px-4 py-3 font-bold text-red-100 md:py-4 md:px-8 text-sm md:text-lg whitespace-nowrap gap-3 items-center">
+            <a href="https://instagram.com/burgersonfleek.ca" class="flex transition rounded-xl shadow-lg backdrop-blur-lg bg-gradient-to-b from-burger-300/80 via-burger-300/80 to-pink-700/60 hover:bg-burger-300 px-4 py-3 font-bold text-red-100 md:py-4 md:px-8 text-xs md:text-lg whitespace-nowrap gap-3 items-center">
               <LogoInstagram width="24" class="fill-current" /> Instagram
             </a>
-            <a href="https://facebook.com/burgersonfleek.ca" class="flex transition rounded-xl shadow-lg backdrop-blur-lg bg-gradient-to-b from-burger-300/80 via-burger-300/80 to-indigo-700/60 hover:bg-burger-300 px-4 py-3 font-bold text-red-100 md:py-4 md:px-8 text-sm md:text-lg whitespace-nowrap gap-3 items-center">
+            <a href="https://facebook.com/burgersonfleek.ca" class="flex transition rounded-xl shadow-lg backdrop-blur-lg bg-gradient-to-b from-burger-300/80 via-burger-300/80 to-indigo-700/60 hover:bg-burger-300 px-4 py-3 font-bold text-red-100 md:py-4 md:px-8 text-xs md:text-lg whitespace-nowrap gap-3 items-center">
               <LogoFacebook width="24" class="fill-current" /> Facebook
             </a>
           </div>
