@@ -2,16 +2,16 @@
   {
     "name": "Lowkey",
     "description": "Thinly sliced AAA rib-eye steak with sautéed onions, lettuce, tomatoes, pickles, and On Fleek Sauce.",
-    "price": "$13.99"
+    "price": "$14.25"
   },
   {
     "name": "Hookup",
     "description": "Thinly sliced AAA rib-eye steak with sautéed onions, roasted peppers, mushrooms, lettuce, tomatoes, pickles, melted cheese, and garlic mayo.",
-    "price": "$17.35"
+    "price": "$17.50"
   },
   {
     "name": "Hangry",
     "description": "Thinly sliced AAA rib-eye steak with sautéed onions, roasted peppers, jalapeños, muchrooms, melted cheese, topped with fried chicken and chipotle sauce.",
-    "price": "$22.00"
+    "price": "$23.00"
   }
 ]

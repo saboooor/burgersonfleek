@@ -128,6 +128,7 @@ export default component$(() => {
                 Medium: <span class="text-amber-400">{side.price.medium}</span><br/>
                 Large: <span class="text-amber-400">{side.price.large}</span>
               </p>
+              {side.description && <p class="text-gray-400 text-md mt-4">{side.description}</p>}
             </Card>;
           })}
         </div>

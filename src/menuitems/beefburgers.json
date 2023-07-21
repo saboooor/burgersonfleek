@@ -35,26 +35,31 @@
   {
     "name": "Shook",
     "description": "Beef patty with cheddar cheese, crusted portobello mushroom stuffed with cheese, lettuce, tomato, pickles, and garlic mayo.",
-    "price": "$14.99"
+    "price": "$15.50"
   },
   {
     "name": "Snatched",
     "description": "Beef patty with mozzarella cheese, crusted cheese, lettuce, tomato, roasted peppers, guacamole, pico de gallo, and chipotle sauce.",
-    "price": "$14.99"
+    "price": "$15.15"
   },
   {
     "name": "Mood",
     "description": "Beef patty with cheddar cheese, three crusted jalapeños filled with cheese, lettuce, tomato, pickles, guacamole, pico de gallo, and chipotle sauce.",
-    "price": "$14.85"
+    "price": "$15.15"
   },
   {
     "name": "Aloha",
     "description": "Beef patty with jalapeño havarti cheese, grilled pineapple, lettuce, beef bacon, and BBQ sauce.",
-    "price": "$13.85"
+    "price": "$13.95"
   },
   {
     "name": "The Melt",
     "description": "Beef patty with swiss cheese, mushrooms, sautéed onions, lettuce, tomato, and garlic mayo.",
     "price": "$14.99"
+  },
+  {
+    "name": "Pick Me - New!",
+    "description": "Pulled beef brisket with sautéed onions, mayo, and smoky BBQ sauce.",
+    "price": "$9.99"
   }
 ]

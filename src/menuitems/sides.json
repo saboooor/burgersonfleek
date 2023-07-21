@@ -29,6 +29,15 @@
   },
   {
     "name": "Chicken Poutine",
+    "description": "Topped with fried chicken.",
+    "price": {
+      "medium": "$14.00",
+      "large": "$23.00"
+    }
+  },
+  {
+    "name": "Pulled Beef Brisket Poutine - New!",
+    "description": "Topped with pulled beef brisket and smoky BBQ sauce.",
     "price": {
       "medium": "$14.00",
       "large": "$23.00"
