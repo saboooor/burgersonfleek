@@ -1,26 +1,34 @@
 import { component$ } from '@builder.io/qwik';
 import { routeLoader$, server$ } from '@builder.io/qwik-city';
 import { PrismaClient } from '@prisma/client/edge';
+import { withAccelerate } from '@prisma/extension-accelerate';
 import { TrashBinOutline } from 'qwik-ionicons';
 import { Button } from '~/components/Button';
 import Checkbox from '~/components/Checkbox';
 import TextInput from '~/components/TextInput';
 
 export const useGetAuth = routeLoader$(async ({ env, cookie, redirect }) => {
-  const prisma = new PrismaClient({ datasources: { db: { url: env.get('DATABASE_URL') } } });
+  const prisma = new PrismaClient({
+    datasources: { db: { url: env.get('DATABASE_URL') } },
+  }).$extends(withAccelerate());
   const sid = cookie.get('session');
   if (!sid?.value) throw redirect(302, '/login');
   const session = await prisma.sessions.findUnique({
     where: {
       token: sid.value,
     },
+    cacheStrategy: { ttl: 3600 },
   });
   if (!session) throw redirect(302, '/login');
 });
 
 export const useGetHours = routeLoader$(async ({ env }) => {
-  const prisma = new PrismaClient({ datasources: { db: { url: env.get('DATABASE_URL') } } });
-  const hours = await prisma.hours.findMany();
+  const prisma = new PrismaClient({
+    datasources: { db: { url: env.get('DATABASE_URL') } },
+  }).$extends(withAccelerate());
+  const hours = await prisma.hours.findMany({
+    cacheStrategy: { ttl: 3600 },
+  });
   return hours;
 });
 

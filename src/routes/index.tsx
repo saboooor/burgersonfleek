@@ -3,14 +3,19 @@ import type { DocumentHead } from '@builder.io/qwik-city';
 import { Link, server$ } from '@builder.io/qwik-city';
 import type { Hours } from '@prisma/client/edge';
 import { PrismaClient } from '@prisma/client/edge';
+import { withAccelerate } from '@prisma/extension-accelerate';
 
 import Logo from '~/components/svg/Logo';
 import { LogoInstagram, LogoFacebook, TimeOutline, BookOutline, CallOutline, MapOutline } from 'qwik-ionicons';
 import LoadingIcon from '~/components/svg/LoadingIcon';
 
 export const getHours = server$(async function() {
-  const prisma = new PrismaClient({ datasources: { db: { url: this.env.get('DATABASE_URL') } } });
-  const hours = await prisma.hours.findMany();
+  const prisma = new PrismaClient({
+    datasources: { db: { url: this.env.get('DATABASE_URL') } },
+  }).$extends(withAccelerate());
+  const hours = await prisma.hours.findMany({
+    cacheStrategy: { ttl: 3600 },
+  });
   return hours;
 });
 

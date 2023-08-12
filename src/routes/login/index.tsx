@@ -2,12 +2,15 @@ import { component$, useStore } from '@builder.io/qwik';
 import { server$ } from '@builder.io/qwik-city';
 import { v4 } from 'uuid';
 import { PrismaClient } from '@prisma/client/edge';
+import { withAccelerate } from '@prisma/extension-accelerate';
 import { Button } from '~/components/Button';
 import TextInput from '~/components/TextInput';
 import LoadingIcon from '~/components/svg/LoadingIcon';
 
 export const login = server$(async function(email: string, password: string) {
-  const prisma = new PrismaClient({ datasources: { db: { url: this.env.get('DATABASE_URL') } } });
+  const prisma = new PrismaClient({
+    datasources: { db: { url: this.env.get('DATABASE_URL') } },
+  }).$extends(withAccelerate());
   const user = await prisma.users.findUnique({
     where: {
       email_password: {
@@ -15,6 +18,7 @@ export const login = server$(async function(email: string, password: string) {
         password,
       },
     },
+    cacheStrategy: { ttl: 3600 },
   });
   if (!user) throw new Error('Invalid email or password');
   const sid = v4();
