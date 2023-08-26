@@ -26,9 +26,7 @@ export const useGetHours = routeLoader$(async ({ env }) => {
   const prisma = new PrismaClient({
     datasources: { db: { url: env.get('DATABASE_URL') } },
   }).$extends(withAccelerate());
-  const hours = await prisma.hours.findMany({
-    cacheStrategy: { ttl: 3600 },
-  });
+  const hours = await prisma.hours.findMany();
   return hours;
 });
 
