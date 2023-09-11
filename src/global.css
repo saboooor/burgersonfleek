@@ -15,6 +15,16 @@
   .animation-delay-4000 { animation-delay: 4s; }
 }
 
+@font-face {
+  font-family: Futura Book;
+  src: url(/fonts/FuturaBook.ttf);
+  font-display: swap;
+}
+
+.font-futura {
+  font-family: Futura Book;
+}
+
 html {
   overflow: overlay;
   background-color: hsl(0deg, 0%, 5%);

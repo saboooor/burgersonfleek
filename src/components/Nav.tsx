@@ -3,7 +3,7 @@
 import { component$, Slot } from '@builder.io/qwik';
 import { Link, useLocation } from '@builder.io/qwik-city';
 
-import { LogoInstagram, LogoFacebook, LogoTiktok, Menu, HomeOutline, BookOutline } from 'qwik-ionicons';
+import { LogoInstagram, LogoFacebook, LogoTiktok, Menu, HomeOutline, BookOutline, MapOutline } from 'qwik-ionicons';
 
 import Icon from '~/components/svg/Icon';
 import LoadingIcon from './svg/LoadingIcon';
@@ -13,10 +13,10 @@ export default component$(() => {
     <Nav>
       <MainNav>
         <NavButton href="/" extraClass="hidden sm:flex gap-3">
-          <HomeOutline width="24" class="fill-current" /> Home
+          <HomeOutline width="24" class="fill-current" /> HOME
         </NavButton>
         <NavButton href="/menu" extraClass="hidden sm:flex gap-3">
-          <BookOutline width="24" class="fill-current" /> Menu
+          <BookOutline width="24" class="fill-current" /> MENU
         </NavButton>
         <NavButton external icon href="https://instagram.com/burgersonfleek.ca" title="Instagram" extraClass="hidden sm:flex">
           <LogoInstagram width="24" class="fill-current" />
@@ -26,6 +26,9 @@ export default component$(() => {
         </NavButton>
         <NavButton external icon href="https://tiktok.com/@burgersonfleek.ca" title="TikTok" extraClass="hidden sm:flex">
           <LogoTiktok width="24" class="fill-current" />
+        </NavButton>
+        <NavButton external icon href="https://maps.app.goo.gl/Unrrg3uda7AQQs4DA" title="TikTok" extraClass="hidden sm:flex">
+          <MapOutline width="24" class="fill-current" />
         </NavButton>
         <button id="mobile-menu-button" type="button" title="Menu" onClick$={() => {
           const classList = document.getElementById('mobile-menu')?.classList;
@@ -52,6 +55,9 @@ export default component$(() => {
           <NavButton external mobile icon href="https://tiktok.com/@burgersonfleek.ca" title="TikTok" extraClass="flex sm:hidden">
             <LogoTiktok width="24" class="fill-current" />
           </NavButton>
+          <NavButton external mobile icon href="https://maps.app.goo.gl/Unrrg3uda7AQQs4DA" title="TikTok" extraClass="flex sm:hidden">
+            <MapOutline width="24" class="fill-current" />
+          </NavButton>
         </div>
       </MobileNav>
     </Nav>
@@ -61,7 +67,7 @@ export default component$(() => {
 export const Nav = component$(() => {
   return (
     <nav class="z-20 fixed top-0 w-screen py-2 bg-gray-900/70 backdrop-blur-xl">
-      <div class="mx-auto max-w-7xl px-4 lg:px-6">
+      <div class="mx-auto max-w-7xl px-4 lg:px-6 font-futura tracking-wider">
         <Slot />
       </div>
     </nav>
@@ -72,11 +78,14 @@ export const Brand = component$(() => {
   const location = useLocation();
   return (
     <div class="flex items-center justify-start">
-      <Link href="/" class="transition ease-in-out text-gray-300 hover:bg-gray-800 hover:text-white drop-shadow-2xl px-3 py-3 rounded-lg text-lg flex gap-2 items-center whitespace-nowrap">
-        <Icon width={32} height={32} /> <span class="font-bold ml-1">BURGERS</span> ON FLEEK
+      <Link href="/" class="transition ease-in-out text-gray-300 hover:bg-gray-800 hover:text-white drop-shadow-2xl px-3 py-3 rounded-lg text-lg flex tracking-wider items-center">
+        <Icon width={32} height={32} />
+        <p class="ml-1 mt-0.5 space-x-1 whitespace-nowrap font-futura">
+          <span class="font-bold ml-2">BURGERS</span><span>ON</span><span>FLEEK</span>
+        </p>
         <div class={{
           'transition-all': true,
-          '-ml-9 opacity-0': !location.isNavigating,
+          '-ml-7 opacity-0': !location.isNavigating,
         }}>
           <LoadingIcon/>
         </div>

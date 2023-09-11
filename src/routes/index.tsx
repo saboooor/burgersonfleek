@@ -22,7 +22,7 @@ export default component$(() => {
           <div class="absolute top-10 w-32 h-32 bg-amber-400 rounded-full opacity-10 animate-blob ease-in-out filter blur-xl animation-delay-2000" style="right: 50%"></div>
           <div class="absolute bottom-5 w-32 h-32 bg-yellow-400 rounded-full opacity-10 animate-blob ease-in-out filter blur-xl animation-delay-4000" style="left: 40%"></div>
           <div class="z-10">
-            <h1 class="font-bold text-orange-100 text-4xl" style="filter: drop-shadow(0 2rem 2rem rgba(251, 146, 60, 0.5));">
+            <h1 class="font-bold text-orange-100 text-4xl font-futura tracking-wider" style="filter: drop-shadow(0 2rem 2rem rgba(251, 146, 60, 0.5));">
               The <span class="text-amber-500">burgers</span><br/>you are <span class="text-orange-300">craving.</span>
             </h1>
           </div>

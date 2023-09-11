@@ -7,10 +7,10 @@ export default component$(() => {
     menu: false,
   });
   return (
-    <aside class="w-full align-middle sm:sticky sm:h-1 sm:top-32 pt-24 sm:pt-0" aria-label="Sidebar">
+    <aside class="w-full align-middle sm:sticky sm:h-1 sm:top-32 pt-24 sm:pt-0 font-futura tracking-wider" aria-label="Sidebar">
       <div class="flex items-center mb-8">
         <div class="flex-1">
-          <p class="text-3xl font-bold text-orange-200">Menu</p>
+          <p class="text-3xl font-bold text-orange-200">MENU</p>
         </div>
         <Button extraClass="sm:hidden" onClick$={() => menuStore.menu = !menuStore.menu}>
           <Menu width="24"/>
@@ -47,7 +47,7 @@ export const MenuTitle = component$(({ id }: any) => {
   return (
     <>
       <span id={id} class="block h-24 -mt-24" />
-      <h1 class="font-bold text-orange-200 text-4xl transition" id={id}>
+      <h1 class="font-bold text-orange-200 text-4xl transition font-futura tracking-wider" id={id}>
         <Slot />
       </h1>
     </>
