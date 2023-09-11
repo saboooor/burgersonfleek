@@ -3,7 +3,7 @@ import type { DocumentHead } from '@builder.io/qwik-city';
 import { Link } from '@builder.io/qwik-city';
 
 import Logo from '~/components/svg/Logo';
-import { LogoInstagram, LogoFacebook, TimeOutline, BookOutline, CallOutline, MapOutline } from 'qwik-ionicons';
+import { LogoInstagram, LogoFacebook, BookOutline, CallOutline, MapOutline } from 'qwik-ionicons';
 
 export default component$(() => {
   return (
