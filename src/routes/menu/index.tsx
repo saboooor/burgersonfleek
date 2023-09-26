@@ -53,7 +53,7 @@ export default component$(() => {
         <div class="flex flex-wrap gap-4 pt-5 pb-10">
           {beefburgers.map((beefburger, i) => {
             return <Card key={i}>
-              <CardHeader>{beefburger.name}</CardHeader>
+              <CardHeader bestSeller={beefburger.bestseller}>{beefburger.name}</CardHeader>
               <p class="text-amber-400 text-md">
                 {beefburger.double && <span class="text-gray-400">Single: </span>}{beefburger.price}
                 {beefburger.double && <><br/><span class="text-gray-400">Double: </span>{beefburger.double}</>}
@@ -67,7 +67,7 @@ export default component$(() => {
         <div class="flex flex-wrap gap-4 pt-5 pb-10">
           {chickenburgers.map((chickenburger, i) => {
             return <Card key={i}>
-              <CardHeader>{chickenburger.name}</CardHeader>
+              <CardHeader bestSeller={chickenburger.bestseller}>{chickenburger.name}</CardHeader>
               <p class="text-amber-400 text-md">
                 {chickenburger.price}
               </p>
@@ -91,7 +91,7 @@ export default component$(() => {
         <div class="flex flex-wrap gap-4 pt-5 pb-10">
           {steaksandwiches.map((steaksandwich, i) => {
             return <Card key={i}>
-              <CardHeader>{steaksandwich.name}</CardHeader>
+              <CardHeader bestSeller={steaksandwich.bestseller}>{steaksandwich.name}</CardHeader>
               <p class="text-amber-400 text-md">
                 {steaksandwich.price}
               </p>

@@ -17,11 +17,16 @@ export default component$(({ extraClass, row, squish, fit, darker, contextMenu }
   );
 });
 
-export const CardHeader = component$(() => {
+export const CardHeader = component$(({ bestSeller }: any) => {
   return (
     <h1 class="flex font-bold text-gray-100 text-2xl mb-2 font-futura tracking-wider">
       <div class="flex items-center gap-3 flex-1">
         <Slot />
+        {bestSeller &&
+          <span class="text-sm bg-burger-100 rounded-lg px-3 py-1">
+            Best Seller
+          </span>
+        }
       </div>
     </h1>
   );

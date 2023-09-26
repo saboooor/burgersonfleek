@@ -7,6 +7,7 @@
   {
     "name": "G.O.A.T",
     "description": "Fried chicken burger (dark meat) with melted cheese, lettuce, tomato, roasted peppers, pico de gallo, chipotle sauce, and garlic mayo.",
-    "price": "$17.25"
+    "price": "$17.35",
+    "bestseller": true  
   }
 ]
