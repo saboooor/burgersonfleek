@@ -5,7 +5,7 @@ export default component$(({ width, height }: any) => {
     <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 460 460" width={width} height={height}>
       <path transform="translate(-30,-30)" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="20" d="M80 176a16 16 0 00-16 16v216c0 30.24 25.76 56 56 56h272c30.24 0 56-24.51 56-54.75V192a16 16 0 00-16-16zM160 176v-32a96 96 0 0196-96h0a96 96 0 0196 96v32"/>
       <g fill="currentColor" transform="scale(0.75)">
-        <path transform="translate(-120,100)" stroke="currentColor" stroke-width="12"
+        <path transform="translate(-120,90)" stroke="currentColor" stroke-width="12"
           d="M560.7,337.1l-261.2,0.1c-3.9,0-7.5-0.9-10.7-2.5c1.3-2.3,2.8-4.5,4.7-6.4c2.6-2.7,5.7-4.9,9.3-6.4
                   c3.5-1.5,7.4-2.4,11.7-2.4l228.1-0.4h0c10.1,0,19.3-4.1,26-10.8c6.6-6.6,10.8-15.8,10.8-26c0-10.1-4.1-19.3-10.8-26
                   c-0.2-0.2-0.4-0.4-0.6-0.6c0.7-3,1.1-6.1,1.1-9.2c0-5.9-1.3-11.9-4-17.6c-12.9-27-33.1-49-58-64.2c-24.9-15.2-54.5-23.7-86.2-23.7
