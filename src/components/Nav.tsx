@@ -5,8 +5,8 @@ import { Link, useLocation } from '@builder.io/qwik-city';
 
 import { LogoInstagram, LogoFacebook, LogoTiktok, Menu, HomeOutline, BookOutline, MapOutline } from 'qwik-ionicons';
 
-import LogoDoorDash from '~/components/svg/DoorDash';
 import Icon from '~/components/svg/Icon';
+import IconWhite from '~/components/svg/IconInBag';
 import LoadingIcon from './svg/LoadingIcon';
 
 export default component$(() => {
@@ -20,7 +20,7 @@ export default component$(() => {
           <BookOutline width="24" class="fill-current" /> MENU
         </NavButton>
         <NavButton external href="https://burgersonfleek.order.online/store/25869825" extraClass="hidden sm:flex gap-3">
-          <LogoDoorDash width="24" class="fill-current" /> ORDER
+          <IconWhite width="24" class="fill-current" /> ORDER
         </NavButton>
         <NavButton external icon href="https://instagram.com/burgersonfleek.ca" title="Instagram" extraClass="hidden sm:flex">
           <LogoInstagram width="24" class="fill-current" />
@@ -50,7 +50,7 @@ export default component$(() => {
           <BookOutline width="24" class="fill-current" /> MENU
         </NavButton>
         <NavButton external mobile href="https://burgersonfleek.order.online/store/25869825" extraClass="flex gap-3">
-          <LogoDoorDash width="24" class="fill-current" /> ORDER
+          <IconWhite width="24" class="fill-current" /> ORDER
         </NavButton>
         <div class="flex justify-evenly">
           <NavButton external mobile icon href="https://instagram.com/burgersonfleek.ca" title="Instagram" extraClass="flex sm:hidden">

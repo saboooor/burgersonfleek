@@ -1,7 +1,7 @@
 import { component$, Slot, useStore } from '@builder.io/qwik';
 import { Button } from './Button';
 import { Menu } from 'qwik-ionicons';
-import LogoDoorDash from '~/components/svg/DoorDash';
+import IconWhite from './svg/IconInBag';
 
 export default component$(() => {
   const menuStore = useStore({
@@ -20,13 +20,13 @@ export default component$(() => {
       <div class={`overflow-y-auto ${!menuStore.menu ? 'hidden sm:' : ''}flex flex-col py-4 px-3 rounded-xl bg-gray-800 border border-gray-700 max-h-[calc(100dvh-400px)]`}>
         <Slot />
       </div>
-      <div class="font-futura bg-burger-200/30 border border-burger-200/60 rounded-xl backdrop-blur-lg p-6 mt-4">
+      <div class="font-futura bg-burger-200/30 border border-burger-200/60 rounded-xl backdrop-blur-lg p-6 mt-4 hidden sm:block">
         <div class="flex flex-col gap-5">
           <h2 class="text-lg sm:text-2xl font-bold">
             Feeling Hungry?
           </h2>
           <a href="https://burgersonfleek.order.online/store/25869825" class="flex transition rounded-xl shadow-lg backdrop-blur-lg bg-gradient-to-b from-burger-100/80 to-burger-200/80 hover:bg-burger-100 px-6 py-3 font-bold text-red-100 md:py-4 md:px-8 text-sm md:text-lg whitespace-nowrap gap-3 items-center">
-            <LogoDoorDash width="24" class="fill-current" /> Order Online
+            <IconWhite width="24" class="fill-current" /> Order Online
           </a>
         </div>
       </div>

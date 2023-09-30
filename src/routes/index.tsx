@@ -3,7 +3,7 @@ import type { DocumentHead } from '@builder.io/qwik-city';
 import { Link } from '@builder.io/qwik-city';
 
 import Logo from '~/components/svg/Logo';
-import LogoDoorDash from '~/components/svg/DoorDash';
+import IconWhite from '~/components/svg/IconInBag';
 import { LogoInstagram, LogoFacebook, BookOutline, CallOutline, MapOutline } from 'qwik-ionicons';
 
 export default component$(() => {
@@ -40,7 +40,7 @@ export default component$(() => {
               <BookOutline width="24" class="fill-current" /> View the menu
             </Link>
             <a href="https://burgersonfleek.order.online/store/25869825" class="flex transition rounded-xl shadow-lg backdrop-blur-lg bg-gradient-to-b from-burger-100/80 to-burger-200/80 hover:bg-burger-100 px-6 py-3 font-bold text-red-100 md:py-4 md:px-8 text-sm md:text-lg whitespace-nowrap gap-3 items-center">
-              <LogoDoorDash width="24" class="fill-current" /> Order Online
+              <IconWhite width="24" class="fill-current" /> Order Online
             </a>
           </div>
           <div class="flex gap-2 justify-center">
