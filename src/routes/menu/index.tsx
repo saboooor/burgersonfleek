@@ -11,9 +11,10 @@ import veggieburgers from '~/menuitems/veggieburgers.json';
 
 import Menu, { MenuCategory, MenuItem, MenuTitle } from '~/components/Menu';
 import Card, { CardHeader } from '~/components/Card';
+import OrderPopup from '~/components/OrderPopup';
 
 export default component$(() => {
-  return (
+  return <>
     <section class="grid gap-4 grid-cols-1 sm:grid-cols-3 lg:grid-cols-4 2xl:grid-cols-5 mx-auto max-w-screen-2xl px-4 sm:px-6 min-h-[calc(100lvh-80px)]">
       <Menu>
         <MenuCategory name="BURGERS">
@@ -143,7 +144,8 @@ export default component$(() => {
         </div>
       </div>
     </section>
-  );
+    <OrderPopup/>
+  </>;
 });
 
 export const head: DocumentHead = {

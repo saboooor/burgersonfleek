@@ -3,6 +3,7 @@ import type { DocumentHead } from '@builder.io/qwik-city';
 import { Link } from '@builder.io/qwik-city';
 
 import Logo from '~/components/svg/Logo';
+import LogoDoorDash from '~/components/svg/DoorDash';
 import { LogoInstagram, LogoFacebook, BookOutline, CallOutline, MapOutline } from 'qwik-ionicons';
 
 export default component$(() => {
@@ -33,11 +34,14 @@ export default component$(() => {
         <p class="text-gray-400 text-lg mx-6 md:mx-20 md:text-xl">
           Premium Quality Gourmet Burgers, Steak Sandwiches, Fries, and more. Only serving Halal حلال
         </p>
-        <div class="mt-10 space-y-3 min-h-[11.25rem]" style="filter: drop-shadow(0 2rem 10rem rgba(251, 146, 60, 0.5));">
-          <div class="flex justify-center">
+        <div class="mt-10 space-y-3 min-h-[11.25rem] font-futura" style="filter: drop-shadow(0 2rem 10rem rgba(251, 146, 60, 0.5));">
+          <div class="flex gap-2 justify-center">
             <Link href="/menu" class="flex transition rounded-xl shadow-lg backdrop-blur-lg bg-gradient-to-b from-burger-100/80 to-burger-200/80 hover:bg-burger-100 px-6 py-3 font-bold text-red-100 md:py-4 md:px-8 text-sm md:text-lg whitespace-nowrap gap-3 items-center">
               <BookOutline width="24" class="fill-current" /> View the menu
             </Link>
+            <a href="https://burgersonfleek.order.online/store/25869825" class="flex transition rounded-xl shadow-lg backdrop-blur-lg bg-gradient-to-b from-burger-100/80 to-burger-200/80 hover:bg-burger-100 px-6 py-3 font-bold text-red-100 md:py-4 md:px-8 text-sm md:text-lg whitespace-nowrap gap-3 items-center">
+              <LogoDoorDash width="24" class="fill-current" /> Order Online
+            </a>
           </div>
           <div class="flex gap-2 justify-center">
             <a href="tel:+1 (905) 427 4377" class="flex transition rounded-xl shadow-lg backdrop-blur-lg bg-gradient-to-b from-burger-200/80 to-burger-300/80 hover:bg-burger-200 px-4 py-3 font-bold text-red-100 md:py-4 md:px-8 text-xs md:text-lg whitespace-nowrap gap-3 items-center">
