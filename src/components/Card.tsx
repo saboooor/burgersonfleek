@@ -5,7 +5,7 @@ export default component$(({ extraClass, row, squish, fit, darker, contextMenu }
   return (
     <div class={{
       'flex border border-gray-700/80 rounded-xl p-6': true,
-      'bg-gray-850': !darker,
+      'bg-gray-800': !darker,
       'flex-col': !row,
       'flex-1 min-w-[18rem]': !squish,
       'min-w-fit': fit,
