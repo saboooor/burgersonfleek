@@ -24,7 +24,6 @@ function getBlobKeyFrame() {
   const translateXPercentages = [ 80, 40, 0, -40, -80 ];
   const translateYPercentages = [ 0, -25, -50, -75, -100 ];
   const scaleValues = [ 0.8, 1, 1.2, 1.4 ];
-  const rotateValues = [ 0, 90, 180, 270 ];
 
   const translateX0Key = Math.floor(Math.random() * translateXPercentages.length);
   const translateX0 = translateXPercentages[translateX0Key];
@@ -57,16 +56,11 @@ function getBlobKeyFrame() {
   const scale2 = scaleValues[Math.floor(Math.random() * scaleValues.length)];
   const scale3 = scaleValues[Math.floor(Math.random() * scaleValues.length)];
 
-  const rotate0 = rotateValues[Math.floor(Math.random() * rotateValues.length)];
-  const rotate1 = rotateValues[Math.floor(Math.random() * rotateValues.length)];
-  const rotate2 = rotateValues[Math.floor(Math.random() * rotateValues.length)];
-  const rotate3 = rotateValues[Math.floor(Math.random() * rotateValues.length)];
-
   const keyframe = {
-    "0%, 100%": { transform: `translate(${translateX0}%, ${translateY0}%) scale(${scale0}) rotate(${rotate0}deg)` },
-    "25%": { transform: `translate(${translateX1}%, ${translateY1}%) scale(${scale1}) rotate(${rotate1}deg)` },
-    "50%": { transform: `translate(${translateX2}%, ${translateY2}%) scale(${scale2}) rotate(${rotate2}deg)` },
-    "75%": { transform: `translate(${translateX3}%, ${translateY3}%) scale(${scale3}) rotate(${rotate3}deg)` }
+    "0%, 100%": { transform: `translate(${translateX0}%, ${translateY0}%) scale(${scale0})` },
+    "25%": { transform: `translate(${translateX1}%, ${translateY1}%) scale(${scale1})` },
+    "50%": { transform: `translate(${translateX2}%, ${translateY2}%) scale(${scale2})` },
+    "75%": { transform: `translate(${translateX3}%, ${translateY3}%) scale(${scale3})` }
   };
 
   return keyframe;
