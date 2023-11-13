@@ -30,7 +30,10 @@ html {
   background-color: hsl(0deg, 0%, 5%);
 }
 
-* { scroll-behavior: smooth; }
+* {
+  scroll-behavior: smooth;
+  touch-action: manipulation;
+}
 *::-webkit-scrollbar {
   appearance: none;
   -webkit-appearance: none;
