@@ -5,8 +5,8 @@ import IconWhite from './svg/IconInBag';
 
 export default component$(() => {
   return (
-    <div class="font-futura fixed bottom-0 bg-burger-200/30 backdrop-blur-lg w-screen p-4 sm:hidden">
-      <div class="flex flex-col gap-5">
+    <div class="font-futura fixed bottom-0 w-full sm:hidden">
+      <div class="flex flex-col gap-4 bg-burger-200/30 backdrop-blur-lg px-6 py-5 m-4 rounded-xl border border-burger-200/50">
         <h2 class="text-lg font-bold">
           Feeling Hungry?
         </h2>

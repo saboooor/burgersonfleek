@@ -19,7 +19,7 @@ export default component$(() => {
         </div>
       </div>
       <div class="text-center justify-center">
-        <div class="flex sm:hidden relative justify-center align-center mt-10" style="width: 100%;">
+        <div class="flex sm:hidden relative justify-center align-center" style="width: 100%;">
           <div class="absolute -bottom-16 w-32 h-32 bg-orange-400 rounded-full opacity-10 animate-blob ease-in-out filter blur-lg"></div>
           <div class="absolute -bottom-16 w-32 h-32 bg-amber-400 rounded-full opacity-10 animate-blob ease-in-out filter blur-lg animation-delay-5"></div>
           <div class="absolute -bottom-16 w-32 h-32 bg-yellow-400 rounded-full opacity-10 animate-blob ease-in-out filter blur-lg animation-delay-10"></div>
