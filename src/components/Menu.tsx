@@ -9,7 +9,7 @@ export default component$(() => {
   });
   return (
     <aside class="w-full align-middle sm:sticky sm:h-1 sm:top-32 pt-24 sm:pt-0 font-futura tracking-wider" aria-label="Sidebar">
-      <div class="flex items-center mb-8 gap-2">
+      <div class="flex items-center gap-2">
         <div class="flex-1">
           <p class="text-3xl font-bold text-orange-200">MENU</p>
         </div>
@@ -20,7 +20,7 @@ export default component$(() => {
           <Menu width="24"/>
         </Button>
       </div>
-      <div class={`overflow-y-auto ${!menuStore.menu ? 'hidden sm:' : ''}flex flex-col gap-6 p-6 rounded-xl bg-gray-800 border border-gray-700 max-h-[calc(100dvh-400px)]`}>
+      <div class={`overflow-y-auto ${!menuStore.menu ? 'hidden sm:' : ''}flex flex-col gap-6 p-6 mt-8 rounded-xl bg-gray-800 border border-gray-700 max-h-[calc(100dvh-400px)]`}>
         <Slot />
       </div>
       <div class="font-futura bg-burger-200/30 border border-burger-200/60 rounded-xl backdrop-blur-lg p-6 mt-4 hidden sm:block">
