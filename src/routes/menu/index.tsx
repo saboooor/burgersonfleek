@@ -1,4 +1,4 @@
-import { component$ } from '@builder.io/qwik';
+import { component$, useStore, useVisibleTask$ } from '@builder.io/qwik';
 import type { DocumentHead } from '@builder.io/qwik-city';
 
 import drinks from '~/menuitems/drinks.json';
@@ -17,23 +17,21 @@ export default component$(() => {
   return <>
     <section class="grid gap-4 grid-cols-1 sm:grid-cols-3 lg:grid-cols-4 2xl:grid-cols-5 mx-auto max-w-screen-2xl px-4 sm:px-6 min-h-[calc(100lvh-80px)]">
       <Menu>
-        <MenuCategory name="BURGERS">
+        <MenuCategory name="BURGERS & SANDWICHES">
           <MenuItem href="#beefburgers">
-            Beef
+            Beef Burgers
           </MenuItem>
           <MenuItem href="#chickenburgers">
-            Chicken
+            Chicken Burgers
           </MenuItem>
           <MenuItem href="#veggieburgers">
-            Vegetarian
+            Vegetarian Burgers
           </MenuItem>
-        </MenuCategory>
-        <MenuCategory name="SANDWICHES">
           <MenuItem href="#steaksandwiches">
-            Steak
+            Steak Sandwiches
           </MenuItem>
         </MenuCategory>
-        <MenuCategory name="OTHER">
+        <MenuCategory name="OTHER" collapse>
           <MenuItem href="#extras">
             Extras
           </MenuItem>
@@ -145,7 +143,7 @@ export default component$(() => {
         <MenuTitle id="drinks">
           Drinks
         </MenuTitle>
-        <div class="flex flex-wrap gap-4 pt-5 pb-10">
+        <div class="flex flex-wrap gap-4 pt-5">
           {drinks.map((drink, i) => {
             return <Card key={i}>
               <CardHeader>{drink.name}</CardHeader>

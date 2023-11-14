@@ -11,6 +11,7 @@
 @tailwind utilities;
 
 @layer utilities {
+  .transition-delay-50 { transition-delay: 50ms; }
   .animation-delay-5 { animation-delay: -5s; }
   .animation-delay-10 { animation-delay: -10s; }
 }

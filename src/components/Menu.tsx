@@ -37,11 +37,14 @@ export default component$(() => {
   );
 });
 
-export const MenuCategory = component$(({ name }: any) => {
+export const MenuCategory = component$(({ name, collapse }: any) => {
   return (
-    <div class="space-y-4">
+    <div class="flex flex-col gap-4">
       <span class="font-bold text-orange-200">{name}</span>
-      <div class="flex gap-2">
+      <div class={{
+        "flex gap-2 flex-wrap": true,
+        "flex-col": !collapse,
+      }}>
         <Slot />
       </div>
     </div>
