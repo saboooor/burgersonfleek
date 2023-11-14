@@ -42,8 +42,8 @@ export const MenuCategory = component$(({ name, collapse }: any) => {
     <div class="flex flex-col gap-4">
       <span class="font-bold text-orange-200">{name}</span>
       <div class={{
-        "flex gap-2 flex-wrap": true,
-        "flex-col": !collapse,
+        'flex gap-2 flex-wrap': true,
+        'flex-col': !collapse,
       }}>
         <Slot />
       </div>
