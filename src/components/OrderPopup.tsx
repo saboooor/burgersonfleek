@@ -2,7 +2,6 @@
 
 import { component$, useStore, useVisibleTask$ } from '@builder.io/qwik';
 import IconWhite from './svg/IconInBag';
-import { server$ } from '@builder.io/qwik-city';
 
 export default component$(() => {
   const store = useStore({
