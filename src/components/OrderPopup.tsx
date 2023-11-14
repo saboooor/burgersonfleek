@@ -13,9 +13,6 @@ export default component$(() => {
     store.prevScrollpos = window.scrollY;
     const orderpopup = document.getElementById('orderpopup')!;
     document.addEventListener('scroll', async () => {
-      
-      const a = [window.scrollY]
-      await server$(() => console.log(...a))()
       if (store.prevScrollpos > window.scrollY && window.scrollY + 1000 < document.body.scrollHeight) {
         orderpopup.style.bottom = '0';
       } else if (window.scrollY > 100) {
