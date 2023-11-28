@@ -117,9 +117,9 @@ export const MainNav = component$(() => {
 export const MobileNav = component$(({ store }: any) => {
   return (
     <div id="mobile-menu" class={{
-      "gap-2 px-3 flex flex-col sm:hidden transition-all duration-300 bg-gray-900/80": true,
-      "opacity-100 max-h-screen pt-2 pb-8": store.mobilemenu,
-      "opacity-0 max-h-0 py-0 pointer-events-none": !store.mobilemenu,
+      'gap-2 px-3 flex flex-col sm:hidden transition-all duration-300 bg-gray-900/80': true,
+      'opacity-100 max-h-screen pt-2 pb-8': store.mobilemenu,
+      'opacity-0 max-h-0 py-0 pointer-events-none': !store.mobilemenu,
     }}>
       <Slot />
     </div>
@@ -128,9 +128,9 @@ export const MobileNav = component$(({ store }: any) => {
 
 export const NavButton = component$(({ href, title, icon, external, extraClass, style, store }: any) => {
   const _class = {
-    "group transition ease-in-out hover:bg-gray-800 hover:text-white py-3 rounded-lg items-center": true,
-    "text-3xl px-3": icon,
-    "px-4 flex gap-3": !icon,
+    'group transition ease-in-out hover:bg-gray-800 hover:text-white py-3 rounded-lg items-center': true,
+    'text-3xl px-3': icon,
+    'px-4 flex gap-3': !icon,
     ...extraClass,
   }
 
