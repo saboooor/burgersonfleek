@@ -111,15 +111,13 @@ export default component$(() => {
             return <Card key={i}>
               <CardHeader>{extra.name}</CardHeader>
               {typeof extra.price == 'string' && <p class="text-amber-400 text-xs sm:text-sm">{extra.price}</p>}
-              {typeof extra.price != 'string' && Object.entries(extra.price).map(([option, price]) => {
-                return <>
-                  <p class="text-xs sm:text-sm">
-                    {option}:
-                    <span class="text-amber-400 ml-1">
-                      {price}
-                    </span>
-                  </p>
-                </>;
+              {typeof extra.price != 'string' && Object.entries(extra.price).map(([option, price], i) => {
+                return <p key={i} class="text-xs sm:text-sm">
+                  {option}:
+                  <span class="text-amber-400 ml-1">
+                    {price}
+                  </span>
+                </p>;
               })}
             </Card>;
           })}
