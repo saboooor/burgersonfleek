@@ -132,7 +132,7 @@ export const NavButton = component$(({ href, title, icon, external, extraClass, 
     'text-3xl px-3': icon,
     'px-4 flex gap-3': !icon,
     ...extraClass,
-  }
+  };
 
   return <>
     {external &&
