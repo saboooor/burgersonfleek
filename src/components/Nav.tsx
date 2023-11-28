@@ -15,25 +15,25 @@ export default component$(() => {
   return (
     <Nav>
       <MainNav>
-        <NavButton href="/" extraClass={{ "hidden sm:flex": true }}>
+        <NavButton href="/" extraClass={{ 'hidden sm:flex': true }}>
           <HomeOutline width="24" class="fill-current" /> HOME
         </NavButton>
-        <NavButton href="/menu" extraClass={{ "hidden sm:flex": true }}>
+        <NavButton href="/menu" extraClass={{ 'hidden sm:flex': true }}>
           <BookOutline width="24" class="fill-current" /> MENU
         </NavButton>
-        <NavButton external href="https://burgersonfleek.order.online/store/25869825" extraClass={{ "hidden sm:flex": true }}>
+        <NavButton external href="https://burgersonfleek.order.online/store/25869825" extraClass={{ 'hidden sm:flex': true }}>
           <IconWhite width="24" class="fill-current" /> ORDER
         </NavButton>
-        <NavButton external icon href="https://instagram.com/burgersonfleek.ca" title="Instagram" extraClass={{ "hidden sm:flex": true }}>
+        <NavButton external icon href="https://instagram.com/burgersonfleek.ca" title="Instagram" extraClass={{ 'hidden sm:flex': true }}>
           <LogoInstagram width="24" class="fill-current" />
         </NavButton>
-        <NavButton external icon href="https://facebook.com/burgersonfleek.ca" title="Facebook" extraClass={{ "hidden sm:flex": true }}>
+        <NavButton external icon href="https://facebook.com/burgersonfleek.ca" title="Facebook" extraClass={{ 'hidden sm:flex': true }}>
           <LogoFacebook width="24" class="fill-current" />
         </NavButton>
-        <NavButton external icon href="https://tiktok.com/@burgersonfleek.ca" title="TikTok" extraClass={{ "hidden sm:flex": true }}>
+        <NavButton external icon href="https://tiktok.com/@burgersonfleek.ca" title="TikTok" extraClass={{ 'hidden sm:flex': true }}>
           <LogoTiktok width="24" class="fill-current" />
         </NavButton>
-        <NavButton external icon href="https://maps.app.goo.gl/Unrrg3uda7AQQs4DA" title="Google Maps" extraClass={{ "hidden sm:flex": true }}>
+        <NavButton external icon href="https://maps.app.goo.gl/Unrrg3uda7AQQs4DA" title="Google Maps" extraClass={{ 'hidden sm:flex': true }}>
           <MapOutline width="24" class="fill-current" />
         </NavButton>
         <button id="mobile-menu-button" type="button" title="Menu" onClick$={() => {
