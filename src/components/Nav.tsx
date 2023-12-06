@@ -141,7 +141,7 @@ export const NavButton = component$(({ href, title, icon, external, extraClass, 
       </a>
     }
     {!external &&
-      <Link href={href} title={title} style={style} class={_class} onClick$={() => { store.mobilemenu = false; }}>
+      <Link href={href} title={title} style={style} class={_class} onClick$={() => { store ? store.mobilemenu = false : undefined; }}>
         <Slot />
       </Link>
     }
