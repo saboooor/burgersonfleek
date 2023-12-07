@@ -21,7 +21,7 @@ export default component$(() => {
         <NavButton href="/menu" extraClass={{ 'hidden sm:flex': true }}>
           <BookOutline width="24" class="fill-current" /> MENU
         </NavButton>
-        <NavButton external href="https://burgersonfleek.order.online/store/25869825" extraClass={{ 'hidden sm:flex': true }}>
+        <NavButton external href="tel:+1 (905) 427 4377" extraClass={{ 'hidden sm:flex': true }}>
           <IconWhite width="24" class="fill-current" /> ORDER
         </NavButton>
         <NavButton external icon href="https://instagram.com/burgersonfleek.ca" title="Instagram" extraClass={{ 'hidden sm:flex': true }}>
@@ -49,7 +49,7 @@ export default component$(() => {
         <NavButton store={store} href="/menu">
           <BookOutline width="24" class="fill-current" /> MENU
         </NavButton>
-        <NavButton external href="https://burgersonfleek.order.online/store/25869825">
+        <NavButton external href="tel:+1 (905) 427 4377">
           <IconWhite width="24" class="fill-current" /> ORDER
         </NavButton>
         <div class="flex justify-evenly">

@@ -40,9 +40,6 @@ export default component$(() => {
             <Link href="/menu" class="flex transition rounded-xl backdrop-blur-lg bg-gradient-to-b from-burger-100/80 to-burger-200/80 hover:bg-burger-100 px-6 py-3 font-bold text-red-100 md:py-4 md:px-8 text-sm md:text-lg whitespace-nowrap gap-3 items-center">
               <BookOutline width="24" class="fill-current" /> View the menu
             </Link>
-            <a href="https://burgersonfleek.order.online/store/25869825" class="flex transition rounded-xl backdrop-blur-lg bg-gradient-to-b from-burger-100/80 to-burger-200/80 hover:bg-burger-100 px-6 py-3 font-bold text-red-100 md:py-4 md:px-8 text-sm md:text-lg whitespace-nowrap gap-3 items-center">
-              <IconInBag width="24" class="fill-current" /> Order Online
-            </a>
           </div>
           <div class="flex gap-2 justify-center">
             <a href="tel:+1 (905) 427 4377" class="flex transition rounded-xl backdrop-blur-lg bg-gradient-to-b from-burger-200/80 to-burger-300/80 hover:bg-burger-200 px-4 py-3 font-bold text-red-100 md:py-4 md:px-8 text-xs md:text-lg whitespace-nowrap gap-3 items-center">
