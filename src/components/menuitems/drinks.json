@@ -1,0 +1,14 @@
+[
+  {
+    "name": "Fountain Drink",
+    "price": "$2.60"
+  },
+  {
+    "name": "Chocolate or Vanilla Milkshake",
+    "price": "$6.60"
+  },
+  {
+    "name": "Ferrero Rocher Milkshake",
+    "price": "$7.99"
+  }
+]

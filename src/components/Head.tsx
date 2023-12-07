@@ -14,13 +14,12 @@ export const RouterHead = component$(() => {
       <meta content="Premium Quality Gourmet Burgers, Steak Sandwiches, Fries, and more. Only serving Halal حلال" name="description" />
 
       <link rel="canonical" href={loc.url.href} />
-      <link rel="icon" href="/icon.svg" />
-      <link rel="mask-icon" href="/mask-icon.svg" color="#c37f0c" />
-      <link rel="apple-touch-icon" href="/apple-icon.png" />
+      <link rel="icon" href="/branding/icon.svg" />
+      <link rel="apple-touch-icon" href="/branding/apple-icon.png" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <meta content="Burgers on Fleek" property="og:title" />
       <meta content="Premium Quality Gourmet Burgers, Steak Sandwiches, Fries, and more. Only serving Halal حلال" property="og:description" />
-      <meta content="https://burgersonfleek.ca/logo.png" property="og:image" />
+      <meta content="https://burgersonfleek.ca/branding/logo.png" property="og:image" />
       <meta content="#0D0D0D" name="theme-color" />
 
       {head.meta.map((m) => <>

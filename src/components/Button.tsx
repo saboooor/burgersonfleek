@@ -4,6 +4,7 @@ import { Link } from '@builder.io/qwik-city';
 const classes = {
   primary: 'bg-luminescent-600/90 border-luminescent-500 hover:bg-luminescent-500 focus:bg-luminescent-500',
   secondary: 'bg-gray-700/90 border-gray-600 hover:bg-gray-600 focus:bg-gray-600',
+  tertiary: 'bg-gray-800 border-gray-700 hover:bg-gray-700 focus:bg-gray-700',
   danger: 'bg-red-700/90 border-red-600 hover:bg-red-600 focus:bg-red-600',
   success: 'bg-green-700/90 border-green-600 hover:bg-green-600 focus:bg-green-600',
   warning: 'bg-yellow-700/90 border-yellow-600 hover:bg-yellow-600 focus:bg-yellow-600',

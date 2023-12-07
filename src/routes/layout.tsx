@@ -6,9 +6,7 @@ export default component$(() => {
   return (
     <main>
       <Nav/>
-      <section>
-        <Slot />
-      </section>
+      <Slot />
       <Footer />
     </main>
   );

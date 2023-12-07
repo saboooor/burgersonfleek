@@ -11,8 +11,9 @@
 @tailwind utilities;
 
 @layer utilities {
-  .animation-delay-2000 { animation-delay: 2s; }
-  .animation-delay-4000 { animation-delay: 4s; }
+  .transition-delay-50 { transition-delay: 50ms; }
+  .animation-delay-5 { animation-delay: -5s; }
+  .animation-delay-10 { animation-delay: -10s; }
 }
 
 @font-face {
@@ -32,8 +33,10 @@ html {
 
 * {
   scroll-behavior: smooth;
+  touch-action: manipulation;
   -webkit-tap-highlight-color: transparent;
 }
+
 *::-webkit-scrollbar {
   appearance: none;
   -webkit-appearance: none;
