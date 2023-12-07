@@ -86,7 +86,7 @@ export const Brand = component$(() => {
   return (
     <div class="flex items-center justify-start">
       <Link href="/" class="transition ease-in-out text-gray-300 hover:bg-gray-800 hover:text-white drop-shadow-2xl px-3 py-3 rounded-lg text-lg flex tracking-wider items-center">
-        <Icon width={32} height={32} />
+        <Icon width={32} />
         <p class="ml-1 mt-0.5 space-x-1 whitespace-nowrap font-futura">
           <span class="font-bold ml-2">BURGERS</span><span>ON</span><span>FLEEK</span>
         </p>

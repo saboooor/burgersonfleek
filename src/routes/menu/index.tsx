@@ -1,17 +1,18 @@
 import { component$, useStore, useVisibleTask$ } from '@builder.io/qwik';
 import type { DocumentHead } from '@builder.io/qwik-city';
 
-import drinks from '~/menuitems/drinks.json';
-import extras from '~/menuitems/extras.json';
-import sides from '~/menuitems/sides.json';
-import beefburgers from '~/menuitems/beefburgers.json';
-import chickenburgers from '~/menuitems/chickenburgers.json';
-import steaksandwiches from '~/menuitems/steaksandwiches.json';
-import veggieburgers from '~/menuitems/veggieburgers.json';
+import drinks from '../../components/menuitems/drinks.json';
+import extras from '../../components/menuitems/extras.json';
+import sides from '../../components/menuitems/sides.json';
+import beefburgers from '~/components/menuitems/beefburgers';
+import chickenburgers from '~/components/menuitems/chickenburgers';
+import steaksandwiches from '~/components/menuitems/steaksandwiches';
+import veggieburgers from '~/components/menuitems/veggieburgers';
 
 import Menu, { MenuCategory, MenuItem, MenuTitle } from '~/components/Menu';
 import Card, { CardHeader } from '~/components/Card';
 import OrderPopup from '~/components/OrderPopup';
+import Icon from '~/components/svg/Icon';
 
 export default component$(() => {
   return <>
@@ -51,6 +52,10 @@ export default component$(() => {
         <div class="flex flex-wrap gap-4 pt-5 pb-10">
           {beefburgers.map((beefburger, i) => {
             return <Card key={i}>
+              <div class="mb-8">
+                {beefburger.image && <beefburger.image class="h-32 w-auto object-contain" />}
+                {!beefburger.image && <Icon width={128}/>}
+              </div>
               <CardHeader bestSeller={beefburger.bestseller}>{beefburger.name}</CardHeader>
               <p class="text-amber-400 text-xs sm:text-sm">
                 {beefburger.double && <span class="text-gray-400">Single: </span>}{beefburger.price}
@@ -67,6 +72,10 @@ export default component$(() => {
         <div class="flex flex-wrap gap-4 pt-5 pb-10">
           {chickenburgers.map((chickenburger, i) => {
             return <Card key={i}>
+              <div class="mb-8">
+                {chickenburger.image && <chickenburger.image class="h-32 w-auto object-contain" />}
+                {!chickenburger.image && <Icon width={128}/>}
+              </div>
               <CardHeader bestSeller={chickenburger.bestseller}>{chickenburger.name}</CardHeader>
               <p class="text-amber-400 text-xs sm:text-sm">
                 {chickenburger.price}
@@ -81,6 +90,10 @@ export default component$(() => {
         <div class="flex flex-wrap gap-4 pt-5 pb-10">
           {veggieburgers.map((veggieburger, i) => {
             return <Card key={i}>
+              <div class="mb-8">
+                {veggieburger.image && <veggieburger.image class="h-32 w-auto object-contain" />}
+                {!veggieburger.image && <Icon width={128}/>}
+              </div>
               <CardHeader>{veggieburger.name}</CardHeader>
               <p class="text-amber-400 text-xs sm:text-sm">
                 {veggieburger.price}
@@ -95,6 +108,10 @@ export default component$(() => {
         <div class="flex flex-wrap gap-4 pt-5 pb-10">
           {steaksandwiches.map((steaksandwich, i) => {
             return <Card key={i}>
+              <div class="mb-8">
+                {steaksandwich.image && <steaksandwich.image class="h-32 w-auto object-contain" />}
+                {!steaksandwich.image && <Icon width={128}/>}
+              </div>
               <CardHeader bestSeller={steaksandwich.bestseller}>{steaksandwich.name}</CardHeader>
               <p class="text-amber-400 text-xs sm:text-sm">
                 {steaksandwich.price}
