@@ -4,7 +4,6 @@ import { Link } from '@builder.io/qwik-city';
 
 import Logo from '~/components/svg/Logo';
 import Icon from '~/components/svg/Icon';
-import IconInBag from '~/components/svg/IconInBag';
 import { LogoInstagram, LogoFacebook, BookOutline, CallOutline, MapOutline } from 'qwik-ionicons';
 
 export default component$(() => {
