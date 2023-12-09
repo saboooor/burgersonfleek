@@ -73,8 +73,8 @@ export default component$(() => {
 
 export const Nav = component$(() => {
   return (
-    <nav class="z-20 fixed top-0 w-screen">
-      <div class="mx-auto max-w-7xl font-futura tracking-wider transition-all backdrop-blur-xl">
+    <nav class="z-20 fixed top-0 w-screen backdrop-blur-xl">
+      <div class="font-futura tracking-wider transition-all">
         <Slot />
       </div>
     </nav>
@@ -103,11 +103,13 @@ export const Brand = component$(() => {
 
 export const MainNav = component$(() => {
   return (
-    <div class="relative flex h-16 items-center justify-between bg-gray-900/80 px-4 lg:px-6 py-10">
-      <Brand/>
-      <div class="flex flex-1 items-center justify-end">
-        <div class="flex gap-1 text-gray-300 whitespace-nowrap">
-          <Slot/>
+    <div class="bg-gray-900/80 px-4 lg:px-6 py-1">
+      <div class="mx-auto max-w-7xl relative flex h-16 items-center justify-between">
+        <Brand/>
+        <div class="flex flex-1 items-center justify-end">
+          <div class="flex gap-1 text-gray-300 whitespace-nowrap">
+            <Slot/>
+          </div>
         </div>
       </div>
     </div>
