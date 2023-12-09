@@ -13,10 +13,10 @@ export default component$(() => {
         <div class="flex-1">
           <p class="text-3xl font-bold text-orange-200">MENU</p>
         </div>
-        <ExternalButton color="tertiary" href="/menu.pdf">
+        <ExternalButton color="tertiary" href="/menu.pdf" aria-label="View Paper Menu">
           <DocumentTextOutline width="24"/>
         </ExternalButton>
-        <Button color="tertiary" extraClass="sm:hidden" onClick$={() => menuStore.menu = !menuStore.menu}>
+        <Button color="tertiary" extraClass="sm:hidden" onClick$={() => menuStore.menu = !menuStore.menu} aria-label="Open Menu">
           <Menu width="24"/>
         </Button>
       </div>

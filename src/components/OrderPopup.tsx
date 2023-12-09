@@ -1,6 +1,6 @@
 // LuminescentDev Navbar Component Apr 28
 
-import { component$, useStore, useVisibleTask$ } from '@builder.io/qwik';
+import { $, component$, useOnDocument, useStore } from '@builder.io/qwik';
 import IconWhite from './svg/IconInBag';
 
 export default component$(() => {
@@ -8,21 +8,18 @@ export default component$(() => {
     prevScrollpos: 0,
   });
 
-  useVisibleTask$(() => {
-    store.prevScrollpos = window.scrollY;
+  useOnDocument('scroll', $(() => {
     const orderpopup = document.getElementById('orderpopup')!;
-    document.addEventListener('scroll', async () => {
-      if (store.prevScrollpos > window.scrollY && window.scrollY + 1000 < document.body.scrollHeight) {
-        orderpopup.style.bottom = '0';
-      } else if (window.scrollY > 100) {
-        orderpopup.style.bottom = '-9rem';
-      }
-      store.prevScrollpos = window.scrollY;
-    });
-  });
+    if (store.prevScrollpos > window.scrollY && window.scrollY + 1000 < document.body.scrollHeight) {
+      orderpopup.style.bottom = '0';
+    } else if (window.scrollY > 100) {
+      orderpopup.style.bottom = '-9rem';
+    }
+    store.prevScrollpos = window.scrollY;
+  }));
 
   return (
-    <div class="font-futura fixed bottom-0 w-full sm:hidden transition-all duration-300 transition-delay-50" id="orderpopup">
+    <div class="font-futura fixed bottom-0 w-full sm:hidden transition-all duration-300 delay-75" id="orderpopup">
       <div class="flex flex-col gap-4 bg-burger-200/30 backdrop-blur-lg px-6 py-5 m-4 rounded-xl border border-burger-200/50">
         <h2 class="text-lg font-bold">
           Feeling HANGRY?

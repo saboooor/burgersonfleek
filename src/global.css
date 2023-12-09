@@ -11,9 +11,8 @@
 @tailwind utilities;
 
 @layer utilities {
-  .transition-delay-50 { transition-delay: 50ms; }
-  .animation-delay-5 { animation-delay: -5s; }
-  .animation-delay-10 { animation-delay: -10s; }
+  .-animation-delay-5000 { animation-delay: -5s; }
+  .-animation-delay-10000 { animation-delay: -10s; }
 }
 
 @font-face {
@@ -91,3 +90,25 @@ main {
     scale: 0.95;
   }
 }
+
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(-100px);
+  animation: fadeInAnimation ease-in-out 800ms;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeInAnimation {
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animation-delay-100 { animation-delay: 100ms; }
+.animation-delay-200 { animation-delay: 200ms; }
+.animation-delay-300 { animation-delay: 300ms; }
+.animation-delay-400 { animation-delay: 400ms; }
+.animation-delay-500 { animation-delay: 500ms; }

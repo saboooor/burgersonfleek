@@ -38,8 +38,8 @@
     "typescript": "5.3.3",
     "undici": "6.0.1",
     "uuid": "^9.0.1",
-    "vite": "5.0.6",
-    "vite-tsconfig-paths": "4.2.1",
+    "vite": "5.0.7",
+    "vite-tsconfig-paths": "4.2.2",
     "wrangler": "latest",
     "zod": "^3.22.4"
   }

@@ -1,4 +1,4 @@
-import { component$, useStore, useVisibleTask$ } from '@builder.io/qwik';
+import { component$ } from '@builder.io/qwik';
 import type { DocumentHead } from '@builder.io/qwik-city';
 
 import drinks from '../../components/menuitems/drinks.json';
@@ -53,7 +53,7 @@ export default component$(() => {
           {beefburgers.map((beefburger, i) => {
             return <Card key={i}>
               <div class="mb-8">
-                {beefburger.image && <beefburger.image class="h-32 w-auto object-contain" />}
+                {beefburger.image && <beefburger.image class="h-32 w-auto object-contain" alt={beefburger.name} />}
                 {!beefburger.image && <Icon width={128}/>}
               </div>
               <CardHeader bestSeller={beefburger.bestseller}>{beefburger.name}</CardHeader>
@@ -73,7 +73,7 @@ export default component$(() => {
           {chickenburgers.map((chickenburger, i) => {
             return <Card key={i}>
               <div class="mb-8">
-                {chickenburger.image && <chickenburger.image class="h-32 w-auto object-contain" />}
+                {chickenburger.image && <chickenburger.image class="h-32 w-auto object-contain" alt={chickenburger.name} />}
                 {!chickenburger.image && <Icon width={128}/>}
               </div>
               <CardHeader bestSeller={chickenburger.bestseller}>{chickenburger.name}</CardHeader>
@@ -91,7 +91,7 @@ export default component$(() => {
           {veggieburgers.map((veggieburger, i) => {
             return <Card key={i}>
               <div class="mb-8">
-                {veggieburger.image && <veggieburger.image class="h-32 w-auto object-contain" />}
+                {veggieburger.image && <veggieburger.image class="h-32 w-auto object-contain" alt={veggieburger.name} />}
                 {!veggieburger.image && <Icon width={128}/>}
               </div>
               <CardHeader>{veggieburger.name}</CardHeader>
@@ -109,7 +109,7 @@ export default component$(() => {
           {steaksandwiches.map((steaksandwich, i) => {
             return <Card key={i}>
               <div class="mb-8">
-                {steaksandwich.image && <steaksandwich.image class="h-32 w-auto object-contain" />}
+                {steaksandwich.image && <steaksandwich.image class="h-32 w-auto object-contain" alt={steaksandwich.name} />}
                 {!steaksandwich.image && <Icon width={128}/>}
               </div>
               <CardHeader bestSeller={steaksandwich.bestseller}>{steaksandwich.name}</CardHeader>
