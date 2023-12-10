@@ -4,7 +4,7 @@ import Icon from '~/components/svg/Icon';
 
 export default component$(() => {
   return (
-    <section class="flex mx-auto max-w-6xl px-6 items-center justify-center min-h-[calc(100lvh)] pt-24 sm:pt-64">
+    <section class="flex mx-auto max-w-6xl px-6 items-center justify-center min-h-[calc(100lvh)] pt-24">
       <div class="text-center justify-center">
         <div class="flex relative justify-center align-center mb-10" style="width: 100%;">
           <div class="absolute -bottom-16 w-32 h-32 bg-orange-400 rounded-full opacity-10 animate-blob ease-in-out filter blur-xl"></div>
