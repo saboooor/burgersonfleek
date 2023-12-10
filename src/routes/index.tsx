@@ -8,7 +8,7 @@ import { LogoInstagram, LogoFacebook, BookOutline, CallOutline, MapOutline } fro
 
 export default component$(() => {
   return (
-    <section class="flex mx-auto max-w-6xl px-6 items-center justify-center min-h-[calc(100lvh)] pt-22 sm:pt-28">
+    <section class="flex mx-auto max-w-6xl px-6 items-center justify-center min-h-[calc(100lvh)] pt-24 sm:pt-28">
       <div class="hidden sm:flex relative justify-start align-center mr-auto" style="max-width: 50%;">
         <div class="absolute left-0 right-0 mx-auto bottom-24 w-48 h-48 bg-orange-400 rounded-full opacity-10 animate-blob ease-in-out filter blur-2xl"></div>
         <div class="absolute left-0 right-0 mx-auto bottom-24 w-48 h-48 bg-amber-400 rounded-full opacity-10 animate-blob ease-in-out filter blur-2xl -animation-delay-5000"></div>

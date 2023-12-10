@@ -5,8 +5,9 @@ import { Link, useLocation } from '@builder.io/qwik-city';
 
 import { LogoInstagram, LogoFacebook, LogoTiktok, Menu, HomeOutline, BookOutline, MapOutline } from 'qwik-ionicons';
 
-import Icon from '~/components/svg/Icon';
-import IconWhite from '~/components/svg/IconInBag';
+import Halal from './svg/Halal';
+import Icon from './svg/Icon';
+import IconWhite from './svg/IconInBag';
 import LoadingIcon from './svg/LoadingIcon';
 
 export default component$(() => {
@@ -23,6 +24,9 @@ export default component$(() => {
         </NavButton>
         <NavButton external href="tel:+1 (905) 427 4377" extraClass={{ 'hidden sm:flex': true }}>
           <IconWhite width="24" class="fill-current" /> ORDER
+        </NavButton>
+        <NavButton href="/halal" extraClass={{ 'hidden sm:flex': true }}>
+          <Halal width="24" class="fill-current" /> HALAL
         </NavButton>
         <NavButton external icon href="https://instagram.com/burgersonfleek.ca" title="Instagram" extraClass={{ 'hidden sm:flex': true }}>
           <LogoInstagram width="24" class="fill-current" />
@@ -51,6 +55,9 @@ export default component$(() => {
         </NavButton>
         <NavButton external href="tel:+1 (905) 427 4377">
           <IconWhite width="24" class="fill-current" /> ORDER
+        </NavButton>
+        <NavButton store={store} href="/halal">
+          <Halal width="24" class="fill-current" /> HALAL
         </NavButton>
         <div class="flex justify-evenly">
           <NavButton external icon href="https://instagram.com/burgersonfleek.ca" title="Instagram">

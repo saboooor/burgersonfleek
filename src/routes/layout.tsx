@@ -1,6 +1,6 @@
 import { component$, Slot } from '@builder.io/qwik';
 import Nav from '~/components/Nav';
-import Footer from '~/components/footer';
+import Footer from '~/components/Footerr';
 
 export default component$(() => {
   return (
