@@ -8,7 +8,7 @@ export default component$(() => {
         If you have any food allergies, please inquire before ordering.
       </p>
       <p class="text-xs md:text-sm mb-1">
-        Contact us at <a href="mailto:eat@burgersonfleek.ca">eat@burgersonfleek.ca</a>
+        Contact us at <a href="mailto:eat@burgersonfleek.ca" class="text-blue-400/80 hover:text-blue-400 hover:underline">eat@burgersonfleek.ca</a>
       </p>
       <p class="text-xs md:text-sm">
         © Copyright {new Date().getFullYear()} Burgers on Fleek - All Rights Reserved.

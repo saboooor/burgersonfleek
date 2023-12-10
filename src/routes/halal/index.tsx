@@ -30,10 +30,10 @@ export default component$(() => {
         </div>
         <div class="text-gray-400 text-lg mx-6 md:mx-20 md:text-xl flex flex-col gap-2 fade-in animation-delay-300">
           <p>
-            Our meat providers are <a href="http://sthelensmeat.com">St. Helen's</a> and <a href="https://sargentfarms.ca">Sargent Farms</a>
+            Our meat providers are <a href="http://sthelensmeat.com" class="text-blue-400/80 hover:text-blue-400 hover:underline">St. Helen's</a> and <a href="https://sargentfarms.ca" class="text-blue-400/80 hover:text-blue-400 hover:underline">Sargent Farms</a>
           </p>
           <p>
-            For further inquiries, feel free to reach us at <a href="mailto:eat@burgersonfleek.ca">eat@burgersonfleek.ca</a>
+            For further inquiries, feel free to reach us at <a href="mailto:eat@burgersonfleek.ca" class="text-blue-400/80 hover:text-blue-400 hover:underline">eat@burgersonfleek.ca</a>
           </p>
         </div>
       </div>
@@ -42,5 +42,5 @@ export default component$(() => {
 });
 
 export const head: DocumentHead = {
-  title: 'Home',
+  title: 'Halal',
 };
