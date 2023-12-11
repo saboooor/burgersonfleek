@@ -16,7 +16,7 @@ import Icon from '~/components/svg/Icon';
 
 export default component$(() => {
   return <>
-    <section class="grid gap-4 grid-cols-1 sm:grid-cols-3 lg:grid-cols-4 2xl:grid-cols-5 mx-auto max-w-screen-2xl px-4 sm:px-6 min-h-[calc(100lvh-80px)]">
+    <section class="grid gap-4 grid-cols-1 sm:grid-cols-3 lg:grid-cols-4 2xl:grid-cols-5 mx-auto max-w-screen-xl px-4 sm:px-6 min-h-[calc(100lvh-80px)]">
       <Menu>
         <MenuCategory name="BURGERS & SANDWICHES">
           <MenuItem href="#beefburgers">

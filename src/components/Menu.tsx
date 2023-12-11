@@ -62,7 +62,7 @@ export const MenuItem = component$(({ href }: any) => {
 export const MenuTitle = component$(({ id, subtitle }: any) => {
   return (
     <>
-      <span id={id} class="block h-24 -mt-24" />
+      <span id={id} class="block h-28 -mt-28" />
       <h1 class="font-bold text-orange-200 text-2xl sm:text-4xl transition font-futura tracking-wider" id={id}>
         <Slot />
       </h1>
