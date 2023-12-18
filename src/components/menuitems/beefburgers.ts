@@ -13,76 +13,76 @@ export default [
   {
     name: 'The Basic',
     description: 'Beef patty with lettuce, tomato, pickles, sautéed onions, and On Fleek Sauce.',
-    price: '$9.70',
-    double: '$14.70'
+    price: '$9.85',
+    double: '$14.85',
   },
   {
     name: 'The Classic',
     description: 'Beef patty with cheddar cheese, lettuce, tomato, pickles, sautéed onions, and On Fleek Sauce.',
-    price: '$10.70',
-    double: '$16.70',
-    image: Classic
+    price: '$10.85',
+    double: '$16.85',
+    image: Classic,
   },
   {
     name: 'Bae',
     description: 'Beef patty with cheddar cheese, beef bacon, lettuce, tomato, pickles, sautéed onions, and On Fleek Sauce.',
-    price: '$11.70',
-    double: '$17.70',
+    price: '$11.99',
+    double: '$17.99',
     bestseller: true,
-    image: Bae
+    image: Bae,
   },
   {
     name: 'Bromance',
     description: 'Beef patty with mozzarela cheese, topped with fried chicken thigh, grilled jalapeños, sautéed onions, lettuce, tomato, and chipotle sauce.',
-    price: '$16.75',
+    price: '$16.99',
     bestseller: true,
-    image: Bromance
+    image: Bromance,
   },
   {
     name: 'Godzilla',
     description: 'Three beef patties with cheddar cheese, beef bacon, lettuce, tomato, sautéed onions, grilled jalapeños, and On Fleek Sauce, between two grilled cheese buns.',
-    price: '$23.00'
+    price: '$23.00',
   },
   {
     name: 'Mashup',
     description: 'Beef patty with jalapeño havarti cheese, lettuce, tomato, pickles, onion rings, fried egg, pico de gallo, and chipotle sauce.',
-    price: '$13.70',
-    image: Mashup
+    price: '$13.85',
+    image: Mashup,
   },
   {
     name: 'Shook',
     description: 'Beef patty with cheddar cheese, crusted portobello mushroom stuffed with cheese, lettuce, tomato, pickles, and garlic mayo.',
-    price: '$15.60',
-    image: Shook
+    price: '$15.99',
+    image: Shook,
   },
   {
     name: 'Snatched',
     description: 'Beef patty with mozzarella cheese, crusted cheese, lettuce, tomato, roasted peppers, guacamole, pico de gallo, and chipotle sauce.',
-    price: '$15.25',
-    image: Snatched
+    price: '$15.50',
+    image: Snatched,
   },
   {
     name: 'Mood',
     description: 'Beef patty with cheddar cheese, three crusted jalapeños filled with cheese, lettuce, tomato, pickles, guacamole, pico de gallo, and chipotle sauce.',
-    price: '$15.25',
-    image: Mood
+    price: '$15.50',
+    image: Mood,
   },
   {
     name: 'Aloha',
     description: 'Beef patty with jalapeño havarti cheese, grilled pineapple, lettuce, beef bacon, and BBQ sauce.',
     price: '$13.99',
-    image: Aloha
+    image: Aloha,
   },
   {
     name: 'The Melt',
     description: 'Beef patty with swiss cheese, mushrooms, sautéed onions, lettuce, tomato, and garlic mayo.',
     price: '$14.99',
-    image: Melt
+    image: Melt,
   },
   {
     name: 'Pick Me',
     description: 'Pulled beef brisket with sautéed onions, mayo, and smoky BBQ sauce.',
-    price: '$9.99',
-    image: PickMe
-  }
-]
+    price: '$10.50',
+    image: PickMe,
+  },
+];

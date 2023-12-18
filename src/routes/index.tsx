@@ -5,6 +5,7 @@ import { Link } from '@builder.io/qwik-city';
 import Logo from '~/components/svg/Logo';
 import Icon from '~/components/svg/Icon';
 import { LogoInstagram, LogoFacebook, BookOutline, CallOutline, MapOutline } from 'qwik-ionicons';
+import Halal from '~/components/svg/Halal';
 
 export default component$(() => {
   return (
@@ -38,6 +39,9 @@ export default component$(() => {
           <div class="flex gap-2 justify-center fade-in animation-delay-300">
             <Link href="/menu" class="flex transition rounded-xl backdrop-blur-lg bg-gradient-to-b from-burger-100/80 to-burger-200/80 hover:bg-burger-100 px-6 py-3 font-bold text-red-100 md:py-4 md:px-8 text-sm md:text-lg whitespace-nowrap gap-3 items-center">
               <BookOutline width="24" class="fill-current" /> View the menu
+            </Link>
+            <Link href="/halal" class="flex transition rounded-xl backdrop-blur-lg bg-gradient-to-b from-burger-100/80 to-burger-200/80 hover:bg-burger-100 px-6 py-3 font-bold text-red-100 md:py-4 md:px-8 text-sm md:text-lg whitespace-nowrap gap-3 items-center">
+              <Halal width="24" class="fill-current" /> Halal
             </Link>
           </div>
           <div class="flex gap-2 justify-center fade-in animation-delay-400">

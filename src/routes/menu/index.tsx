@@ -16,7 +16,7 @@ import Icon from '~/components/svg/Icon';
 
 export default component$(() => {
   return <>
-    <section class="grid gap-4 grid-cols-1 sm:grid-cols-3 lg:grid-cols-4 2xl:grid-cols-5 mx-auto max-w-screen-xl px-4 sm:px-6 min-h-[calc(100lvh-80px)]">
+    <section class="grid gap-4 sm:grid-cols-3 lg:grid-cols-4 mx-auto max-w-screen-xl px-4 sm:px-6 min-h-[calc(100lvh-80px)]">
       <Menu>
         <MenuCategory name="BURGERS & SANDWICHES">
           <MenuItem href="#beefburgers">
@@ -44,7 +44,7 @@ export default component$(() => {
           </MenuItem>
         </MenuCategory>
       </Menu>
-      <div class="sm:col-span-2 lg:col-span-3 2xl:col-span-4 sm:pt-28">
+      <div class="sm:col-span-2 lg:col-span-3 sm:pt-28">
         <MenuTitle id="beefburgers"
           subtitle="* Our beef burgers are made with premium quality meat, cut & grounded in-house & handpressed on the grill.">
           Beef Burgers

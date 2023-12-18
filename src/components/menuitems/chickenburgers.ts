@@ -4,13 +4,13 @@ export default [
   {
     name: 'The Original',
     description: 'Fried chicken burger (dark meat) with lettuce, tomato, and chipotle sauce.',
-    price: '$14.25'
+    price: '$14.50',
   },
   {
     name: 'G.O.A.T',
     description: 'Fried chicken burger (dark meat) with melted cheese, lettuce, tomato, roasted peppers, pico de gallo, chipotle sauce, and garlic mayo.',
-    price: '$17.35',
+    price: '$17.50',
     bestseller: true,
-    image: Goat 
-  }
-]
+    image: Goat,
+  },
+];

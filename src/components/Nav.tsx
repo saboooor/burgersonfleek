@@ -1,4 +1,4 @@
-// LuminescentDev Navbar Component Apr 28
+// LuminescentDev Navbar Component Dec 11
 
 import { component$, Slot, useStore } from '@builder.io/qwik';
 import { Link, useLocation } from '@builder.io/qwik-city';

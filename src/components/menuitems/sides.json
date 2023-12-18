@@ -42,5 +42,13 @@
       "medium": "$15.10",
       "large": "$29.80"
     }
+  },
+  {
+    "name": "Beef Chili Cheese Fries (New)",
+    "description": "Topped with melted cheese and sour cream.",
+    "price": {
+      "medium": "$12.00",
+      "large": "$23.00"
+    }
   }
 ]
