@@ -35,80 +35,20 @@ html {
   touch-action: manipulation;
   -webkit-tap-highlight-color: transparent;
 }
-
 *::-webkit-scrollbar {
   appearance: none;
   -webkit-appearance: none;
   width: 8px;
+  height: 8px;
 }
 *::-webkit-scrollbar-track {
-  background-color: #00000000;
-  border-radius: 3px;
+  background-color: transparent;
 }
 *::-webkit-scrollbar-thumb {
   background-color: #ffffff20;
-  border-radius: 2px;
+  border: 1px solid #ffffff20;
+  border-radius: 3px;
 }
-
-/* NAVBAR TRANSITION */
-nav {
-  view-transition-name: nav;
+*::-webkit-scrollbar-corner {
+  background-color: transparent;
 }
-
-/* MAIN TRANSITION */
-main {
-  view-transition-name: root;
-}
-
-::view-transition-old(root) {
-  animation: 210ms cubic-bezier(0.4, 0, 1, 1) both fade-out,
-    600ms cubic-bezier(0.4, 0, 0.2, 1) both slide-to-bottom;
-}
-
-::view-transition-new(root) {
-  animation: 420ms cubic-bezier(0.4, 0, 0.2, 1) both fade-in,
-    600ms cubic-bezier(0.4, 0, 0.2, 1) both slide-from-top;
-}
-
-
-@keyframes fade-in {
-  from { opacity: 0; }
-}
-
-@keyframes fade-out {
-  to { opacity: 0; }
-}
-@keyframes slide-from-top {
-  from {
-    transform: translateY(30px);
-    scale: 0.95;
-  }
-}
-@keyframes slide-to-bottom {
-  to {
-    transform: translateY(-30px);
-    scale: 0.95;
-  }
-}
-
-
-.fade-in {
-  opacity: 0;
-  transform: translateY(-100px);
-  animation: fadeInAnimation ease-in-out 800ms;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
-}
-
-@keyframes fadeInAnimation {
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.animation-delay-100 { animation-delay: 100ms; }
-.animation-delay-200 { animation-delay: 200ms; }
-.animation-delay-300 { animation-delay: 300ms; }
-.animation-delay-400 { animation-delay: 400ms; }
-.animation-delay-500 { animation-delay: 500ms; }

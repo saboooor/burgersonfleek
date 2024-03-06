@@ -20,7 +20,7 @@ export const RouterHead = component$(() => {
       <meta content="Burgers on Fleek" property="og:title" />
       <meta content="Premium Quality Gourmet Burgers, Steak Sandwiches, Fries, and more. Only serving Halal حلال" property="og:description" />
       <meta content="https://burgersonfleek.ca/branding/logo.png" property="og:image" />
-      <meta content="#0D0D0D" name="theme-color" />
+      <meta content="rgb(22 19 16)" name="theme-color" />
 
       {head.meta.map((m) => <>
         <meta {...m} />

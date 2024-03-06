@@ -4,20 +4,20 @@ import type { DocumentHead } from '@builder.io/qwik-city';
 import drinks from '../../components/menuitems/drinks.json';
 import extras from '../../components/menuitems/extras.json';
 import sides from '../../components/menuitems/sides.json';
-import combos from '../../components/menuitems/combos.json';
 import beefburgers from '~/components/menuitems/beefburgers';
 import chickenburgers from '~/components/menuitems/chickenburgers';
 import steaksandwiches from '~/components/menuitems/steaksandwiches';
 import veggieburgers from '~/components/menuitems/veggieburgers';
 
 import Menu, { MenuCategory, MenuItem, MenuTitle } from '~/components/Menu';
-import Card, { CardHeader } from '~/components/Card';
+import { Card, Header } from '@luminescent/ui';
+import BestSeller from '~/components/BestSeller';
 import OrderPopup from '~/components/OrderPopup';
 import Icon from '~/components/svg/Icon';
 
 export default component$(() => {
   return <>
-    <section class="grid gap-4 sm:grid-cols-3 lg:grid-cols-4 mx-auto max-w-screen-xl px-4 sm:px-6 min-h-[calc(100lvh-80px)]">
+    <section class="grid gap-4 sm:grid-cols-3 lg:grid-cols-4 mx-auto max-w-screen-xl px-4 sm:px-6 min-h-[100svh]">
       <Menu>
         <MenuCategory name="BURGERS & SANDWICHES">
           <MenuItem href="#beefburgers">
@@ -34,9 +34,6 @@ export default component$(() => {
           </MenuItem>
         </MenuCategory>
         <MenuCategory name="OTHER" collapse>
-          <MenuItem href="#combo">
-            Make it a Combo
-          </MenuItem>
           <MenuItem href="#extras">
             Extras
           </MenuItem>
@@ -49,23 +46,36 @@ export default component$(() => {
         </MenuCategory>
       </Menu>
       <div class="sm:col-span-2 lg:col-span-3 sm:pt-28">
+        <p class="text-lg sm:text-xl mb-8">
+          We are not fast food.
+          <br />
+          All our food is made fresh, and it can take a minimum of 15 minutes to complete your order.
+          <br />
+          All of our food is cooked to the internal temperature required by the CFIA.
+          If you have any food allergies, please inquire before ordering.
+        </p>
         <MenuTitle id="beefburgers"
           subtitle="* Our beef burgers are made with premium quality meat, cut & grounded in-house & handpressed on the grill.">
           Beef Burgers
         </MenuTitle>
         <div class="flex flex-wrap gap-4 pt-5 pb-10">
           {beefburgers.map((beefburger, i) => {
-            return <Card key={i}>
-              <div class="mb-8">
-                {beefburger.image && <beefburger.image class="h-32 w-auto object-contain" alt={beefburger.name} />}
+            return <Card key={i} class={{
+              'flex-1 min-w-[18rem]': true,
+            }}>
+              <div class="mb-4">
+                {beefburger.image && <beefburger.image class="h-32 w-auto object-contain" alt={beefburger.name} style="filter: drop-shadow(0 0 3rem rgba(251, 146, 60, 0.1));" />}
                 {!beefburger.image && <Icon width={128}/>}
               </div>
-              <CardHeader bestSeller={beefburger.bestseller}>{beefburger.name}</CardHeader>
-              <p class="text-amber-400 text-xs sm:text-sm">
-                {beefburger.double && <span class="text-gray-400">Single: </span>}{beefburger.price}
-                {beefburger.double && <><br/><span class="text-gray-400">Double: </span>{beefburger.double}</>}
-              </p>
-              <p class="text-gray-400 text-sm sm:text-base mt-4">{beefburger.description}</p>
+              <Header class={{
+                'font-futura tracking-wider': true,
+              }} subheader={
+                <p class="text-amber-400 text-xs sm:text-sm">
+                  {beefburger.double && <span class="text-gray-400">Single: </span>}{beefburger.price}
+                  {beefburger.double && <><br/><span class="text-gray-400">Double: </span>{beefburger.double}</>}
+                </p>
+              }>{beefburger.name}{beefburger.bestseller && <BestSeller/>}</Header>
+              <p class="text-gray-400 text-sm sm:text-base h-full">{beefburger.description}</p>
             </Card>;
           })}
         </div>
@@ -75,16 +85,21 @@ export default component$(() => {
         </MenuTitle>
         <div class="flex flex-wrap gap-4 pt-5 pb-10">
           {chickenburgers.map((chickenburger, i) => {
-            return <Card key={i}>
-              <div class="mb-8">
-                {chickenburger.image && <chickenburger.image class="h-32 w-auto object-contain" alt={chickenburger.name} />}
+            return <Card key={i} class={{
+              'flex-1 min-w-[18rem]': true,
+            }}>
+              <div class="mb-4">
+                {chickenburger.image && <chickenburger.image class="h-32 w-auto object-contain" alt={chickenburger.name} style="filter: drop-shadow(0 0 3rem rgba(251, 146, 60, 0.1));" />}
                 {!chickenburger.image && <Icon width={128}/>}
               </div>
-              <CardHeader bestSeller={chickenburger.bestseller}>{chickenburger.name}</CardHeader>
-              <p class="text-amber-400 text-xs sm:text-sm">
-                {chickenburger.price}
-              </p>
-              <p class="text-gray-400 text-sm sm:text-base mt-4">{chickenburger.description}</p>
+              <Header class={{
+                'font-futura tracking-wider': true,
+              }} subheader={
+                <p class="text-amber-400 text-xs sm:text-sm">
+                  {chickenburger.price}
+                </p>
+              }>{chickenburger.name}{chickenburger.bestseller && <BestSeller/>}</Header>
+              <p class="text-gray-400 text-sm sm:text-base h-full">{chickenburger.description}</p>
             </Card>;
           })}
         </div>
@@ -93,16 +108,21 @@ export default component$(() => {
         </MenuTitle>
         <div class="flex flex-wrap gap-4 pt-5 pb-10">
           {veggieburgers.map((veggieburger, i) => {
-            return <Card key={i}>
-              <div class="mb-8">
-                {veggieburger.image && <veggieburger.image class="h-32 w-auto object-contain" alt={veggieburger.name} />}
+            return <Card key={i} class={{
+              'flex-1 min-w-[18rem]': true,
+            }}>
+              <div class="mb-4">
+                {veggieburger.image && <veggieburger.image class="h-32 w-auto object-contain" alt={veggieburger.name} style="filter: drop-shadow(0 0 3rem rgba(251, 146, 60, 0.1));" />}
                 {!veggieburger.image && <Icon width={128}/>}
               </div>
-              <CardHeader>{veggieburger.name}</CardHeader>
-              <p class="text-amber-400 text-xs sm:text-sm">
-                {veggieburger.price}
-              </p>
-              <p class="text-gray-400 text-sm sm:text-base mt-4">{veggieburger.description}</p>
+              <Header class={{
+                'font-futura tracking-wider': true,
+              }} subheader={
+                <p class="text-amber-400 text-xs sm:text-sm">
+                  {veggieburger.price}
+                </p>
+              }>{veggieburger.name}</Header>
+              <p class="text-gray-400 text-sm sm:text-base h-full">{veggieburger.description}</p>
             </Card>;
           })}
         </div>
@@ -111,16 +131,21 @@ export default component$(() => {
         </MenuTitle>
         <div class="flex flex-wrap gap-4 pt-5 pb-10">
           {steaksandwiches.map((steaksandwich, i) => {
-            return <Card key={i}>
-              <div class="mb-8">
-                {steaksandwich.image && <steaksandwich.image class="h-32 w-auto object-contain" alt={steaksandwich.name} />}
+            return <Card key={i} class={{
+              'flex-1 min-w-[18rem]': true,
+            }}>
+              <div class="mb-4">
+                {steaksandwich.image && <steaksandwich.image class="h-32 w-auto object-contain" alt={steaksandwich.name} style="filter: drop-shadow(0 0 3rem rgba(251, 146, 60, 0.1));" />}
                 {!steaksandwich.image && <Icon width={128}/>}
               </div>
-              <CardHeader bestSeller={steaksandwich.bestseller}>{steaksandwich.name}</CardHeader>
-              <p class="text-amber-400 text-xs sm:text-sm">
-                {steaksandwich.price}
-              </p>
-              <p class="text-gray-400 text-sm sm:text-base mt-4">{steaksandwich.description}</p>
+              <Header class={{
+                'font-futura tracking-wider': true,
+              }} subheader={
+                <p class="text-amber-400 text-xs sm:text-sm">
+                  {steaksandwich.price}
+                </p>
+              }>{steaksandwich.name}</Header>
+              <p class="text-gray-400 text-sm sm:text-base h-full">{steaksandwich.description}</p>
             </Card>;
           })}
         </div>
@@ -129,17 +154,23 @@ export default component$(() => {
         </MenuTitle>
         <div class="flex flex-wrap gap-4 pt-5 pb-10">
           {extras.map((extra, i) => {
-            return <Card key={i}>
-              <CardHeader>{extra.name}</CardHeader>
-              {typeof extra.price == 'string' && <p class="text-amber-400 text-xs sm:text-sm">{extra.price}</p>}
-              {typeof extra.price != 'string' && Object.entries(extra.price).map(([option, price], i) => {
-                return <p key={i} class="text-xs sm:text-sm">
-                  {option}:
-                  <span class="text-amber-400 ml-1">
-                    {price}
-                  </span>
-                </p>;
-              })}
+            return <Card key={i} class={{
+              'flex-1 min-w-[18rem]': true,
+            }}>
+              <Header class={{
+                'font-futura tracking-wider text-wrap': true,
+              }}>{extra.name}</Header>
+              <div class="h-full">
+                {typeof extra.price == 'string' && <p class="text-amber-400 text-xs sm:text-sm">{extra.price}</p>}
+                {typeof extra.price != 'string' && Object.entries(extra.price).map(([option, price], i) => {
+                  return <p key={i} class="text-xs sm:text-sm">
+                    {option}:
+                    <span class="text-amber-400 ml-1">
+                      {price}
+                    </span>
+                  </p>;
+                })}
+              </div>
             </Card>;
           })}
         </div>
@@ -148,39 +179,39 @@ export default component$(() => {
         </MenuTitle>
         <div class="flex flex-wrap gap-4 pt-5 pb-10">
           {sides.map((side, i) => {
-            return <Card key={i}>
-              <CardHeader>{side.name}</CardHeader>
-              <p class="text-gray-400 text-xs sm:text-sm">
-                Medium: <span class="text-amber-400">{side.price.medium}</span><br/>
-                Large: <span class="text-amber-400">{side.price.large}</span>
-              </p>
-              {side.description && <p class="text-gray-400 text-sm sm:text-base mt-4">{side.description}</p>}
-            </Card>;
-          })}
-        </div>
-        <MenuTitle id="combo">
-          Make it a Combo
-        </MenuTitle>
-        <div class="flex flex-wrap gap-4 pt-5 pb-10">
-          {combos.map((combo, i) => {
-            return <Card key={i}>
-              <CardHeader>{combo.name}</CardHeader>
-              <p class="text-gray-400 text-xs sm:text-sm">
-                Medium: <span class="text-amber-400">{combo.price.medium}</span><br/>
-                Large: <span class="text-amber-400">{combo.price.large}</span>
-              </p>
-              {combo.description && <p class="text-gray-400 text-sm sm:text-base mt-4">{combo.description}</p>}
+            return <Card key={i} class={{
+              'flex-1 min-w-[18rem]': true,
+            }}>
+              <Header class={{
+                'font-futura tracking-wider text-wrap': true,
+              }} subheader={
+                <div>
+                  <p class="text-gray-400 text-xs sm:text-sm">
+                    Medium: <span class="text-amber-400">{side.price.medium}</span><br/>
+                    Large: <span class="text-amber-400">{side.price.large}</span><br/><br/>
+                    <span class="text-gray-200 font-bold">Make it a Combo:</span><br/>
+                    Medium: <span class="text-amber-400">{side.price.mediumCombo}</span><br/>
+                    Large: <span class="text-amber-400">{side.price.largeCombo}</span>
+                  </p>
+                </div>
+              }>{side.name}</Header>
+              <p class="text-gray-400 text-sm sm:text-base h-full">{side.description}</p>
             </Card>;
           })}
         </div>
         <MenuTitle id="drinks">
           Drinks
         </MenuTitle>
-        <div class="flex flex-wrap gap-4 pt-5">
+        <div class="flex flex-wrap gap-4 pt-5 pb-10">
           {drinks.map((drink, i) => {
-            return <Card key={i}>
-              <CardHeader>{drink.name}</CardHeader>
-              <p class="text-amber-400 text-xs sm:text-sm">{drink.price}</p>
+            return <Card key={i} class={{
+              'flex-1 min-w-[18rem]': true,
+            }}>
+              <Header class={{
+                'font-futura tracking-wider text-wrap': true,
+              }} subheader={
+                <p class="text-amber-400 text-xs sm:text-sm">{drink.price}</p>
+              }>{drink.name}</Header>
             </Card>;
           })}
         </div>

@@ -1,7 +1,7 @@
 import { component$, Slot, useStore } from '@builder.io/qwik';
-import { Button, ExternalButton } from './Button';
 import { DocumentTextOutline, Menu } from 'qwik-ionicons';
 import IconWhite from './svg/IconInBag';
+import { Button, ButtonAnchor, Card, Header } from '@luminescent/ui';
 
 export default component$(() => {
   const menuStore = useStore({
@@ -9,41 +9,45 @@ export default component$(() => {
   });
   return (
     <aside class="w-full align-middle sm:sticky sm:h-1 sm:top-32 pt-24 sm:pt-0 font-futura tracking-wider" aria-label="Sidebar">
-      <div class="flex items-center gap-2">
+      <div class="flex items-center gap-2 mb-4">
         <div class="flex-1">
           <p class="text-3xl font-bold text-orange-200">MENU</p>
         </div>
-        <ExternalButton color="tertiary" href="/menu.pdf" aria-label="View Paper Menu">
+        <ButtonAnchor color="darkgray" href="/menu.pdf" aria-label="View Paper Menu">
           <DocumentTextOutline width="24"/>
-        </ExternalButton>
-        <Button color="tertiary" extraClass="sm:hidden" onClick$={() => menuStore.menu = !menuStore.menu} aria-label="Open Menu">
+        </ButtonAnchor>
+        <Button color="darkgray" class={{ 'sm:hidden': true }} onClick$={() => menuStore.menu = !menuStore.menu} aria-label="Toggle Menu">
           <Menu width="24"/>
         </Button>
       </div>
-      <div class={`overflow-y-auto ${!menuStore.menu ? 'hidden sm:' : ''}flex flex-col gap-6 p-6 mt-8 rounded-xl bg-gray-800 border border-gray-700 max-h-[calc(100dvh-400px)]`}>
+      <Card class={{
+        'overflow-y-auto mt-8 max-h-[calc(100dvh-300px)]': true,
+        'hidden sm:flex': !menuStore.menu,
+      }}>
         <Slot />
-      </div>
-      <div class="font-futura bg-burger-200/30 border border-burger-200/60 rounded-xl backdrop-blur-lg p-6 mt-4 hidden sm:block">
-        <div class="flex flex-col gap-5">
-          <h2 class="text-lg sm:text-2xl font-bold">
-            Feeling HANGRY?
-          </h2>
-          <a href="tel:+1 (905) 427 4377" class="flex transition rounded-xl shadow-lg backdrop-blur-lg bg-gradient-to-b from-burger-100/80 to-burger-200/80 hover:bg-burger-100 px-6 py-3 font-bold text-red-100 md:py-4 md:px-8 text-sm md:text-lg whitespace-nowrap gap-3 items-center">
-            <IconWhite width="24" class="fill-current" /> Call to order
-          </a>
-        </div>
-      </div>
+      </Card>
+      <Card color="orange" blobs class={{
+        'font-futura backdrop-blur-lg mt-4 hidden sm:block': true,
+      }}>
+        <Header>
+          Feeling HANGRY?
+        </Header>
+        <ButtonAnchor href="tel:+1 (905) 427 4377" color="orange" size="lg" class={{
+          'flex transition backdrop-blur-lg bg-gradient-to-b from-burger-100/80 to-burger-200/80 hover:bg-burger-100 whitespace-nowrap mt-4': true,
+        }}>
+          <IconWhite width="24" class="fill-current" /> Call to order
+        </ButtonAnchor>
+      </Card>
     </aside>
   );
 });
 
-export const MenuCategory = component$(({ name, collapse }: any) => {
+export const MenuCategory = component$(({ name }: any) => {
   return (
     <div class="flex flex-col gap-4">
       <span class="font-bold text-orange-200">{name}</span>
       <div class={{
-        'flex gap-2 flex-wrap': true,
-        'flex-col': !collapse,
+        'flex flex-col gap-2 flex-wrap': true,
       }}>
         <Slot />
       </div>
@@ -53,9 +57,9 @@ export const MenuCategory = component$(({ name, collapse }: any) => {
 
 export const MenuItem = component$(({ href }: any) => {
   return (
-    <a href={href} class="flex-1 min-w-fit transition bg-gray-800 hover:bg-gray-700 hover:text-white hover:drop-shadow-2xl border border-gray-700 hover:border-gray-600 px-3 py-2 rounded-lg text-base flex items-center gap-2">
+    <ButtonAnchor href={href}>
       <Slot />
-    </a>
+    </ButtonAnchor>
   );
 });
 

@@ -5,7 +5,7 @@ import Footer from '~/components/Footer';
 export default component$(() => {
   return (
     <main>
-      <Nav/>
+      <Nav />
       <Slot />
       <Footer />
     </main>
