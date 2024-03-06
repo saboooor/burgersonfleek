@@ -13,14 +13,14 @@ export default [
   {
     name: 'The Basic',
     description: 'Beef patty with lettuce, tomato, pickles, sautéed onions, and On Fleek Sauce.',
-    price: '$9.85',
-    double: '$14.85',
+    price: '$9.90',
+    double: '$14.90',
   },
   {
     name: 'The Classic',
     description: 'Beef patty with cheddar cheese, lettuce, tomato, pickles, sautéed onions, and On Fleek Sauce.',
-    price: '$10.85',
-    double: '$16.85',
+    price: '$10.90',
+    double: '$16.90',
     image: Classic,
   },
   {
@@ -34,25 +34,25 @@ export default [
   {
     name: 'Bromance',
     description: 'Beef patty with mozzarela cheese, topped with fried chicken thigh, grilled jalapeños, sautéed onions, lettuce, tomato, and chipotle sauce.',
-    price: '$16.99',
+    price: '$17.25',
     bestseller: true,
     image: Bromance,
   },
   {
     name: 'Godzilla',
     description: 'Three beef patties with cheddar cheese, beef bacon, lettuce, tomato, sautéed onions, grilled jalapeños, and On Fleek Sauce, between two grilled cheese buns.',
-    price: '$23.00',
+    price: '$23.99',
   },
   {
     name: 'Mashup',
     description: 'Beef patty with jalapeño havarti cheese, lettuce, tomato, pickles, onion rings, fried egg, pico de gallo, and chipotle sauce.',
-    price: '$13.85',
+    price: '$13.90',
     image: Mashup,
   },
   {
     name: 'Shook',
     description: 'Beef patty with cheddar cheese, crusted portobello mushroom stuffed with cheese, lettuce, tomato, pickles, and garlic mayo.',
-    price: '$15.99',
+    price: '$16.99',
     image: Shook,
   },
   {
@@ -82,7 +82,7 @@ export default [
   {
     name: 'Pick Me',
     description: 'Pulled beef brisket with sautéed onions, mayo, and smoky BBQ sauce.',
-    price: '$10.50',
+    price: '$10.99',
     image: PickMe,
   },
 ];

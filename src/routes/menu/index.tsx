@@ -4,6 +4,7 @@ import type { DocumentHead } from '@builder.io/qwik-city';
 import drinks from '../../components/menuitems/drinks.json';
 import extras from '../../components/menuitems/extras.json';
 import sides from '../../components/menuitems/sides.json';
+import combos from '../../components/menuitems/combos.json';
 import beefburgers from '~/components/menuitems/beefburgers';
 import chickenburgers from '~/components/menuitems/chickenburgers';
 import steaksandwiches from '~/components/menuitems/steaksandwiches';
@@ -33,6 +34,9 @@ export default component$(() => {
           </MenuItem>
         </MenuCategory>
         <MenuCategory name="OTHER" collapse>
+          <MenuItem href="#combo">
+            Make it a Combo
+          </MenuItem>
           <MenuItem href="#extras">
             Extras
           </MenuItem>
@@ -139,8 +143,7 @@ export default component$(() => {
             </Card>;
           })}
         </div>
-        <MenuTitle id="sides"
-          subtitle="* Add a drink for $1.50">
+        <MenuTitle id="sides">
           Sides
         </MenuTitle>
         <div class="flex flex-wrap gap-4 pt-5 pb-10">
@@ -152,6 +155,21 @@ export default component$(() => {
                 Large: <span class="text-amber-400">{side.price.large}</span>
               </p>
               {side.description && <p class="text-gray-400 text-sm sm:text-base mt-4">{side.description}</p>}
+            </Card>;
+          })}
+        </div>
+        <MenuTitle id="combo">
+          Make it a Combo
+        </MenuTitle>
+        <div class="flex flex-wrap gap-4 pt-5 pb-10">
+          {combos.map((combo, i) => {
+            return <Card key={i}>
+              <CardHeader>{combo.name}</CardHeader>
+              <p class="text-gray-400 text-xs sm:text-sm">
+                Medium: <span class="text-amber-400">{combo.price.medium}</span><br/>
+                Large: <span class="text-amber-400">{combo.price.large}</span>
+              </p>
+              {combo.description && <p class="text-gray-400 text-sm sm:text-base mt-4">{combo.description}</p>}
             </Card>;
           })}
         </div>
