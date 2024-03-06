@@ -60,22 +60,24 @@ export default component$(() => {
         </MenuTitle>
         <div class="flex flex-wrap gap-4 pt-5 pb-10">
           {beefburgers.map((beefburger, i) => {
-            return <Card key={i} class={{
-              'flex-1 min-w-[18rem]': true,
+            return <Card key={i} row class={{
+              'flex-1 sm:flex-col min-w-[18rem] gap-6': true,
             }}>
               <div class="mb-4">
-                {beefburger.image && <beefburger.image class="h-32 w-auto object-contain" alt={beefburger.name} style="filter: drop-shadow(0 0 3rem rgba(251, 146, 60, 0.1));" />}
-                {!beefburger.image && <Icon width={128}/>}
+                {beefburger.image && <beefburger.image class="max-w-[80px] sm:max-w-[128px]" alt={beefburger.name} style="filter: drop-shadow(0 0 3rem rgba(251, 146, 60, 0.1));" />}
+                {!beefburger.image && <Icon width={80} />}
               </div>
-              <Header class={{
-                'font-futura tracking-wider': true,
-              }} subheader={
-                <p class="text-amber-400 text-xs sm:text-sm">
-                  {beefburger.double && <span class="text-gray-400">Single: </span>}{beefburger.price}
-                  {beefburger.double && <><br/><span class="text-gray-400">Double: </span>{beefburger.double}</>}
-                </p>
-              }>{beefburger.name}{beefburger.bestseller && <BestSeller/>}</Header>
-              <p class="text-gray-400 text-sm sm:text-base h-full">{beefburger.description}</p>
+              <div class="flex-1 flex flex-col gap-4">
+                <Header class={{
+                  'font-futura tracking-wider': true,
+                }} subheader={
+                  <p class="text-amber-400 text-xs sm:text-sm">
+                    {beefburger.double && <span class="text-gray-400">Single: </span>}{beefburger.price}
+                    {beefburger.double && <><br/><span class="text-gray-400">Double: </span>{beefburger.double}</>}
+                  </p>
+                }>{beefburger.name}{beefburger.bestseller && <BestSeller/>}</Header>
+                <p class="text-gray-400 text-sm sm:text-base h-full">{beefburger.description}</p>
+              </div>
             </Card>;
           })}
         </div>
@@ -85,21 +87,23 @@ export default component$(() => {
         </MenuTitle>
         <div class="flex flex-wrap gap-4 pt-5 pb-10">
           {chickenburgers.map((chickenburger, i) => {
-            return <Card key={i} class={{
-              'flex-1 min-w-[18rem]': true,
+            return <Card key={i} row class={{
+              'flex-1 sm:flex-col min-w-[18rem] gap-6': true,
             }}>
               <div class="mb-4">
-                {chickenburger.image && <chickenburger.image class="h-32 w-auto object-contain" alt={chickenburger.name} style="filter: drop-shadow(0 0 3rem rgba(251, 146, 60, 0.1));" />}
-                {!chickenburger.image && <Icon width={128}/>}
+                {chickenburger.image && <chickenburger.image class="max-w-[80px] sm:max-w-[128px]" alt={chickenburger.name} style="filter: drop-shadow(0 0 3rem rgba(251, 146, 60, 0.1));" />}
+                {!chickenburger.image && <Icon width={80} />}
               </div>
-              <Header class={{
-                'font-futura tracking-wider': true,
-              }} subheader={
-                <p class="text-amber-400 text-xs sm:text-sm">
-                  {chickenburger.price}
-                </p>
-              }>{chickenburger.name}{chickenburger.bestseller && <BestSeller/>}</Header>
-              <p class="text-gray-400 text-sm sm:text-base h-full">{chickenburger.description}</p>
+              <div class="flex-1 flex flex-col gap-4">
+                <Header class={{
+                  'font-futura tracking-wider': true,
+                }} subheader={
+                  <p class="text-amber-400 text-xs sm:text-sm">
+                    {chickenburger.price}
+                  </p>
+                }>{chickenburger.name}{chickenburger.bestseller && <BestSeller/>}</Header>
+                <p class="text-gray-400 text-sm sm:text-base h-full">{chickenburger.description}</p>
+              </div>
             </Card>;
           })}
         </div>
@@ -108,21 +112,23 @@ export default component$(() => {
         </MenuTitle>
         <div class="flex flex-wrap gap-4 pt-5 pb-10">
           {veggieburgers.map((veggieburger, i) => {
-            return <Card key={i} class={{
-              'flex-1 min-w-[18rem]': true,
+            return <Card key={i} row class={{
+              'flex-1 sm:flex-col min-w-[18rem] gap-6': true,
             }}>
               <div class="mb-4">
-                {veggieburger.image && <veggieburger.image class="h-32 w-auto object-contain" alt={veggieburger.name} style="filter: drop-shadow(0 0 3rem rgba(251, 146, 60, 0.1));" />}
-                {!veggieburger.image && <Icon width={128}/>}
+                {veggieburger.image && <veggieburger.image class="max-w-[80px] sm:max-w-[128px]" alt={veggieburger.name} style="filter: drop-shadow(0 0 3rem rgba(251, 146, 60, 0.1));" />}
+                {!veggieburger.image && <Icon width={80} />}
               </div>
-              <Header class={{
-                'font-futura tracking-wider': true,
-              }} subheader={
-                <p class="text-amber-400 text-xs sm:text-sm">
-                  {veggieburger.price}
-                </p>
-              }>{veggieburger.name}</Header>
-              <p class="text-gray-400 text-sm sm:text-base h-full">{veggieburger.description}</p>
+              <div class="flex-1 flex flex-col gap-4">
+                <Header class={{
+                  'font-futura tracking-wider': true,
+                }} subheader={
+                  <p class="text-amber-400 text-xs sm:text-sm">
+                    {veggieburger.price}
+                  </p>
+                }>{veggieburger.name}</Header>
+                <p class="text-gray-400 text-sm sm:text-base h-full">{veggieburger.description}</p>
+              </div>
             </Card>;
           })}
         </div>
@@ -131,21 +137,23 @@ export default component$(() => {
         </MenuTitle>
         <div class="flex flex-wrap gap-4 pt-5 pb-10">
           {steaksandwiches.map((steaksandwich, i) => {
-            return <Card key={i} class={{
-              'flex-1 min-w-[18rem]': true,
+            return <Card key={i} row class={{
+              'flex-1 sm:flex-col min-w-[18rem] gap-6': true,
             }}>
               <div class="mb-4">
-                {steaksandwich.image && <steaksandwich.image class="h-32 w-auto object-contain" alt={steaksandwich.name} style="filter: drop-shadow(0 0 3rem rgba(251, 146, 60, 0.1));" />}
-                {!steaksandwich.image && <Icon width={128}/>}
+                {steaksandwich.image && <steaksandwich.image class="max-w-[80px] sm:max-w-[128px]" alt={steaksandwich.name} style="filter: drop-shadow(0 0 3rem rgba(251, 146, 60, 0.1));" />}
+                {!steaksandwich.image && <Icon width={80} />}
               </div>
-              <Header class={{
-                'font-futura tracking-wider': true,
-              }} subheader={
-                <p class="text-amber-400 text-xs sm:text-sm">
-                  {steaksandwich.price}
-                </p>
-              }>{steaksandwich.name}</Header>
-              <p class="text-gray-400 text-sm sm:text-base h-full">{steaksandwich.description}</p>
+              <div class="flex-1 flex flex-col gap-4">
+                <Header class={{
+                  'font-futura tracking-wider': true,
+                }} subheader={
+                  <p class="text-amber-400 text-xs sm:text-sm">
+                    {steaksandwich.price}
+                  </p>
+                }>{steaksandwich.name}</Header>
+                <p class="text-gray-400 text-sm sm:text-base h-full">{steaksandwich.description}</p>
+              </div>
             </Card>;
           })}
         </div>
