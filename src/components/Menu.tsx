@@ -13,9 +13,6 @@ export default component$(() => {
         <div class="flex-1">
           <p class="text-3xl font-bold text-orange-200">MENU</p>
         </div>
-        <ButtonAnchor color="darkgray" href="/menu.pdf" aria-label="View Paper Menu">
-          <DocumentTextOutline width="24"/>
-        </ButtonAnchor>
         <Button color="darkgray" class={{ 'sm:hidden': true }} onClick$={() => menuStore.menu = !menuStore.menu} aria-label="Toggle Menu">
           <Menu width="24"/>
         </Button>
