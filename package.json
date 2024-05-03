@@ -31,7 +31,7 @@
     "@typescript-eslint/eslint-plugin": "7.1.1",
     "@typescript-eslint/parser": "7.1.1",
     "autoprefixer": "10.4.18",
-    "eslint": "8.57.0",
+    "eslint": "9.2.0",
     "eslint-plugin-qwik": "1.5.1",
     "node-fetch": "3.3.2",
     "postcss": "8.4.35",
