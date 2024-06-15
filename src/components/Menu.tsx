@@ -52,14 +52,6 @@ export const MenuCategory = component$(({ name }: any) => {
   );
 });
 
-export const MenuItem = component$(({ href }: any) => {
-  return (
-    <ButtonAnchor href={href}>
-      <Slot />
-    </ButtonAnchor>
-  );
-});
-
 export const MenuTitle = component$(({ id, subtitle }: any) => {
   return (
     <>

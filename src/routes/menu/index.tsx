@@ -1,16 +1,16 @@
 import { component$ } from '@builder.io/qwik';
 import type { DocumentHead } from '@builder.io/qwik-city';
 
-import drinks from '../../components/menuitems/drinks.json';
-import extras from '../../components/menuitems/extras.json';
-import sides from '../../components/menuitems/sides.json';
+import drinks from '~/components/menuitems/drinks.json';
+import extras from '~/components/menuitems/extras.json';
+import sides from '~/components/menuitems/sides.json';
 import beefburgers from '~/components/menuitems/beefburgers';
 import chickenburgers from '~/components/menuitems/chickenburgers';
 import steaksandwiches from '~/components/menuitems/steaksandwiches';
 import veggieburgers from '~/components/menuitems/veggieburgers';
 
-import Menu, { MenuCategory, MenuItem, MenuTitle } from '~/components/Menu';
-import { Card, Header } from '@luminescent/ui';
+import Menu, { MenuCategory, MenuTitle } from '~/components/Menu';
+import { ButtonAnchor, Card, Header } from '@luminescent/ui';
 import BestSeller from '~/components/BestSeller';
 import OrderPopup from '~/components/OrderPopup';
 import Icon from '~/components/svg/Icon';
@@ -20,29 +20,29 @@ export default component$(() => {
     <section class="grid gap-4 sm:grid-cols-3 lg:grid-cols-4 mx-auto max-w-screen-xl px-4 sm:px-6 min-h-[100svh]">
       <Menu>
         <MenuCategory name="BURGERS & SANDWICHES">
-          <MenuItem href="#beefburgers">
+          <ButtonAnchor transparent size="sm" href="#beefburgers">
             Beef Burgers
-          </MenuItem>
-          <MenuItem href="#chickenburgers">
+          </ButtonAnchor>
+          <ButtonAnchor transparent size="sm" href="#chickenburgers">
             Chicken Burgers
-          </MenuItem>
-          <MenuItem href="#veggieburgers">
+          </ButtonAnchor>
+          <ButtonAnchor transparent size="sm" href="#veggieburgers">
             Vegetarian Burgers
-          </MenuItem>
-          <MenuItem href="#steaksandwiches">
+          </ButtonAnchor>
+          <ButtonAnchor transparent size="sm" href="#steaksandwiches">
             Steak Sandwiches
-          </MenuItem>
+          </ButtonAnchor>
         </MenuCategory>
         <MenuCategory name="OTHER" collapse>
-          <MenuItem href="#extras">
+          <ButtonAnchor transparent size="sm" href="#extras">
             Extras
-          </MenuItem>
-          <MenuItem href="#sides">
+          </ButtonAnchor>
+          <ButtonAnchor transparent size="sm" href="#sides">
             Sides
-          </MenuItem>
-          <MenuItem href="#drinks">
+          </ButtonAnchor>
+          <ButtonAnchor transparent size="sm" href="#drinks">
             Drinks
-          </MenuItem>
+          </ButtonAnchor>
         </MenuCategory>
       </Menu>
       <div class="sm:col-span-2 lg:col-span-3 sm:pt-28">
