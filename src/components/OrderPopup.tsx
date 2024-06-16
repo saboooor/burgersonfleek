@@ -24,7 +24,7 @@ export default component$(() => {
       <Header>
         Feeling HANGRY?
       </Header>
-      <ButtonAnchor href="tel:+1 (905) 427 4377" color="orange" class={{
+      <ButtonAnchor href="tel:+1 (905) 427 4377" class={{
         'flex transition backdrop-blur-lg bg-gradient-to-b from-burger-100/80 to-burger-200/80 hover:bg-burger-100 whitespace-nowrap mt-2': true,
       }}>
         <IconWhite width="24" class="fill-current" /> Call to order

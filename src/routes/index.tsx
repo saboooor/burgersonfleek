@@ -1,7 +1,7 @@
 import { component$ } from '@builder.io/qwik';
 import type { DocumentHead } from '@builder.io/qwik-city';
 import { Link } from '@builder.io/qwik-city';
-import { Blobs } from '@luminescent/ui';
+import { Blobs, Button, ButtonAnchor } from '@luminescent/ui';
 
 import Logo from '~/components/svg/Logo';
 import Icon from '~/components/svg/Icon';
@@ -40,31 +40,49 @@ export default component$(() => {
         </p>
         <div class="flex flex-col gap-1.5 sm:gap-2 mt-10 min-h-[11.25rem] font-futura">
           <div class="flex gap-1.5 sm:gap-2 justify-center animate-in fade-in slide-in-from-top-32 sm:slide-in-from-top-24 anim-duration-1000">
-            <Link href="/menu" class="flex transition rounded-xl backdrop-blur-lg bg-gradient-to-b from-burger-100/80 to-burger-200/80 hover:bg-burger-100 px-4 py-3 font-bold text-red-100 md:py-4 md:px-8 text-sm md:text-lg whitespace-nowrap gap-3 items-center">
-              <BookOutline width="24" class="fill-current" /> View the menu
+            <Link href="/menu">
+              <Button size="xl" mobilesize="sm" class={{
+                'bg-gradient-to-b from-burger-100/80 to-burger-200/80 hover:bg-burger-100 border-none': true,
+              }}>
+                <BookOutline width="24" class="fill-current" /> View the menu
+              </Button>
             </Link>
-            <Link href="/halal" class="flex transition rounded-xl backdrop-blur-lg bg-gradient-to-b from-burger-100/80 to-burger-200/80 hover:bg-burger-100 px-4 py-3 font-bold text-red-100 md:py-4 md:px-8 text-sm md:text-lg whitespace-nowrap gap-3 items-center">
-              <Halal width="24" class="fill-current" /> Halal
+            <Link href="/halal">
+              <Button size="xl" mobilesize="sm" class={{
+                'bg-gradient-to-b from-burger-100/80 to-burger-200/80 hover:bg-burger-100 border-none': true,
+              }}>
+                <Halal width="24" class="fill-current" /> Halal
+              </Button>
             </Link>
           </div>
           <div class="flex gap-1.5 sm:gap-2 justify-center animate-in fade-in slide-in-from-top-40 sm:slide-in-from-top-32 anim-duration-1000">
-            <a href="tel:+1 (905) 427 4377" class="flex transition rounded-xl backdrop-blur-lg bg-gradient-to-b from-burger-200/80 to-burger-300/80 hover:bg-burger-200 px-4 py-3 font-bold text-red-100 md:py-4 md:px-8 text-xs md:text-lg whitespace-nowrap gap-3 items-center">
+            <ButtonAnchor href="tel:+1 (905) 427 4377" size="xl" mobilesize="sm" class={{
+              'bg-gradient-to-b from-burger-200/80 to-burger-300/80 hover:bg-burger-200 border-none': true,
+            }}>
               <CallOutline width="24" class="fill-current" /> +1 (905) 427 4377
-            </a>
-            <a href="https://maps.app.goo.gl/Unrrg3uda7AQQs4DA" class="flex transition rounded-xl backdrop-blur-lg bg-gradient-to-b from-burger-200/80 to-burger-300/80 hover:bg-burger-200 px-4 py-3 font-bold text-red-100 md:py-4 md:px-8 text-xs md:text-lg whitespace-nowrap gap-3 items-center">
+            </ButtonAnchor>
+            <ButtonAnchor href="https://maps.app.goo.gl/Unrrg3uda7AQQs4DA" size="xl" mobilesize="sm"  class={{
+              'bg-gradient-to-b from-burger-200/80 to-burger-300/80 hover:bg-burger-200 border-none': true,
+            }}>
               <MapOutline width="24" class="fill-current" /> Google Maps
-            </a>
+            </ButtonAnchor>
           </div>
           <div class="flex gap-1.5 sm:gap-2 justify-center animate-in fade-in slide-in-from-top-48 sm:slide-in-from-top-40 anim-duration-1000">
-            <a href="https://instagram.com/burgersonfleek.ca" class="flex transition rounded-xl backdrop-blur-lg bg-gradient-to-b from-burger-300/80 via-burger-300/80 to-pink-700/60 hover:bg-burger-300 px-4 py-3 font-bold text-red-100 md:py-4 md:px-8 text-xs md:text-lg whitespace-nowrap gap-3 items-center">
+            <ButtonAnchor href="https://instagram.com/burgersonfleek.ca" size="xl" mobilesize="sm" class={{
+              'bg-gradient-to-b from-burger-300/80 via-burger-300/80 to-pink-700/60 hover:bg-burger-300 border-none': true,
+            }}>
               <LogoInstagram width="24" class="fill-current" /> Instagram
-            </a>
-            <a href="https://facebook.com/burgersonfleek.ca" class="flex transition rounded-xl backdrop-blur-lg bg-gradient-to-b from-burger-300/80 via-burger-300/80 to-indigo-700/60 hover:bg-burger-300 px-4 py-3 font-bold text-red-100 md:py-4 md:px-8 text-xs md:text-lg whitespace-nowrap gap-3 items-center">
+            </ButtonAnchor>
+            <ButtonAnchor href="https://facebook.com/burgersonfleek.ca" size="xl" mobilesize="sm" class={{
+              'bg-gradient-to-b from-burger-300/80 via-burger-300/80 to-indigo-700/60 hover:bg-burger-300 border-none': true,
+            }}>
               <LogoFacebook width="24" class="fill-current" /> Facebook
-            </a>
-            <a href="https://tiktok.com/@burgersonfleek.ca" class="flex transition rounded-xl backdrop-blur-lg bg-gradient-to-b from-burger-300/80 via-burger-300/80 to-purple-700/60 hover:bg-burger-300 px-4 py-3 font-bold text-red-100 md:py-4 md:px-8 text-xs md:text-lg whitespace-nowrap gap-3 items-center">
+            </ButtonAnchor>
+            <ButtonAnchor href="https://tiktok.com/@burgersonfleek.ca" size="xl" mobilesize="sm" class={{
+              'bg-gradient-to-b from-burger-300/80 via-burger-300/80 to-purple-700/60 hover:bg-burger-300 border-none': true,
+            }}>
               <LogoTiktok width="24" class="fill-current" /> TikTok
-            </a>
+            </ButtonAnchor>
           </div>
         </div>
       </div>

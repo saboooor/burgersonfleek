@@ -18,8 +18,8 @@ importers:
         specifier: 1.5.7
         version: 1.5.7(@types/node@20.10.5)(rollup@4.17.2)
       '@luminescent/ui':
-        specifier: 0.18.2
-        version: 0.18.2
+        specifier: 0.19.2
+        version: 0.19.2
       '@types/eslint':
         specifier: 8.56.10
         version: 8.56.10
@@ -598,8 +598,8 @@ packages:
   '@jridgewell/trace-mapping@0.3.9':
     resolution: {integrity: sha512-3Belt6tdc8bPgAtbcmdtNJlirVoTmEb5e2gC94PnkwEW9jI6CAHUeoG85tjWP5WquqfavoMtMwiG4P926ZKKuQ==}
 
-  '@luminescent/ui@0.18.2':
-    resolution: {integrity: sha512-hMt7dRJyTbLdaMTNinn/bV338jHIn7Y2D7gjigKxolzkcPFVk2dyvMQYsQC7OsaXLuGgx6l1zWW0oP/i0j1CGQ==}
+  '@luminescent/ui@0.19.2':
+    resolution: {integrity: sha512-0nMkhPhHS0KdzGzDAWmh08Ha7SnTd2Uue3KNvDikodWdtZ6/+0D+Gi7GkeYIW/0KXFkA8CmfN3O9FXBALV/cyw==}
     engines: {node: '>=15.0.0'}
 
   '@mdx-js/mdx@3.0.1':
@@ -2610,7 +2610,7 @@ snapshots:
       '@jridgewell/resolve-uri': 3.1.0
       '@jridgewell/sourcemap-codec': 1.4.15
 
-  '@luminescent/ui@0.18.2': {}
+  '@luminescent/ui@0.19.2': {}
 
   '@mdx-js/mdx@3.0.1':
     dependencies:
