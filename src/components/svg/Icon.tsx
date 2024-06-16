@@ -1,8 +1,9 @@
+import type { PropsOf } from '@builder.io/qwik';
 import { component$ } from '@builder.io/qwik';
 
-export default component$(({ width }: any) => {
+export default component$<PropsOf<'svg'>>(({ width, ...props }) => {
   return (
-    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 338 338" width={width} height={width}>
+    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 338 338" width={width} height={width} {...props}>
       <defs>
         <linearGradient id="linear-gradient" x1="0.5" y1="1" x2="0.5" gradientUnits="objectBoundingBox" gradientTransform="rotate(10)">
           <stop offset="0" stop-color="rgb(94,60,15)"/>
@@ -27,6 +28,11 @@ export default component$(({ width }: any) => {
             c-29.4,0-56.7-7.8-79.7-21.8c-22.9-14-41.4-34.1-53.3-58.8c-2-4.2-2.9-8.4-2.9-12.5c0-0.7,0.1-1.3,0.1-1.9
             c4.4,1.9,9.2,2.9,14.3,2.9v-6.2l0,6.2l260-0.1C548.8,379.1,529.2,402,504.8,417.6z"
         />
+      </g>
+      <g transform="translate(40,40)" fill="rgb(201,128,33)">
+        <path d="M257.158,296.672v-14.273h-5.098v-2.906h13.652v2.906h-5.086v14.273H257.158z"/>
+        <path d="M267.916,296.672v-17.18h5.191l3.117,11.719l3.082-11.719h5.203v17.18h-3.223v-13.523
+          l-3.41,13.523h-3.34l-3.398-13.523v13.523H267.916z"/>
       </g>
     </svg>
   );

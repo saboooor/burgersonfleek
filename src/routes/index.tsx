@@ -5,7 +5,7 @@ import { Blobs } from '@luminescent/ui';
 
 import Logo from '~/components/svg/Logo';
 import Icon from '~/components/svg/Icon';
-import { LogoInstagram, LogoFacebook, BookOutline, CallOutline, MapOutline } from 'qwik-ionicons';
+import { LogoInstagram, LogoFacebook, BookOutline, CallOutline, MapOutline, LogoTiktok } from 'qwik-ionicons';
 import Halal from '~/components/svg/Halal';
 
 export default component$(() => {
@@ -28,9 +28,12 @@ export default component$(() => {
             <Icon width={160} id="mobile"/>
           </div>
         </div>
-        <h1 class="font-bold text-orange-100 text-3xl sm:text-5xl my-4 sm:mb-6 animate-in fade-in slide-in-from-top-16 sm:slide-in-from-top-8 anim-duration-1000" style="filter: drop-shadow(0 2rem 3rem rgba(251, 146, 60, 0.5));">
-          The <span class="text-amber-500">burgers</span><br/>you are <span class="text-orange-300">craving.</span>
-        </h1>
+        <div class="flex items-end justify-center animate-in fade-in slide-in-from-top-16 sm:slide-in-from-top-8 anim-duration-1000">
+          <h1 class="font-bold text-orange-100 text-3xl sm:text-5xl my-4 sm:mb-6" style="filter: drop-shadow(0 2rem 3rem rgba(251, 146, 60, 0.5));">
+            The <span class="text-amber-500">burgers</span><br/>you are <span class="text-orange-300">craving.</span>
+          </h1>
+          <p class="mb-6 sm:mb-10">™</p>
+        </div>
         <p class="text-gray-400 mx-6 md:mx-20 text-lg md:text-xl animate-in fade-in slide-in-from-top-24 sm:slide-in-from-top-16 anim-duration-1000">
           Premium Quality Gourmet Burgers, Steak Sandwiches, Fries, and more. Only serving Halal حلال<br/>
           est. 2019
@@ -60,7 +63,7 @@ export default component$(() => {
               <LogoFacebook width="24" class="fill-current" /> Facebook
             </a>
             <a href="https://tiktok.com/@burgersonfleek.ca" class="flex transition rounded-xl backdrop-blur-lg bg-gradient-to-b from-burger-300/80 via-burger-300/80 to-purple-700/60 hover:bg-burger-300 px-4 py-3 font-bold text-red-100 md:py-4 md:px-8 text-xs md:text-lg whitespace-nowrap gap-3 items-center">
-              TikTok
+              <LogoTiktok width="24" class="fill-current" /> TikTok
             </a>
           </div>
         </div>
