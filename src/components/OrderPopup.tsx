@@ -1,25 +1,23 @@
 // LuminescentDev Navbar Component Apr 28
 
-import { $, component$, useOnDocument, useStore } from '@builder.io/qwik';
+import { $, component$, useOnDocument, useSignal } from '@builder.io/qwik';
 import IconWhite from './svg/IconInBag';
 import { ButtonAnchor, Card, Header } from '@luminescent/ui';
 
 export default component$(() => {
-  const store = useStore({
-    prevScrollpos: 0,
-  });
+  const prevScrollpos = useSignal(0);
 
   useOnDocument('scroll', $(() => {
     const orderpopup = document.getElementById('orderpopup')!;
-    if (store.prevScrollpos > window.scrollY && window.scrollY + 1000 < document.body.scrollHeight) {
+    if (prevScrollpos.value > window.scrollY && window.scrollY + 1000 < document.body.scrollHeight) {
       orderpopup.style.bottom = '0';
     } else if (window.scrollY > 100) {
-      orderpopup.style.bottom = '-8rem';
+      orderpopup.style.bottom = '-9rem';
     }
-    store.prevScrollpos = window.scrollY;
+    prevScrollpos.value = window.scrollY;
   }));
 
-  return <div class="fixed bottom-0 w-full sm:hidden transition-all duration-300 delay-75 p-4">
+  return <div class="fixed bottom-0 w-full sm:hidden p-4">
     <Card color="orange" blobs class={{
       'font-futura backdrop-blur-lg': true,
     }} id="orderpopup">
