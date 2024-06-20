@@ -27,7 +27,7 @@
     "@luminescent/ui": "0.19.2",
     "@types/eslint": "8.56.10",
     "@types/node": "latest",
-    "@types/uuid": "^9.0.8",
+    "@types/uuid": "^10.0.0",
     "@typescript-eslint/eslint-plugin": "7.13.0",
     "@typescript-eslint/parser": "7.13.0",
     "autoprefixer": "10.4.19",
