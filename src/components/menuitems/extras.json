@@ -1,11 +1,11 @@
 [
   {
-    "name": "Beef Bacon",
-    "price": "$3.35"
+    "name": "Beef Bacon (1 strip)",
+    "price": "$1.75"
   },
   {
     "name": "Fried Egg",
-    "price": "$2.00"
+    "price": "$1.50"
   },
   {
     "name": "Extra Sauce",
@@ -16,7 +16,7 @@
     "price": {
       "Extra Cheese": "$1.60",
       "Crusted Cheese": "$3.60",
-      "Melted Cheese": "$3.60"
+      "Melted Cheese": "$3.50"
     }
   },
   {
