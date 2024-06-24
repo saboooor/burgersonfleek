@@ -45,7 +45,7 @@ export default [
   },
   {
     name: 'Mashup',
-    description: 'Beef patty with jalapeño havarti cheese, lettuce, tomato, pickles, onion rings, fried egg, pico de gallo, and chipotle sauce.',
+    description: 'Beef patty with mozzarella cheese, lettuce, tomato, pickles, onion rings, fried egg, pico de gallo, and chipotle sauce.',
     price: '$13.90',
     image: Mashup,
   },
@@ -69,7 +69,7 @@ export default [
   },
   {
     name: 'Aloha',
-    description: 'Beef patty with jalapeño havarti cheese, grilled pineapple, lettuce, beef bacon, and BBQ sauce.',
+    description: 'Beef patty with mozarella cheese, grilled pineapple, lettuce, beef bacon, and BBQ sauce.',
     price: '$13.99',
     image: Aloha,
   },
