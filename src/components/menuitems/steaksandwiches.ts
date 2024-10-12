@@ -15,7 +15,12 @@ export default [
   },
   {
     name: 'Hangry',
-    description: 'Thinly sliced AAA rib-eye steak with sautéed onions, roasted peppers, jalapeños, muchrooms, melted cheese, topped with fried chicken and chipotle sauce.',
+    description: 'Thinly sliced AAA rib-eye steak with sautéed onions, roasted peppers, jalapeños, mushrooms, melted cheese, topped with fried chicken and chipotle sauce.',
+    price: '$23.50',
+  },
+  {
+    name: 'Steak on Fries',
+    description: 'Thinly sliced AAA rib-eye steak with sautéed onions, roasted peppers, jalapeños, mushrooms, melted cheese, chipotle and garlic mayo.',
     price: '$23.50',
   },
 ];

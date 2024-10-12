@@ -8,9 +8,14 @@ export default [
   },
   {
     name: 'G.O.A.T',
-    description: 'Fried chicken burger (dark meat) with melted cheese, lettuce, tomato, roasted peppers, pico de gallo, chipotle sauce, and garlic mayo.',
+    description: 'Fried chicken burger (dark meat) with melted cheese, lettuce, tomato, roasted peppers, pico de gallo, chipotle, and garlic mayo.',
     price: '$17.75',
     bestseller: true,
     image: Goat,
+  },
+  {
+    name: 'Shawty',
+    description: 'Fried chicken burger (dark meat) with lettuce, tomato, and chipotle sauce.',
+    price: '$9.90',
   },
 ];
