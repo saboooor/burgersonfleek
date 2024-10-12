@@ -144,7 +144,7 @@ export default component$(() => {
         }}>
           Steak Sandwiches
         </Header>
-        <div class="flex flex-wrap gap-4 pt-5 pb-10">
+        <div class="grid sm:grid-cols-2 gap-4 pt-5 pb-10">
           {steaksandwiches.map((item, i) => {
             return <Card key={i} row class={{
               'flex-1 sm:flex-col min-w-[18rem] gap-6': true,
