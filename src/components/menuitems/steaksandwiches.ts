@@ -21,6 +21,6 @@ export default [
   {
     name: 'Steak on Fries',
     description: 'Thinly sliced AAA rib-eye steak with sautéed onions, roasted peppers, jalapeños, mushrooms, melted cheese, chipotle and garlic mayo.',
-    price: '$23.50',
+    price: '$19.00',
   },
 ];
