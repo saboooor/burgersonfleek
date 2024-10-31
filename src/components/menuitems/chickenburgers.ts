@@ -16,6 +16,6 @@ export default [
   {
     name: 'Shawty',
     description: 'Fried chicken burger (dark meat) with lettuce, tomato, and chipotle sauce.',
-    price: '$9.90',
+    price: '$9.99',
   },
 ];
