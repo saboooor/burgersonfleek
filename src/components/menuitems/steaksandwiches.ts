@@ -3,7 +3,7 @@ import Hookup from '../images/Hookup.png?jsx';
 export default [
   {
     name: 'Lowkey',
-    description: 'Thinly sliced AAA rib-eye steak with sautéed onions, lettuce, tomatoes, pickles, and On Fleek Sauce.',
+    description: 'Thinly sliced AAA rib-eye steak with sautéed onions, lettuce, tomatoes, pickles, and On Fleek sauce.',
     price: '$15.50',
   },
   {
@@ -20,7 +20,7 @@ export default [
   },
   {
     name: 'Steak on Fries',
-    description: 'Thinly sliced AAA rib-eye steak with sautéed onions, roasted peppers, jalapeños, mushrooms, melted cheese, chipotle and garlic mayo.',
+    description: 'Thinly sliced AAA rib-eye steak with sautéed onions, roasted peppers, jalapeños, mushrooms, melted cheese, chipotle sauce, and garlic mayo.',
     price: '$19.00',
   },
 ];

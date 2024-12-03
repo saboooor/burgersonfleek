@@ -12,20 +12,20 @@ import Snatched from '../images/Snatched.png?jsx';
 export default [
   {
     name: 'The Basic',
-    description: 'Beef patty with lettuce, tomato, pickles, sautéed onions, and On Fleek Sauce.',
+    description: 'Beef patty with lettuce, tomato, pickles, sautéed onions, and On Fleek sauce.',
     price: '$10.05',
     double: '$15.05',
   },
   {
     name: 'The Classic',
-    description: 'Beef patty with cheddar cheese, lettuce, tomato, pickles, sautéed onions, and On Fleek Sauce.',
+    description: 'Beef patty with cheddar cheese, lettuce, tomato, pickles, sautéed onions, and On Fleek sauce.',
     price: '$11.05',
     double: '$17.05',
     image: Classic,
   },
   {
     name: 'Bae',
-    description: 'Beef patty with cheddar cheese, beef bacon, lettuce, tomato, pickles, sautéed onions, and On Fleek Sauce.',
+    description: 'Beef patty with cheddar cheese, beef bacon, lettuce, tomato, pickles, sautéed onions, and On Fleek sauce.',
     price: '$12.15',
     double: '$18.15',
     bestseller: true,
@@ -33,19 +33,19 @@ export default [
   },
   {
     name: 'Bromance',
-    description: 'Beef patty with mozzarela cheese, topped with fried chicken thigh, grilled jalapeños, sautéed onions, lettuce, tomato, and chipotle sauce.',
+    description: 'Beef patty with mozzarella cheese, topped with fried chicken thigh, grilled jalapeños, sautéed onions, lettuce, tomato, and chipotle sauce.',
     price: '$17.40',
     bestseller: true,
     image: Bromance,
   },
   {
     name: 'Godzilla',
-    description: 'Three beef patties with cheddar cheese, beef bacon, lettuce, tomato, sautéed onions, grilled jalapeños, and On Fleek Sauce, between two grilled cheese buns.',
+    description: 'Three beef patties with cheddar cheese, beef bacon, lettuce, tomato, sautéed onion, grilled jalapeños, and On Fleek sauce between two grilled cheese buns.',
     price: '$24.50',
   },
   {
     name: 'Mashup',
-    description: 'Beef patty with mozzarella cheese, lettuce, tomato, pickles, onion rings, fried egg, pico de gallo, and chipotle sauce.',
+    description: 'Beef patty with mozzarrella cheese, lettuce, tomato, pickles, onion rings, fried egg, pico de gallo, and chipotle sauce.',
     price: '$14.00',
     image: Mashup,
   },
@@ -69,7 +69,7 @@ export default [
   },
   {
     name: 'Aloha',
-    description: 'Beef patty with mozarella cheese, grilled pineapple, lettuce, beef bacon, and BBQ sauce.',
+    description: 'Beef patty with mozzarella cheese, grilled pineapple, lettuce, beef bacon, and BBQ sauce.',
     price: '$13.99',
     image: Aloha,
   },
