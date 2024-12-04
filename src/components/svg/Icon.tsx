@@ -7,7 +7,7 @@ export default component$<PropsOf<'svg'>>(({ width, ...props }) => {
       <defs>
         <linearGradient id="linear-gradient" x1="0.5" y1="1" x2="0.5" gradientUnits="objectBoundingBox" gradientTransform="rotate(10)">
           <stop offset="0" stop-color="rgb(94,60,15)"/>
-          <stop offset="1" stop-color="rgb(201,128,33)"/>
+          <stop offset="1" stop-color="rgb(195, 129, 31)"/>
         </linearGradient>
       </defs>
       <g fill="url(#linear-gradient)">

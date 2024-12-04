@@ -11,7 +11,7 @@ export default component$(() => {
   const loc = useLocation();
 
   return (
-    <Nav fixed colorClass='lum-bg-gray-900/50 !text-orange-100' class={{
+    <Nav fixed colorClass='lum-bg-gray-900/50' class={{
       'font-futura tracking-wider': true,
     }}>
       <Link q:slot="start" href="/" class="lum-btn lum-bg-transparent">

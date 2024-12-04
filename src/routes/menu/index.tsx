@@ -74,7 +74,7 @@ export default component$(() => {
                 <Header class={{
                   'font-futura tracking-wider': true,
                 }} subheader={
-                  <p class="text-burger-100 text-xs sm:text-sm">
+                  <p class="text-burger-500 text-xs sm:text-sm">
                     {item.double && <span class="text-gray-600">Single: </span>}{item.price}
                     {item.double && <><br/><span class="text-gray-600">Double: </span>{item.double}</>}
                   </p>
@@ -103,7 +103,7 @@ export default component$(() => {
                 <Header class={{
                   'font-futura tracking-wider': true,
                 }} subheader={
-                  <p class="text-burger-100 text-xs sm:text-sm">
+                  <p class="text-burger-500 text-xs sm:text-sm">
                     {item.price}
                   </p>
                 }>{item.name}{item.bestseller && <BestSeller/>}</Header>
@@ -131,7 +131,7 @@ export default component$(() => {
                 <Header class={{
                   'font-futura tracking-wider': true,
                 }} subheader={
-                  <p class="text-burger-100 text-xs sm:text-sm">
+                  <p class="text-burger-500 text-xs sm:text-sm">
                     {item.price}
                   </p>
                 }>{item.name}</Header>
@@ -159,7 +159,7 @@ export default component$(() => {
                 <Header class={{
                   'font-futura tracking-wider': true,
                 }} subheader={
-                  <p class="text-burger-100 text-xs sm:text-sm">
+                  <p class="text-burger-500 text-xs sm:text-sm">
                     {item.price}
                   </p>
                 }>{item.name}</Header>
@@ -183,11 +183,11 @@ export default component$(() => {
                 'font-futura tracking-wider text-wrap': true,
               }}>{item.name}</Header>
               <div class="h-full">
-                {typeof item.price == 'string' && <p class="text-burger-100 text-xs sm:text-sm">{item.price}</p>}
+                {typeof item.price == 'string' && <p class="text-burger-500 text-xs sm:text-sm">{item.price}</p>}
                 {typeof item.price != 'string' && Object.entries(item.price).map(([option, price], i) => {
                   return <p key={i} class="text-xs sm:text-sm">
                     {option}:
-                    <span class="text-burger-100 ml-1">
+                    <span class="text-burger-500 ml-1">
                       {price}
                     </span>
                   </p>;
@@ -212,11 +212,11 @@ export default component$(() => {
               }} subheader={
                 <div>
                   <p class="text-gray-400 text-xs sm:text-sm">
-                    Medium: <span class="text-burger-100">{item.price.medium}</span><br/>
-                    Large: <span class="text-burger-100">{item.price.large}</span><br/><br/>
+                    Medium: <span class="text-burger-500">{item.price.medium}</span><br/>
+                    Large: <span class="text-burger-500">{item.price.large}</span><br/><br/>
                     <span class="text-gray-200 font-bold">Make it a Combo:</span><br/>
-                    Medium: <span class="text-burger-100">{item.price.mediumCombo}</span><br/>
-                    Large: <span class="text-burger-100">{item.price.largeCombo}</span>
+                    Medium: <span class="text-burger-500">{item.price.mediumCombo}</span><br/>
+                    Large: <span class="text-burger-500">{item.price.largeCombo}</span>
                   </p>
                 </div>
               }>{item.name}</Header>
@@ -238,7 +238,7 @@ export default component$(() => {
               <Header class={{
                 'font-futura tracking-wider text-wrap': true,
               }} subheader={
-                <p class="text-burger-100 text-xs sm:text-sm">{drink.price}</p>
+                <p class="text-burger-500 text-xs sm:text-sm">{drink.price}</p>
               }>{drink.name}</Header>
             </div>;
           })}

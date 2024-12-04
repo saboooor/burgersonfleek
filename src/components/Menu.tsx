@@ -35,7 +35,7 @@ export default component$(() => {
         <Slot />
       </div>
       <div class={{
-        'lum-card lum-bg-burger-300/40': true,
+        'lum-card lum-bg-burger-800/40': true,
         'font-futura backdrop-blur-lg mt-4 hidden sm:block': true,
       }}>
         <Header>
@@ -43,8 +43,8 @@ export default component$(() => {
         </Header>
         <a href="tel:+1 (905) 427 4377" class={{
           'lum-btn lum-pad-lg rounded-lg mt-4 relative': true,
-          'hover:lum-bg-burger-300 text-gray-100 hover:!text-white bg-gradient-to-b border-burger-300': true,
-          'from-burger-100/80 to-burger-200/80 hover:bg-burger-100': true,
+          'hover:lum-bg-burger-800 text-gray-100 hover:!text-white bg-gradient-to-b border-burger-800': true,
+          'from-burger-500/80 to-burger-700/80 hover:bg-burger-500': true,
         }}>
           <IconWhite width="24" class="fill-current" /> Call to order
         </a>

@@ -30,7 +30,7 @@ export default component$(() => {
         </div>
         <div class="flex items-end justify-center animate-in fade-in slide-in-from-top-16 sm:slide-in-from-top-8 anim-duration-1000">
           <h1 class="font-bold text-orange-100 text-3xl sm:text-5xl my-4 sm:mb-6" style="filter: drop-shadow(0 2rem 3rem rgba(251, 146, 60, 0.5));">
-            The <span class="text-amber-500">burgers</span><br/>you are <span class="text-orange-300">craving.</span>
+            The <span class="text-burger-500">burgers</span><br/>you are <span class="text-burger-300">craving.</span>
           </h1>
           <p class="mb-6 sm:mb-10">™</p>
         </div>
@@ -42,15 +42,15 @@ export default component$(() => {
           <div class="flex gap-1 sm:gap-1.5 justify-center animate-in fade-in slide-in-from-top-32 sm:slide-in-from-top-24 anim-duration-1000">
             <Link href="/menu" class={{
               'lum-btn lum-pad-lg text-sm sm:lum-pad-xl sm:text-lg rounded-xl': true,
-              'hover:lum-bg-burger-300 text-gray-100 hover:!text-white bg-gradient-to-b border-gray-900': true,
-              'from-burger-100/80 to-burger-200/80 hover:bg-burger-100': true,
+              'text-gray-100 hover:!text-white border-gray-900': true,
+              'bg-burger-500 hover:lum-bg-burger-700 bg-gradient-to-b from-burger-500/50 to-burger-700': true,
             }}>
               <BookOutline width="24" class="fill-current w-5 sm:w-auto sm:mr-1" /> View the menu
             </Link>
             <Link href="/halal" class={{
               'lum-btn lum-pad-lg text-sm sm:lum-pad-xl sm:text-lg rounded-xl': true,
-              'hover:lum-bg-burger-300 text-gray-100 hover:!text-white bg-gradient-to-b border-gray-900': true,
-              'from-burger-100/80 to-burger-200/80 hover:bg-burger-100': true,
+              'text-gray-100 hover:!text-white border-gray-900': true,
+              'bg-burger-500 hover:lum-bg-burger-700 bg-gradient-to-b from-burger-500/50 to-burger-700': true,
             }}>
               <Halal width="24" class="fill-current w-5 sm:w-auto sm:mr-1" /> Halal
             </Link>
@@ -58,15 +58,15 @@ export default component$(() => {
           <div class="flex gap-1 sm:gap-1.5 justify-center animate-in fade-in slide-in-from-top-40 sm:slide-in-from-top-32 anim-duration-1000">
             <a href="tel:+1 (905) 427 4377" class={{
               'lum-btn lum-pad-lg text-sm sm:lum-pad-xl sm:text-lg rounded-xl': true,
-              'hover:lum-bg-burger-300 text-gray-100 hover:!text-white bg-gradient-to-b border-gray-900': true,
-              'from-burger-200/80 to-burger-300/80 hover:bg-burger-200': true,
+              'text-gray-100 hover:!text-white border-gray-900': true,
+              'bg-burger-700 hover:lum-bg-burger-800 bg-gradient-to-b from-burger-700/50 to-burger-800': true,
             }}>
               <CallOutline width="24" class="fill-current w-5 sm:w-auto sm:mr-1" /> +1 (905) 427 4377
             </a>
             <a href="https://maps.app.goo.gl/Unrrg3uda7AQQs4DA" class={{
               'lum-btn lum-pad-lg text-sm sm:lum-pad-xl sm:text-lg rounded-xl': true,
-              'hover:lum-bg-burger-300 text-gray-100 hover:!text-white bg-gradient-to-b border-gray-900': true,
-              'from-burger-200/80 to-burger-300/80 hover:bg-burger-200': true,
+              'text-gray-100 hover:!text-white border-gray-900': true,
+              'bg-burger-700 hover:lum-bg-burger-800 bg-gradient-to-b from-burger-700/50 to-burger-800': true,
             }}>
               <MapOutline width="24" class="fill-current w-5 sm:w-auto sm:mr-1" /> Google Maps
             </a>
@@ -74,25 +74,25 @@ export default component$(() => {
           <div class="flex gap-1 sm:gap-1.5 justify-center animate-in fade-in slide-in-from-top-48 sm:slide-in-from-top-40 anim-duration-1000">
             <a href="https://instagram.com/burgersonfleek.ca" class={{
               'lum-btn lum-pad-lg text-sm sm:lum-pad-xl sm:text-lg rounded-xl': true,
-              'hover:lum-bg-[#dd2a7b] text-gray-100 hover:!text-white bg-gradient-to-b border-gray-900': true,
-              'from-burger-300/80': true,
-              'to-[#dd2a7baa]': true,
+              'text-gray-100 hover:!text-white border-gray-900': true,
+              'bg-burger-800 bg-gradient-to-b from-burger-800/50': true,
+              'to-[#dd2a7baa] hover:lum-bg-[#dd2a7baa]': true,
             }}>
               <LogoInstagram width="24" class="fill-current w-5 sm:w-auto" />
             </a>
             <a href="https://facebook.com/burgersonfleek.ca" class={{
               'lum-btn lum-pad-lg text-sm sm:lum-pad-xl sm:text-lg rounded-xl': true,
-              'hover:lum-bg-[#1877f2] text-gray-100 hover:!text-white bg-gradient-to-b border-gray-900': true,
-              'from-burger-300/80': true,
-              'to-[#1877f2aa]': true,
+              'text-gray-100 hover:!text-white border-gray-900': true,
+              'bg-burger-800 bg-gradient-to-b from-burger-800/50': true,
+              'to-[#1877f2aa] hover:lum-bg-[#1877f2aa]': true,
             }}>
               <LogoFacebook width="24" class="fill-current w-5 sm:w-auto" />
             </a>
             <a href="https://tiktok.com/@burgersonfleek.ca" class={{
               'lum-btn lum-pad-lg text-sm sm:lum-pad-xl sm:text-lg rounded-xl': true,
-              'hover:lum-bg-[#ee1d52] text-gray-100 hover:!text-white bg-gradient-to-b border-gray-900': true,
-              'from-burger-300/80': true,
-              'to-[#ee1d52aa]': true,
+              'text-gray-100 hover:!text-white border-gray-900': true,
+              'bg-burger-800 bg-gradient-to-b from-burger-800/50': true,
+              'to-[#ee1d52aa] hover:lum-bg-[#ee1d52aa]': true,
             }}>
               <LogoTiktok width="24" class="fill-current w-5 sm:w-auto" />
             </a>

@@ -19,7 +19,7 @@ export default component$(() => {
 
   return <div class="fixed bottom-0 w-full sm:hidden p-4 transition-all" id="orderpopup">
     <div class={{
-      'lum-card flex-row justify-between items-center lum-pad-equal-2xl lum-bg-burger-300/40 !text-white': true,
+      'lum-card flex-row justify-between items-center lum-pad-equal-2xl lum-bg-burger-800/40 !text-white': true,
       'font-futura backdrop-blur-lg mt-4': true,
     }}>
       <p class="text-xl">
@@ -27,8 +27,8 @@ export default component$(() => {
       </p>
       <a href="tel:+1 (905) 427 4377" class={{
         'lum-btn rounded-lg text-white mt-1 relative': true,
-        'hover:lum-bg-burger-300 text-gray-100 hover:!text-white bg-gradient-to-b border-burger-300': true,
-        'from-burger-100/80 to-burger-200/80 hover:bg-burger-100': true,
+        'hover:lum-bg-burger-800 text-gray-100 hover:!text-white bg-gradient-to-b border-burger-800': true,
+        'from-burger-500/80 to-burger-700/80 hover:bg-burger-500': true,
       }}>
         <IconWhite width="24" class="fill-current" /> Call to order
       </a>
