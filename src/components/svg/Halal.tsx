@@ -1,8 +1,8 @@
 import { component$ } from '@builder.io/qwik';
 
-export default component$(({ width }: any) => {
+export default component$(({ width, class: Class }: any) => {
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 48 48" style="enable-background:new 0 0 48 48;" xml:space="preserve" width={width} height={width} fill="currentColor">
+    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 48 48" style="enable-background:new 0 0 48 48;" xml:space="preserve" width={width} height={width} fill="currentColor" class={Class}>
       <path d="M46,34.7c-0.1-0.4-0.5-0.7-1-0.7c-1.9,0-2.7-1-3.7-2.2S38.8,29,36,29c-1.7,0.1-3.1,1.1-3.9,2.5c-0.2,0.5,0,1.1,0.4,1.3  s1.1,0,1.3-0.4c0.4-0.8,1.2-1.3,2.1-1.5c1.9,0,2.7,1,3.7,2.2c0.7,0.9,1.6,1.7,2.6,2.2C40,36.4,37.5,37,35,37c-1,0-4.1,0-5.2-1.5  C28.1,33,28,29,28,17.9c0-1.7,0-2.8,0-2.9c0-0.6-0.4-1-1-1s-1,0.4-1,1c0,0.9,0,1.7,0,2.6c-0.1,4.3-0.9,13.1-4.8,17.2  C19.9,36.2,18,37,16,37c-0.6,0-1,0.4-1,1s0.4,1,1,1c2.5,0,4.9-1,6.6-2.8c1.7-1.9,2.9-4.2,3.6-6.7c0.3,3.4,0.8,5.4,1.9,7.1  c1.5,2.2,4.6,2.4,6.8,2.4c3.7,0,7.4-1.1,10.5-3.2C45.9,35.6,46.1,35.2,46,34.7z"/>
       <path d="M21,26c0,0.6,0.4,1,1,1s1-0.4,1-1c0-6.5-6.2-10.7-6.5-10.8c-0.5-0.3-1.1-0.1-1.4,0.4c-0.3,0.4-0.1,1,0.3,1.3  C15.5,16.9,21,20.6,21,26z"/>
       <path d="M13,17c-0.6,0-1,0.4-1,1v14.9c0,2.7-1.4,4.1-4,4.1c-3.3,0-4-1.2-4-3c-0.1-1,0.7-1.9,1.8-2C5.9,32,6,32,6,32c0.6,0,1-0.4,1-1  s-0.4-1-1-1c-2.1-0.1-3.9,1.6-4,3.8c0,0.1,0,0.1,0,0.2c0,3.3,2,5,6,5c3.8,0,6-2.3,6-6.1V18C14,17.4,13.6,17,13,17z"/>

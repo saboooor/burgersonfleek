@@ -1,6 +1,6 @@
 import { component$ } from '@builder.io/qwik';
 import type { DocumentHead } from '@builder.io/qwik-city';
-import { Blobs } from '@luminescent/ui';
+import { Blobs } from '@luminescent/ui-qwik';
 import Icon from '~/components/svg/Icon';
 
 export default component$(() => {

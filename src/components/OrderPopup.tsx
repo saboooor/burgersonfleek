@@ -2,7 +2,7 @@
 
 import { $, component$, useOnDocument, useSignal } from '@builder.io/qwik';
 import IconWhite from './svg/IconInBag';
-import { ButtonAnchor, Card, Header } from '@luminescent/ui';
+import { Blobs } from '@luminescent/ui-qwik';
 
 export default component$(() => {
   const prevScrollpos = useSignal(0);
@@ -17,18 +17,22 @@ export default component$(() => {
     prevScrollpos.value = window.scrollY;
   }));
 
-  return <div class="fixed bottom-0 w-full sm:hidden p-4">
-    <Card color="orange" blobs class={{
-      'font-futura backdrop-blur-lg': true,
-    }} id="orderpopup">
-      <Header>
+  return <div class="fixed bottom-0 w-full sm:hidden p-4 transition-all" id="orderpopup">
+    <div class={{
+      'lum-card flex-row justify-between items-center lum-pad-equal-2xl lum-bg-burger-300/40 !text-white': true,
+      'font-futura backdrop-blur-lg mt-4': true,
+    }}>
+      <p class="text-xl">
         Feeling HANGRY?
-      </Header>
-      <ButtonAnchor href="tel:+1 (905) 427 4377" class={{
-        'flex transition backdrop-blur-lg bg-gradient-to-b from-burger-100/80 to-burger-200/80 hover:bg-burger-100 whitespace-nowrap mt-2': true,
+      </p>
+      <a href="tel:+1 (905) 427 4377" class={{
+        'lum-btn rounded-lg text-white mt-1 relative': true,
+        'hover:lum-bg-burger-300 text-gray-100 hover:!text-white bg-gradient-to-b border-burger-300': true,
+        'from-burger-100/80 to-burger-200/80 hover:bg-burger-100': true,
       }}>
         <IconWhite width="24" class="fill-current" /> Call to order
-      </ButtonAnchor>
-    </Card>
+      </a>
+      <Blobs color='orange' class={{ 'absolute overflow-clip rounded-lg pointer-events-none': true }} style={{ transform: 'translateZ(-10px)' }}/>
+    </div>
   </div>;
 });
