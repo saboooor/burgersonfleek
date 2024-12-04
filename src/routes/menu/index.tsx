@@ -63,7 +63,7 @@ export default component$(() => {
         <div class="flex flex-wrap gap-4 pt-5 pb-10">
           {beefburgers.map((item, i) => {
             return <div key={i} class={{
-              'lum-card': true,
+              'lum-card lum-bg-gray-900/50': true,
               'flex-1 flex-row sm:flex-col min-w-[18rem] gap-6': true,
             }}>
               <div class="mb-4">
@@ -92,7 +92,7 @@ export default component$(() => {
         <div class="flex flex-wrap gap-4 pt-5 pb-10">
           {chickenburgers.map((item, i) => {
             return <div key={i} class={{
-              'lum-card': true,
+              'lum-card lum-bg-gray-900/50': true,
               'flex-1 sm:flex-col min-w-[18rem] gap-6': true,
             }}>
               <div class="mb-4">
@@ -120,7 +120,7 @@ export default component$(() => {
         <div class="flex flex-wrap gap-4 pt-5 pb-10">
           {veggieburgers.map((item, i) => {
             return <div key={i} class={{
-              'lum-card': true,
+              'lum-card lum-bg-gray-900/50': true,
               'flex-1 sm:flex-col min-w-[18rem] gap-6': true,
             }}>
               <div class="mb-4">
@@ -148,7 +148,7 @@ export default component$(() => {
         <div class="grid sm:grid-cols-2 gap-4 pt-5 pb-10">
           {steaksandwiches.map((item, i) => {
             return <div key={i} class={{
-              'lum-card': true,
+              'lum-card lum-bg-gray-900/50': true,
               'flex-1 sm:flex-col min-w-[18rem] gap-6': true,
             }}>
               <div class="mb-4">
@@ -176,7 +176,7 @@ export default component$(() => {
         <div class="flex flex-wrap gap-4 pt-5 pb-10">
           {extras.map((item, i) => {
             return <div key={i} class={{
-              'lum-card': true,
+              'lum-card lum-bg-gray-900/50': true,
               'flex-1 min-w-[18rem]': true,
             }}>
               <Header class={{
@@ -204,7 +204,7 @@ export default component$(() => {
         <div class="flex flex-wrap gap-4 pt-5 pb-10">
           {sides.map((item, i) => {
             return <div key={i} class={{
-              'lum-card': true,
+              'lum-card lum-bg-gray-900/50': true,
               'flex-1 min-w-[18rem]': true,
             }}>
               <Header class={{
@@ -232,7 +232,7 @@ export default component$(() => {
         <div class="flex flex-wrap gap-4 pt-5 pb-10">
           {drinks.map((drink, i) => {
             return <div key={i} class={{
-              'lum-card': true,
+              'lum-card lum-bg-gray-900/50': true,
               'flex-1 min-w-[18rem]': true,
             }}>
               <Header class={{

@@ -27,7 +27,7 @@ export default component$(() => {
         </button>
       </div>
       <div class={{
-        'lum-card': true,
+        'lum-card lum-bg-gray-900/50': true,
         'flex overflow-y-auto max-h-[calc(100dvh-300px)] mx-2 sm:mx-0 backdrop-blur-xl': true,
         'mt-2': menu.value,
         'opacity-0 sm:opacity-100 pointer-events-none sm:pointer-events-auto': !menu.value,
