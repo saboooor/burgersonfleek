@@ -3,97 +3,86 @@ import type { DocumentHead } from '@builder.io/qwik-city';
 import { Link } from '@builder.io/qwik-city';
 
 import Logo from '~/components/svg/Logo';
-import Icon from '~/components/svg/Icon';
-import { LogoInstagram, LogoFacebook, BookOutline, CallOutline, MapOutline, LogoTiktok } from 'qwik-ionicons';
 import Halal from '~/components/svg/Halal';
+import IconInBag from '~/components/svg/IconInBag';
+import { MapPinIcon, PhoneIcon } from 'lucide-qwik';
+import Icon from '~/components/svg/Icon';
 
 export default component$(() => {
-  return (
-    <section class="flex mx-auto max-w-6xl px-6 items-center justify-center min-h-[100svh] pt-20">
-      <div class="hidden sm:flex relative justify-start align-center mr-auto max-w-[50%]">
-        <div class="z-10 animate-in fade-in slide-in-from-top-8 anim-duration-1000" style="max-width: 60%" >
-          <Logo width={476} height={600} id="pc"/>
+  return <>
+    <section class="flex flex-col sm:flex-row mx-auto max-w-5xl px-6 items-center justify-center min-h-[100svh] pt-20">
+      <div class="flex relative">
+        <div class="z-10 animate-in fade-in slide-in-from-top-24 anim-duration-1000">
+          <Logo width={476} height={600} id="pc" class="hidden sm:flex"/>
+          <Logo width={238} height={300} id="mobile" class="sm:hidden" />
         </div>
       </div>
-      <div class="text-center justify-center">
-        <div class="flex sm:hidden relative justify-center align-center w-full mb-10">
-          <div class="z-10 animate-in fade-in slide-in-from-top-8 anim-duration-1000">
-            <Icon width={160} id="mobile"/>
-          </div>
-        </div>
-        <div class="flex items-end justify-center animate-in fade-in slide-in-from-top-16 sm:slide-in-from-top-8 anim-duration-1000">
-          <h1 class="font-bold text-orange-100 text-3xl sm:text-5xl my-4 sm:mb-6" style="filter: drop-shadow(0 2rem 3rem rgba(251, 146, 60, 0.5));">
-            The <span class="text-burger-500">burgers</span><br/>you are <span class="text-burger-300">craving.</span>
+      <div class="border-l-2 h-full w-10"></div>
+      <div class="flex flex-col items-center sm:items-start text-center sm:text-left">
+        <div class="flex animate-in fade-in slide-in-from-top-16 sm:slide-in-from-top-8 anim-duration-1000">
+          <h1 class="font-bold text-orange-100 text-3xl sm:text-5xl my-4 sm:mb-10">
+            The <span class="text-burger-500">burgers</span><br/>you are <span class="text-burger-300">craving.</span><span class="text-lg align-top">™</span>
           </h1>
-          <p class="mb-6 sm:mb-10">™</p>
         </div>
-        <p class="text-gray-600 mx-6 md:mx-20 text-lg md:text-xl animate-in fade-in slide-in-from-top-24 sm:slide-in-from-top-16 anim-duration-1000">
-          Premium Quality Gourmet Burgers, Steak Sandwiches, Fries, and more. Only serving Halal حلال<br/>
-          est. 2019
+        <p class="text-gray-600 text-lg md:text-xl animate-in fade-in slide-in-from-top-24 sm:slide-in-from-top-16 anim-duration-1000">
+          Premium Quality Gourmet Burgers, Steak Sandwiches, Fries, and more. est. 2019
         </p>
-        <div class="flex flex-col gap-1 sm:gap-1.5 mt-10 min-h-[11.25rem] font-futura">
-          <div class="flex gap-1 sm:gap-1.5 justify-center animate-in fade-in slide-in-from-top-32 sm:slide-in-from-top-24 anim-duration-1000">
+
+        <div class="flex flex-col gap-0.5 mt-2">
+          <div class="flex gap-1 sm:gap-1.5 animate-in fade-in slide-in-from-top-32 sm:slide-in-from-top-24 anim-duration-1000">
+            <a href="https://maps.app.goo.gl/Unrrg3uda7AQQs4DA" class="lum-btn lum-pad-xs lum-bg-transparent hover:lum-bg-gray-900/50 rounded-lg !text-gray-600">
+              <Halal width="24" class="w-5 sm:w-auto sm:mr-1" />
+              Only serving Halal
+            </a>
+          </div>
+          <div class="flex gap-1 sm:gap-1.5 animate-in fade-in slide-in-from-top-40 sm:slide-in-from-top-32 anim-duration-1000">
+            <a href="tel:+1 (905) 427 4377" class="lum-btn lum-pad-xs lum-bg-transparent hover:lum-bg-gray-900/50 rounded-lg !text-gray-600">
+              <PhoneIcon width="24" class="w-5 sm:w-auto sm:mr-1" />
+              +1 (905) 427 4377
+            </a>
+          </div>
+          <div class="flex gap-1 sm:gap-1.5 animate-in fade-in slide-in-from-top-48 sm:slide-in-from-top-40 anim-duration-1000">
+            <a href="https://maps.app.goo.gl/Unrrg3uda7AQQs4DA" class="lum-btn lum-pad-xs lum-bg-transparent hover:lum-bg-gray-900/50 rounded-lg !text-gray-600">
+              <MapPinIcon width="24" class="w-5 sm:w-auto sm:mr-1" />
+              135 Harwood Ave N, Ajax, ON
+            </a>
+          </div>
+        </div>
+
+        <div class="flex flex-col gap-1 sm:gap-2 mt-6 font-futura">
+          <div class="flex gap-1 sm:gap-1.5 animate-in fade-in slide-in-from-top-56 sm:slide-in-from-top-48 anim-duration-1000">
             <Link href="/menu" class={{
-              'lum-btn lum-pad-lg text-sm sm:lum-pad-xl sm:text-lg rounded-xl': true,
-              'text-gray-100 hover:!text-white border-gray-900': true,
-              'lum-bg-burger-700/5 hover:lum-bg-burger-700 bg-gradient-to-b from-burger-500/50 to-burger-700': true,
+              'lum-btn lum-pad-lg text-sm sm:lum-pad-xl sm:text-lg rounded-lg': true,
+              'text-gray-100 hover:!text-white border-burger-600': true,
+              'bg-burger-700/5 hover:lum-bg-burger-700 bg-gradient-to-b from-burger-500/50 to-burger-700': true,
             }}>
-              <BookOutline width="24" class="fill-current w-5 sm:w-auto sm:mr-1" /> View the menu
+              <IconInBag width="24" class="fill-current w-5 sm:w-auto sm:mr-1" /> View the menu
             </Link>
-            <Link href="/halal" class={{
-              'lum-btn lum-pad-lg text-sm sm:lum-pad-xl sm:text-lg rounded-xl': true,
-              'text-gray-100 hover:!text-white border-gray-900': true,
-              'lum-bg-burger-700/5 hover:lum-bg-burger-700 bg-gradient-to-b from-burger-500/50 to-burger-700': true,
-            }}>
-              <Halal width="24" class="fill-current w-5 sm:w-auto sm:mr-1" /> Halal
-            </Link>
-          </div>
-          <div class="flex gap-1 sm:gap-1.5 justify-center animate-in fade-in slide-in-from-top-40 sm:slide-in-from-top-32 anim-duration-1000">
-            <a href="tel:+1 (905) 427 4377" class={{
-              'lum-btn lum-pad-lg text-sm sm:lum-pad-xl sm:text-lg rounded-xl': true,
-              'text-gray-100 hover:!text-white border-gray-900': true,
-              'lum-bg-burger-800/5 hover:lum-bg-burger-800 bg-gradient-to-b from-burger-700/50 to-burger-800': true,
-            }}>
-              <CallOutline width="24" class="fill-current w-5 sm:w-auto sm:mr-1" /> +1 (905) 427 4377
-            </a>
-            <a href="https://maps.app.goo.gl/Unrrg3uda7AQQs4DA" class={{
-              'lum-btn lum-pad-lg text-sm sm:lum-pad-xl sm:text-lg rounded-xl': true,
-              'text-gray-100 hover:!text-white border-gray-900': true,
-              'lum-bg-burger-800/5 hover:lum-bg-burger-800 bg-gradient-to-b from-burger-700/50 to-burger-800': true,
-            }}>
-              <MapOutline width="24" class="fill-current w-5 sm:w-auto sm:mr-1" /> Google Maps
-            </a>
-          </div>
-          <div class="flex gap-1 sm:gap-1.5 justify-center animate-in fade-in slide-in-from-top-48 sm:slide-in-from-top-40 anim-duration-1000">
-            <a href="https://instagram.com/burgersonfleek.ca" class={{
-              'lum-btn lum-pad-lg text-sm sm:lum-pad-xl sm:text-lg rounded-xl': true,
-              'text-gray-100 hover:!text-white border-gray-900': true,
-              'bg-transparent border-[#dd2a7baa] bg-gradient-to-b from-burger-800/50': true,
-              'to-[#dd2a7baa] hover:lum-bg-[#dd2a7baa]': true,
-            }}>
-              <LogoInstagram width="24" class="fill-current w-5 sm:w-auto" />
-            </a>
-            <a href="https://facebook.com/burgersonfleek.ca" class={{
-              'lum-btn lum-pad-lg text-sm sm:lum-pad-xl sm:text-lg rounded-xl': true,
-              'text-gray-100 hover:!text-white border-gray-900': true,
-              'bg-transparent border-[#1877f2aa] bg-gradient-to-b from-burger-800/50': true,
-              'to-[#1877f2aa] hover:lum-bg-[#1877f2aa]': true,
-            }}>
-              <LogoFacebook width="24" class="fill-current w-5 sm:w-auto" />
-            </a>
-            <a href="https://tiktok.com/@burgersonfleek.ca" class={{
-              'lum-btn lum-pad-lg text-sm sm:lum-pad-xl sm:text-lg rounded-xl': true,
-              'text-gray-100 hover:!text-white border-gray-900': true,
-              'bg-transparent border-[#ee1d52aa] bg-gradient-to-b from-burger-800/50': true,
-              'to-[#ee1d52aa] hover:lum-bg-[#ee1d52aa]': true,
-            }}>
-              <LogoTiktok width="24" class="fill-current w-5 sm:w-auto" />
-            </a>
           </div>
         </div>
       </div>
     </section>
-  );
+
+    <section class="flex flex-col mx-auto max-w-6xl px-6 items-center justify-center text-center p-20">
+      <h1 class="font-bold text-orange-100 text-2xl sm:text-5xl mb-8 sm:mb-8 fade-in animation-delay-100">
+        We Only Serve <span class="text-orange-300">Halal حلال</span>
+      </h1>
+      <p class="text-gray-400 text-xl mx-6 md:mx-16 md:text-2xl flex flex-col gap-4 mb-6 sm:mb-10 fade-in animation-delay-200">
+        Burgers On Fleek uses 100% Hand slaughtered Halal Meat.
+      </p>
+      <div class="text-gray-400 text-lg mx-6 md:mx-16 md:text-xl mb-6 sm:mb-10 fade-in animation-delay-300">
+        <p>
+          Our meat providers are
+        </p>
+        <p>
+          <a href="http://sthelensmeat.com" class="text-blue-400/80 hover:text-blue-400 hover:underline">St. Helen's</a> and <a href="https://sargentfarms.ca" class="text-blue-400/80 hover:text-blue-400 hover:underline">Sargent Farms</a>
+        </p>
+      </div>
+      <p class="text-gray-400 text-base mx-6 md:mx-16 md:text-lg fade-in animation-delay-400">
+        For further inquiries, feel free to reach us at <a href="mailto:eat@burgersonfleek.ca" class="text-blue-400/80 hover:text-blue-400 hover:underline">eat@burgersonfleek.ca</a>
+      </p>
+    </section>
+  </>;
 });
 
 export const head: DocumentHead = {

@@ -1,6 +1,7 @@
 import { component$, Slot, useSignal } from '@builder.io/qwik';
 import IconWhite from './svg/IconInBag';
 import { Blobs, Header } from '@luminescent/ui-qwik';
+import IconInBag from './svg/IconInBag';
 
 export default component$(() => {
   const menu = useSignal(false);
@@ -42,11 +43,11 @@ export default component$(() => {
           Feeling HANGRY?
         </Header>
         <a href="tel:+1 (905) 427 4377" class={{
-          'lum-btn lum-pad-lg rounded-lg mt-4 relative': true,
-          'hover:lum-bg-burger-800 text-gray-100 hover:!text-white bg-gradient-to-b border-burger-800': true,
-          'from-burger-500/80 to-burger-700/80 hover:bg-burger-500': true,
+          'lum-btn lum-pad-lg text-sm sm:lum-pad-xl sm:text-lg rounded-lg mt-4': true,
+          'text-gray-100 hover:!text-white border-burger-600': true,
+          'bg-burger-700/5 hover:lum-bg-burger-700 bg-gradient-to-b from-burger-500/50 to-burger-700': true,
         }}>
-          <IconWhite width="24" class="fill-current" /> Call to order
+          <IconInBag width="24" class="fill-current w-5 sm:w-auto sm:mr-1" /> Call us to order
         </a>
         <Blobs color='orange' class={{ 'absolute overflow-clip rounded-lg pointer-events-none': true }} style={{ transform: 'translateZ(-10px)' }}/>
       </div>

@@ -3,6 +3,7 @@
 import { $, component$, useOnDocument, useSignal } from '@builder.io/qwik';
 import IconWhite from './svg/IconInBag';
 import { Blobs } from '@luminescent/ui-qwik';
+import IconInBag from './svg/IconInBag';
 
 export default component$(() => {
   const prevScrollpos = useSignal(0);
@@ -26,11 +27,11 @@ export default component$(() => {
         Feeling HANGRY?
       </p>
       <a href="tel:+1 (905) 427 4377" class={{
-        'lum-btn rounded-lg text-white mt-1 relative': true,
-        'hover:lum-bg-burger-800 text-gray-100 hover:!text-white bg-gradient-to-b border-burger-800': true,
-        'from-burger-500/80 to-burger-700/80 hover:bg-burger-500': true,
+        'lum-btn lum-pad-sm text-sm sm:text-lg rounded-md': true,
+        'text-gray-100 hover:!text-white border-burger-600': true,
+        'bg-burger-700/5 hover:lum-bg-burger-700 bg-gradient-to-b from-burger-500/50 to-burger-700': true,
       }}>
-        <IconWhite width="24" class="fill-current" /> Call to order
+        <IconInBag width="24" class="fill-current w-5 sm:w-auto sm:mr-1" /> Call us to order
       </a>
       <Blobs color='orange' class={{ 'absolute overflow-clip rounded-lg pointer-events-none': true }} style={{ transform: 'translateZ(-10px)' }}/>
     </div>

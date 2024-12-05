@@ -1,8 +1,8 @@
 import { component$ } from '@builder.io/qwik';
 
-export default component$(({ width, height, id }: any) => {
+export default component$(({ width, height, id, class: Class }: any) => {
   return (
-    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 338 350" xml:space="preserve" width={width} height={height}>
+    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 338 350" xml:space="preserve" width={width} height={height} class={Class}>
       <defs>
         <linearGradient id={`${id}-linear-gradient`} x1="0.5" y1="1" x2="0.5" gradientUnits="objectBoundingBox" gradientTransform="rotate(10)">
           <stop offset="0" stop-color="rgb(94,60,15)"/>
