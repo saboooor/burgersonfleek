@@ -59,32 +59,32 @@ export default component$(() => {
 export const SocialButtons = component$(({ big }: any) => {
   return <>
     <a href="tel:+1 (905) 427 4377" title="Call us" class={{
-      "lum-btn lum-bg-transparent hover:text-white fill-current lum-pad-equal-sm": true,
-      "lum-pad-equal-lg rounded-xl": big,
+      'lum-btn lum-bg-transparent hover:text-white fill-current lum-pad-equal-sm': true,
+      'lum-pad-equal-lg rounded-xl': big,
     }}>
       <PhoneIcon strokeWidth={1} />
     </a>
     <a href="https://maps.app.goo.gl/Unrrg3uda7AQQs4DA" title="Google Maps" class={{
-      "lum-btn lum-bg-transparent hover:text-white fill-current lum-pad-equal-sm": true,
-      "lum-pad-equal-lg rounded-xl": big,
+      'lum-btn lum-bg-transparent hover:text-white fill-current lum-pad-equal-sm': true,
+      'lum-pad-equal-lg rounded-xl': big,
     }}>
       <MapPinIcon strokeWidth={1} />
     </a>
     <a href="https://instagram.com/burgersonfleek.ca" title="Instagram" class={{
-      "lum-btn lum-bg-transparent hover:text-white fill-current lum-pad-equal-sm": true,
-      "lum-pad-equal-lg rounded-xl": big,
+      'lum-btn lum-bg-transparent hover:text-white fill-current lum-pad-equal-sm': true,
+      'lum-pad-equal-lg rounded-xl': big,
     }}>
       <InstagramIcon strokeWidth={1} />
     </a>
     <a href="https://facebook.com/burgersonfleek.ca" title="Facebook" class={{
-      "lum-btn lum-bg-transparent hover:text-white fill-current lum-pad-equal-sm": true,
-      "lum-pad-equal-lg rounded-xl": big,
+      'lum-btn lum-bg-transparent hover:text-white fill-current lum-pad-equal-sm': true,
+      'lum-pad-equal-lg rounded-xl': big,
     }}>
       <FacebookIcon strokeWidth={1} />
     </a>
     <a href="https://tiktok.com/@burgersonfleek.ca" title="TikTok" class={{
-      "lum-btn lum-bg-transparent hover:text-white fill-current lum-pad-equal-sm": true,
-      "lum-pad-equal-lg rounded-xl": big,
+      'lum-btn lum-bg-transparent hover:text-white fill-current lum-pad-equal-sm': true,
+      'lum-pad-equal-lg rounded-xl': big,
     }}>
       <TikTok />
     </a>

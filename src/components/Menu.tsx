@@ -1,7 +1,7 @@
 import { component$, Slot, useSignal } from '@builder.io/qwik';
 import { Blobs, Header } from '@luminescent/ui-qwik';
 import IconInBag from './svg/IconInBag';
-import { BookOpenIcon, MenuIcon, MoreHorizontalIcon } from 'lucide-qwik';
+import { BookOpenIcon, MenuIcon } from 'lucide-qwik';
 
 export default component$(() => {
   const menu = useSignal(false);

@@ -1,7 +1,6 @@
 // LuminescentDev Navbar Component Apr 28
 
 import { $, component$, useOnDocument, useSignal } from '@builder.io/qwik';
-import IconWhite from './svg/IconInBag';
 import { Blobs } from '@luminescent/ui-qwik';
 import IconInBag from './svg/IconInBag';
 
