@@ -54,5 +54,15 @@
       "mediumCombo": "$16.85",
       "largeCombo": "$31.55"
     }
+  },
+  {
+    "name": "Beef Chili Cheese Fries",
+    "description": "Topped with sour cream.",
+    "price": {
+      "medium": "$10.50",
+      "large": "$18.50",
+      "mediumCombo": "$12.25",
+      "largeCombo": "$20.25"
+    }
   }
 ]
