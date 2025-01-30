@@ -38,7 +38,7 @@
     "node-fetch": "3.3.2",
     "postcss": "8.4.49",
     "qwik-ionicons": "1.0.5",
-    "tailwindcss": "3.4.16",
+    "tailwindcss": "3.4.17",
     "typescript": "5.7.2",
     "undici": "7.1.0",
     "uuid": "^11.0.3",
