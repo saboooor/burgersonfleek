@@ -33,7 +33,7 @@ export default [
   },
   {
     name: 'Bromance',
-    description: 'Beef patty with mozzarella cheese, topped with fried chicken thigh, grilled jalapeños, sautéed onions, lettuce, tomato, and chipotle sauce.',
+    description: 'Beef patty with mozzarella cheese, topped with boneless fried chicken thigh, grilled jalapeños, sautéed onions, lettuce, tomato, and chipotle sauce.',
     price: '$17.55',
     bestseller: true,
     image: Bromance,
