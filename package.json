@@ -35,6 +35,7 @@
     "@types/node": "latest",
     "eslint": "9.30.1",
     "eslint-plugin-qwik": "1.14.1",
+    "globals": "^16.3.0",
     "lucide-icons-qwik": "^0.487.0",
     "qwik-ionicons": "1.0.5",
     "tailwindcss": "4.1.11",
