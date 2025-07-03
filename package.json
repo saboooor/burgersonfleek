@@ -2,7 +2,7 @@
   "name": "burgersonfleek",
   "description": "Website for Burgers on Fleek",
   "engines": {
-    "node": ">=23.0.0"
+    "node": ">=23.11.0"
   },
   "private": true,
   "scripts": {
