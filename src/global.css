@@ -6,14 +6,48 @@
  *
  */
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
-@layer utilities {
-  .-animation-delay-5000 { animation-delay: -5s; }
-  .-animation-delay-10000 { animation-delay: -10s; }
+@plugin "@anuragroy/tailwindcss-animate";
+
+@import "@luminescent/ui";
+
+@config "@luminescent/ui-qwik/config";
+@source "../node_modules/@luminescent/ui-qwik";
+
+@theme {
+  --color-gray-50: hsl(30deg, 0%, 95%);
+  --color-gray-100: hsl(30deg, 2%, 90%);
+  --color-gray-200: hsl(30deg, 4%, 85%);
+  --color-gray-300: hsl(30deg, 6%, 80%);
+  --color-gray-400: hsl(30deg, 8%, 70%);
+  --color-gray-500: hsl(30deg, 10%, 60%);
+  --color-gray-600: hsl(30deg, 14%, 50%);
+  --color-gray-700: hsl(30deg, 16%, 40%);
+  --color-gray-800: hsl(30deg, 18%, 30%);
+  --color-gray-850: hsl(30deg, 20%, 15%);
+  --color-gray-900: hsl(30deg, 30%, 8%);
+  --color-gray-950: hsl(30deg, 35%, 5%);
+  --color-burger-50: hsl(30deg, 54%, 95%);
+  --color-burger-100: hsl(30deg, 57%, 85%);
+  --color-burger-200: hsl(30deg, 61%, 80%);
+  --color-burger-300: hsl(30deg, 65%, 70%);
+  --color-burger-400: hsl(30deg, 69%, 60%);
+  --color-burger-500: hsl(30deg, 71%, 50%);
+  --color-burger-600: hsl(30deg, 73%, 44%);
+  --color-burger-700: hsl(30deg, 77%, 28%);
+  --color-burger-800: hsl(30deg, 81%, 16%);
+  --color-burger-900: hsl(30deg, 85%, 10%);
+  --color-burger-950: hsl(30deg, 89%, 7%);
+  --color-lum-text: var(--color-burger-100);
+  --color-lum-text-secondary: --alpha(var(--color-burger-200) / 80%);
+  --color-lum-border: var(--color-burger-500);
+  --lum-default-alpha: 60;
+  --lum-border-radius: var(--radius-lg);
 }
+
+.-animation-delay-5000 { animation-delay: -5s; }
+.-animation-delay-10000 { animation-delay: -10s; }
 
 @font-face {
   font-family: Futura Book;
@@ -27,7 +61,7 @@
 
 html {
   overflow: overlay;
-  background-color: hsl(30deg, 28%, 5%);
+  background-color: var(--color-gray-950);
 }
 
 * {

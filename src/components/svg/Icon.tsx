@@ -1,9 +1,9 @@
-import type { PropsOf } from '@builder.io/qwik';
 import { component$ } from '@builder.io/qwik';
+import { IconProps } from '@luminescent/ui-qwik/lib-types/components/logos/IconProps';
 
-export default component$<PropsOf<'svg'>>(({ width, ...props }) => {
+export default component$<IconProps>(({ size, ...props }) => {
   return (
-    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 338 338" width={width} height={width} {...props}>
+    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 338 338" width={size} height={size} {...props}>
       <defs>
         <linearGradient id="linear-gradient" x1="0.5" y1="1" x2="0.5" gradientUnits="objectBoundingBox" gradientTransform="rotate(10)">
           <stop offset="0" stop-color="rgb(94,60,15)"/>

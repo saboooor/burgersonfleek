@@ -19,20 +19,20 @@ export default component$(() => {
 
   return <div class="fixed bottom-0 w-full sm:hidden p-4 transition-all" id="orderpopup">
     <div class={{
-      'lum-card flex-row justify-between items-center lum-pad-equal-2xl lum-bg-burger-800/40 !text-white': true,
+      'lum-card flex-row justify-between items-center p-5 lum-bg-burger-800/40 !text-lum-text': true,
       'font-futura backdrop-blur-lg mt-4': true,
     }}>
       <p class="text-xl">
         Feeling HANGRY?
       </p>
       <a href="tel:+1 (905) 427 4377" class={{
-        'lum-btn lum-pad-sm text-sm sm:text-lg rounded-md': true,
-        'text-gray-100 hover:!text-white border-burger-600': true,
+        'lum-btn lum-btn-p-2 text-sm sm:text-lg': true,
+        'hover:!text-lum-text border-burger-600': true,
         'bg-burger-700/5 hover:lum-bg-burger-700 bg-gradient-to-b from-burger-500/50 to-burger-700': true,
       }}>
         <IconInBag width="24" class="fill-current w-5 sm:w-auto sm:mr-1" /> Call us to order
       </a>
-      <Blobs color='orange' class={{ 'absolute overflow-clip rounded-lg pointer-events-none': true }} style={{ transform: 'translateZ(-10px)' }}/>
+      <Blobs color='orange' class={{ 'absolute overflow-clip pointer-events-none': true }} style={{ transform: 'translateZ(-10px)' }}/>
     </div>
   </div>;
 });

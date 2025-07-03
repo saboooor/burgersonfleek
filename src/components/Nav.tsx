@@ -2,7 +2,7 @@ import { component$ } from '@builder.io/qwik';
 import { Link, useLocation } from '@builder.io/qwik-city';
 import { Nav } from '@luminescent/ui-qwik';
 
-import { PhoneIcon, MapPinIcon, InstagramIcon, FacebookIcon } from 'lucide-qwik';
+import { Phone,  MapPin,  Instagram,  Facebook } from 'lucide-icons-qwik';
 import TikTok from './svg/TikTok';
 import Icon from './svg/Icon';
 import Halal from './svg/Halal';
@@ -12,11 +12,11 @@ export default component$(() => {
   const loc = useLocation();
 
   return (
-    <Nav fixed colorClass='lum-bg-gray-900/50' class={{
+    <Nav fixed colorClass='lum-bg-gray-900' class={{
       'font-futura tracking-wider': true,
     }}>
       <Link q:slot="start" href="/" class="lum-btn lum-bg-transparent">
-        <Icon width={32} />
+        <Icon size={32} />
         <p class="mt-0.5 space-x-1 whitespace-nowrap">
           <span class="font-bold">BURGERS</span><span>ON</span><span>FLEEK</span>
         </p>
@@ -29,12 +29,12 @@ export default component$(() => {
       </Link>
 
       <Link q:slot="end" href="/menu" class={{
-        'lum-btn lum-bg-transparent hover:text-white lum-pad-equal-sm sm:lum-pad-sm': true,
+        'lum-btn lum-bg-transparent hover:text-lum-text p-2 sm:lum-btn-p-2': true,
       }}>
         <IconInBag class="fill-current" /> <span class="hidden lg:inline">MENU</span>
       </Link>
       <Link q:slot="end" href="/halal" class={{
-        'hidden lg:flex lum-btn lum-bg-transparent hover:text-white lum-pad-equal-sm sm:lum-pad-sm': true,
+        'hidden lg:flex lum-btn lum-bg-transparent hover:text-lum-text p-2 sm:lum-btn-p-2': true,
       }}>
         <Halal class="fill-current" /> HALAL
       </Link>
@@ -42,10 +42,10 @@ export default component$(() => {
         <SocialButtons />
       </div>
 
-      <Link q:slot="mobile" href="/menu" class="lum-btn lum-bg-transparent hover:text-white">
+      <Link q:slot="mobile" href="/menu" class="lum-btn lum-bg-transparent hover:text-lum-text">
         <IconInBag class="fill-current" /> MENU
       </Link>
-      <Link q:slot="mobile" href="/halal" class="lum-btn lum-bg-transparent hover:text-white">
+      <Link q:slot="mobile" href="/halal" class="lum-btn lum-bg-transparent hover:text-lum-text">
         <Halal class="fill-current" /> HALAL
       </Link>
       <div q:slot='mobile' class="flex justify-evenly">
@@ -59,32 +59,32 @@ export default component$(() => {
 export const SocialButtons = component$(({ big }: any) => {
   return <>
     <a href="tel:+1 (905) 427 4377" title="Call us" class={{
-      'lum-btn lum-bg-transparent hover:text-white fill-current lum-pad-equal-sm': true,
-      'lum-pad-equal-lg rounded-xl': big,
+      'lum-btn lum-bg-transparent hover:text-lum-text fill-current p-2': true,
+      'p-4': big,
     }}>
-      <PhoneIcon strokeWidth={1} />
+      <Phone strokeWidth={1} />
     </a>
     <a href="https://maps.app.goo.gl/Unrrg3uda7AQQs4DA" title="Google Maps" class={{
-      'lum-btn lum-bg-transparent hover:text-white fill-current lum-pad-equal-sm': true,
-      'lum-pad-equal-lg rounded-xl': big,
+      'lum-btn lum-bg-transparent hover:text-lum-text fill-current p-2': true,
+      'p-4': big,
     }}>
-      <MapPinIcon strokeWidth={1} />
+      <MapPin strokeWidth={1} />
     </a>
     <a href="https://instagram.com/burgersonfleek.ca" title="Instagram" class={{
-      'lum-btn lum-bg-transparent hover:text-white fill-current lum-pad-equal-sm': true,
-      'lum-pad-equal-lg rounded-xl': big,
+      'lum-btn lum-bg-transparent hover:text-lum-text fill-current p-2': true,
+      'p-4': big,
     }}>
-      <InstagramIcon strokeWidth={1} />
+      <Instagram strokeWidth={1} />
     </a>
     <a href="https://facebook.com/burgersonfleek.ca" title="Facebook" class={{
-      'lum-btn lum-bg-transparent hover:text-white fill-current lum-pad-equal-sm': true,
-      'lum-pad-equal-lg rounded-xl': big,
+      'lum-btn lum-bg-transparent hover:text-lum-text fill-current p-2': true,
+      'p-4': big,
     }}>
-      <FacebookIcon strokeWidth={1} />
+      <Facebook strokeWidth={1} />
     </a>
     <a href="https://tiktok.com/@burgersonfleek.ca" title="TikTok" class={{
-      'lum-btn lum-bg-transparent hover:text-white fill-current lum-pad-equal-sm': true,
-      'lum-pad-equal-lg rounded-xl': big,
+      'lum-btn lum-bg-transparent hover:text-lum-text fill-current p-2': true,
+      'p-4': big,
     }}>
       <TikTok />
     </a>

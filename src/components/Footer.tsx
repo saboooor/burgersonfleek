@@ -15,7 +15,7 @@ export default component$(() => {
           If you have any food allergies, please advise us before ordering.
         </p>
 
-        <div class="flex flex-col text-center items-center sm:text-end sm:items-end gap-4">
+        <div class="flex flex-col text-center items-center sm:text-end sm:items-end gap-2">
           <div class="flex gap-2">
             <SocialButtons />
           </div>
