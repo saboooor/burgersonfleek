@@ -45,7 +45,7 @@
     "vite": "7.0.0",
     "vite-tsconfig-paths": "5.1.4",
     "wrangler": "latest",
-    "zod": "^3.25.69"
+    "zod": "^4.0.0"
   },
   "packageManager": "pnpm@10.12.4",
   "pnpm": {
