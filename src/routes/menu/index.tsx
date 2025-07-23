@@ -13,8 +13,7 @@ import Menu, { MenuCategory } from '~/components/Menu';
 import BestSeller from '~/components/BestSeller';
 import OrderPopup from '~/components/OrderPopup';
 import Icon from '~/components/svg/Icon';
-import { Anchor } from '@luminescent/ui-qwik';
-import { Beef, CupSoda, Drumstick, EggFried, Leaf, Soup } from 'lucide-icons-qwik';
+import { Beef, CupSoda, Drumstick, EggFried, Hamburger, Leaf, Soup } from 'lucide-icons-qwik';
 
 export default component$(() => {
   return <>
@@ -22,27 +21,27 @@ export default component$(() => {
       <Menu>
         <MenuCategory name="BURGERS & SANDWICHES">
           <a class="lum-btn lum-bg-transparent" href="#beefburgers">
-            <Beef /> Beef Burgers
+            <Hamburger class="text-orange-300" /> Beef Burgers
           </a>
           <a class="lum-btn lum-bg-transparent" href="#chickenburgers">
-            <Drumstick /> Chicken Burgers
+            <Drumstick class="text-yellow-200" /> Chicken Burgers
           </a>
           <a class="lum-btn lum-bg-transparent" href="#veggieburgers">
-            <Leaf /> Vegetarian Burgers
+            <Leaf class="text-green-300" /> Vegetarian Burgers
           </a>
           <a class="lum-btn lum-bg-transparent" href="#steaksandwiches">
-            <Beef /> Steak Sandwiches
+            <Beef class="text-red-300" /> Steak Sandwiches
           </a>
         </MenuCategory>
         <MenuCategory name="OTHER" collapse>
           <a class="lum-btn lum-bg-transparent" href="#extras">
-            <EggFried /> Extras
+            <EggFried class="text-amber-200" /> Extras
           </a>
           <a class="lum-btn lum-bg-transparent" href="#sides">
-            <Soup /> Sides
+            <Soup class="text-orange-300" /> Sides
           </a>
           <a class="lum-btn lum-bg-transparent" href="#drinks">
-            <CupSoda /> Drinks
+            <CupSoda class="text-red-300" /> Drinks
           </a>
         </MenuCategory>
       </Menu>
@@ -56,11 +55,10 @@ export default component$(() => {
           <br />
           If you have any food allergies, please advise us before ordering.
         </p>
-        <Anchor id="beefburgers">
-          <h2 id="beefburgers" class="text-xl font-bold whitespace-nowrap text-lum-text sm:text-4xl font-futura tracking-wider">
-            Beef Burgers
-          </h2>
-        </Anchor>
+        <h2 id="beefburgers" class="flex items-center gap-3 text-xl font-bold whitespace-nowrap text-lum-text sm:text-4xl font-futura tracking-wider">
+          <Hamburger class="text-orange-300" size={46} />
+          Beef Burgers
+        </h2>
         <h3 class="text-sm text-lum-text-secondary mt-1">
           * All of our beef burgers are made with premium quality meat, cut and grounded in house daily and handpressed on the grill.
         </h3>
@@ -89,11 +87,10 @@ export default component$(() => {
             </div>;
           })}
         </div>
-        <Anchor id="chickenburgers">
-          <h2 id="chickenburgers" class="text-xl font-bold whitespace-nowrap text-lum-text sm:text-4xl font-futura tracking-wider">
-            Chicken Burgers
-          </h2>
-        </Anchor>
+        <h2 id="chickenburgers" class="flex items-center gap-3 text-xl font-bold whitespace-nowrap text-lum-text sm:text-4xl font-futura tracking-wider">
+          <Drumstick class="text-yellow-200" size={46} />
+          Chicken Burgers
+        </h2>
         <h3 class="text-sm text-lum-text-secondary mt-1">
           * All of our chicken burgers are made using boneless leg/thigh which is marinated in our special spice blend (mild) and deep fried.
         </h3>
@@ -121,11 +118,10 @@ export default component$(() => {
             </div>;
           })}
         </div>
-        <Anchor id="veggieburgers">
-          <h2 id="veggieburgers" class="text-xl font-bold whitespace-nowrap text-lum-text sm:text-4xl font-futura tracking-wider">
-            Vegetarian Burgers
-          </h2>
-        </Anchor>
+        <h2 id="veggieburgers" class="flex items-center gap-3 text-xl font-bold whitespace-nowrap text-lum-text sm:text-4xl font-futura tracking-wider">
+          <Leaf class="text-green-300" size={46} />
+          Vegetarian Burgers
+        </h2>
         <div class="flex flex-wrap gap-2 pt-5 pb-10">
           {veggieburgers.map((item, i) => {
             return <div key={i} class={{
@@ -150,11 +146,10 @@ export default component$(() => {
             </div>;
           })}
         </div>
-        <Anchor id="steaksandwiches">
-          <h2 id="steaksandwiches" class="text-xl font-bold whitespace-nowrap text-lum-text sm:text-4xl font-futura tracking-wider">
-            Steak Sandwiches
-          </h2>
-        </Anchor>
+        <h2 id="steaksandwiches" class="flex items-center gap-3 text-xl font-bold whitespace-nowrap text-lum-text sm:text-4xl font-futura tracking-wider">
+          <Beef class="text-red-300" size={46} />
+          Steak Sandwiches
+        </h2>
         <div class="grid sm:grid-cols-2 gap-2 pt-5 pb-10">
           {steaksandwiches.map((item, i) => {
             return <div key={i} class={{
@@ -179,11 +174,10 @@ export default component$(() => {
             </div>;
           })}
         </div>
-        <Anchor id="extras">
-          <h2 id="extras" class="text-xl font-bold whitespace-nowrap text-lum-text sm:text-4xl font-futura tracking-wider">
-            Extras
-          </h2>
-        </Anchor>
+        <h2 id="extras" class="flex items-center gap-3 text-xl font-bold whitespace-nowrap text-lum-text sm:text-4xl font-futura tracking-wider">
+          <EggFried class="text-yellow-200" size={46} />
+          Extras
+        </h2>
         <div class="flex flex-wrap gap-2 pt-5 pb-10">
           {extras.map((item, i) => {
             return <div key={i} class={{
@@ -209,11 +203,10 @@ export default component$(() => {
             </div>;
           })}
         </div>
-        <Anchor id="sides">
-          <h2 id="sides" class="text-xl font-bold whitespace-nowrap text-lum-text sm:text-4xl font-futura tracking-wider">
-            Sides
-          </h2>
-        </Anchor>
+        <h2 id="sides" class="flex items-center gap-3 text-xl font-bold whitespace-nowrap text-lum-text sm:text-4xl font-futura tracking-wider">
+          <Soup class="text-orange-300" size={46} />
+          Sides
+        </h2>
         <div class="flex flex-wrap gap-2 pt-5 pb-10">
           {sides.map((item, i) => {
             return <div key={i} class={{
@@ -238,11 +231,10 @@ export default component$(() => {
             </div>;
           })}
         </div>
-        <Anchor id="drinks">
-          <h2 id="drinks" class="text-xl font-bold whitespace-nowrap text-lum-text sm:text-4xl font-futura tracking-wider">
-            Drinks
-          </h2>
-        </Anchor>
+        <h2 id="drinks" class="flex items-center gap-3 text-xl font-bold whitespace-nowrap text-lum-text sm:text-4xl font-futura tracking-wider">
+          <CupSoda class="text-red-300" size={46} />
+          Drinks
+        </h2>
         <div class="flex flex-wrap gap-2 pt-5 pb-10">
           {drinks.map((item, i) => {
             return <div key={i} class={{

@@ -62,6 +62,7 @@
 html {
   overflow: overlay;
   background-color: var(--color-gray-950);
+  scroll-padding-top: 10rem;
 }
 
 * {
