@@ -12,12 +12,12 @@ export default component$(() => {
   const loc = useLocation();
 
   return (
-    <Nav fixed colorClass='lum-bg-gray-900' class={{
+    <Nav fixed floating colorClass='lum-bg-gray-900' class={{
       'font-futura tracking-wider': true,
     }}>
-      <Link q:slot="start" href="/" class="lum-btn lum-bg-transparent">
-        <Icon size={32} />
-        <p class="mt-0.5 space-x-1 whitespace-nowrap">
+      <Link q:slot="start" href="/" class="lum-btn lum-bg-transparent rounded-lum-1 -m-1">
+        <Icon size={30} />
+        <p class="space-x-1 whitespace-nowrap">
           <span class="font-bold">BURGERS</span><span>ON</span><span>FLEEK</span>
         </p>
         <div class={{
@@ -29,12 +29,12 @@ export default component$(() => {
       </Link>
 
       <Link q:slot="end" href="/menu" class={{
-        'lum-btn lum-bg-transparent hover:text-lum-text p-2 sm:lum-btn-p-2': true,
+        'lum-btn lum-bg-transparent hover:text-lum-text p-2 sm:lum-btn-p-2 rounded-lum-1': true,
       }}>
         <IconInBag class="fill-current" /> <span class="hidden lg:inline">MENU</span>
       </Link>
       <Link q:slot="end" href="/halal" class={{
-        'hidden lg:flex lum-btn lum-bg-transparent hover:text-lum-text p-2 sm:lum-btn-p-2': true,
+        'hidden lg:flex lum-btn lum-bg-transparent hover:text-lum-text p-2 sm:lum-btn-p-2 rounded-lum-1': true,
       }}>
         <Halal class="fill-current" /> HALAL
       </Link>
@@ -42,10 +42,10 @@ export default component$(() => {
         <SocialButtons />
       </div>
 
-      <Link q:slot="mobile" href="/menu" class="lum-btn lum-bg-transparent hover:text-lum-text">
+      <Link q:slot="mobile" href="/menu" class="lum-btn lum-bg-transparent hover:text-lum-text rounded-lum-1">
         <IconInBag class="fill-current" /> MENU
       </Link>
-      <Link q:slot="mobile" href="/halal" class="lum-btn lum-bg-transparent hover:text-lum-text">
+      <Link q:slot="mobile" href="/halal" class="lum-btn lum-bg-transparent hover:text-lum-text rounded-lum-1">
         <Halal class="fill-current" /> HALAL
       </Link>
       <div q:slot='mobile' class="flex justify-evenly">
@@ -59,31 +59,31 @@ export default component$(() => {
 export const SocialButtons = component$(({ big }: any) => {
   return <>
     <a href="tel:+1 (905) 427 4377" title="Call us" class={{
-      'lum-btn lum-bg-transparent hover:text-lum-text fill-current p-2': true,
+      'lum-btn lum-bg-transparent hover:text-lum-text fill-current p-2 rounded-lum-1': true,
       'p-4': big,
     }}>
       <Phone strokeWidth={1} />
     </a>
     <a href="https://maps.app.goo.gl/Unrrg3uda7AQQs4DA" title="Google Maps" class={{
-      'lum-btn lum-bg-transparent hover:text-lum-text fill-current p-2': true,
+      'lum-btn lum-bg-transparent hover:text-lum-text fill-current p-2 rounded-lum-1': true,
       'p-4': big,
     }}>
       <MapPin strokeWidth={1} />
     </a>
     <a href="https://instagram.com/burgersonfleek.ca" title="Instagram" class={{
-      'lum-btn lum-bg-transparent hover:text-lum-text fill-current p-2': true,
+      'lum-btn lum-bg-transparent hover:text-lum-text fill-current p-2 rounded-lum-1': true,
       'p-4': big,
     }}>
       <Instagram strokeWidth={1} />
     </a>
     <a href="https://facebook.com/burgersonfleek.ca" title="Facebook" class={{
-      'lum-btn lum-bg-transparent hover:text-lum-text fill-current p-2': true,
+      'lum-btn lum-bg-transparent hover:text-lum-text fill-current p-2 rounded-lum-1': true,
       'p-4': big,
     }}>
       <Facebook strokeWidth={1} />
     </a>
     <a href="https://tiktok.com/@burgersonfleek.ca" title="TikTok" class={{
-      'lum-btn lum-bg-transparent hover:text-lum-text fill-current p-2': true,
+      'lum-btn lum-bg-transparent hover:text-lum-text fill-current p-2 rounded-lum-1': true,
       'p-4': big,
     }}>
       <TikTok />
