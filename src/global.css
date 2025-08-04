@@ -5,17 +5,17 @@
  * the styles in here will be applied to the Document, without any sort of CSS scoping.
  *
  */
+@import url("https://use.typekit.net/mvz1qpc.css");
 
 @import "tailwindcss";
 
-@plugin "@anuragroy/tailwindcss-animate";
-
 @import "@luminescent/ui";
+
+@plugin "@anuragroy/tailwindcss-animate";
 
 @config "@luminescent/ui-qwik/config";
 @source "../node_modules/@luminescent/ui-qwik";
 
-@import url("https://use.typekit.net/mvz1qpc.css");
 
 @theme {
   --color-gray-50: hsl(30deg, 0%, 95%);
