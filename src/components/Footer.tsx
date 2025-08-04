@@ -21,9 +21,6 @@ export default component$(() => {
           </div>
           <div>
             <p class="text-xs md:text-sm">
-              Contact us at <a href="mailto:eat@burgersonfleek.ca" class="text-blue-400/80 hover:text-blue-400 hover:underline">eat@burgersonfleek.ca</a>
-            </p>
-            <p class="text-xs md:text-sm">
               © Copyright {new Date().getFullYear()} Burgers on Fleek - All Rights Reserved.
             </p>
           </div>
