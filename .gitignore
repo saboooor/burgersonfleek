@@ -1,3 +1,4 @@
+# Build
 /dist
 /lib
 /lib-types
@@ -5,7 +6,6 @@
 
 # Development
 node_modules
-*.local
 
 # Cache
 .cache
@@ -23,7 +23,6 @@ pnpm-debug.log*
 lerna-debug.log*
 
 # Editor
-.vscode/*
 !.vscode/extensions.json
 .idea
 .DS_Store
@@ -37,8 +36,14 @@ lerna-debug.log*
 .yarn/*
 !.yarn/releases
 
-# Secrets
-.env
+config/
+data/
+.DS_Store
+package-lock.json
+config.json
 
 # Cloudflare
 functions/**/*.js
+
+.env
+.wrangler
