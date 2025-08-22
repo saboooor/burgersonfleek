@@ -34,7 +34,7 @@
     "@tailwindcss/vite": "^4.1.12",
     "@types/eslint": "9.6.1",
     "@types/node": "latest",
-    "eslint": "9.33.0",
+    "eslint": "9.34.0",
     "eslint-plugin-qwik": "1.15.0",
     "globals": "^16.3.0",
     "lucide-icons-qwik": "^0.533.0",
