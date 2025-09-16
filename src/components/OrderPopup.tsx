@@ -1,6 +1,6 @@
 // LuminescentDev Navbar Component Apr 28
 
-import { $, component$, useOnDocument, useSignal } from '@builder.io/qwik';
+import { component$, useSignal, useVisibleTask$ } from '@builder.io/qwik';
 import { Blobs } from '@luminescent/ui-qwik';
 import IconInBag from './svg/IconInBag';
 
@@ -12,17 +12,25 @@ export default component$(({ id, popup, class: Class, col }: {
 }) => {
   const prevScrollpos = useSignal(0);
 
-  useOnDocument('scroll', $(() => {
+  // eslint-disable-next-line qwik/no-use-visible-task
+  useVisibleTask$(() => {
     if (!popup || !id) return;
-    console.log('scrolling for' + id);
-    const orderpopup = document.getElementById(id)!;
-    if (prevScrollpos.value > window.scrollY && window.scrollY + 1000 < document.body.scrollHeight) {
-      orderpopup.style.bottom = '0';
-    } else if (window.scrollY > 100) {
-      orderpopup.style.bottom = '-9rem';
-    }
-    prevScrollpos.value = window.scrollY;
-  }));
+
+    const handler = () => {
+      const orderpopup = document.getElementById(id)!;
+      if (
+        prevScrollpos.value > window.scrollY &&
+        window.scrollY + 1000 < document.body.scrollHeight
+      ) {
+        orderpopup.style.bottom = '0';
+      } else if (window.scrollY > 100) {
+        orderpopup.style.bottom = '-9rem';
+      }
+      prevScrollpos.value = window.scrollY;
+    };
+
+    document.addEventListener('scroll', handler);
+  });
 
   return <div class={{
     'fixed bottom-0 p-4 w-full transition-all': popup,
