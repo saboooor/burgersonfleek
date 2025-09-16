@@ -254,7 +254,9 @@ export default component$(() => {
         </div>
       </div>
     </section>
-    <OrderPopup/>
+    <OrderPopup popup id="orderpopup" class={{
+      'sm:hidden': true,
+    }}/>
   </>;
 });
 

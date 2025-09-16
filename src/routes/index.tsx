@@ -3,9 +3,10 @@ import type { DocumentHead } from '@builder.io/qwik-city';
 import { Link } from '@builder.io/qwik-city';
 
 import Logo from '~/components/svg/Logo';
+import LogoHorizontal from '~/components/svg/LogoHorizontal';
 import Halal from '~/components/svg/Halal';
-import IconInBag from '~/components/svg/IconInBag';
 import { BookOpen, MapPin, Phone } from 'lucide-icons-qwik';
+import OrderPopup from '~/components/OrderPopup';
 
 export default component$(() => {
   return <>
@@ -13,10 +14,9 @@ export default component$(() => {
       <div class="flex relative">
         <div class="z-10 animate-in fade-in slide-in-from-top-16 anim-duration-1000">
           <Logo size={476} height={600} id="pc" class="hidden sm:flex"/>
-          <Logo size={238} height={300} id="mobile" class="sm:hidden -my-8" />
+          <LogoHorizontal size={288} height={100} id="mobile" class="sm:hidden" />
         </div>
       </div>
-      <div class="border-l-2 h-full w-10"></div>
       <div class="flex flex-col items-center sm:items-start text-center sm:text-left">
         <div class="flex animate-in fade-in slide-in-from-top-16 sm:slide-in-from-top-8 anim-duration-1000">
           <h1 class="font-bold text-lum-text text-3xl sm:text-5xl my-4 sm:mb-10">
@@ -46,15 +46,12 @@ export default component$(() => {
               135 Harwood Ave N, Ajax, ON
             </a>
           </div>
-          <div class="flex gap-1 sm:gap-1.5 animate-in fade-in slide-in-from-top-56 sm:slide-in-from-top-48 anim-duration-1000">
-            <a target="_blank" href="https://order.toasttab.com/online/burgers-on-fleek-135-harwood-ave-n-unit-b212" class="lum-btn lum-btn-p-1 lum-bg-transparent hover:lum-bg-gray-900/50 !text-lum-text-secondary">
-              <IconInBag strokeWidth={1} class="w-5 sm:w-auto sm:mr-1" />
-              Order Online
-            </a>
-          </div>
         </div>
 
-        <div class="flex flex-col gap-1 sm:gap-2 my-6 font-futura">
+        <OrderPopup class={{
+          'animate-in fade-in slide-in-from-top-64 sm:slide-in-from-top-56 anim-duration-1000': true,
+        }} />
+        <div class="flex flex-col gap-1 sm:gap-2 my-4 font-futura">
           <div class="flex gap-1 sm:gap-1.5 animate-in fade-in slide-in-from-top-64 sm:slide-in-from-top-56 anim-duration-1000">
             <Link href="/menu" class={{
               'lum-btn lum-btn-p-3 text-sm sm:lum-btn-p-4 sm:text-lg': true,
