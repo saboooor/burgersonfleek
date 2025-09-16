@@ -13,7 +13,7 @@ export default component$(() => {
       <div class="flex relative">
         <div class="z-10 animate-in fade-in slide-in-from-top-16 anim-duration-1000">
           <Logo size={476} height={600} id="pc" class="hidden sm:flex"/>
-          <Logo size={238} height={300} id="mobile" class="sm:hidden" />
+          <Logo size={238} height={300} id="mobile" class="sm:hidden -my-8" />
         </div>
       </div>
       <div class="border-l-2 h-full w-10"></div>
@@ -54,7 +54,7 @@ export default component$(() => {
           </div>
         </div>
 
-        <div class="flex flex-col gap-1 sm:gap-2 mt-6 font-futura">
+        <div class="flex flex-col gap-1 sm:gap-2 my-6 font-futura">
           <div class="flex gap-1 sm:gap-1.5 animate-in fade-in slide-in-from-top-64 sm:slide-in-from-top-56 anim-duration-1000">
             <Link href="/menu" class={{
               'lum-btn lum-btn-p-3 text-sm sm:lum-btn-p-4 sm:text-lg': true,
