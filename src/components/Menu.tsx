@@ -41,12 +41,12 @@ export default component$(() => {
         <h2 class="text-xl font-bold whitespace-nowrap sm:text-2xl">
           Feeling HANGRY?
         </h2>
-        <a href="tel:+1 (905) 427 4377" class={{
+        <a href="https://order.toasttab.com/online/burgers-on-fleek-135-harwood-ave-n-unit-b212" class={{
           'lum-btn lum-btn-p-3 text-sm sm:lum-btn-p-4 sm:text-lg mt-4': true,
           'hover:!text-lum-text border-burger-600': true,
-          'bg-burger-700/5 hover:lum-bg-burger-700 bg-gradient-to-b from-burger-500/50 to-burger-700': true,
+          'bg-burger-700/5 hover:lum-bg-burger-700 bg-gradient-to-b from-burger-600/50 to-burger-700/50': true,
         }}>
-          <IconInBag class="fill-current w-5 sm:w-auto sm:mr-1" /> Call us to order
+          <IconInBag class="fill-current w-5 sm:w-auto sm:mr-1" /> Order Online
         </a>
       </div>
     </aside>

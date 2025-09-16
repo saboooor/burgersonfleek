@@ -25,12 +25,12 @@ export default component$(() => {
       <p class="text-xl">
         Feeling HANGRY?
       </p>
-      <a href="tel:+1 (905) 427 4377" class={{
-        'lum-btn lum-btn-p-2 text-sm sm:text-lg': true,
+      <a href="https://order.toasttab.com/online/burgers-on-fleek-135-harwood-ave-n-unit-b212" class={{
+        'lum-btn lum-btn-p-3 text-sm sm:lum-btn-p-4 sm:text-lg': true,
         'hover:!text-lum-text border-burger-600': true,
-        'bg-burger-700/5 hover:lum-bg-burger-700 bg-gradient-to-b from-burger-500/50 to-burger-700': true,
+        'bg-burger-700/5 hover:lum-bg-burger-700 bg-gradient-to-b from-burger-600/50 to-burger-700/50': true,
       }}>
-        <IconInBag width="24" class="fill-current w-5 sm:w-auto sm:mr-1" /> Call us to order
+        <IconInBag class="fill-current w-5 sm:w-auto sm:mr-1" /> Order Online
       </a>
       <Blobs color='orange' class={{ 'absolute overflow-clip pointer-events-none': true }} style={{ transform: 'translateZ(-10px)' }}/>
     </div>

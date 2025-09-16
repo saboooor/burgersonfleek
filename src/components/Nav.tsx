@@ -2,7 +2,7 @@ import { component$ } from '@builder.io/qwik';
 import { Link, useLocation } from '@builder.io/qwik-city';
 import { Nav } from '@luminescent/ui-qwik';
 
-import { Phone,  MapPin,  Instagram,  Facebook } from 'lucide-icons-qwik';
+import { Phone,  MapPin,  Instagram,  Facebook, BookOpen } from 'lucide-icons-qwik';
 import TikTok from './svg/TikTok';
 import Icon from './svg/Icon';
 import Halal from './svg/Halal';
@@ -31,22 +31,30 @@ export default component$(() => {
       <Link q:slot="end" href="/menu" class={{
         'lum-btn lum-bg-transparent hover:text-lum-text p-2 sm:lum-btn-p-2 rounded-lum-1': true,
       }}>
-        <IconInBag class="fill-current" /> <span class="hidden lg:inline">MENU</span>
+        <BookOpen strokeWidth={1} /> <span class="hidden lg:inline">MENU</span>
+      </Link>
+      <Link q:slot="end" target='_blank' href="https://order.toasttab.com/online/burgers-on-fleek-135-harwood-ave-n-unit-b212" class={{
+        'lum-btn lum-bg-transparent hover:text-lum-text p-2 sm:lum-btn-p-2 rounded-lum-1': true,
+      }}>
+        <IconInBag /> <span class="hidden lg:inline">ORDER</span>
       </Link>
       <Link q:slot="end" href="/halal" class={{
-        'hidden lg:flex lum-btn lum-bg-transparent hover:text-lum-text p-2 sm:lum-btn-p-2 rounded-lum-1': true,
+        'hidden lg:flex lum-btn lum-bg-transparent hover:text-lum-text p-2 rounded-lum-1': true,
       }}>
-        <Halal class="fill-current" /> HALAL
+        <Halal />
       </Link>
       <div q:slot='end' class="hidden sm:flex gap-2">
         <SocialButtons />
       </div>
 
       <Link q:slot="mobile" href="/menu" class="lum-btn lum-bg-transparent hover:text-lum-text rounded-lum-1">
-        <IconInBag class="fill-current" /> MENU
+        <BookOpen strokeWidth={1} /> MENU
+      </Link>
+      <Link q:slot="mobile" target='_blank' href="https://order.toasttab.com/online/burgers-on-fleek-135-harwood-ave-n-unit-b212" class="lum-btn lum-bg-transparent hover:text-lum-text rounded-lum-1">
+        <IconInBag /> ORDER ONLINE
       </Link>
       <Link q:slot="mobile" href="/halal" class="lum-btn lum-bg-transparent hover:text-lum-text rounded-lum-1">
-        <Halal class="fill-current" /> HALAL
+        <Halal /> HALAL
       </Link>
       <div q:slot='mobile' class="flex justify-evenly">
         <SocialButtons />
