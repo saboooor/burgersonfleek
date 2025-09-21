@@ -35,13 +35,13 @@ export default component$(() => {
             </a>
           </div>
           <div class="flex gap-1 sm:gap-1.5 animate-in fade-in slide-in-from-top-40 sm:slide-in-from-top-32 anim-duration-1000">
-            <a href="tel:+1 (905) 427 4377" class="lum-btn lum-btn-p-1 lum-bg-transparent hover:lum-bg-gray-900/50 !text-lum-text-secondary">
+            <a data-umami-event="phone" href="tel:+1 (905) 427 4377" class="lum-btn lum-btn-p-1 lum-bg-transparent hover:lum-bg-gray-900/50 !text-lum-text-secondary">
               <Phone strokeWidth={1} class="w-5 sm:w-auto sm:mr-1" />
               +1 (905) 427 4377
             </a>
           </div>
           <div class="flex gap-1 sm:gap-1.5 animate-in fade-in slide-in-from-top-48 sm:slide-in-from-top-40 anim-duration-1000">
-            <a target="_blank" href="https://maps.app.goo.gl/Unrrg3uda7AQQs4DA" class="lum-btn lum-btn-p-1 lum-bg-transparent hover:lum-bg-gray-900/50 !text-lum-text-secondary">
+            <a data-umami-event="maps" target="_blank" href="https://maps.app.goo.gl/Unrrg3uda7AQQs4DA" class="lum-btn lum-btn-p-1 lum-bg-transparent hover:lum-bg-gray-900/50 !text-lum-text-secondary">
               <MapPin strokeWidth={1} class="w-5 sm:w-auto sm:mr-1" />
               135 Harwood Ave N, Ajax, ON
             </a>
@@ -53,7 +53,7 @@ export default component$(() => {
         }} />
         <div class="flex flex-col gap-1 sm:gap-2 my-4 font-futura">
           <div class="flex gap-1 sm:gap-1.5 animate-in fade-in slide-in-from-top-64 sm:slide-in-from-top-56 anim-duration-1000">
-            <Link href="/menu" class={{
+            <Link data-umami-event="menu" href="/menu" class={{
               'lum-btn lum-btn-p-3 text-sm sm:lum-btn-p-4 sm:text-lg': true,
               'hover:!text-lum-text border-burger-600': true,
               'bg-burger-700/5 hover:lum-bg-burger-700 bg-gradient-to-b from-burger-500/50 to-burger-700': true,

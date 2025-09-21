@@ -44,7 +44,7 @@ export default component$(({ id, popup, class: Class, col }: {
       <p class="text-xl mr-2">
         Feeling HANGRY?
       </p>
-      <a target='_blank' href="https://order.toasttab.com/online/burgers-on-fleek-135-harwood-ave-n-unit-b212" class={{
+      <a target='_blank' data-umami-event="order_online" href="https://order.toasttab.com/online/burgers-on-fleek-135-harwood-ave-n-unit-b212" class={{
         'lum-btn lum-btn-p-3 text-sm sm:lum-btn-p-4 sm:text-lg': true,
         'hover:!text-lum-text border-burger-600': true,
         'bg-burger-700/5 hover:lum-bg-burger-700 bg-gradient-to-b from-burger-600/50 to-burger-700/50': true,

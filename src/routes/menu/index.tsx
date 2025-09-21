@@ -20,27 +20,27 @@ export default component$(() => {
     <section class="grid gap-2 sm:grid-cols-3 lg:grid-cols-4 mx-auto max-w-7xl px-4 sm:px-6 min-h-[100svh]">
       <Menu>
         <MenuCategory name="BURGERS & SANDWICHES">
-          <a class="lum-btn lum-bg-transparent" href="#beefburgers">
+          <a class="lum-btn lum-bg-transparent" href="#beefburgers" data-umami-event-menu="beefburgers">
             <Hamburger class="text-orange-300" /> Beef Burgers
           </a>
-          <a class="lum-btn lum-bg-transparent" href="#chickenburgers">
+          <a class="lum-btn lum-bg-transparent" href="#chickenburgers" data-umami-event-menu="chickenburgers">
             <Drumstick class="text-yellow-200" /> Chicken Burgers
           </a>
-          <a class="lum-btn lum-bg-transparent" href="#veggieburgers">
+          <a class="lum-btn lum-bg-transparent" href="#veggieburgers" data-umami-event-menu="veggieburgers">
             <Leaf class="text-green-300" /> Vegetarian Burgers
           </a>
-          <a class="lum-btn lum-bg-transparent" href="#steaksandwiches">
+          <a class="lum-btn lum-bg-transparent" href="#steaksandwiches" data-umami-event-menu="steaksandwiches">
             <Beef class="text-red-300" /> Steak Sandwiches
           </a>
         </MenuCategory>
         <MenuCategory name="OTHER" collapse>
-          <a class="lum-btn lum-bg-transparent" href="#extras">
+          <a class="lum-btn lum-bg-transparent" href="#extras" data-umami-event-menu="extras">
             <EggFried class="text-amber-200" /> Extras
           </a>
-          <a class="lum-btn lum-bg-transparent" href="#sides">
+          <a class="lum-btn lum-bg-transparent" href="#sides" data-umami-event-menu="sides">
             <Soup class="text-orange-300" /> Sides
           </a>
-          <a class="lum-btn lum-bg-transparent" href="#drinks">
+          <a class="lum-btn lum-bg-transparent" href="#drinks" data-umami-event-menu="drinks">
             <CupSoda class="text-red-300" /> Drinks
           </a>
         </MenuCategory>
