@@ -43,7 +43,7 @@ export default component$(({ id, popup, class: Class, col }: {
       'font-futura backdrop-blur-lg mt-4': true,
     }}>
       <p class={{
-        'text-xl mx-2': true,
+        'sm:text-xl mx-2': true,
         'my-1': col,
       }}>
         Feeling HANGRY?
