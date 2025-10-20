@@ -51,10 +51,10 @@ export default component$(() => {
         <OrderPopup class={{
           'animate-in fade-in slide-in-from-top-64 sm:slide-in-from-top-56 anim-duration-1000': true,
         }} />
-        <div class="flex flex-col gap-1 sm:gap-2 my-4 font-futura">
+        <div class="flex flex-col gap-1 sm:gap-2 mt-2 font-futura">
           <div class="flex gap-1 sm:gap-1.5 animate-in fade-in slide-in-from-top-64 sm:slide-in-from-top-56 anim-duration-1000">
             <Link data-umami-event="menu" href="/menu" class={{
-              'lum-btn lum-btn-p-3 text-sm sm:lum-btn-p-4 sm:text-lg': true,
+              'lum-btn lum-btn-p-2 text-sm sm:lum-btn-p-3 sm:text-lg': true,
               'hover:!text-lum-text border-burger-600': true,
               'bg-burger-700/5 hover:lum-bg-burger-700 bg-gradient-to-b from-burger-500/50 to-burger-700': true,
             }}>

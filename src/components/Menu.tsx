@@ -19,15 +19,13 @@ export default component$(() => {
         </div>
       </Dropdown>
       <div class={{
-        'lum-card gap-7': true,
+        'lum-card gap-2 p-4': true,
         'flex overflow-y-auto max-h-[calc(100dvh-300px)] m-4 mt-2 sm:m-0 backdrop-blur-xl': true,
         'opacity-0 sm:opacity-100 pointer-events-none sm:pointer-events-auto': !menu.value,
       }}>
         <Slot />
       </div>
-      <OrderPopup col class={{
-        'hidden sm:block': true,
-      }} />
+      <OrderPopup col/>
     </aside>
   );
 });
@@ -35,9 +33,9 @@ export default component$(() => {
 export const MenuCategory = component$(({ name }: any) => {
   return (
     <div class="flex flex-col gap-2">
-      <span class="font-bold text-orange-200">{name}</span>
+      <span class="text-orange-200 px-2 py-1">{name}</span>
       <div class={{
-        'flex flex-col gap-2 flex-wrap': true,
+        'flex flex-col gap-1 flex-wrap': true,
       }}>
         <Slot />
       </div>

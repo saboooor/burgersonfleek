@@ -20,27 +20,27 @@ export default component$(() => {
     <section class="grid gap-2 sm:grid-cols-3 lg:grid-cols-4 mx-auto max-w-7xl px-4 sm:px-6 min-h-[100svh]">
       <Menu>
         <MenuCategory name="BURGERS & SANDWICHES">
-          <a class="lum-btn lum-bg-transparent" href="#beefburgers" data-umami-event-menu="beefburgers">
+          <a class="lum-btn lum-bg-transparent rounded-lum-2 text-orange-200" href="#beefburgers" data-umami-event-menu="beefburgers">
             <Hamburger class="text-orange-300" /> Beef Burgers
           </a>
-          <a class="lum-btn lum-bg-transparent" href="#chickenburgers" data-umami-event-menu="chickenburgers">
+          <a class="lum-btn lum-bg-transparent rounded-lum-2 text-yellow-100" href="#chickenburgers" data-umami-event-menu="chickenburgers">
             <Drumstick class="text-yellow-200" /> Chicken Burgers
           </a>
-          <a class="lum-btn lum-bg-transparent" href="#veggieburgers" data-umami-event-menu="veggieburgers">
+          <a class="lum-btn lum-bg-transparent rounded-lum-2 text-green-200" href="#veggieburgers" data-umami-event-menu="veggieburgers">
             <Leaf class="text-green-300" /> Vegetarian Burgers
           </a>
-          <a class="lum-btn lum-bg-transparent" href="#steaksandwiches" data-umami-event-menu="steaksandwiches">
+          <a class="lum-btn lum-bg-transparent rounded-lum-2 text-red-200" href="#steaksandwiches" data-umami-event-menu="steaksandwiches">
             <Beef class="text-red-300" /> Steak Sandwiches
           </a>
         </MenuCategory>
-        <MenuCategory name="OTHER" collapse>
-          <a class="lum-btn lum-bg-transparent" href="#extras" data-umami-event-menu="extras">
+        <MenuCategory name="TREAT YOURSELF">
+          <a class="lum-btn lum-bg-transparent rounded-lum-2 text-amber-100" href="#extras" data-umami-event-menu="extras">
             <EggFried class="text-amber-200" /> Extras
           </a>
-          <a class="lum-btn lum-bg-transparent" href="#sides" data-umami-event-menu="sides">
+          <a class="lum-btn lum-bg-transparent rounded-lum-2 text-orange-200" href="#sides" data-umami-event-menu="sides">
             <Soup class="text-orange-300" /> Sides
           </a>
-          <a class="lum-btn lum-bg-transparent" href="#drinks" data-umami-event-menu="drinks">
+          <a class="lum-btn lum-bg-transparent rounded-lum-2 text-red-200" href="#drinks" data-umami-event-menu="drinks">
             <CupSoda class="text-red-300" /> Drinks
           </a>
         </MenuCategory>
@@ -55,7 +55,7 @@ export default component$(() => {
           <br />
           If you have any food allergies, please advise us before ordering.
         </p>
-        <h2 id="beefburgers" class="flex items-center gap-3 text-xl font-bold whitespace-nowrap text-lum-text sm:text-4xl font-futura tracking-wider">
+        <h2 id="beefburgers" class="flex items-center gap-3 text-xl font-bold whitespace-nowrap text-orange-200 sm:text-4xl font-futura tracking-wider">
           <Hamburger class="text-orange-300" size={46} />
           Beef Burgers
         </h2>
@@ -87,7 +87,7 @@ export default component$(() => {
             </div>;
           })}
         </div>
-        <h2 id="chickenburgers" class="flex items-center gap-3 text-xl font-bold whitespace-nowrap text-lum-text sm:text-4xl font-futura tracking-wider">
+        <h2 id="chickenburgers" class="flex items-center gap-3 text-xl font-bold whitespace-nowrap text-yellow-100 sm:text-4xl font-futura tracking-wider">
           <Drumstick class="text-yellow-200" size={46} />
           Chicken Burgers
         </h2>
@@ -118,7 +118,7 @@ export default component$(() => {
             </div>;
           })}
         </div>
-        <h2 id="veggieburgers" class="flex items-center gap-3 text-xl font-bold whitespace-nowrap text-lum-text sm:text-4xl font-futura tracking-wider">
+        <h2 id="veggieburgers" class="flex items-center gap-3 text-xl font-bold whitespace-nowrap text-green-200 sm:text-4xl font-futura tracking-wider">
           <Leaf class="text-green-300" size={46} />
           Vegetarian Burgers
         </h2>
@@ -146,7 +146,7 @@ export default component$(() => {
             </div>;
           })}
         </div>
-        <h2 id="steaksandwiches" class="flex items-center gap-3 text-xl font-bold whitespace-nowrap text-lum-text sm:text-4xl font-futura tracking-wider">
+        <h2 id="steaksandwiches" class="flex items-center gap-3 text-xl font-bold whitespace-nowrap text-red-200 sm:text-4xl font-futura tracking-wider">
           <Beef class="text-red-300" size={46} />
           Steak Sandwiches
         </h2>
@@ -174,7 +174,7 @@ export default component$(() => {
             </div>;
           })}
         </div>
-        <h2 id="extras" class="flex items-center gap-3 text-xl font-bold whitespace-nowrap text-lum-text sm:text-4xl font-futura tracking-wider">
+        <h2 id="extras" class="flex items-center gap-3 text-xl font-bold whitespace-nowrap text-yellow-100 sm:text-4xl font-futura tracking-wider">
           <EggFried class="text-yellow-200" size={46} />
           Extras
         </h2>
@@ -203,7 +203,7 @@ export default component$(() => {
             </div>;
           })}
         </div>
-        <h2 id="sides" class="flex items-center gap-3 text-xl font-bold whitespace-nowrap text-lum-text sm:text-4xl font-futura tracking-wider">
+        <h2 id="sides" class="flex items-center gap-3 text-xl font-bold whitespace-nowrap text-orange-200 sm:text-4xl font-futura tracking-wider">
           <Soup class="text-orange-300" size={46} />
           Sides
         </h2>
@@ -231,7 +231,7 @@ export default component$(() => {
             </div>;
           })}
         </div>
-        <h2 id="drinks" class="flex items-center gap-3 text-xl font-bold whitespace-nowrap text-lum-text sm:text-4xl font-futura tracking-wider">
+        <h2 id="drinks" class="flex items-center gap-3 text-xl font-bold whitespace-nowrap text-red-200 sm:text-4xl font-futura tracking-wider">
           <CupSoda class="text-red-300" size={46} />
           Drinks
         </h2>
