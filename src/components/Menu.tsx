@@ -19,9 +19,10 @@ export default component$(() => {
         </div>
       </Dropdown>
       <div class={{
-        'lum-card gap-2 p-4': true,
+        'transition-all lum-card gap-2 p-4': true,
         'flex overflow-y-auto max-h-[calc(100dvh-300px)] m-4 mt-2 sm:m-0 backdrop-blur-xl': true,
-        'opacity-0 sm:opacity-100 pointer-events-none sm:pointer-events-auto': !menu.value,
+        'mt-2': menu.value,
+        'pointer-events-none sm:pointer-events-auto opacity-0 sm:opacity-100 -mt-2 sm:mt-2 scale-95 sm:scale-100': !menu.value,
       }}>
         <Slot />
       </div>
