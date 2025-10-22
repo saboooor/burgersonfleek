@@ -6,7 +6,7 @@ export default component$<IconProps>(({ size, ...props }) => {
     <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 338 338" width={size} height={size} {...props}>
       <defs>
         <linearGradient id="linear-gradient" x1="0.5" y1="1" x2="0.5" gradientUnits="objectBoundingBox" gradientTransform="rotate(10)">
-          <stop offset="0" stop-color="rgb(94,60,15)"/>
+          <stop offset="0" stop-color="rgba(201,128,33,0.30)"/>
           <stop offset="1" stop-color="rgb(195, 129, 31)"/>
         </linearGradient>
       </defs>
