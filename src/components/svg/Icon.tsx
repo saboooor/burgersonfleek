@@ -6,11 +6,22 @@ export default component$<IconProps>(({ size, ...props }) => {
     <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 338 338" width={size} height={size} {...props}>
       <defs>
         <linearGradient id="linear-gradient" x1="0.5" y1="1" x2="0.5" gradientUnits="objectBoundingBox" gradientTransform="rotate(10)">
-          <stop offset="0" stop-color="rgba(201,128,33,0.30)"/>
-          <stop offset="1" stop-color="rgb(195, 129, 31)"/>
+          <stop offset="0" stop-color="rgba(201,128,33,0.60)"/>
+          <stop offset="1" stop-color="rgb(201,128,33)"/>
         </linearGradient>
+
+        <filter id="bevelLight" x="-20%" y="-20%" width="140%" height="140%">
+          <feGaussianBlur in="SourceAlpha" stdDeviation="2" result="blur"/>
+          <feSpecularLighting in="blur" surfaceScale="1" specularConstant="0.6"
+            specularExponent="25" lighting-color="rgb(201,128,33)" result="specOut">
+            <fePointLight x="-2000" y="-3000" z="5000"/>
+          </feSpecularLighting>
+          <feComposite in="specOut" in2="SourceAlpha" operator="in" result="specOut"/>
+          <feComposite in="SourceGraphic" in2="specOut" operator="arithmetic" k1="0" k2="1" k3="1" k4="0"/>
+        </filter>
       </defs>
-      <g fill="url(#linear-gradient)">
+      <g fill="url(#linear-gradient)"
+        filter="url(#bevelLight)">
         <path transform="translate(-252,-129)" stroke="url(#linear-gradient)"
           d="M560.7,337.1l-261.2,0.1c-3.9,0-7.5-0.9-10.7-2.5c1.3-2.3,2.8-4.5,4.7-6.4c2.6-2.7,5.7-4.9,9.3-6.4
             c3.5-1.5,7.4-2.4,11.7-2.4l228.1-0.4h0c10.1,0,19.3-4.1,26-10.8c6.6-6.6,10.8-15.8,10.8-26c0-10.1-4.1-19.3-10.8-26

@@ -15,7 +15,6 @@
 @config "@luminescent/ui-qwik/config";
 @source "../node_modules/@luminescent/ui-qwik";
 
-
 @theme {
   --color-gray-50: hsl(30deg, 0%, 95%);
   --color-gray-100: hsl(30deg, 2%, 90%);
@@ -29,17 +28,17 @@
   --color-gray-850: hsl(30deg, 20%, 15%);
   --color-gray-900: hsl(30deg, 30%, 8%);
   --color-gray-950: hsl(30deg, 35%, 5%);
-  --color-burger-50: hsl(30deg, 54%, 95%);
-  --color-burger-100: hsl(30deg, 57%, 85%);
-  --color-burger-200: hsl(30deg, 61%, 80%);
-  --color-burger-300: hsl(30deg, 65%, 70%);
-  --color-burger-400: hsl(30deg, 69%, 60%);
-  --color-burger-500: hsl(30deg, 71%, 50%);
-  --color-burger-600: hsl(30deg, 73%, 44%);
-  --color-burger-700: hsl(30deg, 77%, 28%);
-  --color-burger-800: hsl(30deg, 81%, 16%);
-  --color-burger-900: hsl(30deg, 85%, 10%);
-  --color-burger-950: hsl(30deg, 89%, 7%);
+  --color-burger-50:  oklch(0.97  0.035 80);   /* soft butter cream */
+  --color-burger-100: oklch(0.93  0.055 75);   /* light beige-gold */
+  --color-burger-200: oklch(0.85  0.085 70);   /* honey tan */
+  --color-burger-300: oklch(0.77  0.11  68);   /* golden brown */
+  --color-burger-400: oklch(0.71  0.125 67);   /* warm toasted gold */
+  --color-burger-500: oklch(0.6617 0.1355 67.02); /* base tone */
+  --color-burger-600: oklch(0.58  0.13  65);   /* amber brown */
+  --color-burger-700: oklch(0.50  0.11  63);   /* caramel crust */
+  --color-burger-800: oklch(0.42  0.09  60);   /* dark toasted brown */
+  --color-burger-900: oklch(0.33  0.075 58);   /* deep baked tone */
+  --color-burger-950: oklch(0.25  0.06  55);   /* charred brown */
   --color-lum-text: var(--color-burger-100);
   --color-lum-text-secondary: --alpha(var(--color-burger-200) / 80%);
   --color-lum-border: var(--color-burger-500);

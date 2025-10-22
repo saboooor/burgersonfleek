@@ -20,7 +20,7 @@ export default component$(() => {
       <div class="flex flex-col items-center sm:items-start text-center sm:text-left">
         <div class="flex animate-in fade-in slide-in-from-top-16 sm:slide-in-from-top-8 anim-duration-800">
           <h1 class="font-bold text-lum-text text-3xl sm:text-5xl my-4 sm:mb-10">
-            The <span class="text-burger-500">burgers</span><br/>you are <span class="text-burger-300">craving.</span><span class="text-lg align-top">™</span>
+            The <span class="text-burger-500 gold-text">burgers</span><br/>you are <span class="text-burger-300">craving.</span><span class="text-lg align-top">™</span>
           </h1>
         </div>
         <p class="text-lum-text-secondary text-lg md:text-xl animate-in fade-in slide-in-from-top-24 sm:slide-in-from-top-16 anim-duration-800">
@@ -61,8 +61,8 @@ export default component$(() => {
           <div class="flex gap-1 sm:gap-1.5 animate-in fade-in slide-in-from-top-72 sm:slide-in-from-top-64 anim-duration-800">
             <Link data-umami-event="menu" href="/menu" class={{
               'lum-btn lum-btn-p-3 sm:text-lg': true,
-              'hover:!text-lum-text border-burger-600': true,
-              'bg-burger-700/5 hover:lum-bg-burger-700 bg-gradient-to-b from-burger-500/50 to-burger-700': true,
+              'hover:!text-lum-text border-burger-500': true,
+              'bg-gradient-to-b from-burger-600 to-burger-700 hover:from-burger-500': true,
             }}>
               <BookOpen strokeWidth={1} class="w-5 sm:w-auto sm:mr-1" /> View the menu
             </Link>
