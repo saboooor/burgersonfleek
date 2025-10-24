@@ -19,7 +19,7 @@ export default component$(() => {
       </div>
       <div class="flex flex-col items-center sm:items-start text-center sm:text-left">
         <div class="flex animate-in fade-in slide-in-from-top-16 sm:slide-in-from-top-8 anim-duration-800">
-          <h1 class="font-medium text-white text-3xl sm:text-5xl my-4 sm:mb-8">
+          <h1 class="font-semibold text-white text-3xl sm:text-5xl my-4 sm:mb-8">
             The <span class="text-burger-500 gold-text">burgers</span><br/>you are <span class="text-burger-300">craving.</span><span class="text-lg align-top">™</span>
           </h1>
         </div>
