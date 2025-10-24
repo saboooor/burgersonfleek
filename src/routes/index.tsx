@@ -10,7 +10,7 @@ import OrderPopup from '~/components/OrderPopup';
 
 export default component$(() => {
   return <>
-    <section class="flex flex-col sm:flex-row mx-auto max-w-5xl px-6 items-center justify-center min-h-[100svh] pt-20">
+    <section class="flex flex-col sm:flex-row mx-auto max-w-5xl px-6 items-center justify-center min-h-svh pt-20">
       <div class="flex relative">
         <div class="z-10 animate-in fade-in slide-in-from-top-16 anim-duration-800">
           <Logo size={476} height={600} id="pc" class="hidden sm:flex"/>
@@ -19,7 +19,7 @@ export default component$(() => {
       </div>
       <div class="flex flex-col items-center sm:items-start text-center sm:text-left">
         <div class="flex animate-in fade-in slide-in-from-top-16 sm:slide-in-from-top-8 anim-duration-800">
-          <h1 class="font-bold text-lum-text text-3xl sm:text-5xl my-4 sm:mb-10">
+          <h1 class="font-medium text-white text-3xl sm:text-5xl my-4 sm:mb-10">
             The <span class="text-burger-500 gold-text">burgers</span><br/>you are <span class="text-burger-300">craving.</span><span class="text-lg align-top">™</span>
           </h1>
         </div>
@@ -35,19 +35,19 @@ export default component$(() => {
             </a>
           </div>
           <div class="flex gap-1 sm:gap-1.5 animate-in fade-in slide-in-from-top-40 sm:slide-in-from-top-32 anim-duration-800">
-            <a data-umami-event="phone" href="tel:+1 (905) 427 4377" class="lum-btn lum-btn-p-1 lum-bg-transparent hover:lum-bg-gray-900/50 !text-lum-text-secondary">
+            <a data-umami-event="phone" href="tel:+1 (905) 427 4377" class="lum-btn lum-btn-p-1 lum-bg-transparent hover:lum-bg-gray-900/50 text-lum-text-secondary!">
               <Phone strokeWidth={1} class="w-5 sm:w-auto sm:mr-1" />
               +1 (905) 427 4377
             </a>
           </div>
           <div class="flex gap-1 sm:gap-1.5 animate-in fade-in slide-in-from-top-48 sm:slide-in-from-top-40 anim-duration-800">
-            <a data-umami-event="maps" target="_blank" href="https://maps.app.goo.gl/Unrrg3uda7AQQs4DA" class="lum-btn lum-btn-p-1 lum-bg-transparent hover:lum-bg-gray-900/50 !text-lum-text-secondary">
+            <a data-umami-event="maps" target="_blank" href="https://maps.app.goo.gl/Unrrg3uda7AQQs4DA" class="lum-btn lum-btn-p-1 lum-bg-transparent hover:lum-bg-gray-900/50 text-lum-text-secondary!">
               <MapPin strokeWidth={1} class="w-5 sm:w-auto sm:mr-1" />
               135 Harwood Ave N, Ajax, ON
             </a>
           </div>
           <div class="flex gap-1 sm:gap-1.5 animate-in fade-in slide-in-from-top-56 sm:slide-in-from-top-48 anim-duration-800">
-            <a data-umami-event="giftcard" target="_blank" href="https://order.toasttab.com/egiftcards/burgers-on-fleek-135-harwood-ave-n-unit-b212" class="lum-btn lum-btn-p-1 lum-bg-transparent hover:lum-bg-gray-900/50 !text-burger-400">
+            <a data-umami-event="giftcard" target="_blank" href="https://order.toasttab.com/egiftcards/burgers-on-fleek-135-harwood-ave-n-unit-b212" class="lum-btn lum-btn-p-1 lum-bg-transparent hover:lum-bg-gray-900/50 text-burger-400!">
               <Gift strokeWidth={1} class="w-5 sm:w-auto sm:mr-1" />
               Generous Mood? Order gift cards
             </a>
@@ -61,8 +61,8 @@ export default component$(() => {
           <div class="flex gap-1 sm:gap-1.5 animate-in fade-in slide-in-from-top-72 sm:slide-in-from-top-64 anim-duration-800">
             <Link data-umami-event="menu" href="/menu" class={{
               'lum-btn lum-btn-p-3 sm:text-lg': true,
-              'hover:!text-lum-text border-burger-500': true,
-              'bg-gradient-to-b from-burger-600 to-burger-700 hover:from-burger-500': true,
+              'hover:text-lum-text! border-burger-500': true,
+              'bg-linear-to-b from-burger-600 to-burger-700 hover:from-burger-500': true,
             }}>
               <BookOpen strokeWidth={1} class="w-5 sm:w-auto sm:mr-1" /> View the menu
             </Link>

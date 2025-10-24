@@ -17,7 +17,7 @@ import { Beef, CupSoda, Drumstick, EggFried, Hamburger, Leaf, Soup } from 'lucid
 
 export default component$(() => {
   return <>
-    <section class="grid gap-2 sm:grid-cols-3 lg:grid-cols-4 mx-auto max-w-7xl px-4 sm:px-6 min-h-[100svh]">
+    <section class="grid gap-2 sm:grid-cols-3 lg:grid-cols-4 mx-auto max-w-7xl px-4 sm:px-6 min-h-svh">
       <Menu>
         <MenuCategory name="BURGERS & SANDWICHES">
           <a class="lum-btn lum-bg-transparent rounded-lum-2 text-orange-200" href="#beefburgers" data-umami-event-menu="beefburgers">
@@ -69,8 +69,8 @@ export default component$(() => {
               'flex-1 flex-row sm:flex-col min-w-[18rem] gap-6': true,
             }}>
               <div class="mb-4">
-                {item.image && <item.image class="max-w-[80px] sm:max-h-[128px] sm:max-w-full sm:object-contain" alt={item.name} style="filter: drop-shadow(0 0 3rem rgba(251, 146, 60, 0.1));" />}
-                {!item.image && <Icon size={128} class="w-[80px] h-[80px] sm:h-auto sm:w-auto sm:mx-auto" />}
+                {item.image && <item.image class="max-w-20 sm:max-h-32 sm:max-w-full sm:object-contain" alt={item.name} style="filter: drop-shadow(0 0 3rem rgba(251, 146, 60, 0.1));" />}
+                {!item.image && <Icon size={128} class="w-20 h-20 sm:h-auto sm:w-auto sm:mx-auto" />}
               </div>
               <div class="flex-1 flex flex-col gap-2">
                 <h2 class={{
@@ -101,8 +101,8 @@ export default component$(() => {
               'flex-1 sm:flex-col min-w-[18rem] gap-6': true,
             }}>
               <div class="mb-4">
-                {item.image && <item.image class="max-w-[80px] sm:max-h-[128px] sm:max-w-full sm:object-contain" alt={item.name} style="filter: drop-shadow(0 0 3rem rgba(251, 146, 60, 0.1));" />}
-                {!item.image && <Icon size={128} class="w-[80px] h-[80px] sm:h-auto sm:w-auto sm:mx-auto" />}
+                {item.image && <item.image class="max-w-20 sm:max-h-32 sm:max-w-full sm:object-contain" alt={item.name} style="filter: drop-shadow(0 0 3rem rgba(251, 146, 60, 0.1));" />}
+                {!item.image && <Icon size={128} class="w-20 h-20 sm:h-auto sm:w-auto sm:mx-auto" />}
               </div>
               <div class="flex-1 flex flex-col gap-2">
                 <h2 class={{
@@ -129,8 +129,8 @@ export default component$(() => {
               'flex-1 sm:flex-col min-w-[18rem] gap-6': true,
             }}>
               <div class="mb-4">
-                {item.image && <item.image class="max-w-[80px] sm:max-h-[128px] sm:max-w-full sm:object-contain" alt={item.name} style="filter: drop-shadow(0 0 3rem rgba(251, 146, 60, 0.1));" />}
-                {!item.image && <Icon size={128} class="w-[80px] h-[80px] sm:h-auto sm:w-auto sm:mx-auto" />}
+                {item.image && <item.image class="max-w-20 sm:max-h-32 sm:max-w-full sm:object-contain" alt={item.name} style="filter: drop-shadow(0 0 3rem rgba(251, 146, 60, 0.1));" />}
+                {!item.image && <Icon size={128} class="w-20 h-20 sm:h-auto sm:w-auto sm:mx-auto" />}
               </div>
               <div class="flex-1 flex flex-col gap-2">
                 <h2 class={{
@@ -157,8 +157,8 @@ export default component$(() => {
               'flex-1 sm:flex-col min-w-[18rem] gap-6': true,
             }}>
               <div class="mb-4">
-                {item.image && <item.image class="max-w-[80px] sm:max-h-[128px] sm:max-w-full sm:object-contain" alt={item.name} style="filter: drop-shadow(0 0 3rem rgba(251, 146, 60, 0.1));" />}
-                {!item.image && <Icon size={128} class="w-[80px] h-[80px] sm:h-auto sm:w-auto sm:mx-auto" />}
+                {item.image && <item.image class="max-w-20 sm:max-h-32 sm:max-w-full sm:object-contain" alt={item.name} style="filter: drop-shadow(0 0 3rem rgba(251, 146, 60, 0.1));" />}
+                {!item.image && <Icon size={128} class="w-20 h-20 sm:h-auto sm:w-auto sm:mx-auto" />}
               </div>
               <div class="flex-1 flex flex-col gap-2">
                 <h2 class={{

@@ -38,7 +38,7 @@ export default component$(({ id, popup, class: Class, col }: {
     ...Class,
   }} id={id}>
     <div class={{
-      'lum-card justify-between items-center gap-2 p-2 lum-bg-burger-800/40 !text-lum-text': true,
+      'lum-card justify-between items-center gap-2 p-2 lum-bg-burger-800/40 text-lum-text!': true,
       'flex-row': !col,
       'font-futura backdrop-blur-lg mt-4': true,
     }}>
@@ -51,8 +51,8 @@ export default component$(({ id, popup, class: Class, col }: {
       <a target='_blank' data-umami-event="order_online" href="https://order.toasttab.com/online/burgers-on-fleek-135-harwood-ave-n-unit-b212" class={{
         'lum-btn lum-btn-p-2 text-sm sm:lum-btn-p-2 sm:text-lg rounded-lum-2': true,
         'w-full justify-center': col,
-        'hover:!text-lum-text border-burger-500': true,
-        'bg-gradient-to-b from-burger-600 to-burger-700 hover:from-burger-500': true,
+        'hover:text-lum-text! border-burger-500': true,
+        'bg-linear-to-b from-burger-600 to-burger-700 hover:from-burger-500': true,
       }}>
         <IconInBag class="fill-current w-5 sm:w-auto sm:mr-1" /> Order Online
       </a>

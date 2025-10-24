@@ -4,7 +4,7 @@ import Icon from '~/components/svg/Icon';
 
 export default component$(() => {
   return (
-    <section class="flex flex-col mx-auto max-w-6xl px-6 items-center justify-center text-center min-h-[100svh] pt-20">
+    <section class="flex flex-col mx-auto max-w-6xl px-6 items-center justify-center text-center min-h-svh pt-20">
       <div class="relative fade-in mb-10 w-full sm:w-96 h-32 flex justify-center">
         <div class="z-10">
           <Icon size={119} id="mobile"/>

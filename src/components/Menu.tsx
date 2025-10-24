@@ -7,7 +7,7 @@ export default component$(() => {
   const menu = useSignal(false);
 
   return (
-    <aside class="w-full fixed -ml-4 sm:sticky sm:h-1 top-[66px] sm:top-32 font-futura z-[40]" aria-label="Sidebar">
+    <aside class="w-full fixed -ml-4 sm:sticky sm:h-1 top-[66px] sm:top-32 font-futura z-40" aria-label="Sidebar">
       <Dropdown class={{
         'w-[calc(100%-2rem)] items-center gap-3 mx-4 -mt-4 pt-6 lum-bg-gray-800/30 text-orange-200! backdrop-blur-lg': true,
         'sm:pt-2 sm:mb-2 sm:mx-0 sm:w-full sm:border-transparent sm:bg-transparent': true,
