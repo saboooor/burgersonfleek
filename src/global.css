@@ -44,7 +44,7 @@
   --color-lum-border: var(--color-burger-500);
   --lum-default-alpha: 60;
   --lum-border-radius: var(--radius-2xl);
-  --depth: 2;
+  --depth: 1;
 }
 
 .-animation-delay-5000 { animation-delay: -5s; }
