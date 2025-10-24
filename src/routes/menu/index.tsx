@@ -158,7 +158,7 @@ export default component$(() => {
             }}>
               <div class="mb-4">
                 {item.image && <item.image class="max-w-20 sm:max-h-32 sm:max-w-full sm:object-contain" alt={item.name} style="filter: drop-shadow(0 0 3rem rgba(251, 146, 60, 0.1));" />}
-                {!item.image && <Icon size={128} class="w-20 h-20 sm:h-auto sm:w-auto sm:mx-auto" />}
+                {!item.image && <Icon size={128} class="w-20 h-20 sm:h-auto sm:w-auto sm:mx-auto rotate-5" />}
               </div>
               <div class="flex-1 flex flex-col gap-2">
                 <h2 class={{
