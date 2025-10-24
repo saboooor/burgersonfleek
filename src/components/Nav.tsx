@@ -17,7 +17,7 @@ export default component$(() => {
     }}>
       <Link q:slot="start" href="/" class="lum-btn lum-bg-transparent rounded-lum-1 -m-1">
         <Icon size={30} />
-        <p class="space-x-1 whitespace-nowrap">
+        <p class="space-x-1 whitespace-nowrap text-white">
           <span class="font-bold">BURGERS</span><span>ON</span><span>FLEEK</span>
         </p>
         <div class={{
