@@ -1,7 +1,7 @@
 {
   "name": "burgersonfleek",
   "homepage": "https://burgersonfleek.ca",
-  "description": "Website for Burgers on Fleek",
+  "description": "Burgers on Fleek website",
   "engines": {
     "node": ">=23.11.0"
   },
