@@ -19,11 +19,13 @@ export default component$(() => {
       </div>
       <div class="flex flex-col items-center sm:items-start text-center sm:text-left">
         <div class="flex animate-in fade-in slide-in-from-top-16 sm:slide-in-from-top-8 anim-duration-800">
-          <h1 class="font-medium text-white text-3xl sm:text-5xl my-4 sm:mb-10">
+          <h1 class="font-medium text-white text-3xl sm:text-5xl my-4 sm:mb-8">
             The <span class="text-burger-500 gold-text">burgers</span><br/>you are <span class="text-burger-300">craving.</span><span class="text-lg align-top">™</span>
           </h1>
         </div>
-        <p class="text-lum-text-secondary text-lg md:text-xl animate-in fade-in slide-in-from-top-24 sm:slide-in-from-top-16 anim-duration-800">
+
+        <hr class="border-lum-text-secondary/20 0 w-full mb-6 hidden sm:flex animate-in fade-in slide-in-from-top-24 sm:slide-in-from-top-16 anim-duration-800" />
+        <p class="text-lum-text text-lg md:text-xl animate-in fade-in slide-in-from-top-24 sm:slide-in-from-top-16 anim-duration-800">
           Premium Quality Gourmet Burgers, Steak Sandwiches, Fries, and more. est. 2019
         </p>
 
