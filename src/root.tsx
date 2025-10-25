@@ -20,7 +20,7 @@ export default component$(() => {
         <script defer src="https://umami.bwmp.dev/script.js" data-website-id="0f3cda1e-13fd-4ca3-9057-1701f2f7ee36"/>
         <RouterHead />
       </head>
-      <body class="text-lum-text">
+      <body class="text-lum-text" onTouchStart$={() => {}}>
         <RouterOutlet />
       </body>
     </QwikCityProvider>
