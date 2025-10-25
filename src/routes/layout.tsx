@@ -5,7 +5,7 @@ import { useLocation } from '@builder.io/qwik-city';
 
 const videos = [
   '/videos/godzilla.mp4',
-  '/videos/shook.webm',
+  '/videos/shook.mp4',
 ];
 
 export default component$(() => {
