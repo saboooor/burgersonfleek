@@ -33,7 +33,7 @@ export default component$(({ id, popup, class: Class, col }: {
   });
 
   return <div class={{
-    'fixed bottom-0 p-4 w-full transition-all': popup,
+    'fixed bottom-0 p-4 w-full transition-transform': popup,
     'hidden sm:block': col,
     ...Class,
   }} id={id}>
