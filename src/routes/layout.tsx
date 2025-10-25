@@ -15,7 +15,7 @@ export default component$(() => {
       <video
         class={{
           'fixed top-0 overflow-hidden -z-10 w-full h-full object-cover opacity-10': true,
-          'blur-xl scale-110': loc.url.pathname != '/',
+          'blur-md scale-110': loc.url.pathname != '/',
         }}
         autoplay
         muted
