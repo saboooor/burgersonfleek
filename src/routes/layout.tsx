@@ -3,6 +3,11 @@ import Nav from '~/components/Nav';
 import Footer from '~/components/Footer';
 import { useLocation } from '@builder.io/qwik-city';
 
+const videos = [
+  '/videos/godzilla.mp4',
+  '/videos/shook.webm',
+];
+
 export default component$(() => {
   const loc = useLocation();
   return (
@@ -17,7 +22,7 @@ export default component$(() => {
         preload="auto"
         poster="/videos/hero.jpg"
       >
-        <source src="/videos/shook.webm" type="video/mp4"/>
+        <source src={videos[Math.floor(Math.random() * videos.length)]} type="video/mp4" />
       </video>
       <Nav />
       <Slot />
