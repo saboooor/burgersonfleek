@@ -18,6 +18,7 @@ export default component$(() => {
           'blur-md scale-110': loc.url.pathname != '/',
         }}
         autoplay
+        playsInline
         muted
         preload="auto"
         poster="/videos/hero.jpg"
