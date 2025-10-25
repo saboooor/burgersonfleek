@@ -39,6 +39,7 @@
   --color-burger-800: oklch(0.42  0.09  60);   /* dark toasted brown */
   --color-burger-900: oklch(0.33  0.075 58);   /* deep baked tone */
   --color-burger-950: oklch(0.25  0.06  55);   /* charred brown */
+  --color-lum-accent: var(--color-burger-500);
   --color-lum-text: var(--color-burger-100);
   --color-lum-text-secondary: --alpha(var(--color-burger-200) / 80%);
   --color-lum-border: var(--color-burger-500);
