@@ -16,17 +16,17 @@
 @source "../node_modules/@luminescent/ui-qwik";
 
 @theme {
-  --color-gray-50:    oklch(98.5% 0.002 80);
-  --color-gray-100:   oklch(96.7% 0.003 75);
-  --color-gray-200:   oklch(92.8% 0.006 70);
-  --color-gray-300:   oklch(87.2% 0.01  68);
-  --color-gray-400:   oklch(70.7% 0.022 67);
-  --color-gray-500:   oklch(55.1% 0.027 67.02);
-  --color-gray-600:   oklch(44.6% 0.03  65);
-  --color-gray-700:   oklch(37.3% 0.034 63);
-  --color-gray-800:   oklch(27.8% 0.033 60);
-  --color-gray-900:   oklch(21%   0.034 58);
-  --color-gray-950:   oklch(13%   0.028 55);
+  --color-gray-50:    oklch(98.5% 0.0015 80);
+  --color-gray-100:   oklch(96.7% 0.0021 75);
+  --color-gray-200:   oklch(92.8% 0.004  70);
+  --color-gray-300:   oklch(87.2% 0.007  68);
+  --color-gray-400:   oklch(70.7% 0.016  67);
+  --color-gray-500:   oklch(55.1% 0.021  67.02);
+  --color-gray-600:   oklch(44.6% 0.022  65);
+  --color-gray-700:   oklch(37.3% 0.025  63);
+  --color-gray-800:   oklch(27.8% 0.024  60);
+  --color-gray-900:   oklch(21%   0.023  58);
+  --color-gray-950:   oklch(13%   0.021  55);
 
   --color-burger-50:  oklch(97%    0.035  80);   /* soft butter cream */
   --color-burger-100: oklch(93%    0.055  75);   /* light beige-gold */
