@@ -52,7 +52,7 @@ export default component$(({ id, popup, class: Class, col }: {
         'lum-btn lum-btn-p-2 text-sm sm:lum-btn-p-2 sm:text-lg rounded-lum-2': true,
         'w-full justify-center': col,
         'hover:text-lum-text! border-none': true,
-        'lum-bg-burger-600 bg-linear-to-b from-burger-600 to-burger-700 hover:from-burger-500': true,
+        'lum-bg-burger-600 bg-linear-to-b from-burger-600 to-burger-700 hover:from-burger-500 active:from-burger-500': true,
       }}>
         <IconInBag class="fill-current w-5 sm:w-auto sm:mr-1" /> Order Online
       </a>
