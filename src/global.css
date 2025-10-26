@@ -16,33 +16,33 @@
 @source "../node_modules/@luminescent/ui-qwik";
 
 @theme {
-  --color-gray-50: hsl(30deg, 0%, 95%);
-  --color-gray-100: hsl(30deg, 2%, 90%);
-  --color-gray-200: hsl(30deg, 4%, 85%);
-  --color-gray-300: hsl(30deg, 6%, 80%);
-  --color-gray-400: hsl(30deg, 8%, 70%);
-  --color-gray-500: hsl(30deg, 10%, 60%);
-  --color-gray-600: hsl(30deg, 14%, 50%);
-  --color-gray-700: hsl(30deg, 16%, 40%);
-  --color-gray-800: hsl(30deg, 18%, 30%);
-  --color-gray-850: hsl(30deg, 20%, 15%);
-  --color-gray-900: hsl(30deg, 30%, 8%);
-  --color-gray-950: hsl(30deg, 35%, 5%);
-  --color-burger-50:  oklch(0.97  0.035 80);   /* soft butter cream */
-  --color-burger-100: oklch(0.93  0.055 75);   /* light beige-gold */
-  --color-burger-200: oklch(0.85  0.085 70);   /* honey tan */
-  --color-burger-300: oklch(0.77  0.11  68);   /* golden brown */
-  --color-burger-400: oklch(0.71  0.125 67);   /* warm toasted gold */
-  --color-burger-500: oklch(0.6617 0.1355 67.02); /* base tone */
-  --color-burger-600: oklch(0.58  0.13  65);   /* amber brown */
-  --color-burger-700: oklch(0.50  0.11  63);   /* caramel crust */
-  --color-burger-800: oklch(0.42  0.09  60);   /* dark toasted brown */
-  --color-burger-900: oklch(0.33  0.075 58);   /* deep baked tone */
-  --color-burger-950: oklch(0.25  0.06  55);   /* charred brown */
+  --color-gray-50:    oklch(98.5% 0.002 80);
+  --color-gray-100:   oklch(96.7% 0.003 75);
+  --color-gray-200:   oklch(92.8% 0.006 70);
+  --color-gray-300:   oklch(87.2% 0.01  68);
+  --color-gray-400:   oklch(70.7% 0.022 67);
+  --color-gray-500:   oklch(55.1% 0.027 67.02);
+  --color-gray-600:   oklch(44.6% 0.03  65);
+  --color-gray-700:   oklch(37.3% 0.034 63);
+  --color-gray-800:   oklch(27.8% 0.033 60);
+  --color-gray-900:   oklch(21%   0.034 58);
+  --color-gray-950:   oklch(13%   0.028 55);
+
+  --color-burger-50:  oklch(97%    0.035  80);   /* soft butter cream */
+  --color-burger-100: oklch(93%    0.055  75);   /* light beige-gold */
+  --color-burger-200: oklch(85%    0.085  70);   /* honey tan */
+  --color-burger-300: oklch(77%    0.11   68);   /* golden brown */
+  --color-burger-400: oklch(71%    0.125  67);   /* warm toasted gold */
+  --color-burger-500: oklch(66.17% 0.1355 67.02); /* base tone */
+  --color-burger-600: oklch(58%    0.13   65);   /* amber brown */
+  --color-burger-700: oklch(50%    0.11   63);   /* caramel crust */
+  --color-burger-800: oklch(42%    0.09   60);   /* dark toasted brown */
+  --color-burger-900: oklch(33%    0.075  58);   /* deep baked tone */
+  --color-burger-950: oklch(25%    0.06   55);   /* charred brown */
+
   --color-lum-accent: var(--color-burger-500);
-  --color-lum-text: var(--color-burger-100);
-  --color-lum-text-secondary: --alpha(var(--color-burger-200) / 80%);
   --color-lum-border: var(--color-burger-500);
+
   --lum-default-alpha: 60;
   --lum-border-radius: var(--radius-2xl);
   --lum-depth: 1;
