@@ -100,7 +100,7 @@ export default component$(() => {
           {chickenburgers.map((item, i) => {
             return <div key={i} class={{
               'lum-card': true,
-              'flex-1 sm:flex-col min-w-[18rem] gap-6': true,
+              'flex-1 flex-row sm:flex-col min-w-[18rem] gap-6': true,
             }}>
               <div class="mb-4" style={{
                 filter: 'drop-shadow(0 0.5rem 0.5rem var(--color-burger-900))',
@@ -130,7 +130,7 @@ export default component$(() => {
           {veggieburgers.map((item, i) => {
             return <div key={i} class={{
               'lum-card': true,
-              'flex-1 sm:flex-col min-w-[18rem] gap-6': true,
+              'flex-1 flex-row sm:flex-col min-w-[18rem] gap-6': true,
             }}>
               <div class="mb-4" style={{
                 filter: 'drop-shadow(0 0.5rem 0.5rem var(--color-burger-900))',
@@ -160,7 +160,7 @@ export default component$(() => {
           {steaksandwiches.map((item, i) => {
             return <div key={i} class={{
               'lum-card': true,
-              'flex-1 sm:flex-col min-w-[18rem] gap-6': true,
+              'flex-1 flex-row sm:flex-col min-w-[18rem] gap-6': true,
             }}>
               <div class="mb-4" style={{
                 filter: 'drop-shadow(0 0.5rem 0.5rem var(--color-burger-900))',
