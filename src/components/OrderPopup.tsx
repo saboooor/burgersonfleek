@@ -4,27 +4,26 @@ import { component$, useSignal, useVisibleTask$ } from '@builder.io/qwik';
 import { Blobs } from '@luminescent/ui-qwik';
 import IconInBag from './svg/IconInBag';
 
-export default component$(({ id, popup, class: Class, col }: {
-  id?: string
+export default component$(({ popup, class: Class, col }: {
   popup?: boolean
   class?: { [key: string]: boolean }
   col?: boolean
 }) => {
   const prevScrollpos = useSignal(0);
+  const orderPopupRef = useSignal<HTMLDivElement>();
 
   // eslint-disable-next-line qwik/no-use-visible-task
   useVisibleTask$(() => {
-    if (!popup || !id) return;
+    if (!popup) return;
 
     const handler = () => {
-      const orderpopup = document.getElementById(id)!;
       if (
         prevScrollpos.value > window.scrollY &&
         window.scrollY + 1000 < document.body.scrollHeight
       ) {
-        orderpopup.style.bottom = '0';
+        orderPopupRef.value!.style.bottom = '0';
       } else if (window.scrollY > 100) {
-        orderpopup.style.bottom = '-9rem';
+        orderPopupRef.value!.style.bottom = '-9rem';
       }
       prevScrollpos.value = window.scrollY;
     };
@@ -36,7 +35,7 @@ export default component$(({ id, popup, class: Class, col }: {
     'fixed bottom-0 p-4 w-full transition-transform': popup,
     'hidden sm:block': col,
     ...Class,
-  }} id={id}>
+  }} ref={orderPopupRef}>
     <div class={{
       'lum-card justify-between items-center gap-2 p-2 lum-bg-burger-800/40 text-lum-text!': true,
       'flex-row': !col,

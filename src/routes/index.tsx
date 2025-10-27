@@ -5,13 +5,14 @@ import { Link } from '@builder.io/qwik-city';
 import Logo from '~/components/svg/Logo';
 import LogoHorizontal from '~/components/svg/LogoHorizontal';
 import Halal from '~/components/svg/Halal';
-import { BookOpen, Gift, MapPin, Phone } from 'lucide-icons-qwik';
+import { BookOpen, ChevronDown, Gift, MapPin, Phone } from 'lucide-icons-qwik';
 import OrderPopup from '~/components/OrderPopup';
+import Reviews from '~/components/Reviews';
 
 export default component$(() => {
   return <>
     <section class="flex flex-col sm:flex-row mx-auto max-w-5xl px-6 items-center justify-center min-h-svh pt-20">
-      <div class="flex relative">
+      <div class="flex">
         <div class="z-10 animate-in fade-in slide-in-from-top-16 anim-duration-800">
           <Logo size={476} height={600} id="pc" class="hidden sm:flex"/>
           <LogoHorizontal size={288} height={100} id="mobile" class="sm:hidden" />
@@ -56,11 +57,9 @@ export default component$(() => {
           </div>
         </div>
 
-        <OrderPopup class={{
-          'animate-in fade-in slide-in-from-top-72 sm:slide-in-from-top-64 anim-duration-800': true,
-        }} />
-        <div class="flex flex-col gap-1 sm:gap-2 mt-2 font-futura">
-          <div class="flex gap-1 sm:gap-1.5 animate-in fade-in slide-in-from-top-72 sm:slide-in-from-top-64 anim-duration-800">
+        <div class="flex flex-col items-center sm:items-start gap-1 sm:gap-2 mt-2 font-futura animate-in fade-in slide-in-from-top-72 sm:slide-in-from-top-64 anim-duration-800">
+          <OrderPopup />
+          <div class="flex gap-1 sm:gap-1.5">
             <Link data-umami-event="menu" href="/menu" class={{
               'lum-btn lum-btn-p-3 sm:text-lg': true,
               'hover:text-lum-text! active:text-lum-text border-none': true,
@@ -69,8 +68,27 @@ export default component$(() => {
               <BookOpen strokeWidth={1} class="w-5 sm:w-auto sm:mr-1" /> View the menu
             </Link>
           </div>
+          <div class="mt-6 w-full flex justify-center animate-bounce text-burger-200">
+            <a href="#reviews" class="lum-btn lum-bg-transparent">
+              <ChevronDown /> Learn More
+            </a>
+          </div>
         </div>
       </div>
+
+    </section>
+
+    <section id="reviews" class="flex flex-col items-center text-center mx-auto max-w-5xl px-6 py-20">
+      <div class="flex">
+        <h1 class="font-semibold text-white text-3xl sm:text-5xl my-4 sm:mb-8">
+          See for <span class="text-burger-300">yourself.</span>
+        </h1>
+      </div>
+      <p class="text-lum-text-secondary text-lg md:text-xl">
+        Our guests love us! Check out our reviews on Google.
+      </p>
+
+      <Reviews />
     </section>
   </>;
 });
