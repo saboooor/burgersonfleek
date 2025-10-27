@@ -7,7 +7,7 @@ export default component$(() => {
   // eslint-disable-next-line qwik/no-use-visible-task
   useVisibleTask$(async () => {
     // load reviews from api
-    const res = await fetch('https://api.burgersonfleek.ca/reviews');
+    const res = await fetch('https://api.burgersonfleek.ca/details');
     reviews.value = (await res.json() as any).reviews;
     console.log(reviews.value);
   });
