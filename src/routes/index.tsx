@@ -1,4 +1,4 @@
-import { component$ } from '@builder.io/qwik';
+import { component$, createContextId, useContextProvider, useSignal, useVisibleTask$ } from '@builder.io/qwik';
 import type { DocumentHead } from '@builder.io/qwik-city';
 import { Link } from '@builder.io/qwik-city';
 
@@ -9,7 +9,18 @@ import { BookOpen, ChevronDown, Gift, MapPin, Phone } from 'lucide-icons-qwik';
 import OrderPopup from '~/components/OrderPopup';
 import Reviews from '~/components/Reviews';
 
+export const GoogleDetailsContext = createContextId<any>('google-details');
 export default component$(() => {
+  const GoogleDetails = useSignal<any>({});
+  useContextProvider(GoogleDetailsContext, GoogleDetails);
+
+  // eslint-disable-next-line qwik/no-use-visible-task
+  useVisibleTask$(async () => {
+    // load reviews from api
+    const res = await fetch('https://api.burgersonfleek.ca/details');
+    GoogleDetails.value = await res.json() as any;
+  });
+
   return <>
     <section class="flex flex-col sm:flex-row mx-auto max-w-5xl px-6 items-center justify-center min-h-svh pt-20">
       <div class="flex">
@@ -20,12 +31,10 @@ export default component$(() => {
       </div>
       <div class="flex flex-col items-center sm:items-start text-center sm:text-left">
         <div class="flex animate-in fade-in slide-in-from-top-16 sm:slide-in-from-top-8 anim-duration-800">
-          <h1 class="font-semibold text-white text-3xl sm:text-5xl my-4 sm:mb-8">
+          <h1 class="font-semibold text-white text-3xl sm:text-5xl my-6">
             The <span class="text-burger-500 gold-text">burgers</span><br/>you are <span class="text-burger-300">craving.</span><span class="text-lg align-top">™</span>
           </h1>
         </div>
-
-        <hr class="border-lum-text-secondary/20 0 w-full mb-6 hidden sm:flex animate-in fade-in slide-in-from-top-24 sm:slide-in-from-top-16 anim-duration-800" />
         <p class="text-lum-text text-lg md:text-xl animate-in fade-in slide-in-from-top-24 sm:slide-in-from-top-16 anim-duration-800">
           Premium Quality Gourmet Burgers, Steak Sandwiches, Fries, and more. est. 2019
         </p>
@@ -58,6 +67,40 @@ export default component$(() => {
         </div>
 
         <div class="flex flex-col items-center sm:items-start gap-1 sm:gap-2 mt-2 font-futura animate-in fade-in slide-in-from-top-72 sm:slide-in-from-top-64 anim-duration-800">
+          <div class="min-h-16.5">
+            {GoogleDetails.value.currentOpeningHours?.openNow !== undefined &&
+              <div class="animate-in fade-in anim-duration-800 w-fit lum-card lum-btn-p-2 gap-1 backdrop-blur-md">
+                {GoogleDetails.value.currentOpeningHours?.openNow && <>
+                  <p class="flex items-center gap-1 text-green-200/80 font-medium text-sm">
+                    <span class="w-2 h-2 rounded-full lum-bg-green-300 mr-1" />
+                    We're open, come on in!
+                  </p>
+                  <p class="text-lum-text-secondary">
+                    closing at {new Date(GoogleDetails.value.currentOpeningHours?.nextCloseTime?.seconds * 1000 - (15 * 60 * 1000))
+                      .toLocaleTimeString([], {
+                        hour: 'numeric',
+                        minute: 'numeric',
+                        second: undefined,
+                      })}
+                  </p>
+                </>}
+                {!GoogleDetails.value.currentOpeningHours?.openNow && <>
+                  <p class="flex items-center gap-1 text-red-200/80 font-medium text-sm">
+                    <span class="w-2 h-2 rounded-full lum-bg-red-300 mr-1" />
+                    We're closed.
+                  </p>
+                  <p class="text-lum-text-secondary">
+                    opening at {new Date(GoogleDetails.value.currentOpeningHours?.nextOpenTime?.seconds * 1000 - (15 * 60 * 1000))
+                      .toLocaleTimeString([], {
+                        hour: 'numeric',
+                        minute: 'numeric',
+                        second: undefined,
+                      })}
+                  </p>
+                </>}
+              </div>
+            }
+          </div>
           <OrderPopup />
           <div class="flex gap-1 sm:gap-1.5">
             <Link data-umami-event="menu" href="/menu" class={{

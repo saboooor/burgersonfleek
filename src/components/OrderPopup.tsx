@@ -39,7 +39,7 @@ export default component$(({ popup, class: Class, col }: {
     <div class={{
       'lum-card justify-between items-center gap-2 p-2 lum-bg-burger-800/40 text-lum-text!': true,
       'flex-row': !col,
-      'font-futura backdrop-blur-lg mt-4': true,
+      'font-futura backdrop-blur-md': true,
     }}>
       <p class={{
         'sm:text-xl mx-2': true,

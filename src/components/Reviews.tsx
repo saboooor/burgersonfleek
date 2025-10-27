@@ -1,21 +1,14 @@
-import { component$, useSignal, useVisibleTask$ } from '@builder.io/qwik';
+import { component$, useContext } from '@builder.io/qwik';
 import { Star } from 'lucide-icons-qwik';
+import { GoogleDetailsContext } from '~/routes';
 
 export default component$(() => {
-  const reviews = useSignal<any[]>([]);
-
-  // eslint-disable-next-line qwik/no-use-visible-task
-  useVisibleTask$(async () => {
-    // load reviews from api
-    const res = await fetch('https://api.burgersonfleek.ca/details');
-    reviews.value = (await res.json() as any).reviews;
-    console.log(reviews.value);
-  });
+  const GoogleDetails = useContext<any>(GoogleDetailsContext);
 
   return (
     <div class="flex flex-wrap justify-evenly relative w-full my-10 gap-4">
-      {reviews.value.map((review: any) => (
-        <a href={review.googleMapsUri} key={review.name} class="lum-card lum-bg-gray-900/50 relative text-left p-6 backdrop-blur-lg lum-hoverable">
+      {GoogleDetails.value.reviews?.map((review: any) => (
+        <a href={review.googleMapsUri} key={review.name} class="lum-card lum-bg-gray-900/50 relative text-left p-6 backdrop-blur-md lum-hoverable">
           <div class="flex sm:flex-row flex-col sm:items-center gap-4">
             <div class="flex-1 flex items-center gap-2">
               <img src={review.authorAttribution.photoUri} alt={review.authorAttribution.displayName} width={32} height={32}  />
