@@ -10,7 +10,7 @@ export default component$(() => {
   // eslint-disable-next-line qwik/no-use-visible-task
   useVisibleTask$(async () => {
     // load reviews from api
-    const res = await fetch('https://api.burgersonfleek.ca/details');
+    const res = await fetch('https://api.burgersonfleek.ca/details?placeId=ChIJGwNrpL7f1IkRam5-B2BHkw4');
     GoogleDetails.value = await res.json() as any;
   });
 
