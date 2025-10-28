@@ -69,7 +69,7 @@ export default component$(() => {
         <div class="flex flex-col items-center sm:items-start gap-1 sm:gap-2 mt-2 font-futura animate-in fade-in slide-in-from-top-72 sm:slide-in-from-top-64 anim-duration-800">
           <div class="min-h-15.5">
             {GoogleDetails.value.currentOpeningHours?.openNow !== undefined &&
-              <div class="animate-in fade-in anim-duration-800 w-fit lum-btn-p-2">
+              <div class="animate-in fade-in anim-duration-400 w-fit lum-btn-p-2">
                 {GoogleDetails.value.currentOpeningHours?.openNow && <>
                   <p class="flex items-center gap-1 text-green-200/80 font-medium">
                     <span class="w-2 h-2 rounded-full lum-bg-green-300 mr-1" />
