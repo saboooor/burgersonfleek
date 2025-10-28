@@ -90,7 +90,7 @@ export default component$(() => {
                     We're closed.
                   </p>
                   <p class="text-lum-text-secondary">
-                    opening at {new Date(GoogleDetails.value.currentOpeningHours?.nextOpenTime?.seconds * 1000 - (15 * 60 * 1000))
+                    opening at {new Date(GoogleDetails.value.currentOpeningHours?.nextOpenTime?.seconds * 1000)
                       .toLocaleTimeString([], {
                         hour: 'numeric',
                         minute: 'numeric',
