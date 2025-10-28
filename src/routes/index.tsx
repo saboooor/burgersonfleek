@@ -67,15 +67,15 @@ export default component$(() => {
         </div>
 
         <div class="flex flex-col items-center sm:items-start gap-1 sm:gap-2 mt-2 font-futura animate-in fade-in slide-in-from-top-72 sm:slide-in-from-top-64 anim-duration-800">
-          <div class="min-h-16.5">
+          <div class="min-h-15.5">
             {GoogleDetails.value.currentOpeningHours?.openNow !== undefined &&
-              <div class="animate-in fade-in anim-duration-800 w-fit lum-card lum-btn-p-2 gap-1 backdrop-blur-md">
+              <div class="animate-in fade-in anim-duration-800 w-fit lum-btn-p-2">
                 {GoogleDetails.value.currentOpeningHours?.openNow && <>
-                  <p class="flex items-center gap-1 text-green-200/80 font-medium text-sm">
+                  <p class="flex items-center gap-1 text-green-200/80 font-medium">
                     <span class="w-2 h-2 rounded-full lum-bg-green-300 mr-1" />
                     We're open, come on in!
                   </p>
-                  <p class="text-lum-text-secondary">
+                  <p class="text-lum-text-secondary text-sm">
                     closing at {new Date(GoogleDetails.value.currentOpeningHours?.nextCloseTime?.seconds * 1000 - (15 * 60 * 1000))
                       .toLocaleTimeString([], {
                         hour: 'numeric',
@@ -85,11 +85,11 @@ export default component$(() => {
                   </p>
                 </>}
                 {!GoogleDetails.value.currentOpeningHours?.openNow && <>
-                  <p class="flex items-center gap-1 text-red-200/80 font-medium text-sm">
+                  <p class="flex items-center gap-1 text-red-200/80 font-medium">
                     <span class="w-2 h-2 rounded-full lum-bg-red-300 mr-1" />
-                    We're closed.
+                    We're closed at the moment.
                   </p>
-                  <p class="text-lum-text-secondary">
+                  <p class="text-lum-text-secondary text-sm">
                     opening at {new Date(GoogleDetails.value.currentOpeningHours?.nextOpenTime?.seconds * 1000)
                       .toLocaleTimeString([], {
                         hour: 'numeric',
