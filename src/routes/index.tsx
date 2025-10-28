@@ -60,9 +60,9 @@ export default component$(() => {
             </a>
           </div>
           <div class="flex gap-1 sm:gap-1.5 animate-in fade-in slide-in-from-top-56 sm:slide-in-from-top-48 anim-duration-800">
-            <a data-umami-event="giftcard" target="_blank" href="https://order.toasttab.com/egiftcards/burgers-on-fleek-135-harwood-ave-n-unit-b212" class="lum-btn lum-btn-p-1 gap-1 lum-bg-transparent hover:lum-bg-gray-900/50 text-burger-400! rounded-lum-1">
+            <a data-umami-event="giftcard" target="_blank" href="https://order.toasttab.com/egiftcards/burgers-on-fleek-135-harwood-ave-n-unit-b212" class="lum-btn lum-btn-p-1 gap-1 lum-bg-transparent hover:lum-bg-gray-900/50 text-lum-text-secondary! rounded-lum-1">
               <Gift strokeWidth={1} class="w-5 sm:w-auto sm:mr-1" />
-              Generous Mood? Order gift cards
+              Generous Mood? <span class="text-burger-400 underline">Order gift cards</span>
             </a>
           </div>
           <div class="min-h-15.5 flex gap-1 sm:gap-1.5 animate-in fade-in slide-in-from-top-64 sm:slide-in-from-top-56 anim-duration-800">
