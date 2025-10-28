@@ -1,6 +1,6 @@
 import { component$, Slot } from '@builder.io/qwik';
 import Nav from '~/components/Nav';
-import Footer from '~/components/Footer';
+import Footer from '~/components/sections/Footer';
 import { useLocation } from '@builder.io/qwik-city';
 
 const videos = [

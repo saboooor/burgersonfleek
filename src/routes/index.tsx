@@ -7,7 +7,8 @@ import LogoHorizontal from '~/components/svg/LogoHorizontal';
 import Halal from '~/components/svg/Halal';
 import { BookOpen, ChevronDown, Gift, MapPin, Phone } from 'lucide-icons-qwik';
 import OrderPopup from '~/components/OrderPopup';
-import Reviews from '~/components/Reviews';
+import Reviews from '~/components/sections/Reviews';
+import HalalSection from '~/components/sections/Halal';
 
 export const GoogleDetailsContext = createContextId<any>('google-details');
 export default component$(() => {
@@ -41,25 +42,25 @@ export default component$(() => {
 
         <div class="flex flex-col gap-1 mt-2 text-left">
           <div class="flex gap-1 sm:gap-1.5 animate-in fade-in slide-in-from-top-32 sm:slide-in-from-top-24 anim-duration-800">
-            <a href="/halal" class="lum-btn lum-btn-p-1 lum-bg-transparent hover:lum-bg-gray-900/50 !text-lum-text-secondary rounded-lum-1">
+            <a href="/halal" class="lum-btn lum-btn-p-1 gap-1 lum-bg-transparent hover:lum-bg-gray-900/50 !text-lum-text-secondary rounded-lum-1">
               <Halal class="w-5 sm:w-auto sm:mr-1" />
               Only serving Halal
             </a>
           </div>
           <div class="flex gap-1 sm:gap-1.5 animate-in fade-in slide-in-from-top-40 sm:slide-in-from-top-32 anim-duration-800">
-            <a data-umami-event="phone" href="tel:+1 (905) 427 4377" class="lum-btn lum-btn-p-1 lum-bg-transparent hover:lum-bg-gray-900/50 text-lum-text-secondary! rounded-lum-1">
+            <a data-umami-event="phone" href="tel:+1 (905) 427 4377" class="lum-btn lum-btn-p-1 gap-1 lum-bg-transparent hover:lum-bg-gray-900/50 text-lum-text-secondary! rounded-lum-1">
               <Phone strokeWidth={1} class="w-5 sm:w-auto sm:mr-1" />
               +1 (905) 427 4377
             </a>
           </div>
           <div class="flex gap-1 sm:gap-1.5 animate-in fade-in slide-in-from-top-48 sm:slide-in-from-top-40 anim-duration-800">
-            <a data-umami-event="maps" target="_blank" href="https://maps.app.goo.gl/Unrrg3uda7AQQs4DA" class="lum-btn lum-btn-p-1 lum-bg-transparent hover:lum-bg-gray-900/50 text-lum-text-secondary! rounded-lum-1">
+            <a data-umami-event="maps" target="_blank" href="https://maps.app.goo.gl/Unrrg3uda7AQQs4DA" class="lum-btn lum-btn-p-1 gap-1 lum-bg-transparent hover:lum-bg-gray-900/50 text-lum-text-secondary! rounded-lum-1">
               <MapPin strokeWidth={1} class="w-5 sm:w-auto sm:mr-1" />
               135 Harwood Ave N, Ajax, ON
             </a>
           </div>
           <div class="flex gap-1 sm:gap-1.5 animate-in fade-in slide-in-from-top-56 sm:slide-in-from-top-48 anim-duration-800">
-            <a data-umami-event="giftcard" target="_blank" href="https://order.toasttab.com/egiftcards/burgers-on-fleek-135-harwood-ave-n-unit-b212" class="lum-btn lum-btn-p-1 lum-bg-transparent hover:lum-bg-gray-900/50 text-burger-400! rounded-lum-1">
+            <a data-umami-event="giftcard" target="_blank" href="https://order.toasttab.com/egiftcards/burgers-on-fleek-135-harwood-ave-n-unit-b212" class="lum-btn lum-btn-p-1 gap-1 lum-bg-transparent hover:lum-bg-gray-900/50 text-burger-400! rounded-lum-1">
               <Gift strokeWidth={1} class="w-5 sm:w-auto sm:mr-1" />
               Generous Mood? Order gift cards
             </a>
@@ -121,17 +122,12 @@ export default component$(() => {
 
     </section>
 
-    <section id="reviews" class="flex flex-col items-center text-center mx-auto max-w-5xl px-6 py-20">
-      <div class="flex">
-        <h1 class="font-semibold text-white text-3xl sm:text-5xl my-4 sm:mb-8">
-          See for <span class="text-burger-300">yourself.</span>
-        </h1>
-      </div>
-      <p class="text-lum-text-secondary text-lg md:text-xl">
-        Our guests love us! Check out our reviews on Google.
-      </p>
-
+    <section id="reviews" class="flex flex-col items-center text-center mx-auto max-w-5xl px-6">
       <Reviews />
+    </section>
+
+    <section id="halal" class="flex flex-col items-center text-center mx-auto max-w-5xl px-6 mt-20">
+      <HalalSection />
     </section>
   </>;
 });

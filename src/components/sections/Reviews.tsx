@@ -5,7 +5,15 @@ import { GoogleDetailsContext } from '~/routes';
 export default component$(() => {
   const GoogleDetails = useContext<any>(GoogleDetailsContext);
 
-  return (
+  return <>
+    <div class="flex">
+      <h1 class="font-semibold text-white text-3xl sm:text-5xl my-4 sm:mb-8">
+        See for <span class="text-burger-300">yourself.</span>
+      </h1>
+    </div>
+    <p class="text-lum-text-secondary text-lg md:text-xl">
+      Our guests love us! Check out our reviews on Google.
+    </p>
     <div class="flex flex-wrap justify-evenly relative w-full my-10 gap-4">
       {GoogleDetails.value.reviews?.map((review: any) => (
         <a href={review.googleMapsUri} key={review.name} class="lum-card lum-bg-gray-900/50 relative text-left p-6 backdrop-blur-md lum-hoverable">
@@ -33,5 +41,5 @@ export default component$(() => {
         </a>
       ))}
     </div>
-  );
+  </>;
 });
