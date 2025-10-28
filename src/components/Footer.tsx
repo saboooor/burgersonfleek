@@ -3,7 +3,7 @@ import { SocialButtons } from './Nav';
 
 export default component$(() => {
   return (
-    <footer class="z-10 lum-card max-w-7xl mx-auto lum-bg-gray-950 m-4 backdrop-blur-md p-6 text-lum-text-secondary flex-col sm:flex-row gap-2 sm:gap-8">
+    <footer class="items-center justify-center z-10 lum-card lum-bg-gray-950 m-4 backdrop-blur-md p-6 text-lum-text-secondary flex-col sm:flex-row gap-2 sm:gap-8">
       <p>
         We are not fast food.
         <br />
@@ -14,7 +14,7 @@ export default component$(() => {
         If you have any food allergies, please advise us before ordering.
       </p>
 
-      <div class="flex flex-col text-center items-center sm:text-end sm:items-end gap-2 flex-1">
+      <div class="flex flex-col text-center items-center sm:text-end sm:items-end gap-2">
         <div class="flex gap-2">
           <SocialButtons />
         </div>
