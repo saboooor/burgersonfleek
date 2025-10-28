@@ -48,7 +48,7 @@ export default component$(({ popup, class: Class, col }: {
         Feeling HANGRY?
       </p>
       <a target='_blank' data-umami-event="order_online" href="https://order.toasttab.com/online/burgers-on-fleek-135-harwood-ave-n-unit-b212" class={{
-        'lum-btn lum-btn-p-2 text-sm sm:lum-btn-p-2 sm:text-lg rounded-lum-2': true,
+        'lum-btn lum-btn-p-2 text-sm sm:text-lg rounded-lum-2': true,
         'w-full justify-center': col,
         'hover:text-lum-text! border-none': true,
         'lum-bg-burger-600 bg-linear-to-b from-burger-600 to-burger-700 hover:from-burger-500 active:from-burger-500': true,

@@ -60,12 +60,12 @@ const Review = component$(({ review }: { review: any }) => {
         {review.relativePublishTimeDescription}
       </p>
       <div class="flex gap-1">
-        <a href={review.googleMapsUri} target="_blank" class="lum-btn lum-btn-p-1 rounded-lum-2 text-xs md:text-sm gap-1 lum-bg-transparent text-burger-200/50">
+        <a href={review.googleMapsUri} target="_blank" class="lum-btn lum-btn-p-1 rounded-lum-2 text-xs md:text-sm lum-bg-transparent text-burger-200/50">
           <MapPin size={16} />
           Open in Google Maps
         </a>
         {overflowing.value &&
-          <button class="lum-btn lum-btn-p-1 rounded-lum-2 text-xs md:text-sm gap-1 lum-bg-transparent text-burger-200/50 cursor-pointer"
+          <button class="lum-btn lum-btn-p-1 rounded-lum-2 text-xs md:text-sm lum-bg-transparent text-burger-200/50 cursor-pointer"
             onClick$={() => { expanded.value = !expanded.value; }}>
             <div
               class={{
