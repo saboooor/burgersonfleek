@@ -112,6 +112,8 @@ export default component$(() => {
               'lum-btn lum-btn-p-3 sm:text-lg': true,
               'hover:text-lum-text! active:text-lum-text border-none': true,
               'lum-bg-burger-600 bg-linear-to-b from-burger-600 to-burger-700 hover:from-burger-500 active:from-burger-500': true,
+            }} onClick$={() => {
+              window.umami?.track('menu');
             }}>
               <BookOpen strokeWidth={1} class="w-5 sm:w-auto sm:mr-1" /> View the menu
             </Link>
