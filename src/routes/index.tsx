@@ -108,7 +108,7 @@ export default component$(() => {
         <div class="flex flex-col items-center sm:items-start gap-1 sm:gap-2 mt-2 font-futura animate-in fade-in slide-in-from-top-72 sm:slide-in-from-top-64 anim-duration-800">
           <OrderPopup />
           <div class="flex gap-1 sm:gap-1.5">
-            <Link data-umami-event="menu" href="/menu" class={{
+            <Link href="/menu" class={{
               'lum-btn lum-btn-p-3 sm:text-lg': true,
               'hover:text-lum-text! active:text-lum-text border-none': true,
               'lum-bg-burger-600 bg-linear-to-b from-burger-600 to-burger-700 hover:from-burger-500 active:from-burger-500': true,
