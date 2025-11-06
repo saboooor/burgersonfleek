@@ -1,4 +1,4 @@
-import { component$ } from '@builder.io/qwik';
+import { component$, useVisibleTask$ } from '@builder.io/qwik';
 import { useDocumentHead, useLocation } from '@builder.io/qwik-city';
 
 /**
@@ -8,10 +8,33 @@ export const RouterHead = component$(() => {
   const head = useDocumentHead();
   const loc = useLocation();
 
+  // eslint-disable-next-line qwik/no-use-visible-task
+  useVisibleTask$(() => {
+    // Load Typekit fonts asynchronously
+    const html = document.documentElement;
+    const link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.href = 'https://use.typekit.net/mvz1qpc.css';
+    link.onload = () => html.classList.add('fonts-loaded');
+    document.head.appendChild(link);
+  });
+
   return (
     <>
       <title>{`Burgers on Fleek - ${head.title}`}</title>
       <meta content="Premium Quality Gourmet Burgers, Steak Sandwiches, Fries, and more. Only serving Halal حلال" name="description" />
+
+      {/* Typekit Fonts */}
+      <link rel="preconnect" href="https://use.typekit.net" />
+      <link rel="preconnect" href="https://p.typekit.net" />
+      <noscript>
+        <link rel="stylesheet" href="https://use.typekit.net/mvz1qpc.css" />
+        <style>{`
+          .font-futura {
+            opacity: 1 !important;
+          }
+        `}</style>
+      </noscript>
 
       <link rel="canonical" href={loc.url.href} />
       <link rel="icon" href="/branding/svg/icon.svg" />

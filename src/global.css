@@ -5,7 +5,6 @@
  * the styles in here will be applied to the Document, without any sort of CSS scoping.
  *
  */
-@import url("https://use.typekit.net/mvz1qpc.css");
 
 @import "tailwindcss";
 @plugin "@anuragroy/tailwindcss-animate";
@@ -55,6 +54,15 @@
   font-family: "futura-pt", sans-serif;
   font-weight: 400;
   font-style: normal;
+  font-display: swap !important;
+  visibility: hidden;
+  opacity: 0;
+}
+
+html.fonts-loaded .font-futura {
+  visibility: visible;
+  transition: visibility 0s, opacity 0.2s ease-in;
+  opacity: 1;
 }
 
 html {
