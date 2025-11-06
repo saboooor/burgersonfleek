@@ -14,11 +14,11 @@ export default component$(() => {
           Our meat providers are
         </p>
         <p>
-          <a href="http://sthelensmeat.com" class="text-blue-400/80 hover:text-blue-400 hover:underline">St. Helen's</a> and <a href="https://sargentfarms.ca" class="text-blue-400/80 hover:text-blue-400 hover:underline">Sargent Farms</a>
+          <a href="http://sthelensmeat.com" class="text-blue-400/80 hover:text-blue-400 underline">St. Helen's</a> and <a href="https://sargentfarms.ca" class="text-blue-400/80 hover:text-blue-400 underline">Sargent Farms</a>
         </p>
       </div>
       <p class="text-lum-text-secondary text-base mx-6 md:mx-16 md:text-lg fade-in animation-delay-400">
-        For further inquiries, feel free to reach us at <a href="mailto:eat@burgersonfleek.ca" class="text-blue-400/80 hover:text-blue-400 hover:underline">eat@burgersonfleek.ca</a>
+        For further inquiries, feel free to reach us at <a href="mailto:eat@burgersonfleek.ca" class="text-blue-400/80 hover:text-blue-400 underline">eat@burgersonfleek.ca</a>
       </p>
     </>
   );
