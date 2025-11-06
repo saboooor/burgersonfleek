@@ -38,7 +38,7 @@
     "eslint-plugin-qwik": "1.17.1",
     "globals": "^16.4.0",
     "lucide-icons-qwik": "^0.540.0",
-    "tailwindcss": "4.1.16",
+    "tailwindcss": "4.1.17",
     "typescript": "5.8.3",
     "typescript-eslint": "^8.46.2",
     "undici": "7.16.0",
