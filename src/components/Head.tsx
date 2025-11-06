@@ -29,11 +29,11 @@ export const RouterHead = component$(() => {
       <link rel="preconnect" href="https://p.typekit.net" />
       <noscript>
         <link rel="stylesheet" href="https://use.typekit.net/mvz1qpc.css" />
-        <style>{`
+        <style dangerouslySetInnerHTML={`
           .font-futura {
             opacity: 1 !important;
           }
-        `}</style>
+        `} />
       </noscript>
 
       <link rel="canonical" href={loc.url.href} />
