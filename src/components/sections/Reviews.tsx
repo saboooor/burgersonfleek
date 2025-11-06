@@ -37,9 +37,9 @@ const Review = component$(({ review }: { review: any }) => {
     <div class="flex sm:flex-row flex-col sm:items-center gap-4">
       <div class="flex-1 flex items-center gap-2">
         <img src={review.authorAttribution.photoUri} alt={review.authorAttribution.displayName} width={32} height={32}  />
-        <h3 class="text-lum-text text-base md:text-xl font-bold">
+        <p class="text-lum-text text-base md:text-xl font-bold">
           {review.authorAttribution.displayName}
-        </h3>
+        </p>
       </div>
       <div class="flex">
         <div class={'flex gap-1 lum-bg-gray-800/50 p-2 rounded-lum-2'}>
@@ -56,16 +56,16 @@ const Review = component$(({ review }: { review: any }) => {
       {review.text.text}
     </p>
     <div class="flex justify-between items-end">
-      <p class="text-gray-600 text-xs md:text-sm text-left">
+      <p class="text-gray-500 text-xs md:text-sm text-left">
         {review.relativePublishTimeDescription}
       </p>
       <div class="flex gap-1">
-        <a href={review.googleMapsUri} target="_blank" class="lum-btn lum-btn-p-1 rounded-lum-2 text-xs md:text-sm lum-bg-transparent text-burger-200/50">
+        <a href={review.googleMapsUri} target="_blank" class="lum-btn lum-btn-p-1 rounded-lum-2 text-xs md:text-sm lum-bg-transparent text-burger-200/75">
           <MapPin size={16} />
           Open in Google Maps
         </a>
         {overflowing.value &&
-          <button class="lum-btn lum-btn-p-1 rounded-lum-2 text-xs md:text-sm lum-bg-transparent text-burger-200/50 cursor-pointer"
+          <button class="lum-btn lum-btn-p-1 rounded-lum-2 text-xs md:text-sm lum-bg-transparent text-burger-200/75 cursor-pointer"
             onClick$={() => { expanded.value = !expanded.value; }}>
             <div
               class={{

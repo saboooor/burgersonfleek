@@ -30,17 +30,17 @@ export default component$(() => {
 
       <Link q:slot="end" href="/menu" class={{
         'lum-btn lum-bg-transparent hover:text-lum-text p-2 sm:lum-btn-p-2 rounded-lum-2': true,
-      }}>
+      }} title='Menu'>
         <BookOpen strokeWidth={1} /> <span class="hidden lg:inline">MENU</span>
       </Link>
       <Link q:slot="end" target='_blank' data-umami-event="order_online" href="https://order.toasttab.com/online/burgers-on-fleek-135-harwood-ave-n-unit-b212" class={{
         'lum-btn lum-bg-transparent hover:text-lum-text p-2 sm:lum-btn-p-2 rounded-lum-2': true,
-      }}>
+      }} title='Order Online'>
         <IconInBag /> <span class="hidden lg:inline">ORDER</span>
       </Link>
       <Link q:slot="end" href="/halal" class={{
         'hidden lg:flex lum-btn lum-bg-transparent hover:text-lum-text p-2 rounded-lum-2': true,
-      }}>
+      }} title='Halal'>
         <Halal />
       </Link>
       <div q:slot='end' class="hidden sm:flex gap-2">
