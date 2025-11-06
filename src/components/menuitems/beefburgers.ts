@@ -1,6 +1,7 @@
 import Aloha from '../images/Aloha.png?jsx';
 import Bae from '../images/Bae.png?jsx';
 import Bromance from '../images/Bromance.png?jsx';
+import Basic from '../images/Basic.png?jsx';
 import Classic from '../images/Classic.png?jsx';
 import Mashup from '../images/Mashup.png?jsx';
 import Melt from '../images/Melt.png?jsx';
@@ -15,6 +16,7 @@ export default [
     description: 'Beef patty with lettuce, tomato, pickles, sautéed onions, and On Fleek sauce.',
     price: '$10.25',
     double: '$15.25',
+    image: Basic,
   },
   {
     name: 'The Classic',
