@@ -33,11 +33,11 @@ export default component$(() => {
       }} title='Menu'>
         <BookOpen strokeWidth={1} /> <span class="hidden lg:inline">MENU</span>
       </Link>
-      <Link q:slot="end" target='_blank' data-umami-event="order_online" href="https://order.toasttab.com/online/burgers-on-fleek-135-harwood-ave-n-unit-b212" class={{
+      <a q:slot="end" target='_blank' data-umami-event="order_online" href="https://order.toasttab.com/online/burgers-on-fleek-135-harwood-ave-n-unit-b212" class={{
         'lum-btn lum-bg-transparent hover:text-lum-text p-2 sm:lum-btn-p-2 rounded-lum-2': true,
       }} title='Order Online'>
         <IconInBag /> <span class="hidden lg:inline">ORDER</span>
-      </Link>
+      </a>
       <Link q:slot="end" href="/halal" class={{
         'hidden lg:flex lum-btn lum-bg-transparent hover:text-lum-text p-2 rounded-lum-2': true,
       }} title='Halal'>
@@ -50,9 +50,9 @@ export default component$(() => {
       <Link q:slot="mobile" href="/menu" class="lum-btn lum-bg-transparent hover:text-lum-text rounded-lum-2">
         <BookOpen strokeWidth={1} /> MENU
       </Link>
-      <Link q:slot="mobile" target='_blank' data-umami-event="order_online" href="https://order.toasttab.com/online/burgers-on-fleek-135-harwood-ave-n-unit-b212" class="lum-btn lum-bg-transparent hover:text-lum-text rounded-lum-2">
+      <a q:slot="mobile" target='_blank' data-umami-event="order_online" href="https://order.toasttab.com/online/burgers-on-fleek-135-harwood-ave-n-unit-b212" class="lum-btn lum-bg-transparent hover:text-lum-text rounded-lum-2">
         <IconInBag /> ORDER ONLINE
-      </Link>
+      </a>
       <Link q:slot="mobile" href="/halal" class="lum-btn lum-bg-transparent hover:text-lum-text rounded-lum-2">
         <Halal /> HALAL
       </Link>
