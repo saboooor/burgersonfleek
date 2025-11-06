@@ -56,7 +56,7 @@ const Review = component$(({ review }: { review: any }) => {
       {review.text.text}
     </p>
     <div class="flex justify-between items-end">
-      <p class="text-gray-500 text-xs md:text-sm text-left">
+      <p class="text-gray-400 text-xs md:text-sm text-left">
         {review.relativePublishTimeDescription}
       </p>
       <div class="flex gap-1">
