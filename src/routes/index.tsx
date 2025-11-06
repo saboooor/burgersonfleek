@@ -42,7 +42,7 @@ export default component$(() => {
 
         <div class="flex flex-col gap-1 mt-2 text-left">
           <div class="flex gap-1 sm:gap-1.5 animate-in fade-in slide-in-from-top-32 sm:slide-in-from-top-24 anim-duration-800">
-            <a href="/halal" class="lum-btn lum-btn-p-1 lum-bg-transparent hover:lum-bg-gray-900/50 !text-lum-text-secondary rounded-lum-1">
+            <a href="/halal" class="lum-btn lum-btn-p-1 lum-bg-transparent hover:lum-bg-gray-900/50 text-lum-text-secondary! rounded-lum-1">
               <Halal class="w-5 sm:w-auto sm:mr-1" />
               Only serving Halal
             </a>
@@ -67,12 +67,20 @@ export default component$(() => {
           </div>
           <div class="min-h-15.5 flex gap-1 sm:gap-1.5 animate-in fade-in slide-in-from-top-64 sm:slide-in-from-top-56 anim-duration-800">
             {GoogleDetails.value.currentOpeningHours?.openNow !== undefined &&
-              <div class="animate-in fade-in anim-duration-400 w-fit lum-btn-p-1">
-                {GoogleDetails.value.currentOpeningHours?.openNow && <>
+              <div class="*:animate-in *:fade-in *:anim-duration-400 w-fit lum-btn-p-1">
+                {GoogleDetails.value.currentOpeningHours?.nextCloseTime?.seconds * 1000 - (15 * 60 * 1000) < Date.now()
+                || GoogleDetails.value.currentOpeningHours?.openNow === false ?
+                  <p class="flex items-center gap-2 text-red-200/80 font-medium">
+                    <span class="w-2 h-2 rounded-full lum-bg-red-300" />
+                    We're closed at the moment.
+                  </p>
+                  :
                   <p class="flex items-center gap-2 text-green-200/80 font-medium">
                     <span class="w-2 h-2 rounded-full lum-bg-green-300" />
                     We're open, come on in!
                   </p>
+                }
+                {GoogleDetails.value.currentOpeningHours?.openNow &&
                   <p class="text-lum-text-secondary text-sm">
                     closing at {new Date(GoogleDetails.value.currentOpeningHours?.nextCloseTime?.seconds * 1000 - (15 * 60 * 1000))
                       .toLocaleTimeString([], {
@@ -81,12 +89,8 @@ export default component$(() => {
                         second: undefined,
                       })}
                   </p>
-                </>}
-                {!GoogleDetails.value.currentOpeningHours?.openNow && <>
-                  <p class="flex items-center gap-2 text-red-200/80 font-medium">
-                    <span class="w-2 h-2 rounded-full lum-bg-red-300" />
-                    We're closed at the moment.
-                  </p>
+                }
+                {!GoogleDetails.value.currentOpeningHours?.openNow &&
                   <p class="text-lum-text-secondary text-sm">
                     opening at {new Date(GoogleDetails.value.currentOpeningHours?.nextOpenTime?.seconds * 1000)
                       .toLocaleTimeString([], {
@@ -95,7 +99,7 @@ export default component$(() => {
                         second: undefined,
                       })}
                   </p>
-                </>}
+                }
               </div>
             }
           </div>
