@@ -23,12 +23,13 @@ export default component$(() => {
   });
 
   return <>
-    <section class="flex flex-col sm:flex-row mx-auto max-w-5xl px-6 items-center min-h-svh pt-24">
+    <section class="flex flex-col sm:flex-row mx-auto max-w-5xl px-6 items-center justify-center min-h-svh pt-24">
       <div class="flex animate-in fade-in slide-in-from-top-16 anim-duration-600">
         <Logo size={476} height={600} id="pc" class="hidden sm:flex"/>
       </div>
-      <div class="flex flex-col items-center text-center sm:items-start sm:text-left">
+      <div class="flex flex-col sm:items-start sm:text-left items-center text-center">
         <LogoHorizontal size={216} height={75} id="mobile" class="sm:hidden mx-auto mb-6 animate-in fade-in slide-in-from-top-16 anim-duration-600" />
+
         <h1 class="font-bold text-white text-2xl sm:text-4xl mb-2 animate-in fade-in slide-in-from-top-16 anim-duration-700">
           The <span class="text-lum-accent">burgers</span><br/>you are <span class="text-burger-300">craving.</span><span class="text-lg align-top">™</span>
         </h1>
@@ -116,7 +117,7 @@ export default component$(() => {
               <BookOpen strokeWidth={1} class="w-5 sm:w-auto sm:mr-1" /> View the menu
             </Link>
           </div>
-          <div class="mt-6 w-full flex justify-center animate-bounce text-burger-200">
+          <div class="mt-4 w-full flex justify-center animate-bounce text-burger-200">
             <a href="#reviews" class="lum-btn lum-bg-transparent p-2">
               <ChevronDown />
             </a>
