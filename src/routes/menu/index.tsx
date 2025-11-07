@@ -80,7 +80,7 @@ export default component$(() => {
                 }}>
                   {item.name}{item.bestseller && <BestSeller/>}
                 </h2>
-                <p class="text-burger-500 text-xs sm:text-sm">
+                <p class="text-lum-accent text-xs sm:text-sm">
                   {item.double && <span class="text-lum-text-secondary">Single: </span>}{item.price}
                   {item.double && <><br/><span class="text-lum-text-secondary">Double: </span>{item.double}</>}
                 </p>
@@ -114,7 +114,7 @@ export default component$(() => {
                 }}>
                   {item.name}{item.bestseller && <BestSeller/>}
                 </h2>
-                <p class="text-burger-500 text-xs sm:text-sm">
+                <p class="text-lum-accent text-xs sm:text-sm">
                   {item.price}
                 </p>
                 <p class="text-lum-text-secondary text-sm sm:text-base h-full">{item.description}</p>
@@ -144,7 +144,7 @@ export default component$(() => {
                 }}>
                   {item.name}
                 </h2>
-                <p class="text-burger-500 text-xs sm:text-sm">
+                <p class="text-lum-accent text-xs sm:text-sm">
                   {item.price}
                 </p>
                 <p class="text-lum-text-secondary text-sm sm:text-base h-full">{item.description}</p>
@@ -174,7 +174,7 @@ export default component$(() => {
                 }}>
                   {item.name}
                 </h2>
-                <p class="text-burger-500 text-xs sm:text-sm">
+                <p class="text-lum-accent text-xs sm:text-sm">
                   {item.price}
                 </p>
                 <p class="text-lum-text-secondary text-sm sm:text-base h-full">{item.description}</p>
@@ -198,11 +198,11 @@ export default component$(() => {
                 {item.name}
               </h2>
               <div class="h-full">
-                {typeof item.price == 'string' && <p class="text-burger-500 text-xs sm:text-sm">{item.price}</p>}
+                {typeof item.price == 'string' && <p class="text-lum-accent text-xs sm:text-sm">{item.price}</p>}
                 {typeof item.price != 'string' && Object.entries(item.price).map(([option, price], i) => {
                   return <p key={i} class="text-xs sm:text-sm">
                     {option}:
-                    <span class="text-burger-500 ml-1">
+                    <span class="text-lum-accent ml-1">
                       {price}
                     </span>
                   </p>;
@@ -228,11 +228,11 @@ export default component$(() => {
               </h2>
               <div>
                 <p class="text-lum-text-secondary text-xs sm:text-sm">
-                  Medium: <span class="text-burger-500">{item.price.medium}</span><br/>
-                  Large: <span class="text-burger-500">{item.price.large}</span><br/><br/>
+                  Medium: <span class="text-lum-accent">{item.price.medium}</span><br/>
+                  Large: <span class="text-lum-accent">{item.price.large}</span><br/><br/>
                   <span class="font-bold">Make it a Combo:</span><br/>
-                  Medium: <span class="text-burger-500">{item.price.mediumCombo}</span><br/>
-                  Large: <span class="text-burger-500">{item.price.largeCombo}</span>
+                  Medium: <span class="text-lum-accent">{item.price.mediumCombo}</span><br/>
+                  Large: <span class="text-lum-accent">{item.price.largeCombo}</span>
                 </p>
               </div>
               <p class="text-lum-text-secondary text-sm sm:text-base h-full">{item.description}</p>
@@ -254,7 +254,7 @@ export default component$(() => {
               }}>
                 {item.name}
               </h2>
-              <p class="text-burger-500 text-xs sm:text-sm">
+              <p class="text-lum-accent text-xs sm:text-sm">
                 {item.price}
               </p>
             </div>;

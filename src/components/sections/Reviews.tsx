@@ -41,12 +41,10 @@ const Review = component$(({ review }: { review: any }) => {
           {review.authorAttribution.displayName}
         </p>
       </div>
-      <div class="flex">
-        <div class={'flex gap-1 lum-bg-gray-800/50 p-2 rounded-lum-2'}>
-          {[...Array(review.rating)].map((_, i) =>
-            <Star key={i} class="w-4 h-4 fill-current text-burger-400" />,
-          )}
-        </div>
+      <div class="flex gap-1 lum-bg-gray-700 p-2 rounded-lum-2">
+        {[...Array(review.rating)].map((_, i) =>
+          <Star key={i} class="w-4 h-4 fill-current text-lum-accent" />,
+        )}
       </div>
     </div>
     <p class={{

@@ -61,7 +61,6 @@
 
 html.fonts-loaded .font-futura {
   visibility: visible;
-  transition: visibility 0s, opacity 0.2s ease-in;
   opacity: 1;
 }
 
