@@ -1,6 +1,7 @@
 import Aloha from '../images/Aloha.png?jsx';
 import Bae from '../images/Bae.png?jsx';
 import Bromance from '../images/Bromance.png?jsx';
+import Godzilla from '../images/Godzilla.png?jsx';
 import Basic from '../images/Basic.png?jsx';
 import Classic from '../images/Classic.png?jsx';
 import Mashup from '../images/Mashup.png?jsx';
@@ -44,6 +45,7 @@ export default [
     name: 'Godzilla',
     description: 'Three beef patties with cheddar cheese, beef bacon, lettuce, tomato, sautéed onion, grilled jalapeños, and On Fleek sauce between two grilled cheese buns.',
     price: '$24.90',
+    image: Godzilla,
   },
   {
     name: 'Mashup',
