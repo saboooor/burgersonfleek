@@ -1,4 +1,5 @@
 import Veggie from '../images/Veggie.png?jsx';
+import Shroom from '../images/Shroom.png?jsx';
 
 export default [
   {
@@ -11,5 +12,6 @@ export default [
     name: 'Shroom',
     description: 'Crusted portobello mushroom stuffed with cheese, with lettuce, tomato, pickles, and garlic mayo.',
     price: '$11.25',
+    image: Shroom,
   },
 ];
