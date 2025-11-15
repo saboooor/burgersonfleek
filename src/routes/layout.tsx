@@ -21,7 +21,6 @@ export default component$(() => {
         playsInline
         muted
         preload="auto"
-        poster="/videos/hero.jpg"
       >
         <source src={videos[Math.floor(Math.random() * videos.length)]} type="video/mp4" />
       </video>
