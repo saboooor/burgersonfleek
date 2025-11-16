@@ -36,8 +36,8 @@ export default component$(() => {
     controls.update();
 
     // Lights
-    const pointLight = new THREE.DirectionalLight(0xffffff, 1);
-    pointLight.position.set(1, 1, -20);
+    const pointLight = new THREE.DirectionalLight(0xFDE2C1, 0.5);
+    pointLight.position.set(1, -2, -20);
     pointLight.castShadow = true;
     const ambientLight = new THREE.AmbientLight(0xffffff, 2);
     scene.add(pointLight, ambientLight);
@@ -52,9 +52,9 @@ export default component$(() => {
     backTexture.anisotropy = renderer.capabilities.getMaxAnisotropy();
     backTexture.colorSpace = THREE.SRGBColorSpace;
 
-    const frontMaterial = new THREE.MeshStandardMaterial({ map: frontTexture, roughness: 0.5 });
-    const backMaterial = new THREE.MeshStandardMaterial({ map: backTexture, roughness: 0.5 });
-    const sideMaterial = new THREE.MeshStandardMaterial({ color: 0x000000, roughness: 0.5 });
+    const frontMaterial = new THREE.MeshStandardMaterial({ map: frontTexture, roughness: 0.2 });
+    const backMaterial = new THREE.MeshStandardMaterial({ map: backTexture, roughness: 0.2 });
+    const sideMaterial = new THREE.MeshStandardMaterial({ color: 0x000000, roughness: 0.2 });
 
     // Create an array of materials for each side of the box (front and back)
     const materials = [

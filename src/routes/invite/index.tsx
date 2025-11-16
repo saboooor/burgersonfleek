@@ -13,4 +13,20 @@ export default component$(() => {
 export const head = generateHead({
   title: 'Your personal invitation to our 5th anniversary',
   image: '/invite/card-front.jpg',
+  head: {
+    meta: [
+      {
+        name: 'og:image:width',
+        content: '1500',
+      },
+      {
+        name: 'og:image:height',
+        content: '1000',
+      },
+      {
+        name: 'twitter:card',
+        content: 'summary_large_image',
+      },
+    ],
+  },
 });
