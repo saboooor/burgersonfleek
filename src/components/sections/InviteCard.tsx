@@ -36,10 +36,10 @@ export default component$(() => {
     controls.update();
 
     // Lights
-    const pointLight = new THREE.DirectionalLight(0xFDE2C1, 0.5);
-    pointLight.position.set(1, -2, -20);
+    const pointLight = new THREE.DirectionalLight(0xFDE2C1, 0.2);
+    pointLight.position.set(1, 0, -20);
     pointLight.castShadow = true;
-    const ambientLight = new THREE.AmbientLight(0xffffff, 2);
+    const ambientLight = new THREE.AmbientLight(0xffffff, 3);
     scene.add(pointLight, ambientLight);
 
     // Card Geometry and Materials
@@ -71,13 +71,18 @@ export default component$(() => {
     scene.add(cardMesh);
 
     // Animation Loop
-    const animate = () => {
+    const clock = new THREE.Clock();
+    function animate() {
+      const delta = clock.getDelta(); // seconds since last frame
+
+      // rotate at a fixed speed (radians per second)
+      const rotationSpeed = 1; // adjust to taste
+      cardMesh.rotation.y += rotationSpeed * delta;
+
       renderer.render(scene, camera);
-      // rotate the card slowly
-      cardMesh.rotation.y += 0.005;
       controls.update();
       requestAnimationFrame(animate);
-    };
+    }
     animate();
   });
 
