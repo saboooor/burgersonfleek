@@ -1,7 +1,7 @@
 import { component$, useContextProvider, useSignal, useVisibleTask$ } from '@builder.io/qwik';
-import type { DocumentHead } from '@builder.io/qwik-city';
 import Reviews from '~/components/sections/Reviews';
 import { GoogleDetailsContext } from '..';
+import { generateHead } from '~/root';
 
 export default component$(() => {
   const GoogleDetails = useSignal<any>({});
@@ -21,6 +21,6 @@ export default component$(() => {
   );
 });
 
-export const head: DocumentHead = {
-  title: 'Reviews',
-};
+export const head = generateHead({
+  title: 'Burgers on Fleek - Reviews',
+});

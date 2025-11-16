@@ -1,6 +1,6 @@
 import { component$ } from '@builder.io/qwik';
-import type { DocumentHead } from '@builder.io/qwik-city';
 import HalalSection from '~/components/sections/Halal';
+import { generateHead } from '~/root';
 
 export default component$(() => {
   return (
@@ -10,6 +10,6 @@ export default component$(() => {
   );
 });
 
-export const head: DocumentHead = {
-  title: 'Halal',
-};
+export const head = generateHead({
+  title: 'Burgers on Fleek - Halal',
+});

@@ -1,5 +1,4 @@
 import { component$, createContextId, useContextProvider, useSignal, useVisibleTask$ } from '@builder.io/qwik';
-import type { DocumentHead } from '@builder.io/qwik-city';
 import { Link } from '@builder.io/qwik-city';
 
 import Cutout from '~/components/images/Cutout.png?jsx';
@@ -9,6 +8,7 @@ import { BookOpen, ChevronDown, Gift, MapPin, Phone } from 'lucide-icons-qwik';
 import OrderPopup from '~/components/OrderPopup';
 import Reviews from '~/components/sections/Reviews';
 import HalalSection from '~/components/sections/Halal';
+import { generateHead } from '~/root';
 
 export const GoogleDetailsContext = createContextId<any>('google-details');
 export default component$(() => {
@@ -138,6 +138,6 @@ export default component$(() => {
   </>;
 });
 
-export const head: DocumentHead = {
-  title: 'Home',
-};
+export const head = generateHead({
+  title: 'Burgers on Fleek',
+});

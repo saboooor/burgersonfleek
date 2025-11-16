@@ -1,6 +1,6 @@
 import { component$ } from '@builder.io/qwik';
-import type { DocumentHead } from '@builder.io/qwik-city';
 import InviteCard from '~/components/sections/InviteCard';
+import { generateHead } from '~/root';
 
 export default component$(() => {
   return (
@@ -10,6 +10,7 @@ export default component$(() => {
   );
 });
 
-export const head: DocumentHead = {
+export const head = generateHead({
   title: 'Your personal invitation to our 5th anniversary',
-};
+  image: '/invite/card-front.jpg',
+});

@@ -1,5 +1,5 @@
 import { component$ } from '@builder.io/qwik';
-import { QwikCityProvider, RouterOutlet } from '@builder.io/qwik-city';
+import { DocumentHead, DocumentHeadValue, QwikCityProvider, RouterOutlet } from '@builder.io/qwik-city';
 import { RouterHead } from './components/Head';
 
 import './global.css';
@@ -26,3 +26,40 @@ export default component$(() => {
     </QwikCityProvider>
   );
 });
+
+export const defaultDescription = 'Premium Quality Gourmet Burgers, Steak Sandwiches, Fries, and more. Only serving Halal حلال';
+
+export function generateHead({
+  title = 'Burgers on Fleek',
+  description = defaultDescription,
+  image = '/branding/png/logo.png',
+  head = {},
+}: {
+  title?: string;
+  description?: string;
+  image?: string;
+  head?: Partial<DocumentHeadValue>;
+}): DocumentHead {
+  return {
+    ...head,
+    title,
+    meta: [
+      {
+        name: 'description',
+        content: description,
+      },
+      {
+        name: 'og:description',
+        content: description,
+      },
+      {
+        name: 'og:image',
+        content: image,
+      },
+      ...(head.meta ?? []),
+    ],
+    scripts: [
+      ...(head.scripts ?? []),
+    ],
+  };
+}

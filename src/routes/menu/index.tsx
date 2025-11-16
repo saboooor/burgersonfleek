@@ -1,5 +1,4 @@
 import { component$ } from '@builder.io/qwik';
-import type { DocumentHead } from '@builder.io/qwik-city';
 
 import drinks from '~/components/menuitems/drinks.json';
 import extras from '~/components/menuitems/extras.json';
@@ -14,6 +13,7 @@ import BestSeller from '~/components/BestSeller';
 import OrderPopup from '~/components/OrderPopup';
 import Icon from '~/components/svg/Icon';
 import { Beef, CupSoda, Drumstick, EggFried, Hamburger, Leaf, Soup } from 'lucide-icons-qwik';
+import { generateHead } from '~/root';
 
 export default component$(() => {
   return <>
@@ -268,6 +268,6 @@ export default component$(() => {
   </>;
 });
 
-export const head: DocumentHead = {
-  title: 'Menu',
-};
+export const head = generateHead({
+  title: 'Burgers on Fleek - Menu',
+});

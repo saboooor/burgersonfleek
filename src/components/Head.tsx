@@ -21,8 +21,15 @@ export const RouterHead = component$(() => {
 
   return (
     <>
-      <title>{`Burgers on Fleek - ${head.title}`}</title>
-      <meta content="Premium Quality Gourmet Burgers, Steak Sandwiches, Fries, and more. Only serving Halal حلال" name="description" />
+      <title>{`${head.title}`}</title>
+      <meta content={`${head.title}`} property="og:title" />
+      <meta content="oklch(0.6617 0.1355 67.02)" name="theme-color" />
+      <meta content="https://burgersonfleek.ca/branding/png/logo.png" property="og:image" />
+
+      <link rel="canonical" href={loc.url.href} />
+      <link rel="icon" href="/branding/svg/icon.svg" />
+      <link rel="apple-touch-icon" href="/branding/png/mobile/apple-icon.png" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
       {/* Typekit Fonts */}
       <link rel="preconnect" href="https://use.typekit.net" />
@@ -35,15 +42,6 @@ export const RouterHead = component$(() => {
           }
         `} />
       </noscript>
-
-      <link rel="canonical" href={loc.url.href} />
-      <link rel="icon" href="/branding/svg/icon.svg" />
-      <link rel="apple-touch-icon" href="/branding/png/mobile/apple-icon.png" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <meta content="Burgers on Fleek" property="og:title" />
-      <meta content="Premium Quality Gourmet Burgers, Steak Sandwiches, Fries, and more. Only serving Halal حلال" property="og:description" />
-      <meta content="https://burgersonfleek.ca/branding/png/logo.png" property="og:image" />
-      <meta content="oklch(0.6617 0.1355 67.02)" name="theme-color" />
 
       {head.meta.map((m, i) => (
         <meta {...m} key={i} />
