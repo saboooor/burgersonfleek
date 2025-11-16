@@ -24,7 +24,6 @@ export const RouterHead = component$(() => {
       <title>{`${head.title}`}</title>
       <meta content={`${head.title}`} property="og:title" />
       <meta content="oklch(0.6617 0.1355 67.02)" name="theme-color" />
-      <meta content="https://burgersonfleek.ca/branding/png/logo.png" property="og:image" />
 
       <link rel="canonical" href={loc.url.href} />
       <link rel="icon" href="/branding/svg/icon.svg" />
