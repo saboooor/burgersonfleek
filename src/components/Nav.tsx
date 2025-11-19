@@ -12,12 +12,10 @@ export default component$(() => {
   const loc = useLocation();
 
   return (
-    <Nav fixed floating colorClass='lum-bg-gray-900' class={{
-      'font-futura tracking-wider': true,
-    }}>
+    <Nav fixed floating colorClass='lum-bg-gray-900'>
       <Link q:slot="start" href="/" class="lum-btn lum-bg-transparent rounded-lum-1 -m-1">
         <Icon size={30} />
-        <p class="space-x-1 whitespace-nowrap text-white">
+        <p class="space-x-1 whitespace-nowrap text-white font-futura transition-opacity">
           <span class="font-bold">BURGERS</span><span>ON</span><span>FLEEK</span>
         </p>
         <div class={{
@@ -29,12 +27,12 @@ export default component$(() => {
       </Link>
 
       <Link q:slot="end" href="/menu" class={{
-        'lum-btn lum-bg-transparent hover:text-lum-text p-2 sm:lum-btn-p-2 rounded-lum-2': true,
+        'lum-btn lum-bg-transparent font-futura hover:text-lum-text p-2 sm:lum-btn-p-2 rounded-lum-2': true,
       }} title='Menu'>
-        <BookOpen strokeWidth={1} /> <span class="hidden lg:inline">MENU</span>
+        <BookOpen strokeWidth={1} /> MENU
       </Link>
       <a q:slot="end" target='_blank' data-umami-event="order_online" href="https://order.toasttab.com/online/burgers-on-fleek-135-harwood-ave-n-unit-b212" class={{
-        'lum-btn lum-bg-transparent hover:text-lum-text p-2 sm:lum-btn-p-2 rounded-lum-2': true,
+        'lum-btn lum-bg-transparent font-futura hover:text-lum-text p-2 sm:lum-btn-p-2 rounded-lum-2': true,
       }} title='Order Online'>
         <IconInBag /> <span class="hidden lg:inline">ORDER</span>
       </a>
@@ -47,13 +45,14 @@ export default component$(() => {
         <SocialButtons />
       </div>
 
-      <Link q:slot="mobile" href="/menu" class="lum-btn lum-bg-transparent hover:text-lum-text rounded-lum-2">
+      <Link q:slot="mobile" href="/menu" class="lum-btn lum-bg-transparent font-futura hover:text-lum-text rounded-lum-2">
         <BookOpen strokeWidth={1} /> MENU
       </Link>
-      <a q:slot="mobile" target='_blank' data-umami-event="order_online" href="https://order.toasttab.com/online/burgers-on-fleek-135-harwood-ave-n-unit-b212" class="lum-btn lum-bg-transparent hover:text-lum-text rounded-lum-2">
+      <a q:slot="mobile" target='_blank' data-umami-event="order_online" href="https://order.toasttab.com/online/burgers-on-fleek-135-harwood-ave-n-unit-b212"
+        class="lum-btn lum-bg-transparent font-futura hover:text-lum-text rounded-lum-2">
         <IconInBag /> ORDER ONLINE
       </a>
-      <Link q:slot="mobile" href="/halal" class="lum-btn lum-bg-transparent hover:text-lum-text rounded-lum-2">
+      <Link q:slot="mobile" href="/halal" class="lum-btn lum-bg-transparent font-futura hover:text-lum-text rounded-lum-2">
         <Halal /> HALAL
       </Link>
       <div q:slot='mobile' class="flex justify-evenly">
