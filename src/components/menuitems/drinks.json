@@ -5,14 +5,14 @@
   },
   {
     "name": "Bottled Water",
-    "price": "$1.50"
+    "price": "$2.00"
   },
   {
     "name": "Chocolate or Vanilla Milkshake",
-    "price": "$6.90"
+    "price": "$6.99"
   },
   {
     "name": "Ferrero Rocher Milkshake",
-    "price": "$8.40"
+    "price": "$8.99"
   }
 ]

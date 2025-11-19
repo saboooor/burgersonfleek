@@ -4,7 +4,7 @@ export default [
   {
     name: 'Shawty',
     description: 'Fried chicken thigh burger with lettuce, tomato, and chipotle sauce.',
-    price: '$10.36',
+    price: '$10.45',
   },
   {
     name: 'The Original',
@@ -14,7 +14,7 @@ export default [
   {
     name: 'G.O.A.T',
     description: 'Fried chicken leg burger with melted cheese, lettuce, tomato, roasted peppers, pico de gallo, chipotle sauce, and garlic mayo.',
-    price: '$17.99',
+    price: '$18.25',
     bestseller: true,
     image: Goat,
   },

@@ -12,20 +12,27 @@
     "price": "$0.60"
   },
   {
-    "name": "Cheese",
-    "price": {
-      "Extra Cheese": "$1.60",
-      "Crusted Cheese": "$3.60",
-      "Melted Cheese": "$3.50"
-    }
+    "name": "Extra Cheese",
+    "price": "$1.60"
+  },
+  {
+    "name": "Crusted Cheese",
+    "price": "$3.60"
+  },
+  {
+    "name": "Melted Cheese",
+    "price": "$3.50"
   },
   {
     "name": "Alternative Bun",
     "price": {
       "Gluten Free Buns": "$2.50",
-      "Grilled Cheese Buns": "$4.00",
       "Keto Buns": "$3.50"
     }
+  },
+  {
+    "name": "Grilled Cheese Buns",
+    "price": "$4.00"
   },
   {
     "name": "Grilled Jalapeños",
