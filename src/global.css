@@ -92,3 +92,17 @@ html {
 *::-webkit-scrollbar-corner {
   background-color: transparent;
 }
+
+.fullscreen-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+
+  object-fit: cover;
+  transform: scale(1.12); /* remove letterboxing */
+  transform-origin: center;
+  z-index: -10;
+  pointer-events: none;
+}
