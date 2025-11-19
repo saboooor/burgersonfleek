@@ -69,7 +69,7 @@ const Review = component$(({ review }: { review: any }) => {
             onClick$={() => { expanded.value = !expanded.value; }}>
             <div
               class={{
-                'transition-transform duration-300': true,
+                'motion-safe:transition-transform duration-300': true,
                 'rotate-180': expanded.value,
               }}
             >

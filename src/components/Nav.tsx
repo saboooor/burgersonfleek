@@ -15,11 +15,11 @@ export default component$(() => {
     <Nav fixed floating colorClass='lum-bg-gray-900'>
       <Link q:slot="start" href="/" class="lum-btn lum-bg-transparent rounded-lum-1 -m-1">
         <Icon size={30} />
-        <p class="space-x-1 whitespace-nowrap text-white font-futura transition-opacity">
+        <p class="space-x-1 whitespace-nowrap text-white font-futura motion-safe:transition-opacity">
           <span class="font-bold">BURGERS</span><span>ON</span><span>FLEEK</span>
         </p>
         <div class={{
-          'transition-all': true,
+          'motion-safe:transition-all': true,
           '-ml-6 opacity-0': !loc.isNavigating,
         }}>
           <div class="lum-loading w-4 h-4" />

@@ -32,7 +32,7 @@ export default component$(({ popup, class: Class, col }: {
   });
 
   return <div class={{
-    'fixed bottom-0 p-4 w-full transition-transform': popup,
+    'fixed bottom-0 p-4 w-full motion-safe:transition-transform': popup,
     'hidden sm:block': col,
     ...Class,
   }} ref={orderPopupRef}>
