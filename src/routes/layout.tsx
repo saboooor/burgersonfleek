@@ -14,7 +14,7 @@ export default component$(() => {
     <main>
       <video
         class={{
-          'fixed top-0 overflow-hidden -z-10 w-full h-full object-cover opacity-25 motion-safe:animate-in fade-in': true,
+          'fixed top-0 overflow-hidden -z-10 w-full h-full object-cover opacity-25 animate-in fade-in': true,
           'blur-md scale-110': loc.url.pathname != '/',
         }}
         autoplay
