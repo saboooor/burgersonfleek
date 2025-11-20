@@ -45,10 +45,10 @@ export default component$(() => {
     // Card Geometry and Materials
     const cardGeometry = new THREE.BoxGeometry(4, 3, 0.05); // Width, Height, Depth
     const textureLoader = new THREE.TextureLoader();
-    const frontTexture = textureLoader.load('card-front.jpg');
+    const frontTexture = textureLoader.load('/invite/card-front.jpg');
     frontTexture.anisotropy = renderer.capabilities.getMaxAnisotropy();
     frontTexture.colorSpace = THREE.SRGBColorSpace;
-    const backTexture = textureLoader.load('card-back.jpg');
+    const backTexture = textureLoader.load('/invite/card-back.jpg');
     backTexture.anisotropy = renderer.capabilities.getMaxAnisotropy();
     backTexture.colorSpace = THREE.SRGBColorSpace;
 
