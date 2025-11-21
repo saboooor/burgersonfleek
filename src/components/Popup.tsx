@@ -85,8 +85,7 @@ export default component$(({ fixed, class: Class, col, types, pathname }: {
             'sm:text-xl mx-2': true,
             'my-1': col,
           }}>
-            <span class="font-bold">It's our 5 year anniversary!</span><br/>
-            Today only get 20% OFF in-store!
+            Thank you all for your support on our 5 year anniversary!
           </p>
           <Blobs color='orange' class={{ 'absolute overflow-clip pointer-events-none -z-1 rounded-lum': true }} style={{ transform: 'translateZ(-10px)' }}/>
         </a>
