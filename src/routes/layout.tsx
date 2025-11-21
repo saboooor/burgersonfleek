@@ -4,10 +4,10 @@ import Footer from '~/components/sections/Footer';
 import { useLocation } from '@builder.io/qwik-city';
 import Popup from '~/components/Popup';
 
-const videos = [
-  '/videos/godzilla.mp4',
-  '/videos/shook.mp4',
-];
+//const videos = [
+//  '/videos/godzilla.mp4',
+//  '/videos/shook.mp4',
+//];
 
 export default component$(() => {
   const loc = useLocation();
