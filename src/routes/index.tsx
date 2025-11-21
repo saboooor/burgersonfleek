@@ -5,11 +5,11 @@ import Cutout from '~/components/images/Cutout.png?jsx';
 import LogoHorizontal from '~/components/svg/LogoHorizontal';
 import Halal from '~/components/svg/Halal';
 import { BookOpen, ChevronDown, Gift, MapPin, Phone } from 'lucide-icons-qwik';
-import OrderPopup from '~/components/OrderPopup';
 import Reviews from '~/components/sections/Reviews';
 import HalalSection from '~/components/sections/Halal';
 import { generateHead } from '~/root';
 import InviteCard from '~/components/sections/InviteCard';
+import Popup from '~/components/Popup';
 
 export const GoogleDetailsContext = createContextId<any>('google-details');
 export default component$(() => {
@@ -24,7 +24,7 @@ export default component$(() => {
   });
 
   return <>
-    <section class="flex flex-col sm:flex-row gap-4 mx-auto max-w-6xl px-6 items-center justify-center min-h-svh pt-24">
+    <section class="flex flex-col sm:flex-row gap-4 mx-auto max-w-6xl px-6 items-center justify-center min-h-svh pt-36">
       <div class="flex flex-col items-center animate-in fade-in motion-safe:slide-in-from-top-16 motion-safe:anim-duration-600 gap-4">
         <LogoHorizontal size={600} height={250} id="pc" class="hidden sm:flex"/>
         <LogoHorizontal size={300} height={125} id="mobile" class="flex sm:hidden"/>
@@ -104,9 +104,9 @@ export default component$(() => {
         </div>
 
         <div class="flex flex-col items-center sm:items-start gap-1 sm:gap-2 font-futura">
-          <OrderPopup class={{
+          <Popup class={{
             'animate-in fade-in motion-safe:slide-in-from-top-16 motion-safe:anim-duration-1400': true,
-          }} />
+          }} types={['order']} />
           <div class="animate-in fade-in motion-safe:slide-in-from-top-16 motion-safe:anim-duration-1500">
             <Link href="/menu" class={{
               'lum-btn lum-btn-p-3 sm:text-lg': true,

@@ -88,7 +88,7 @@ export default component$(() => {
 
   return (
     <>
-      <div class="flex flex-col px-10">
+      <div class="flex flex-col px-10" id="invite">
         <h1 class="font-semibold text-white text-3xl sm:text-5xl my-4 sm:mb-8">
           We're having our <span class="text-burger-300">5th anniversary!</span>
         </h1>
@@ -98,7 +98,7 @@ export default component$(() => {
       </div>
 
       <canvas ref={preview} id="preview" class={{
-        'mt-10 w-full h-[60svh]': true,
+        'mt-10 w-full h-[60svh] lum-card p-0 backdrop-blur-sm': true,
       }} />
     </>
   );

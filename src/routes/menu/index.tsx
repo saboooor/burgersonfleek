@@ -10,14 +10,13 @@ import veggieburgers from '~/components/menuitems/veggieburgers';
 
 import Menu, { MenuCategory } from '~/components/Menu';
 import BestSeller from '~/components/BestSeller';
-import OrderPopup from '~/components/OrderPopup';
 import Icon from '~/components/svg/Icon';
 import { Beef, CupSoda, Drumstick, EggFried, Hamburger, Leaf, Soup } from 'lucide-icons-qwik';
 import { generateHead } from '~/root';
 
 export default component$(() => {
   return <>
-    <section class="grid gap-2 sm:grid-cols-3 lg:grid-cols-4 mx-auto max-w-7xl px-4 sm:px-6 min-h-svh">
+    <section class="grid gap-2 sm:grid-cols-3 lg:grid-cols-4 mx-auto max-w-7xl px-4 sm:px-6 min-h-svh pt-15">
       <Menu>
         <MenuCategory name="BURGERS & SANDWICHES">
           <a class="lum-btn lum-bg-transparent rounded-lum-2 text-orange-200" href="#beefburgers" data-umami-event-menu="beefburgers">
@@ -262,9 +261,6 @@ export default component$(() => {
         </div>
       </div>
     </section>
-    <OrderPopup popup class={{
-      'sm:hidden': true,
-    }}/>
   </>;
 });
 

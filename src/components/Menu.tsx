@@ -1,7 +1,6 @@
 import { component$, Slot, useSignal } from '@builder.io/qwik';
 import { Dropdown } from '@luminescent/ui-qwik';
 import { BookOpen } from 'lucide-icons-qwik';
-import OrderPopup from './OrderPopup';
 
 export default component$(() => {
   const menu = useSignal(false);
@@ -26,7 +25,6 @@ export default component$(() => {
       }}>
         <Slot />
       </div>
-      <OrderPopup col/>
     </aside>
   );
 });

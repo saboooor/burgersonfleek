@@ -2,6 +2,7 @@ import { component$, Slot } from '@builder.io/qwik';
 import Nav from '~/components/Nav';
 import Footer from '~/components/sections/Footer';
 import { useLocation } from '@builder.io/qwik-city';
+import Popup from '~/components/Popup';
 
 const videos = [
   '/videos/godzilla.mp4',
@@ -27,6 +28,12 @@ export default component$(() => {
       <Nav />
       <Slot />
       <Footer />
+      <Popup fixed pathname={loc.url.pathname} types={
+        [
+          ...(loc.url.pathname != '/' ? ['order' as const] : []),
+          'deal',
+        ]
+      } />
     </main>
   );
 });
