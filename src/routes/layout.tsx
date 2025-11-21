@@ -23,7 +23,7 @@ export default component$(() => {
         muted
         preload="auto"
       >
-        <source src={videos[Math.floor(Math.random() * videos.length)]} type="video/mp4" />
+        <source src={/*videos[Math.floor(Math.random() * videos.length)]*/'/videos/anniversary.mp4'} type="video/mp4" />
       </video>
       <Nav />
       <Slot />
