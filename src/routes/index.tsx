@@ -8,7 +8,6 @@ import { BookOpen, ChevronDown, Gift, MapPin, Phone } from 'lucide-icons-qwik';
 import Reviews from '~/components/sections/Reviews';
 import HalalSection from '~/components/sections/Halal';
 import { generateHead } from '~/root';
-import InviteCard from '~/components/sections/InviteCard';
 import Popup from '~/components/Popup';
 
 export const GoogleDetailsContext = createContextId<any>('google-details');
@@ -127,10 +126,6 @@ export default component$(() => {
 
         </div>
       </div>
-    </section>
-
-    <section class="flex flex-col mx-auto max-w-6xl items-center justify-center text-center min-h-svh pt-20">
-      <InviteCard />
     </section>
 
     <section id="reviews" class="flex flex-col items-center text-center mx-auto max-w-5xl px-6">
