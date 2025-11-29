@@ -44,7 +44,15 @@
 
   --lum-default-alpha: 60;
   --lum-border-radius: var(--radius-2xl);
+  --lum-border-superellipse: 2;
   --lum-depth: 1;
+}
+
+
+@supports (corner-shape: squircle) {
+  :root {
+    --lum-border-radius: var(--radius-4xl);
+  }
 }
 
 .-animation-delay-5000 { animation-delay: -5s; }

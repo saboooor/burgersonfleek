@@ -1,7 +1,6 @@
 import { component$, useSignal, useVisibleTask$ } from '@builder.io/qwik';
 import { Blobs } from '@luminescent/ui-qwik';
 import IconInBag from './svg/IconInBag';
-import { PartyPopper } from 'lucide-icons-qwik';
 
 export default component$(({ fixed, class: Class, col, types, pathname }: {
   fixed?: boolean
@@ -44,7 +43,7 @@ export default component$(({ fixed, class: Class, col, types, pathname }: {
     }} ref={PopupRefBottom}>
       {types.includes('order') &&
         <div class={{
-          'lum-card justify-between items-center gap-2 p-2 lum-bg-burger-800/40 text-lum-text! max-w-7xl': true,
+          'lum-card justify-between items-center gap-2 p-2 lum-bg-burger-800/40 text-lum-text! max-w-7xl corner-squircle': true,
           'flex-row': !col,
           'font-futura backdrop-blur-md': true,
         }}>
@@ -55,17 +54,18 @@ export default component$(({ fixed, class: Class, col, types, pathname }: {
             Feeling HANGRY?
           </p>
           <a target='_blank' data-umami-event="order_online" href="https://order.toasttab.com/online/burgers-on-fleek-135-harwood-ave-n-unit-b212" class={{
-            'lum-btn lum-btn-p-2 text-sm sm:text-lg rounded-lum-2': true,
+            'lum-btn lum-btn-p-2 text-sm sm:text-lg rounded-lum-2 corner-squircle': true,
             'w-full justify-center': col,
             'hover:text-lum-text! border-none': true,
             'lum-bg-burger-600 bg-linear-to-b from-burger-600 to-burger-700 hover:from-burger-500 active:from-burger-500': true,
           }}>
             <IconInBag class="fill-current w-5 sm:w-auto sm:mr-1" /> Order Online
           </a>
-          <Blobs color='orange' class={{ 'absolute overflow-clip pointer-events-none -z-1 rounded-lum': true }} style={{ transform: 'translateZ(-10px)' }}/>
+          <Blobs color='orange' class={{ 'absolute overflow-clip pointer-events-none -z-1 rounded-lum corner-squircle': true }} style={{ transform: 'translateZ(-10px)' }}/>
         </div>
       }
     </div>
+    {/*
     <div class={{
       'top-16': !pathname?.includes('menu'),
       'top-30': pathname?.includes('menu'),
@@ -75,7 +75,7 @@ export default component$(({ fixed, class: Class, col, types, pathname }: {
       ...Class,
     }} ref={PopupRefTop}>
       {types.includes('deal') &&
-        <a href='/invite' class={{
+        <div class={{
           'lum-card justify-between items-center gap-2 lum-btn-p-2 text-lum-text! max-w-7xl animate-bounce': true,
           'flex-row': !col,
           'font-futura backdrop-blur-md': true,
@@ -88,8 +88,9 @@ export default component$(({ fixed, class: Class, col, types, pathname }: {
             <span class="font-bold">Thank you all for your support on our 5th anniversary!</span><br/>
           </p>
           <Blobs color='orange' class={{ 'absolute overflow-clip pointer-events-none -z-1 rounded-lum': true }} style={{ transform: 'translateZ(-10px)' }}/>
-        </a>
+        </div>
       }
     </div>
+    */}
   </>;
 });
