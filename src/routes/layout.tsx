@@ -22,6 +22,7 @@ export default component$(() => {
         autoplay
         playsInline
         muted
+        loop
         preload="auto"
       >
         <source src={videos[Math.floor(Math.random() * videos.length)]} type="video/mp4" />
