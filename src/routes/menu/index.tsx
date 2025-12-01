@@ -44,7 +44,7 @@ export default component$(() => {
           </a>
         </MenuCategory>
       </Menu>
-      <div class="sm:col-span-2 lg:col-span-3 pt-36 sm:pt-28">
+      <div class="sm:col-span-2 lg:col-span-3 pt-20">
         <p class="sm:text-xl mb-8 text-lum-text-secondary">
           We are not fast food.
           <br />
