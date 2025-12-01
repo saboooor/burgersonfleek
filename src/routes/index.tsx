@@ -23,7 +23,7 @@ export default component$(() => {
   });
 
   return <>
-    <section class="flex flex-col sm:flex-row gap-4 mx-auto max-w-6xl px-6 items-center justify-center min-h-svh pt-36">
+    <section class="flex flex-col sm:flex-row gap-4 mx-auto max-w-6xl px-6 items-center justify-center min-h-svh pt-20">
       <div class="flex flex-col items-center animate-in fade-in motion-safe:slide-in-from-top-16 motion-safe:anim-duration-600 gap-4">
         <LogoHorizontal size={600} height={250} id="pc" class="hidden sm:flex"/>
         <LogoHorizontal size={300} height={125} id="mobile" class="flex sm:hidden"/>
