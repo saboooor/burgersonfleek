@@ -7,6 +7,7 @@ import Popup from '~/components/Popup';
 const videos = [
   '/videos/godzilla.mp4',
   '/videos/shook.mp4',
+  '/videos/5years.mp4',
 ];
 
 export default component$(() => {
