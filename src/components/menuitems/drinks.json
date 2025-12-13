@@ -8,6 +8,10 @@
     "price": "$2.00"
   },
   {
+    "name": "Apple Juice",
+    "price": "$2.99"
+  },
+  {
     "name": "Chocolate or Vanilla Milkshake",
     "price": "$6.99"
   },
