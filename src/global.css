@@ -27,6 +27,8 @@
   --color-gray-900:   oklch(21%   0.023  58);
   --color-gray-950:   oklch(13%   0.021  55);
 
+  --color-lum-card-bg:    --alpha(var(--color-gray-900) / 50%);
+
   --color-burger-50:  oklch(97%    0.035  80);   /* soft butter cream */
   --color-burger-100: oklch(93%    0.055  75);   /* light beige-gold */
   --color-burger-200: oklch(85%    0.085  70);   /* honey tan */
@@ -42,7 +44,6 @@
   --color-lum-accent: var(--color-burger-500);
   --color-lum-border: var(--color-burger-500);
 
-  --lum-default-alpha: 60;
   --lum-border-radius: var(--radius-2xl);
   --lum-border-superellipse: 2;
   --lum-depth: 1;

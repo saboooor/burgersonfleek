@@ -12,7 +12,7 @@ export default component$(() => {
   const loc = useLocation();
 
   return (
-    <Nav fixed floating colorClass='lum-bg-gray-900'>
+    <Nav fixed floating colorClass='lum-bg-lum-card-bg'>
       <Link q:slot="start" href="/" class="lum-btn lum-bg-transparent rounded-lum-1 -m-1">
         <Icon size={30} />
         <p class="space-x-1 whitespace-nowrap text-white font-futura motion-safe:transition-opacity">

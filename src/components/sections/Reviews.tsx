@@ -33,7 +33,9 @@ const Review = component$(({ review }: { review: any }) => {
     }
   });
 
-  return <div key={review.name} class="lum-card lum-bg-gray-900/50 relative text-left p-6 backdrop-blur-md">
+  if (review.rating < 3) return null;
+
+  return <div key={review.name} class="lum-card relative text-left p-6 backdrop-blur-md">
     <div class="flex sm:flex-row flex-col sm:items-center gap-4">
       <div class="flex-1 flex items-center gap-2">
         <img src={review.authorAttribution.photoUri} alt={review.authorAttribution.displayName} width={32} height={32}  />
@@ -42,7 +44,7 @@ const Review = component$(({ review }: { review: any }) => {
         </p>
       </div>
       <div class="flex">
-        <div class="flex gap-1 lum-bg-gray-700 p-2 rounded-lum-2">
+        <div class="flex gap-1 lum-bg-lum-input-bg p-2 rounded-lum-2">
           {[...Array(review.rating)].map((_, i) =>
             <Star key={i} class="w-4 h-4 fill-current text-lum-accent" />,
           )}
