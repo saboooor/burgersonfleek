@@ -87,16 +87,6 @@ export default component$(() => {
                       })}
                   </p>
                 }
-                {!GoogleDetails.value.currentOpeningHours?.openNow &&
-                  <p class="text-lum-text-secondary text-sm">
-                    opening at {new Date(GoogleDetails.value.currentOpeningHours?.nextOpenTime?.seconds * 1000)
-                      .toLocaleTimeString([], {
-                        hour: 'numeric',
-                        minute: 'numeric',
-                        second: undefined,
-                      })}
-                  </p>
-                }
               </div>
             }
           </div>
