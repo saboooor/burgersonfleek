@@ -87,6 +87,37 @@ export default component$(() => {
                       })}
                   </p>
                 }
+                {!GoogleDetails.value.currentOpeningHours?.openNow && (() => {
+                  const nextOpenTimestamp = GoogleDetails.value.currentOpeningHours?.nextOpenTime?.seconds * 1000;
+                  if (!nextOpenTimestamp) return null;
+
+                  const now = Date.now();
+                  const nextOpenDate = new Date(nextOpenTimestamp);
+                  const oneDay = 24 * 60 * 60 * 1000;
+
+                  const isMoreThanOneDayAway = nextOpenTimestamp - now > oneDay;
+
+                  return (
+                    <p class="text-lum-text-secondary text-sm">
+                      opening at{' '}
+                      {isMoreThanOneDayAway
+                        ? nextOpenDate.toLocaleDateString(undefined, {
+                          month: 'short',
+                          day: 'numeric',
+                          year: 'numeric',
+                        }) + ' ' + nextOpenDate.toLocaleTimeString(undefined, {
+                          hour: 'numeric',
+                          minute: 'numeric',
+                          second: undefined,
+                        })
+                        : nextOpenDate.toLocaleTimeString(undefined, {
+                          hour: 'numeric',
+                          minute: 'numeric',
+                          second: undefined,
+                        })}
+                    </p>
+                  );
+                })()}
               </div>
             }
           </div>
