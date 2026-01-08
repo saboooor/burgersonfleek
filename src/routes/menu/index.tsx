@@ -19,24 +19,24 @@ export default component$(() => {
     <section class="grid gap-2 sm:grid-cols-3 lg:grid-cols-4 mx-auto max-w-7xl px-4 sm:px-6 min-h-svh pt-15">
       <Menu>
         <MenuCategory name="BURGERS & SANDWICHES">
-          <a class="lum-btn lum-bg-transparent rounded-lum-2 text-orange-200" href="#beefburgers" data-umami-event-menu="beefburgers">
+          <a class="lum-btn lum-bg-transparent rounded-lum-2 text-orange-200" href="#beefburgers" data-umami-event="menu" data-umami-event-menu="beefburgers">
             <Hamburger class="text-orange-300" /> Beef Burgers
           </a>
-          <a class="lum-btn lum-bg-transparent rounded-lum-2 text-yellow-100" href="#chickenburgers" data-umami-event-menu="chickenburgers">
+          <a class="lum-btn lum-bg-transparent rounded-lum-2 text-yellow-100" href="#chickenburgers" data-umami-event="menu" data-umami-event-menu="chickenburgers">
             <Drumstick class="text-yellow-200" /> Chicken Burgers
           </a>
-          <a class="lum-btn lum-bg-transparent rounded-lum-2 text-green-200" href="#veggieburgers" data-umami-event-menu="veggieburgers">
+          <a class="lum-btn lum-bg-transparent rounded-lum-2 text-green-200" href="#veggieburgers" data-umami-event="menu" data-umami-event-menu="veggieburgers">
             <Leaf class="text-green-300" /> Vegetarian Burgers
           </a>
-          <a class="lum-btn lum-bg-transparent rounded-lum-2 text-red-200" href="#steaksandwiches" data-umami-event-menu="steaksandwiches">
+          <a class="lum-btn lum-bg-transparent rounded-lum-2 text-red-200" href="#steaksandwiches" data-umami-event="menu" data-umami-event-menu="steaksandwiches">
             <Beef class="text-red-300" /> Steak Sandwiches
           </a>
         </MenuCategory>
         <MenuCategory name="TREAT YOURSELF">
-          <a class="lum-btn lum-bg-transparent rounded-lum-2 text-amber-100" href="#extras" data-umami-event-menu="extras">
+          <a class="lum-btn lum-bg-transparent rounded-lum-2 text-amber-100" href="#extras" data-umami-event="menu" data-umami-event-menu="extras">
             <EggFried class="text-amber-200" /> Extras
           </a>
-          <a class="lum-btn lum-bg-transparent rounded-lum-2 text-burger-200" href="#sides" data-umami-event-menu="sides">
+          <a class="lum-btn lum-bg-transparent rounded-lum-2 text-burger-200" href="#combos" data-umami-event="menu" data-umami-event-menu="combos">
             <div class="flex -space-x-2 max-w-6">
               <CupSoda class="text-red-300" size={14} />
               <Hamburger class="text-burger-200 z-10 drop-shadow-sm drop-shadow-black" size={14} />
@@ -44,10 +44,10 @@ export default component$(() => {
             </div>
             Combos
           </a>
-          <a class="lum-btn lum-bg-transparent rounded-lum-2 text-orange-200" href="#sides" data-umami-event-menu="sides">
+          <a class="lum-btn lum-bg-transparent rounded-lum-2 text-orange-200" href="#sides" data-umami-event="menu" data-umami-event-menu="sides">
             <Soup class="text-orange-300" /> Sides
           </a>
-          <a class="lum-btn lum-bg-transparent rounded-lum-2 text-red-200" href="#drinks" data-umami-event-menu="drinks">
+          <a class="lum-btn lum-bg-transparent rounded-lum-2 text-red-200" href="#drinks" data-umami-event="menu" data-umami-event-menu="drinks">
             <CupSoda class="text-red-300" /> Drinks
           </a>
         </MenuCategory>
