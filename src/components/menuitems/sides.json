@@ -1,57 +1,36 @@
 [
   {
     "name": "Fresh Cut Fries",
-    "price": {
-      "medium": "$4.85",
-      "large": "$9.15",
-      "mediumCombo": "$6.70",
-      "largeCombo": "$11.00"
-    }
-  },
-  {
-    "name": "Sweet Potato Fries",
-    "price": {
-      "medium": "$7.85",
-      "large": "$15.15",
-      "mediumCombo": "$9.70",
-      "largeCombo": "$17.00"
-    }
+    "price": "$4.85",
+    "combo": "$6.99"
   },
   {
     "name": "Onion Rings",
-    "price": {
-      "medium": "$7.35",
-      "large": "$14.15",
-      "mediumCombo": "$9.20",
-      "largeCombo": "$16.00"
-    }
+    "price": "$7.35",
+    "combo": "$9.49"
+  },
+  {
+    "name": "Sweet Potato Fries",
+    "description": "Comes with a chipotle dip.",
+    "price": "$7.85",
+    "combo": "$9.99"
   },
   {
     "name": "Poutine",
-    "price": {
-      "medium": "$8.15",
-      "large": "$15.70",
-      "mediumCombo": "$10.00",
-      "largeCombo": "$17.55"
-    }
+    "description": "Fresh cut fries topped with cheese curds, and beef based gravy",
+    "price": "$8.15",
+    "combo": "$10.29"
   },
   {
     "name": "Fried Chicken Poutine",
-    "price": {
-      "medium": "$14.25",
-      "large": "$27.85",
-      "mediumCombo": "$16.10",
-      "largeCombo": "$29.70"
-    }
+    "description": "Fresh cut fries topped with cheese curds, beef based gravy, and fried chicken.",
+    "price": "$14.25",
+    "combo": "$16.39"
   },
   {
     "name": "Pulled Beef Brisket Poutine",
-    "description": "Topped with smoky BBQ sauce.",
-    "price": {
-      "medium": "$15.35",
-      "large": "$29.99",
-      "mediumCombo": "$17.20",
-      "largeCombo": "$31.84"
-    }
+    "description": "Fresh cut fries topped with cheese curds, beef based gravy, pulled beef brisket, and smoky BBQ sauce.",
+    "price": "$15.35",
+    "combo": "$17.49"
   }
 ]

@@ -36,6 +36,14 @@ export default component$(() => {
           <a class="lum-btn lum-bg-transparent rounded-lum-2 text-amber-100" href="#extras" data-umami-event-menu="extras">
             <EggFried class="text-amber-200" /> Extras
           </a>
+          <a class="lum-btn lum-bg-transparent rounded-lum-2 text-burger-200" href="#sides" data-umami-event-menu="sides">
+            <div class="flex -space-x-2 max-w-6">
+              <CupSoda class="text-red-300" size={14} />
+              <Hamburger class="text-burger-200 z-10 drop-shadow-sm drop-shadow-black" size={14} />
+              <Soup class="text-orange-300" size={14} />
+            </div>
+            Combos
+          </a>
           <a class="lum-btn lum-bg-transparent rounded-lum-2 text-orange-200" href="#sides" data-umami-event-menu="sides">
             <Soup class="text-orange-300" /> Sides
           </a>
@@ -210,6 +218,32 @@ export default component$(() => {
             </div>;
           })}
         </div>
+        <h2 id="combo" class="flex items-center gap-3 text-xl font-bold whitespace-nowrap text-orange-200 sm:text-4xl font-futura tracking-wider">
+          <div class="flex -space-x-5">
+            <CupSoda class="text-red-300" size={46} />
+            <Hamburger class="text-burger-200 z-10 drop-shadow-sm drop-shadow-black" size={46} />
+            <Soup class="text-orange-300" size={46} />
+          </div>
+          Combos
+        </h2>
+        <div class="flex flex-wrap gap-2 pt-5 pb-10">
+          {sides.map((item, i) => {
+            return <div key={i} class={{
+              'lum-card': true,
+              'flex-1 min-w-[18rem]': true,
+            }}>
+              <h2 class={{
+                'flex gap-2 text-xl font-bold sm:text-2xl font-futura tracking-wider': true,
+              }}>
+                {item.name}
+              </h2>
+              <div class="flex-1 flex flex-col gap-2">
+                <p class="text-lum-accent text-xs sm:text-sm">{item.combo}</p>
+                <p class="text-lum-text-secondary text-sm sm:text-base h-full">{item.description}</p>
+              </div>
+            </div>;
+          })}
+        </div>
         <h2 id="sides" class="flex items-center gap-3 text-xl font-bold whitespace-nowrap text-orange-200 sm:text-4xl font-futura tracking-wider">
           <Soup class="text-orange-300" size={46} />
           Sides
@@ -225,16 +259,10 @@ export default component$(() => {
               }}>
                 {item.name}
               </h2>
-              <div>
-                <p class="text-lum-text-secondary text-xs sm:text-sm">
-                  Medium: <span class="text-lum-accent">{item.price.medium}</span><br/>
-                  Large: <span class="text-lum-accent">{item.price.large}</span><br/><br/>
-                  <span class="font-bold">Make it a Combo:</span><br/>
-                  Medium: <span class="text-lum-accent">{item.price.mediumCombo}</span><br/>
-                  Large: <span class="text-lum-accent">{item.price.largeCombo}</span>
-                </p>
+              <div class="flex-1 flex flex-col gap-2">
+                <p class="text-lum-accent text-xs sm:text-sm">{item.price}</p>
+                <p class="text-lum-text-secondary text-sm sm:text-base h-full">{item.description}</p>
               </div>
-              <p class="text-lum-text-secondary text-sm sm:text-base h-full">{item.description}</p>
             </div>;
           })}
         </div>

@@ -4,7 +4,7 @@ export default [
   {
     name: 'Shawty',
     description: 'Fried chicken thigh burger with lettuce, tomato, and chipotle sauce.',
-    price: '$10.45',
+    price: '$10.49',
   },
   {
     name: 'The Original',
