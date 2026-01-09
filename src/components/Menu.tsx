@@ -1,27 +1,18 @@
-import { component$, Slot, useSignal } from '@builder.io/qwik';
-import { Dropdown } from '@luminescent/ui-qwik';
+import { component$, Slot } from '@builder.io/qwik';
 import { BookOpen } from 'lucide-icons-qwik';
 
 export default component$(() => {
-  const menu = useSignal(false);
-
   return (
-    <aside class="w-full fixed -ml-4 sm:sticky sm:h-1 top-[66px] sm:top-32 font-futura z-40" aria-label="Sidebar">
-      <Dropdown class={{
-        'w-[calc(100%-2rem)] items-center gap-3 mx-4 -mt-4 pt-6 lum-bg-gray-800 text-orange-200! backdrop-blur-md': true,
-        'sm:pt-2 sm:mb-2 sm:mx-0 sm:w-full sm:lum-bg-transparent': true,
-      }} opened={menu.value}
-      onClick$={() => menu.value = !menu.value}>
-        <div class="flex items-center gap-3">
-          <BookOpen strokeWidth={1} size={28} />
-          <h1 class="text-xl flex-1">MENU</h1>
-        </div>
-      </Dropdown>
+    <aside class="hidden sm:block w-full -ml-4 sticky h-1 top-30" aria-label="Sidebar">
       <div class={{
-        'motion-safe:transition-all lum-card gap-2 p-4': true,
-        'flex overflow-y-auto max-h-[calc(100dvh-300px)] m-4 mt-2 sm:m-0 backdrop-blur-md': true,
-        'mt-2': menu.value,
-        'pointer-events-none sm:pointer-events-auto opacity-0 sm:opacity-100 -mt-2 sm:mt-2 scale-95 sm:scale-100': !menu.value,
+        'flex items-center gap-4 text-orange-200! lum-btn-p-2 mb-2': true,
+        'w-full lum-bg-transparent': true,
+      }}>
+        <BookOpen strokeWidth={1} size={32} />
+        <h1 class="text-2xl flex-1 font-futura">MENU</h1>
+      </div>
+      <div class={{
+        'motion-safe:transition-all lum-card gap-2 p-4 font-futura': true,
       }}>
         <Slot />
       </div>
@@ -38,6 +29,14 @@ export const MenuCategory = component$(({ name }: any) => {
       }}>
         <Slot />
       </div>
+    </div>
+  );
+});
+
+export const MobileMenu = component$(() => {
+  return (
+    <div class="sm:hidden fixed mt-3 z-10 w-[calc(100vw-2rem)] lum-card flex-row gap-1 *:lum-btn *:rounded-lum-1 p-1 overflow-auto font-futura backdrop-blur-md">
+      <Slot />
     </div>
   );
 });

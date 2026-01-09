@@ -3,7 +3,7 @@ import { SocialButtons } from '../Nav';
 
 export default component$(() => {
   return (
-    <footer class="items-center justify-center z-10 lum-card lum-bg-gray-950 m-4 backdrop-blur-md p-6 text-lum-text-secondary flex-col sm:flex-row gap-2 sm:gap-8 mt-20">
+    <footer class="items-center justify-center z-10 lum-card lum-bg-gray-950 m-4 p-6 text-lum-text-secondary flex-col sm:flex-row gap-2 sm:gap-8 mt-20">
       <p>
         We are not fast food.
         <br />

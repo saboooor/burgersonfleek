@@ -98,7 +98,7 @@ export default component$(() => {
       </div>
 
       <canvas ref={preview} id="preview" class={{
-        'mt-10 w-full h-[60svh] lum-card p-0 backdrop-blur-sm': true,
+        'mt-10 w-full h-[60svh] lum-card p-0 backdrop-blur-md': true,
       }} />
     </>
   );
