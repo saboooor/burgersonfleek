@@ -33,7 +33,7 @@ const Review = component$(({ review }: { review: any }) => {
     }
   });
 
-  if (review.rating < 3) return null;
+  if (review.rating < 4) return null;
 
   return <div key={review.name} class="lum-card relative text-left p-6 backdrop-blur-md">
     <div class="flex sm:flex-row flex-col sm:items-center gap-4">
