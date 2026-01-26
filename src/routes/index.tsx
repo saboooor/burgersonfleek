@@ -93,14 +93,14 @@ export default component$(() => {
 
                   const now = Date.now();
                   const nextOpenDate = new Date(nextOpenTimestamp);
-                  const oneDay = 24 * 60 * 60 * 1000;
+                  const twelveHrs = 12 * 60 * 60 * 1000;
 
-                  const isMoreThanOneDayAway = nextOpenTimestamp - now > oneDay;
+                  const isMoreThanTwelveHrsAway = nextOpenTimestamp - now > twelveHrs;
 
                   return (
                     <p class="text-lum-text-secondary text-sm">
                       opening at{' '}
-                      {isMoreThanOneDayAway
+                      {isMoreThanTwelveHrsAway
                         ? nextOpenDate.toLocaleDateString(undefined, {
                           month: 'short',
                           day: 'numeric',
