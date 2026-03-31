@@ -1,4 +1,4 @@
-import { component$, useSignal, useVisibleTask$ } from '@qwik.dev/core';
+import { $, component$, useOnDocument, useSignal } from '@qwik.dev/core';
 import { Blobs } from '@luminescent/ui-qwik';
 import IconInBag from './svg/IconInBag';
 
@@ -13,26 +13,21 @@ export default component$(({ fixed, class: Class, col, types, pathname }: {
   const PopupRefBottom = useSignal<HTMLDivElement>();
   const PopupRefTop = useSignal<HTMLDivElement>();
 
-  // eslint-disable-next-line qwik/no-use-visible-task
-  useVisibleTask$(() => {
-    if (!fixed) return;
+  useOnDocument('scroll', $(() => {
+    if (!fixed || !PopupRefTop.value || !PopupRefBottom.value) return;
 
-    const handler = () => {
-      if (
-        prevScrollpos.value > window.scrollY &&
-        window.scrollY + 1000 < document.body.scrollHeight
-      ) {
-        PopupRefBottom.value!.style.bottom = '0';
-        PopupRefTop.value!.style.top = (pathname?.includes('menu') ? '120px' : '64px');
-      } else if (window.scrollY > 100) {
-        PopupRefBottom.value!.style.bottom = PopupRefBottom.value!.offsetHeight * -1 + 'px';
-        PopupRefTop.value!.style.top = PopupRefTop.value!.offsetHeight * -2 + 'px';
-      }
-      prevScrollpos.value = window.scrollY;
-    };
-
-    document.addEventListener('scroll', handler);
-  });
+    if (
+      prevScrollpos.value > window.scrollY &&
+      window.scrollY + 1000 < document.body.scrollHeight
+    ) {
+      PopupRefBottom.value.style.bottom = '0';
+      PopupRefTop.value.style.top = (pathname?.includes('menu') ? '120px' : '64px');
+    } else if (window.scrollY > 100) {
+      PopupRefBottom.value.style.bottom = PopupRefBottom.value.offsetHeight * -1 + 'px';
+      PopupRefTop.value.style.top = PopupRefTop.value.offsetHeight * -2 + 'px';
+    }
+    prevScrollpos.value = window.scrollY;
+  }));
 
   return <>
     <div class={{
