@@ -1,4 +1,4 @@
-import { component$, useSignal, useVisibleTask$ } from '@builder.io/qwik';
+import { component$, useSignal, useVisibleTask$ } from '@qwik.dev/core';
 import { Blobs } from '@luminescent/ui-qwik';
 import IconInBag from './svg/IconInBag';
 

@@ -1,5 +1,5 @@
 
-import { component$ } from '@builder.io/qwik';
+import { component$ } from '@qwik.dev/core';
 import { Medal } from 'lucide-icons-qwik';
 
 export default  component$(() => {

@@ -1,4 +1,4 @@
-import { component$, useContext, useSignal, useVisibleTask$ } from '@builder.io/qwik';
+import { component$, useContext, useSignal, useVisibleTask$ } from '@qwik.dev/core';
 import { ChevronDown, MapPin, Star } from 'lucide-icons-qwik';
 import { GoogleDetailsContext } from '~/routes';
 

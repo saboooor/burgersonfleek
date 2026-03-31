@@ -1,5 +1,5 @@
-import { component$, useVisibleTask$ } from '@builder.io/qwik';
-import { useDocumentHead, useLocation } from '@builder.io/qwik-city';
+import { component$ } from '@qwik.dev/core';
+import { useDocumentHead, useLocation } from '@qwik.dev/router';
 
 /**
  * The RouterHead component is placed inside of the document `<head>` element.
@@ -7,17 +7,6 @@ import { useDocumentHead, useLocation } from '@builder.io/qwik-city';
 export const RouterHead = component$(() => {
   const head = useDocumentHead();
   const loc = useLocation();
-
-  // eslint-disable-next-line qwik/no-use-visible-task
-  useVisibleTask$(() => {
-    // Load Typekit fonts asynchronously
-    const html = document.documentElement;
-    const link = document.createElement('link');
-    link.rel = 'stylesheet';
-    link.href = 'https://use.typekit.net/mvz1qpc.css';
-    link.onload = () => html.classList.add('fonts-loaded');
-    document.head.appendChild(link);
-  });
 
   return (
     <>
@@ -33,14 +22,7 @@ export const RouterHead = component$(() => {
       {/* Typekit Fonts */}
       <link rel="preconnect" href="https://use.typekit.net" />
       <link rel="preconnect" href="https://p.typekit.net" />
-      <noscript>
-        <link rel="stylesheet" href="https://use.typekit.net/mvz1qpc.css" />
-        <style dangerouslySetInnerHTML={`
-          .font-futura {
-            opacity: 1 !important;
-          }
-        `} />
-      </noscript>
+      <link rel="stylesheet" href="https://use.typekit.net/mvz1qpc.css" />
 
       {head.meta.map((m, i) => (
         <meta {...m} key={i} />

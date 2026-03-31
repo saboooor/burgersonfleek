@@ -1,4 +1,4 @@
-import { component$ } from '@builder.io/qwik';
+import { component$ } from '@qwik.dev/core';
 import HalalSection from '~/components/sections/Halal';
 import { generateHead } from '~/root';
 

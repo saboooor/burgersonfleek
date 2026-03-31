@@ -1,5 +1,5 @@
-import { component$ } from '@builder.io/qwik';
-import { IconProps } from '@luminescent/ui-qwik/lib-types/components/logos/IconProps';
+import { component$ } from '@qwik.dev/core';
+import { IconProps } from 'lucide-icons-qwik';
 
 export default component$<IconProps>(({ size, ...props }) => {
   return (

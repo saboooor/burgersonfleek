@@ -1,9 +1,9 @@
-import { component$ } from '@builder.io/qwik';
-import { Link, useLocation } from '@builder.io/qwik-city';
+import { component$ } from '@qwik.dev/core';
+import { Link, useLocation } from '@qwik.dev/router';
 import { Nav } from '@luminescent/ui-qwik';
 
-import { Phone,  MapPin,  Instagram,  Facebook, BookOpen } from 'lucide-icons-qwik';
-import TikTok from './svg/TikTok';
+import { Phone, BookOpen, MapPin } from 'lucide-icons-qwik';
+import { SiFacebook, SiInstagram, SiTiktok } from 'simple-icons-qwik';
 import Icon from './svg/Icon';
 import Halal from './svg/Halal';
 import IconInBag from './svg/IconInBag';
@@ -12,7 +12,7 @@ export default component$(() => {
   const loc = useLocation();
 
   return (
-    <Nav fixed floating colorClass='lum-bg-lum-card-bg'>
+    <Nav fixed floating>
       <Link q:slot="start" href="/" class="lum-btn lum-bg-transparent rounded-lum-1 -m-1">
         <Icon size={30} />
         <p class="space-x-1 whitespace-nowrap text-white font-futura motion-safe:transition-opacity">
@@ -69,31 +69,31 @@ export const SocialButtons = component$(({ big }: any) => {
       'lum-btn lum-bg-transparent hover:text-lum-text fill-current p-2 rounded-lum-2': true,
       'p-4': big,
     }}>
-      <Phone strokeWidth={1} />
+      <Phone />
     </a>
     <a href="https://maps.app.goo.gl/Unrrg3uda7AQQs4DA" data-umami-event="maps" title="Google Maps" class={{
       'lum-btn lum-bg-transparent hover:text-lum-text fill-current p-2 rounded-lum-2': true,
       'p-4': big,
     }}>
-      <MapPin strokeWidth={1} />
+      <MapPin />
     </a>
     <a href="https://instagram.com/burgersonfleek.ca" data-umami-event="social-instagram" title="Instagram" class={{
       'lum-btn lum-bg-transparent hover:text-lum-text fill-current p-2 rounded-lum-2': true,
       'p-4': big,
     }}>
-      <Instagram strokeWidth={1} />
+      <SiInstagram />
     </a>
     <a href="https://facebook.com/burgersonfleek.ca" data-umami-event="social-facebook" title="Facebook" class={{
       'lum-btn lum-bg-transparent hover:text-lum-text fill-current p-2 rounded-lum-2': true,
       'p-4': big,
     }}>
-      <Facebook strokeWidth={1} />
+      <SiFacebook />
     </a>
     <a href="https://tiktok.com/@burgersonfleek.ca" data-umami-event="social-tiktok" title="TikTok" class={{
       'lum-btn lum-bg-transparent hover:text-lum-text fill-current p-2 rounded-lum-2': true,
       'p-4': big,
     }}>
-      <TikTok />
+      <SiTiktok />
     </a>
   </>;
 });

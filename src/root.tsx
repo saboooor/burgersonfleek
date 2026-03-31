@@ -1,5 +1,5 @@
-import { component$ } from '@builder.io/qwik';
-import { DocumentHead, DocumentHeadValue, QwikCityProvider, RouterOutlet } from '@builder.io/qwik-city';
+import { component$ } from '@qwik.dev/core';
+import { DocumentHead, DocumentHeadValue, QwikRouterProvider, RouterOutlet } from '@qwik.dev/router';
 import { RouterHead } from './components/Head';
 
 import './global.css';
@@ -13,7 +13,7 @@ export default component$(() => {
    */
 
   return (
-    <QwikCityProvider>
+    <QwikRouterProvider>
       <head>
         <meta charset="utf-8" />
         <link rel="manifest" href="/manifest.json" />
@@ -23,7 +23,7 @@ export default component$(() => {
       <body class="text-lum-text" onTouchStart$={() => {}}>
         <RouterOutlet />
       </body>
-    </QwikCityProvider>
+    </QwikRouterProvider>
   );
 });
 

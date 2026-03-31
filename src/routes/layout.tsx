@@ -1,7 +1,7 @@
-import { component$, Slot } from '@builder.io/qwik';
+import { component$, Slot } from '@qwik.dev/core';
 import Nav from '~/components/Nav';
 import Footer from '~/components/sections/Footer';
-import { useLocation } from '@builder.io/qwik-city';
+import { useLocation } from '@qwik.dev/router';
 import Popup from '~/components/Popup';
 
 const videos = [

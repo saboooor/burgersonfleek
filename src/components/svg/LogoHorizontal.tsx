@@ -1,4 +1,4 @@
-import { component$ } from '@builder.io/qwik';
+import { component$ } from '@qwik.dev/core';
 
 export default component$(({ size, height, id, class: Class }: any) => {
   return (

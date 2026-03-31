@@ -1,4 +1,4 @@
-import { component$ } from '@builder.io/qwik';
+import { component$ } from '@qwik.dev/core';
 
 import drinks from '~/components/menuitems/drinks.json';
 import extras from '~/components/menuitems/extras.json';

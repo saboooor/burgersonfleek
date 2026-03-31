@@ -1,5 +1,5 @@
-import { component$, createContextId, useContextProvider, useSignal, useVisibleTask$ } from '@builder.io/qwik';
-import { Link } from '@builder.io/qwik-city';
+import { component$, createContextId, useContextProvider, useSignal, useVisibleTask$ } from '@qwik.dev/core';
+import { Link } from '@qwik.dev/router';
 
 import Cutout from '~/components/images/Cutout.png?jsx';
 import LogoHorizontal from '~/components/svg/LogoHorizontal';

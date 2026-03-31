@@ -11,7 +11,6 @@
 
 @import "@luminescent/ui";
 
-@config "@luminescent/ui-qwik/config";
 @source "../node_modules/@luminescent/ui-qwik";
 
 @theme {
@@ -64,13 +63,6 @@
   font-weight: 400;
   font-style: normal;
   font-display: swap !important;
-  visibility: hidden;
-  opacity: 0;
-}
-
-html.fonts-loaded .font-futura {
-  visibility: visible;
-  opacity: 1;
 }
 
 html {

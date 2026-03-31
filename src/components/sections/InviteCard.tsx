@@ -1,7 +1,7 @@
-import { component$, useSignal, useVisibleTask$, type Signal } from '@builder.io/qwik';
+import { component$, useSignal, useVisibleTask$, type Signal } from '@qwik.dev/core';
 
 import * as THREE from 'three';
-import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
+import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
 
 export default component$(() => {
   const preview = useSignal<HTMLCanvasElement>() as Signal<HTMLCanvasElement>;

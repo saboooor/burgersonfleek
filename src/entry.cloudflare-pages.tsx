@@ -8,10 +8,10 @@
  *
  */
 import {
-  createQwikCity,
+  createQwikRouter,
   type PlatformCloudflarePages,
-} from '@builder.io/qwik-city/middleware/cloudflare-pages';
-import qwikCityPlan from '@qwik-city-plan';
+} from '@qwik.dev/router/middleware/cloudflare-pages';
+import qwikRouterConfig from '@qwik-router-config';
 import { manifest } from '@qwik-client-manifest';
 import render from './entry.ssr';
 
@@ -19,6 +19,6 @@ declare global {
   type QwikCityPlatform = PlatformCloudflarePages
 }
 
-const fetch = createQwikCity({ render, qwikCityPlan, manifest });
+const fetch = createQwikRouter({ render, qwikRouterConfig, manifest });
 
 export { fetch };

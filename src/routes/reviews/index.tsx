@@ -1,4 +1,4 @@
-import { component$, useContextProvider, useSignal, useVisibleTask$ } from '@builder.io/qwik';
+import { component$, useContextProvider, useSignal, useVisibleTask$ } from '@qwik.dev/core';
 import Reviews from '~/components/sections/Reviews';
 import { GoogleDetailsContext } from '..';
 import { generateHead } from '~/root';
