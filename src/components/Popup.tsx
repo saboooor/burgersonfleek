@@ -14,17 +14,21 @@ export default component$(({ fixed, class: Class, col, types, pathname }: {
   const PopupRefTop = useSignal<HTMLDivElement>();
 
   useOnDocument('scroll', $(() => {
-    if (!fixed || !PopupRefTop.value || !PopupRefBottom.value) return;
+    if (!fixed) return;
 
     if (
       prevScrollpos.value > window.scrollY &&
       window.scrollY + 1000 < document.body.scrollHeight
     ) {
-      PopupRefBottom.value.style.bottom = '0';
-      PopupRefTop.value.style.top = (pathname?.includes('menu') ? '120px' : '64px');
+      if (PopupRefBottom.value)
+        PopupRefBottom.value.style.bottom = '0';
+      if (PopupRefTop.value)
+        PopupRefTop.value.style.top = (pathname?.includes('menu') ? '120px' : '64px');
     } else if (window.scrollY > 100) {
-      PopupRefBottom.value.style.bottom = PopupRefBottom.value.offsetHeight * -1 + 'px';
-      PopupRefTop.value.style.top = PopupRefTop.value.offsetHeight * -2 + 'px';
+      if (PopupRefBottom.value)
+        PopupRefBottom.value.style.bottom = PopupRefBottom.value.offsetHeight * -1 + 'px';
+      if (PopupRefTop.value)
+        PopupRefTop.value.style.top = PopupRefTop.value.offsetHeight * -2 + 'px';
     }
     prevScrollpos.value = window.scrollY;
   }));

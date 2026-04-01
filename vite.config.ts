@@ -51,9 +51,6 @@ export default defineConfig(({ command, mode }): UserConfig => {
     ssr: {
       noExternal: qwikDeps,
     },
-    build: {
-      minify: false,
-    },
 
     /**
      * This is an advanced setting. It improves the bundling of your server code. To use it, make sure you understand when your consumed packages are dependencies or dev dependencies. (otherwise things will break in production)
