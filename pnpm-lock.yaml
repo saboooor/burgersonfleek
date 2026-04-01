@@ -24,8 +24,8 @@ importers:
         specifier: ^6.8.2
         version: 6.8.2
       '@luminescent/ui-qwik':
-        specifier: 7.0.0-0
-        version: 7.0.0-0(@luminescent/ui@6.8.2)
+        specifier: 7.0.0-2
+        version: 7.0.0-2(@luminescent/ui@6.8.2)
       '@qwik.dev/core':
         specifier: 2.0.0-beta.30
         version: 2.0.0-beta.30(vite@7.3.0(@types/node@20.10.5)(jiti@2.6.1)(lightningcss@1.32.0)(yaml@2.8.3))
@@ -51,8 +51,8 @@ importers:
         specifier: ^17.4.0
         version: 17.4.0
       lucide-icons-qwik:
-        specifier: 0.577.0-qwik-v2
-        version: 0.577.0-qwik-v2
+        specifier: 1.7.0-qwik-v2
+        version: 1.7.0-qwik-v2
       simple-icons-qwik:
         specifier: 16.12.0-qwik-v2
         version: 16.12.0-qwik-v2
@@ -684,8 +684,8 @@ packages:
     resolution: {integrity: sha512-W69uzPt9qAhqShl74bma9yzRqXv8FNJLz3R/R6vC4Z5rXYaZJ4W2fcITOUX33WBmKIlq6YNPrm6rWWY6tfMikw==}
     engines: {node: ^18.17.0 || ^20.3.0 || >=21.0.0}
 
-  '@luminescent/ui-qwik@7.0.0-0':
-    resolution: {integrity: sha512-juyv18uP4iLd17S2/c8FxUjaQGrpbh8tvYk+QOV7qWSLiXQ0JS6e/tw5A56bNLTKvaHZ0vKuWghK7GMWw3urZw==}
+  '@luminescent/ui-qwik@7.0.0-2':
+    resolution: {integrity: sha512-Hyp64qzRRaI0SExLDWGmdnc/2iJZDfear7u5WhAre/nxe5D5NPB3g7D2PoVIENyLeK2S6WMfuFo2VpS+5QlqcQ==}
     engines: {node: ^18.17.0 || ^20.3.0 || >=21.0.0}
     peerDependencies:
       '@luminescent/ui': 6.8.3-1
@@ -1763,8 +1763,8 @@ packages:
   longest-streak@3.0.1:
     resolution: {integrity: sha512-cHlYSUpL2s7Fb3394mYxwTYj8niTaNHUCLr0qdiCXQfSjfuA7CKofpX2uSwEfFDQ0EB7JcnMnm+GjbqqoinYYg==}
 
-  lucide-icons-qwik@0.577.0-qwik-v2:
-    resolution: {integrity: sha512-thwhmoYRcSvaefu5fGZCRVgoxdPlJ7M3enBlaqv84c4StnMa9wRp93wdOZg5PfA9LrdCUfzjHr7DbFrRAJhCIw==}
+  lucide-icons-qwik@1.7.0-qwik-v2:
+    resolution: {integrity: sha512-NLETj1KoD6jlrRjcjlgQfZ9INjQ8Xd7AyyeMCM8iLLVcxM78ewFio716+H62UA55HR5nheKNC2IQfBFw9SoDXg==}
     engines: {node: '>=16.8.0 <18.0.0 || >=18.11'}
 
   magic-string@0.30.21:
@@ -2809,7 +2809,7 @@ snapshots:
 
   '@luminescent/icons-qwik@0.1.1': {}
 
-  '@luminescent/ui-qwik@7.0.0-0(@luminescent/ui@6.8.2)':
+  '@luminescent/ui-qwik@7.0.0-2(@luminescent/ui@6.8.2)':
     dependencies:
       '@luminescent/ui': 6.8.2
 
@@ -3968,7 +3968,7 @@ snapshots:
 
   longest-streak@3.0.1: {}
 
-  lucide-icons-qwik@0.577.0-qwik-v2: {}
+  lucide-icons-qwik@1.7.0-qwik-v2: {}
 
   magic-string@0.30.21:
     dependencies:
