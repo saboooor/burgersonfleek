@@ -12,9 +12,8 @@
  */
 import { createQwikRouter } from '@qwik.dev/router/middleware/node';
 import render from './entry.ssr';
-import qwikRouterConfig from '@qwik-router-config';
 
 /**
- * The default export is the QwikCity adapter used by Vite preview.
+ * The default export is the QwikRouter adapter used by Vite preview.
  */
-export default createQwikRouter({ render, qwikRouterConfig });
+export default createQwikRouter({ render });

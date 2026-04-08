@@ -44,7 +44,7 @@ const Review = component$(({ review }: { review: any }) => {
         </p>
       </div>
       <div class="flex">
-        <div class="flex gap-1 lum-bg-lum-input-bg p-2 rounded-lum-2">
+        <div class="flex gap-1 lum-grad-bg-lum-input-bg p-2 rounded-lum-2">
           {[...Array(review.rating)].map((_, i) =>
             <Star key={i} class="w-4 h-4 fill-current text-lum-accent" />,
           )}

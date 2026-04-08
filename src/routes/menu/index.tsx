@@ -58,7 +58,7 @@ const TreatYourself = component$(() => {
 
 export default component$(() => {
   return <>
-    <section class="grid gap-2 sm:grid-cols-3 lg:grid-cols-4 mx-auto max-w-7xl px-4 sm:px-6 min-h-svh pt-15">
+    <section class="grid gap-2 sm:grid-cols-3 lg:grid-cols-4 mx-auto max-w-7xl min-h-svh">
       <MobileMenu>
         <BurgersSandwiches />
         <TreatYourself />
@@ -71,7 +71,7 @@ export default component$(() => {
           <TreatYourself />
         </MenuCategory>
       </Menu>
-      <div class="sm:col-span-2 lg:col-span-3 pt-20">
+      <div class="sm:col-span-2 lg:col-span-3 pt-35 sm:pt-25 px-4 sm:px-6">
         <p class="sm:text-xl mb-8 text-lum-text-secondary">
           We are not fast food.
           <br />
@@ -91,7 +91,7 @@ export default component$(() => {
         <div class="flex flex-wrap gap-2 pt-5 pb-10">
           {beefburgers.map((item, i) => {
             return <div key={i} class={{
-              'lum-card': true,
+              'lum-card lum-grad-bg-lum-card-bg': true,
               'flex-1 flex-row sm:flex-col min-w-[18rem] gap-6': true,
             }}>
               <div class="mb-4" style={{
@@ -125,7 +125,7 @@ export default component$(() => {
         <div class="flex flex-wrap gap-2 pt-5 pb-10">
           {chickenburgers.map((item, i) => {
             return <div key={i} class={{
-              'lum-card': true,
+              'lum-card lum-grad-bg-lum-card-bg': true,
               'flex-1 flex-row sm:flex-col min-w-[18rem] gap-6': true,
             }}>
               <div class="mb-4" style={{
@@ -155,7 +155,7 @@ export default component$(() => {
         <div class="flex flex-wrap gap-2 pt-5 pb-10">
           {veggieburgers.map((item, i) => {
             return <div key={i} class={{
-              'lum-card': true,
+              'lum-card lum-grad-bg-lum-card-bg': true,
               'flex-1 flex-row sm:flex-col min-w-[18rem] gap-6': true,
             }}>
               <div class="mb-4" style={{
@@ -185,7 +185,7 @@ export default component$(() => {
         <div class="grid sm:grid-cols-2 gap-2 pt-5 pb-10">
           {steaksandwiches.map((item, i) => {
             return <div key={i} class={{
-              'lum-card': true,
+              'lum-card lum-grad-bg-lum-card-bg': true,
               'flex-1 flex-row sm:flex-col min-w-[18rem] gap-6': true,
             }}>
               <div class="mb-4" style={{
@@ -215,7 +215,7 @@ export default component$(() => {
         <div class="flex flex-wrap gap-2 pt-5 pb-10">
           {extras.map((item, i) => {
             return <div key={i} class={{
-              'lum-card': true,
+              'lum-card lum-grad-bg-lum-card-bg': true,
               'flex-1 min-w-[18rem]': true,
             }}>
               <h2 class={{
@@ -248,7 +248,7 @@ export default component$(() => {
         <div class="flex flex-wrap gap-2 pt-5 pb-10">
           {sides.map((item, i) => {
             return <div key={i} class={{
-              'lum-card': true,
+              'lum-card lum-grad-bg-lum-card-bg': true,
               'flex-1 min-w-[18rem]': true,
             }}>
               <h2 class={{
@@ -270,7 +270,7 @@ export default component$(() => {
         <div class="flex flex-wrap gap-2 pt-5 pb-10">
           {sides.map((item, i) => {
             return <div key={i} class={{
-              'lum-card': true,
+              'lum-card lum-grad-bg-lum-card-bg': true,
               'flex-1 min-w-[18rem]': true,
             }}>
               <h2 class={{
@@ -292,7 +292,7 @@ export default component$(() => {
         <div class="flex flex-wrap gap-2 pt-5 pb-10">
           {drinks.map((item, i) => {
             return <div key={i} class={{
-              'lum-card': true,
+              'lum-card lum-grad-bg-lum-card-bg': true,
               'flex-1 min-w-[18rem]': true,
             }}>
               <h2 class={{

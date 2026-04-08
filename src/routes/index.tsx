@@ -68,12 +68,12 @@ export default component$(() => {
                 {GoogleDetails.value.currentOpeningHours?.nextCloseTime?.seconds * 1000 - (15 * 60 * 1000) < Date.now()
                 || GoogleDetails.value.currentOpeningHours?.openNow === false ?
                   <p class="flex items-center gap-2 text-red-200/80 font-medium">
-                    <span class="w-2 h-2 rounded-full lum-bg-red-300" />
+                    <span class="w-2 h-2 rounded-full lum-grad-bg-red-300" />
                     We're closed at the moment.
                   </p>
                   :
                   <p class="flex items-center gap-2 text-green-200/80 font-medium">
-                    <span class="w-2 h-2 rounded-full lum-bg-green-300" />
+                    <span class="w-2 h-2 rounded-full lum-grad-bg-green-300" />
                     We're open, come on in!
                   </p>
                 }
@@ -131,7 +131,7 @@ export default component$(() => {
             <Link href="/menu" class={{
               'lum-btn lum-btn-p-3 sm:text-lg': true,
               'hover:text-lum-text! active:text-lum-text border-none': true,
-              'lum-bg-burger-600 bg-linear-to-b from-burger-600 to-burger-700 hover:from-burger-500 active:from-burger-500': true,
+              'lum-grad-bg-burger-600 bg-linear-to-b from-burger-600 to-burger-700 hover:from-burger-500 active:from-burger-500': true,
             }} onClick$={() => {
               window.umami?.track('menu');
             }}>

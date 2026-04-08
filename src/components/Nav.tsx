@@ -12,7 +12,7 @@ export default component$(() => {
   const loc = useLocation();
 
   return (
-    <Nav fixed floating>
+    <Nav fixed floating colorClass="lum-grad-bg-lum-accent/20">
       <Link q:slot="start" href="/" class="lum-btn lum-bg-transparent rounded-lum-1 -m-1">
         <Icon size={30} />
         <p class="space-x-1 whitespace-nowrap text-white font-futura motion-safe:transition-opacity">
@@ -29,12 +29,12 @@ export default component$(() => {
       <Link q:slot="end" href="/menu" class={{
         'lum-btn lum-bg-transparent font-futura hover:text-lum-text p-2 sm:lum-btn-p-2 rounded-lum-2': true,
       }} title='Menu'>
-        <BookOpen strokeWidth={1} /> MENU
+        <BookOpen strokeWidth={1} /> <span class="hidden sm:inline">MENU</span>
       </Link>
       <a q:slot="end" target='_blank' data-umami-event="order_online" href="https://order.toasttab.com/online/burgers-on-fleek-135-harwood-ave-n-unit-b212" class={{
         'lum-btn lum-bg-transparent font-futura hover:text-lum-text p-2 sm:lum-btn-p-2 rounded-lum-2': true,
       }} title='Order Online'>
-        <IconInBag /> <span class="hidden lg:inline">ORDER</span>
+        <IconInBag /> <span class="hidden sm:inline">ORDER</span>
       </a>
       <Link q:slot="end" href="/halal" class={{
         'hidden lg:flex lum-btn lum-bg-transparent hover:text-lum-text p-2 rounded-lum-2': true,

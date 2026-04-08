@@ -42,7 +42,7 @@ export default component$(({ fixed, class: Class, col, types, pathname }: {
     }} ref={PopupRefBottom}>
       {types.includes('order') &&
         <div class={{
-          'lum-card justify-between items-center gap-2 p-2 lum-bg-burger-800/40 text-lum-text! max-w-7xl': true,
+          'lum-card justify-between items-center gap-2 p-2 lum-grad-bg-burger-800/40 text-lum-text! max-w-7xl': true,
           'flex-row': !col,
           'font-futura backdrop-blur-md': true,
         }}>
@@ -56,7 +56,7 @@ export default component$(({ fixed, class: Class, col, types, pathname }: {
             'lum-btn lum-btn-p-2 text-sm sm:text-lg rounded-lum-2': true,
             'w-full justify-center': col,
             'hover:text-lum-text! border-none': true,
-            'lum-bg-burger-600 bg-linear-to-b from-burger-600 to-burger-700 hover:from-burger-500 active:from-burger-500': true,
+            'lum-grad-bg-burger-600 bg-linear-to-b from-burger-600 to-burger-700 hover:from-burger-500 active:from-burger-500': true,
           }}>
             <IconInBag class="fill-current w-5 sm:w-auto sm:mr-1" /> Order Online
           </a>
