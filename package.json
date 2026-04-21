@@ -42,7 +42,7 @@
     "globals": "^17.4.0",
     "lucide-icons-qwik": "1.7.0-qwik-v2",
     "simple-icons-qwik": "16.12.0-qwik-v2",
-    "tailwindcss": "4.2.2",
+    "tailwindcss": "4.2.4",
     "three": "^0.183.2",
     "ts-morph": "^27.0.2",
     "typescript": "5.8.3",
