@@ -8,6 +8,7 @@ const videos = [
   '/videos/godzilla.mp4',
   '/videos/shook.mp4',
   '/videos/5years.mp4',
+  '/videos/brisket.mp4',
 ];
 
 export default component$(() => {
