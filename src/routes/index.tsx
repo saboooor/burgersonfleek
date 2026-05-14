@@ -14,6 +14,13 @@ import HalalSection from '~/components/sections/Halal';
 import { generateHead } from '~/root';
 import Popup from '~/components/Popup';
 
+const videos = [
+  '/videos/godzilla.mp4',
+  '/videos/shook.mp4',
+  '/videos/5years.mp4',
+  '/videos/brisket.mp4',
+];
+
 export const GoogleDetailsContext = createContextId<any>('google-details');
 export default component$(() => {
   const GoogleDetails = useSignal<any>({});
@@ -27,6 +34,18 @@ export default component$(() => {
   });
 
   return <>
+    <video
+      class={{
+        'fullscreen-bg opacity-25 animate-in fade-in': true,
+      }}
+      autoplay
+      playsInline
+      muted
+      loop
+      preload="auto"
+    >
+      <source src={videos[Math.floor(Math.random() * videos.length)]} type="video/mp4" />
+    </video>
     <section class="flex flex-col sm:flex-row gap-4 mx-auto max-w-6xl px-6 items-center justify-center min-h-svh pt-20">
       <div class="flex flex-col items-center animate-in fade-in motion-safe:slide-in-from-top-16 motion-safe:anim-duration-600 gap-4">
         <LogoHorizontal size={600} height={250} id="pc" class="hidden sm:flex"/>

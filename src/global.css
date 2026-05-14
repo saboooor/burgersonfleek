@@ -68,6 +68,9 @@
 html {
   overflow: overlay;
   background-color: var(--color-gray-950);
+  background-image: url('/branding/svg/bg.svg');
+  background-repeat: repeat;
+  background-size: 60px 60px;
   scroll-padding-top: 10rem;
 }
 

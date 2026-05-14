@@ -64,7 +64,7 @@ const TreatYourself = component$(() => {
 
 export default component$(() => {
   return <>
-    <section class="grid gap-2 sm:grid-cols-3 lg:grid-cols-4 mx-auto max-w-7xl min-h-svh">
+    <section class="menu-pattern-bg grid gap-2 sm:grid-cols-3 lg:grid-cols-4 mx-auto max-w-7xl min-h-svh">
       <MobileMenu>
         <BurgersSandwiches />
         <TreatYourself />
