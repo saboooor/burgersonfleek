@@ -2,7 +2,7 @@
 import { component$ } from '@qwik.dev/core';
 import Medal from 'lucide-icons-qwik/icons/Medal';
 
-export default  component$(() => {
+export default component$(() => {
   return (
     <span class="flex gap-1.5 items-center text-[10px] lum-grad-bg-burger-500/50 rounded-lum lum-btn-p-1">
       <Medal size={14} />

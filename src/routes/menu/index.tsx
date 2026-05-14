@@ -23,16 +23,16 @@ import { generateHead } from '~/root';
 const BurgersSandwiches = component$(() => {
   return (
     <>
-      <a class="lum-btn lum-bg-transparent rounded-lum-2 text-orange-200" href="#beefburgers" data-umami-event="menu-beefburgers">
+      <a class="lum-btn lum-bg-transparent hover:lum-bg-orange-950/50 rounded-lum-2 text-orange-100" href="#beefburgers" data-umami-event="menu-beefburgers">
         <Hamburger class="text-orange-300" /> Beef Burgers
       </a>
-      <a class="lum-btn lum-bg-transparent rounded-lum-2 text-yellow-100" href="#chickenburgers" data-umami-event="menu-chickenburgers">
+      <a class="lum-btn lum-bg-transparent hover:lum-bg-yellow-950/50 rounded-lum-2 text-yellow-100" href="#chickenburgers" data-umami-event="menu-chickenburgers">
         <Drumstick class="text-yellow-200" /> Chicken Burgers
       </a>
-      <a class="lum-btn lum-bg-transparent rounded-lum-2 text-green-200" href="#veggieburgers" data-umami-event="menu-veggieburgers">
+      <a class="lum-btn lum-bg-transparent hover:lum-bg-green-950/50 rounded-lum-2 text-green-100" href="#veggieburgers" data-umami-event="menu-veggieburgers">
         <Leaf class="text-green-300" /> Vegetarian Burgers
       </a>
-      <a class="lum-btn lum-bg-transparent rounded-lum-2 text-red-200" href="#steaksandwiches" data-umami-event="menu-steaksandwiches">
+      <a class="lum-btn lum-bg-transparent hover:lum-bg-red-950/50 rounded-lum-2 text-red-100" href="#steaksandwiches" data-umami-event="menu-steaksandwiches">
         <Beef class="text-red-300" /> Steak Sandwiches
       </a>
     </>
@@ -41,10 +41,10 @@ const BurgersSandwiches = component$(() => {
 const TreatYourself = component$(() => {
   return (
     <>
-      <a class="lum-btn lum-bg-transparent rounded-lum-2 text-amber-100" href="#extras" data-umami-event="menu-extras">
+      <a class="lum-btn lum-bg-transparent hover:lum-bg-amber-950/50 rounded-lum-2 text-amber-100" href="#extras" data-umami-event="menu-extras">
         <EggFried class="text-amber-200" /> Extras
       </a>
-      <a class="lum-btn lum-bg-transparent rounded-lum-2 text-burger-200" href="#combos" data-umami-event="menu-combos">
+      <a class="lum-btn lum-bg-transparent hover:lum-bg-burger-950/50 rounded-lum-2 text-burger-100" href="#combos" data-umami-event="menu-combos">
         <div class="flex -space-x-2 max-w-6">
           <CupSoda class="text-red-300" size={14} />
           <Hamburger class="text-burger-200 z-10 drop-shadow-sm drop-shadow-black" size={14} />
@@ -52,10 +52,10 @@ const TreatYourself = component$(() => {
         </div>
         Combos
       </a>
-      <a class="lum-btn lum-bg-transparent rounded-lum-2 text-orange-200" href="#sides" data-umami-event="menu-sides">
+      <a class="lum-btn lum-bg-transparent hover:lum-bg-orange-950/50 rounded-lum-2 text-orange-100" href="#sides" data-umami-event="menu-sides">
         <Soup class="text-orange-300" /> Sides
       </a>
-      <a class="lum-btn lum-bg-transparent rounded-lum-2 text-red-200" href="#drinks" data-umami-event="menu-drinks">
+      <a class="lum-btn lum-bg-transparent hover:lum-bg-red-950/50 rounded-lum-2 text-red-100" href="#drinks" data-umami-event="menu-drinks">
         <CupSoda class="text-red-300" /> Drinks
       </a>
     </>
@@ -97,12 +97,17 @@ export default component$(() => {
         <div class="flex flex-wrap gap-2 pt-5 pb-10">
           {beefburgers.map((item, i) => {
             return <div key={i} class={{
-              'lum-card lum-grad-bg-lum-card-bg': true,
+              'lum-card lum-grad-bg-lum-card-bg relative': true,
               'flex-1 flex-row sm:flex-col min-w-[18rem] gap-6': true,
             }}>
-              <div class="mb-4" style={{
-                filter: 'drop-shadow(0 0.5rem 0.5rem var(--color-burger-900))',
-              }}>
+              <div class="absolute inset-0 -z-10 w-full h-full object-cover saturate-200 rounded-lum-2 overflow-clip">
+                <item.image class="absolute top-0 -translate-y-1/2 scale-75 opacity-30" alt={item.name}
+                  width={1024}
+                  height={1024}
+                />
+              </div>
+              <div class="absolute inset-0 -z-10 rounded-lum-2 backdrop-blur-2xl"/>
+              <div class="mb-4">
                 {item.image && <item.image class="max-w-20 sm:max-h-32 sm:max-w-full sm:object-contain" alt={item.name} />}
                 {!item.image && <Icon size={128} class="w-20 h-20 sm:h-auto sm:w-auto sm:mx-auto" />}
               </div>
@@ -131,12 +136,17 @@ export default component$(() => {
         <div class="flex flex-wrap gap-2 pt-5 pb-10">
           {chickenburgers.map((item, i) => {
             return <div key={i} class={{
-              'lum-card lum-grad-bg-lum-card-bg': true,
+              'lum-card lum-grad-bg-lum-card-bg relative': true,
               'flex-1 flex-row sm:flex-col min-w-[18rem] gap-6': true,
             }}>
-              <div class="mb-4" style={{
-                filter: 'drop-shadow(0 0.5rem 0.5rem var(--color-burger-900))',
-              }}>
+              <div class="absolute inset-0 -z-10 w-full h-full object-cover saturate-200 rounded-lum-2 overflow-clip">
+                <item.image class="absolute top-0 -translate-y-1/2 scale-75 opacity-30" alt={item.name}
+                  width={1024}
+                  height={1024}
+                />
+              </div>
+              <div class="absolute inset-0 -z-10 rounded-lum-2 backdrop-blur-2xl"/>
+              <div class="mb-4">
                 {item.image && <item.image class="max-w-20 sm:max-h-32 sm:max-w-full sm:object-contain" alt={item.name} />}
                 {!item.image && <Icon size={128} class="w-20 h-20 sm:h-auto sm:w-auto sm:mx-auto" />}
               </div>
@@ -161,12 +171,17 @@ export default component$(() => {
         <div class="flex flex-wrap gap-2 pt-5 pb-10">
           {veggieburgers.map((item, i) => {
             return <div key={i} class={{
-              'lum-card lum-grad-bg-lum-card-bg': true,
+              'lum-card lum-grad-bg-lum-card-bg relative': true,
               'flex-1 flex-row sm:flex-col min-w-[18rem] gap-6': true,
             }}>
-              <div class="mb-4" style={{
-                filter: 'drop-shadow(0 0.5rem 0.5rem var(--color-burger-900))',
-              }}>
+              <div class="absolute inset-0 -z-10 w-full h-full object-cover saturate-200 rounded-lum-2 overflow-clip">
+                <item.image class="absolute top-0 -translate-y-1/2 scale-75 opacity-30" alt={item.name}
+                  width={1024}
+                  height={1024}
+                />
+              </div>
+              <div class="absolute inset-0 -z-10 rounded-lum-2 backdrop-blur-2xl"/>
+              <div class="mb-4">
                 {item.image && <item.image class="max-w-20 sm:max-h-32 sm:max-w-full sm:object-contain" alt={item.name} />}
                 {!item.image && <Icon size={128} class="w-20 h-20 sm:h-auto sm:w-auto sm:mx-auto" />}
               </div>
@@ -191,12 +206,17 @@ export default component$(() => {
         <div class="grid sm:grid-cols-2 gap-2 pt-5 pb-10">
           {steaksandwiches.map((item, i) => {
             return <div key={i} class={{
-              'lum-card lum-grad-bg-lum-card-bg': true,
+              'lum-card lum-grad-bg-lum-card-bg relative': true,
               'flex-1 flex-row sm:flex-col min-w-[18rem] gap-6': true,
             }}>
-              <div class="mb-4" style={{
-                filter: 'drop-shadow(0 0.5rem 0.5rem var(--color-burger-900))',
-              }}>
+              <div class="absolute inset-0 -z-10 w-full h-full object-cover saturate-200 rounded-lum-2 overflow-clip">
+                <item.image class="absolute top-0 -translate-y-1/2 scale-75 opacity-30" alt={item.name}
+                  width={1024}
+                  height={1024}
+                />
+              </div>
+              <div class="absolute inset-0 -z-10 rounded-lum-2 backdrop-blur-2xl"/>
+              <div class="mb-4">
                 {item.image && <item.image class="max-w-20 sm:max-h-32 sm:max-w-full sm:object-contain" alt={item.name} />}
                 {!item.image && <Icon size={128} class="w-20 h-20 sm:h-auto sm:w-auto sm:mx-auto rotate-5" />}
               </div>
@@ -221,7 +241,7 @@ export default component$(() => {
         <div class="flex flex-wrap gap-2 pt-5 pb-10">
           {extras.map((item, i) => {
             return <div key={i} class={{
-              'lum-card lum-grad-bg-lum-card-bg': true,
+              'lum-card lum-grad-bg-lum-card-bg relative': true,
               'flex-1 min-w-[18rem]': true,
             }}>
               <h2 class={{
@@ -254,7 +274,7 @@ export default component$(() => {
         <div class="flex flex-wrap gap-2 pt-5 pb-10">
           {sides.map((item, i) => {
             return <div key={i} class={{
-              'lum-card lum-grad-bg-lum-card-bg': true,
+              'lum-card lum-grad-bg-lum-card-bg relative': true,
               'flex-1 min-w-[18rem]': true,
             }}>
               <h2 class={{
@@ -276,7 +296,7 @@ export default component$(() => {
         <div class="flex flex-wrap gap-2 pt-5 pb-10">
           {sides.map((item, i) => {
             return <div key={i} class={{
-              'lum-card lum-grad-bg-lum-card-bg': true,
+              'lum-card lum-grad-bg-lum-card-bg relative': true,
               'flex-1 min-w-[18rem]': true,
             }}>
               <h2 class={{
@@ -298,7 +318,7 @@ export default component$(() => {
         <div class="flex flex-wrap gap-2 pt-5 pb-10">
           {drinks.map((item, i) => {
             return <div key={i} class={{
-              'lum-card lum-grad-bg-lum-card-bg': true,
+              'lum-card lum-grad-bg-lum-card-bg relative': true,
               'flex-1 min-w-[18rem]': true,
             }}>
               <h2 class={{

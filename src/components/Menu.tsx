@@ -5,10 +5,9 @@ export default component$(() => {
   return (
     <aside class="hidden sm:flex flex-col sticky max-h-180 top-0 pt-30 px-6" aria-label="Sidebar">
       <div class={{
-        'flex items-center gap-4 text-orange-200! lum-btn-p-2 mb-2': true,
-        'w-full lum-bg-transparent': true,
+        'flex items-center gap-3 lum-btn-p-2 mb-2': true,
       }}>
-        <BookOpen strokeWidth={1} size={32} />
+        <BookOpen />
         <h1 class="text-2xl flex-1 font-futura">MENU</h1>
       </div>
       <div class={{
