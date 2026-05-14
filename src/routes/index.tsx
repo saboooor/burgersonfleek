@@ -1,4 +1,4 @@
-import { component$, createContextId, useContextProvider, useSignal, useVisibleTask$ } from '@qwik.dev/core';
+import { component$, createContextId, useContextProvider, useSignal, useTask$, useVisibleTask$ } from '@qwik.dev/core';
 import { Link } from '@qwik.dev/router';
 
 import Cutout from '~/components/images/Cutout.png?jsx';
@@ -25,12 +25,24 @@ export const GoogleDetailsContext = createContextId<any>('google-details');
 export default component$(() => {
   const GoogleDetails = useSignal<any>({});
   useContextProvider(GoogleDetailsContext, GoogleDetails);
+  const videoRef = useSignal<HTMLVideoElement>();
 
   // eslint-disable-next-line qwik/no-use-visible-task
   useVisibleTask$(async () => {
     // load reviews from api
     const res = await fetch('https://api.burgersonfleek.ca/details?placeId=ChIJGwNrpL7f1IkRam5-B2BHkw4');
     GoogleDetails.value = await res.json() as any;
+  });
+
+  useTask$(({ track }) => {
+    track(() => videoRef.value);
+
+    const video = videoRef.value;
+    if (!video) return;
+
+    video.muted = true;
+    video.defaultMuted = true;
+    video.volume = 0;
   });
 
   return <>
@@ -41,6 +53,7 @@ export default component$(() => {
       autoplay
       playsInline
       muted
+      ref={videoRef}
       loop
       preload="auto"
     >
