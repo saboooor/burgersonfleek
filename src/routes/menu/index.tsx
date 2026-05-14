@@ -11,7 +11,13 @@ import veggieburgers from '~/components/menuitems/veggieburgers';
 import Menu, { MenuCategory, MobileMenu } from '~/components/Menu';
 import BestSeller from '~/components/BestSeller';
 import Icon from '~/components/svg/Icon';
-import { Beef, CupSoda, Drumstick, EggFried, Hamburger, Leaf, Soup } from 'lucide-icons-qwik';
+import Beef from 'lucide-icons-qwik/icons/Beef';
+import CupSoda from 'lucide-icons-qwik/icons/CupSoda';
+import Drumstick from 'lucide-icons-qwik/icons/Drumstick';
+import EggFried from 'lucide-icons-qwik/icons/EggFried';
+import Hamburger from 'lucide-icons-qwik/icons/Hamburger';
+import Leaf from 'lucide-icons-qwik/icons/Leaf';
+import Soup from 'lucide-icons-qwik/icons/Soup';
 import { generateHead } from '~/root';
 
 const BurgersSandwiches = component$(() => {

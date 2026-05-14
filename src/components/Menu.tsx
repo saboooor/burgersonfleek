@@ -1,5 +1,5 @@
 import { component$, Slot } from '@qwik.dev/core';
-import { BookOpen } from 'lucide-icons-qwik';
+import BookOpen from 'lucide-icons-qwik/icons/BookOpen';
 
 export default component$(() => {
   return (

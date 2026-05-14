@@ -2,8 +2,12 @@ import { component$ } from '@qwik.dev/core';
 import { Link, useLocation } from '@qwik.dev/router';
 import { Nav } from '@luminescent/ui-qwik';
 
-import { Phone, BookOpen, MapPin } from 'lucide-icons-qwik';
-import { SiFacebook, SiInstagram, SiTiktok } from 'simple-icons-qwik';
+import Phone from 'lucide-icons-qwik/icons/Phone';
+import BookOpen from 'lucide-icons-qwik/icons/BookOpen';
+import MapPin from 'lucide-icons-qwik/icons/MapPin';
+import SiFacebook from 'simple-icons-qwik/icons/SiFacebook';
+import SiInstagram from 'simple-icons-qwik/icons/SiInstagram';
+import SiTiktok from 'simple-icons-qwik/icons/SiTiktok';
 import Icon from './svg/Icon';
 import Halal from './svg/Halal';
 import IconInBag from './svg/IconInBag';

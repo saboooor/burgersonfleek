@@ -1,7 +1,6 @@
 import { component$ } from '@qwik.dev/core';
-import { IconProps } from 'lucide-icons-qwik';
 
-export default component$<IconProps>(({ size, ...props }) => {
+export default component$<any>(({ size, ...props }) => {
   return (
     <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 338 338" width={size} height={size} {...props}>
       <defs>

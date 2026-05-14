@@ -7,7 +7,6 @@ import { qwikRouter } from "@qwik.dev/router/vite";
 import { defineConfig, type UserConfig } from "vite";
 import pkg from "./package.json";
 import tailwindcss from '@tailwindcss/vite';
-import tsconfigPaths from "vite-tsconfig-paths";
 
 let platform = {};
 
@@ -36,10 +35,10 @@ const qwikDeps = [
  */
 export default defineConfig(({ command, mode }): UserConfig => {
   return {
-    //resolve: {
-    //  tsconfigPaths: true,
-    //},
-    plugins: [qwikRouter(), qwikVite(), tailwindcss(), tsconfigPaths({ root: '.' })],
+    resolve: {
+      tsconfigPaths: true,
+    },
+    plugins: [qwikRouter(), qwikVite(), tailwindcss()],
     // This tells Vite which dependencies to pre-build in dev mode.
     optimizeDeps: {
       // Put problematic deps that break bundling here, mostly those with binaries.

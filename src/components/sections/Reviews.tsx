@@ -1,5 +1,7 @@
 import { component$, useContext, useSignal, useVisibleTask$ } from '@qwik.dev/core';
-import { ChevronDown, MapPin, Star } from 'lucide-icons-qwik';
+import ChevronDown from 'lucide-icons-qwik/icons/ChevronDown';
+import MapPin from 'lucide-icons-qwik/icons/MapPin';
+import Star from 'lucide-icons-qwik/icons/Star';
 import { GoogleDetailsContext } from '~/routes';
 
 export default component$(() => {
