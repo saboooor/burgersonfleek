@@ -11,7 +11,7 @@ export default [
   {
     name: 'Shroom',
     description: 'Crusted portobello mushroom stuffed with cheese, with lettuce, tomato, pickles, and garlic mayo.',
-    price: '$11.49',
+    price: '$11.75',
     image: Shroom,
   },
 ];

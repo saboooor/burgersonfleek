@@ -86,7 +86,7 @@ export default [
   {
     name: 'Pick Me',
     description: 'Pulled beef brisket with sautéed onions, mayo, and smoky BBQ sauce.',
-    price: '$11.49',
+    price: '$12.00',
     image: PickMe,
   },
 ];
