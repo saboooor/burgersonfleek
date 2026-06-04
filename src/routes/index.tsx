@@ -90,10 +90,19 @@ export default component$(() => {
         <Cutout class="max-w-3/4 sm:max-w-150 drop-shadow-md" />
       </div>
       <div class="flex flex-col sm:items-start sm:text-left items-center text-center">
-        <h1 class="font-bold text-white text-2xl sm:text-4xl mb-2 animate-in fade-in motion-safe:slide-in-from-top-16 motion-safe:anim-duration-700">
-          The <span class="text-lum-accent">burgers</span><br class="hidden sm:block" /> you are <span class="text-burger-300">craving.</span><span class="text-lg align-top">™</span>
+        <h1 class="font-futura font-bold! uppercase tracking-tighter text-lg/3 sm:text-2xl/5 md:text-4xl/10 animate-in fade-in motion-safe:slide-in-from-top-16 motion-safe:anim-duration-700">
+          The{' '}
+          <span class="text-transparent bg-clip-text! bg-linear-to-br from-burger-200 via-burger-400 to-orange-100">
+            burgers
+          </span>{' '}
+          <br class="hidden sm:block" />
+          you are{' '}
+          <span class="text-transparent bg-clip-text! bg-linear-to-br from-burger-400 via-burger-200 to-burger-600">
+            craving.
+          </span>
+          <span class="text-lg align-top">™</span>
         </h1>
-        <p class="text-lum-text-secondary md:text-lg animate-in fade-in motion-safe:slide-in-from-top-16 motion-safe:anim-duration-800">
+        <p class="mt-2 text-lum-text-secondary md:text-lg animate-in fade-in motion-safe:slide-in-from-top-16 motion-safe:anim-duration-800">
           Premium Quality Gourmet Burgers, Steak Sandwiches, Fries, and more. est. 2019
         </p>
 
