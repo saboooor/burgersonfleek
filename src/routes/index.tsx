@@ -1,5 +1,5 @@
-import { component$, createContextId, useContextProvider, useSignal, useTask$, useVisibleTask$ } from '@qwik.dev/core';
-import { Link } from '@qwik.dev/router';
+import { component$, createContextId, useContextProvider, useSignal, useTask$ } from '@qwik.dev/core';
+import { Link, routeLoader$ } from '@qwik.dev/router';
 
 import Cutout from '~/components/images/Cutout.png?jsx';
 import LogoHorizontal from '~/components/svg/LogoHorizontal';
@@ -13,6 +13,7 @@ import Reviews from '~/components/sections/Reviews';
 import HalalSection from '~/components/sections/Halal';
 import { generateHead } from '~/root';
 import Popup from '~/components/Popup';
+import { getPlaceDetails } from '~/components/GoogleMaps';
 
 const videos = [
   '/videos/godzilla.mp4',
@@ -21,18 +22,12 @@ const videos = [
   '/videos/brisket.mp4',
 ];
 
-export const GoogleDetailsContext = createContextId<any>('google-details');
+export const useGoogleDetails = routeLoader$(async (requestEvent) => getPlaceDetails(requestEvent));
+export const GoogleDetailsContext = createContextId<ReturnType<typeof useGoogleDetails>>('google-details');
 export default component$(() => {
-  const GoogleDetails = useSignal<any>({});
+  const GoogleDetails = useGoogleDetails();
   useContextProvider(GoogleDetailsContext, GoogleDetails);
   const videoRef = useSignal<HTMLVideoElement>();
-
-  // eslint-disable-next-line qwik/no-use-visible-task
-  useVisibleTask$(async () => {
-    // load reviews from api
-    const res = await fetch('https://api.burgersonfleek.ca/details?placeId=ChIJGwNrpL7f1IkRam5-B2BHkw4');
-    GoogleDetails.value = await res.json() as any;
-  });
 
   useTask$(({ track }) => {
     track(() => videoRef.value);
@@ -124,14 +119,11 @@ export default component$(() => {
                   </p>
                 }
                 {!GoogleDetails.value.currentOpeningHours?.openNow && (() => {
-                  const nextOpenTimestamp = GoogleDetails.value.currentOpeningHours?.nextOpenTime?.seconds * 1000;
-                  if (!nextOpenTimestamp) return null;
-
                   const now = Date.now();
-                  const nextOpenDate = new Date(nextOpenTimestamp);
+                  const nextOpenDate = new Date(GoogleDetails.value.currentOpeningHours?.nextOpenTime);
                   const twelveHrs = 12 * 60 * 60 * 1000;
 
-                  const isMoreThanTwelveHrsAway = nextOpenTimestamp - now > twelveHrs;
+                  const isMoreThanTwelveHrsAway = nextOpenDate.getTime() - now > twelveHrs;
 
                   return (
                     <p class="text-lum-text-secondary text-sm">
@@ -141,15 +133,18 @@ export default component$(() => {
                           month: 'short',
                           day: 'numeric',
                           year: 'numeric',
+                          timeZone: 'America/Toronto',
                         }) + ' ' + nextOpenDate.toLocaleTimeString(undefined, {
                           hour: 'numeric',
                           minute: 'numeric',
                           second: undefined,
+                          timeZone: 'America/Toronto',
                         })
                         : nextOpenDate.toLocaleTimeString(undefined, {
                           hour: 'numeric',
                           minute: 'numeric',
                           second: undefined,
+                          timeZone: 'America/Toronto',
                         })}
                     </p>
                   );

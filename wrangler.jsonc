@@ -6,10 +6,9 @@
 	"$schema": "node_modules/wrangler/config-schema.json",
 	"name": "burgersonfleek-ca",
 	"main": "./dist/_worker.js",
-	"compatibility_date": "2025-08-15",
+	"compatibility_date": "2026-06-02",
 	"compatibility_flags": [
-		"nodejs_compat",
-		"global_fetch_strictly_public"
+		"nodejs_compat"
 	],
 	"assets": {
 		"binding": "ASSET",
@@ -27,7 +26,14 @@
       "pattern": "www.burgersonfleek.ca",
       "custom_domain": true
     }
-  ]
+  ],
+	"kv_namespaces": [
+		{
+			"binding": "bof",
+			"id": "83001e0b3708488e9e69240831b46212",
+			"remote": true
+		}
+	]
 	/**
 	 * Smart Placement
 	 * Docs: https://developers.cloudflare.com/workers/configuration/smart-placement/#smart-placement
