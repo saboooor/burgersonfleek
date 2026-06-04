@@ -1,7 +1,14 @@
 import { RequestEventBase } from '@qwik.dev/router';
 
 // function to fetch place details
-async function fetchPlaceDetails(apiKey: string, placeId: string, kv: Env['bof']) {
+async function fetchPlaceDetails(requestEvent: RequestEventBase, kv: Env['bof']) {
+  const { env } = requestEvent;
+  const apiKey = env.get('GOOGLE_MAPS_API_KEY');
+  if (!apiKey) {
+    throw new Error('Google Maps API key not configured');
+  }
+  const placeId = 'ChIJGwNrpL7f1IkRam5-B2BHkw4';
+
   // initialize Google Maps Places client
   const url = new URL(`https://places.googleapis.com/v1/places/${placeId}`);
   url.searchParams.set('key', apiKey);
@@ -38,13 +45,9 @@ export async function getPlaceDetails(requestEvent: RequestEventBase) {
   let details = placeDetails ? JSON.parse(placeDetails) : null;
 
   try {
-    const placeId = 'ChIJGwNrpL7f1IkRam5-B2BHkw4';
-    const apiKey = env.get('GOOGLE_MAPS_API_KEY');
-    if (!apiKey) throw new Error('Google Maps API key not configured');
-
     if (!details) {
       console.debug('No cached data, fetching from Places API');
-      details = await fetchPlaceDetails(apiKey, placeId, kv);
+      details = await fetchPlaceDetails(requestEvent, kv);
       return details;
     }
 
@@ -64,7 +67,7 @@ export async function getPlaceDetails(requestEvent: RequestEventBase) {
     console.debug('Current open/close time has passed');
 
     // fetch fresh details from Places API
-    details = await fetchPlaceDetails(apiKey, placeId, kv);
+    details = await fetchPlaceDetails(requestEvent, kv);
   } catch (error) {
     // log error and serve stale data if available
     console.error('Error fetching place details:', error);
