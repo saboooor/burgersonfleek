@@ -40,6 +40,35 @@ export default component$(() => {
     video.volume = 0;
   });
 
+  const twelveHrs = 12 * 60 * 60 * 1000;
+  const fifteenMins = 15 * 60 * 1000;
+  const nextCloseTime = new Date(
+    new Date(GoogleDetails.value.currentOpeningHours?.nextCloseTime).getTime() - fifteenMins,
+  );
+  const nextOpenTime = new Date(GoogleDetails.value.currentOpeningHours?.nextOpenTime);
+  const now = Date.now();
+
+  const closeTime = nextCloseTime.toLocaleTimeString([], {
+    hour: 'numeric',
+    minute: 'numeric',
+    second: undefined,
+    timeZone: 'America/Toronto',
+  });
+
+  const openTimeMoreThanTwelveHrsAway = nextOpenTime.getTime() - now > twelveHrs;
+  const openTime = nextOpenTime.toLocaleTimeString(undefined, {
+    hour: 'numeric',
+    minute: 'numeric',
+    second: undefined,
+    timeZone: 'America/Toronto',
+  });
+  const openDate = nextOpenTime.toLocaleDateString(undefined, {
+    month: 'short',
+    day: 'numeric',
+    year: 'numeric',
+    timeZone: 'America/Toronto',
+  });
+
   return <>
     <video
       class={{
@@ -96,7 +125,7 @@ export default component$(() => {
           <div class="lum-btn lum-btn-p-1 lum-bg-transparent hover:lum-bg-lum-card-bg text-lum-text-secondary! min-h-13.5 animate-in fade-in motion-safe:slide-in-from-top-16 motion-safe:anim-duration-1300">
             {GoogleDetails.value.currentOpeningHours?.openNow !== undefined &&
               <div class="*:animate-in *:fade-in *:motion-safe:anim-duration-800">
-                {GoogleDetails.value.currentOpeningHours?.nextCloseTime?.seconds * 1000 - (15 * 60 * 1000) < Date.now()
+                {nextCloseTime.getTime() < now
                 || GoogleDetails.value.currentOpeningHours?.openNow === false ?
                   <p class="flex items-center gap-2 text-red-200/80 font-medium">
                     <span class="w-2 h-2 rounded-full lum-grad-bg-red-300" />
@@ -110,45 +139,12 @@ export default component$(() => {
                 }
                 {GoogleDetails.value.currentOpeningHours?.openNow &&
                   <p class="text-lum-text-secondary text-sm">
-                    closing at {new Date(GoogleDetails.value.currentOpeningHours?.nextCloseTime?.seconds * 1000 - (15 * 60 * 1000))
-                      .toLocaleTimeString([], {
-                        hour: 'numeric',
-                        minute: 'numeric',
-                        second: undefined,
-                      })}
+                    closing at {closeTime}
                   </p>
                 }
-                {!GoogleDetails.value.currentOpeningHours?.openNow && (() => {
-                  const now = Date.now();
-                  const nextOpenDate = new Date(GoogleDetails.value.currentOpeningHours?.nextOpenTime);
-                  const twelveHrs = 12 * 60 * 60 * 1000;
-
-                  const isMoreThanTwelveHrsAway = nextOpenDate.getTime() - now > twelveHrs;
-
-                  return (
-                    <p class="text-lum-text-secondary text-sm">
-                      opening at{' '}
-                      {isMoreThanTwelveHrsAway
-                        ? nextOpenDate.toLocaleDateString(undefined, {
-                          month: 'short',
-                          day: 'numeric',
-                          year: 'numeric',
-                          timeZone: 'America/Toronto',
-                        }) + ' ' + nextOpenDate.toLocaleTimeString(undefined, {
-                          hour: 'numeric',
-                          minute: 'numeric',
-                          second: undefined,
-                          timeZone: 'America/Toronto',
-                        })
-                        : nextOpenDate.toLocaleTimeString(undefined, {
-                          hour: 'numeric',
-                          minute: 'numeric',
-                          second: undefined,
-                          timeZone: 'America/Toronto',
-                        })}
-                    </p>
-                  );
-                })()}
+                {!GoogleDetails.value.currentOpeningHours?.openNow && <p class="text-lum-text-secondary text-sm">
+                  opening {openTimeMoreThanTwelveHrsAway && `on ${openDate}`} {`at ${openTime}`}
+                </p>}
               </div>
             }
           </div>
