@@ -90,7 +90,7 @@ export default component$(() => {
         <Cutout class="max-w-3/4 sm:max-w-150 drop-shadow-md" />
       </div>
       <div class="flex flex-col sm:items-start sm:text-left items-center text-center">
-        <h1 class="font-futura font-bold! uppercase tracking-tighter text-lg/3 sm:text-2xl/5 md:text-4xl/10 animate-in fade-in motion-safe:slide-in-from-top-16 motion-safe:anim-duration-700">
+        <h1 class="font-futura font-bold! uppercase tracking-tighter text-2xl/6 sm:text-3xl/8 md:text-4xl/10 animate-in fade-in motion-safe:slide-in-from-top-16 motion-safe:anim-duration-700">
           The{' '}
           <span class="text-transparent bg-clip-text! bg-linear-to-br from-burger-200 via-burger-400 to-orange-100">
             burgers
