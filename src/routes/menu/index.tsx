@@ -50,7 +50,7 @@ const TreatYourself = component$(() => {
           <Hamburger class="text-burger-200 z-10 drop-shadow-sm drop-shadow-black" size={14} />
           <Soup class="text-orange-300" size={14} />
         </div>
-        Combos
+        Combo Options
       </a>
       <a class="lum-btn lum-bg-transparent hover:lum-bg-orange-950/50 rounded-lum-2 text-orange-100" href="#sides" data-umami-event="menu-sides">
         <Soup class="text-orange-300" /> Sides
@@ -269,7 +269,7 @@ export default component$(() => {
             <Hamburger class="text-burger-200 z-10 drop-shadow-sm drop-shadow-black" size={46} />
             <Soup class="text-orange-300" size={46} />
           </div>
-          Combos
+          Combo Options
         </h2>
         <div class="flex flex-wrap gap-2 pt-5 pb-10">
           {sides.map((item, i) => {
