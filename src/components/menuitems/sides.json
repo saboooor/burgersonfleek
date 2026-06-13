@@ -26,5 +26,11 @@
     "description": "Fresh cut fries topped with cheese curds, beef based gravy, and fried chicken.",
     "price": "$14.25",
     "combo": "$16.39"
+  },
+  {
+    "name": "Pulled Beef Brisket Poutine",
+    "description": "Fresh cut fries topped with cheese curds, beef based gravy, pulled beef brisket, and smoky BBQ sauce.",
+    "price": "$16.00",
+    "combo": "$18.14"
   }
 ]

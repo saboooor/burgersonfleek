@@ -7,6 +7,7 @@ import Classic from '../images/Classic.png?jsx';
 import Mashup from '../images/Mashup.png?jsx';
 import Melt from '../images/Melt.png?jsx';
 import Mood from '../images/Mood.png?jsx';
+import PickMe from '../images/PickMe.png?jsx';
 import Shook from '../images/Shook.png?jsx';
 import Snatched from '../images/Snatched.png?jsx';
 
@@ -81,5 +82,11 @@ export default [
     description: 'Beef patty with swiss cheese, mushrooms, sautéed onions, lettuce, tomato, and garlic mayo.',
     price: '$15.49',
     image: Melt,
+  },
+  {
+    name: 'Pick Me',
+    description: 'Pulled beef brisket with sautéed onions, mayo, and smoky BBQ sauce.',
+    price: '$12.00',
+    image: PickMe,
   },
 ];
