@@ -6,7 +6,6 @@ import Basic from '../images/Basic.png?jsx';
 import Classic from '../images/Classic.png?jsx';
 import Mashup from '../images/Mashup.png?jsx';
 import Melt from '../images/Melt.png?jsx';
-import Mood from '../images/Mood.png?jsx';
 import PickMe from '../images/PickMe.png?jsx';
 import Shook from '../images/Shook.png?jsx';
 import Snatched from '../images/Snatched.png?jsx';
