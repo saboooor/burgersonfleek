@@ -1,5 +1,4 @@
 import { $, component$, useOnDocument, useSignal } from '@qwik.dev/core';
-import { Blobs } from '@luminescent/ui-qwik';
 import IconInBag from './svg/IconInBag';
 
 export default component$(({ fixed, class: Class, col, types, pathname }: {
@@ -60,7 +59,6 @@ export default component$(({ fixed, class: Class, col, types, pathname }: {
           }}>
             <IconInBag class="fill-current w-5 sm:w-auto sm:mr-1" /> Order Online
           </a>
-          <Blobs color='orange' class={{ 'absolute overflow-clip pointer-events-none -z-1 rounded-lum': true }} style={{ transform: 'translateZ(-10px)' }}/>
         </div>
       }
     </div>
@@ -86,7 +84,6 @@ export default component$(({ fixed, class: Class, col, types, pathname }: {
           }}>
             <span class="font-bold">Thank you all for your support on our 5th anniversary!</span><br/>
           </p>
-          <Blobs color='orange' class={{ 'absolute overflow-clip pointer-events-none -z-1 rounded-lum': true }} style={{ transform: 'translateZ(-10px)' }}/>
         </div>
       }
     </div>
