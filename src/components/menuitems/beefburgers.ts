@@ -15,28 +15,28 @@ export default [
     name: 'The Basic',
     description: 'Beef patty with lettuce, tomato, pickles, sautéed onions, and On Fleek sauce.',
     price: '$10.49',
-    double: '$15.49',
+    double: '$15.99',
     image: Basic,
   },
   {
     name: 'The Classic',
     description: 'Beef patty with cheddar cheese, lettuce, tomato, pickles, sautéed onions, and On Fleek sauce.',
     price: '$11.49',
-    double: '$17.49',
+    double: '$17.99',
     image: Classic,
   },
   {
     name: 'Bae',
     description: 'Beef patty with cheddar cheese, beef bacon, lettuce, tomato, pickles, sautéed onions, and On Fleek sauce.',
     price: '$12.65',
-    double: '$18.65',
+    double: '$18.99',
     bestseller: true,
     image: Bae,
   },
   {
     name: 'Aloha',
     description: 'Beef patty with mozzarella cheese, grilled pineapple, lettuce, beef bacon, and BBQ sauce.',
-    price: '$14.49',
+    price: '$13.65',
     image: Aloha,
   },
   {
@@ -48,7 +48,7 @@ export default [
   {
     name: 'Shook',
     description: 'Beef patty with cheddar cheese, crusted portobello mushroom stuffed with cheese, lettuce, tomato, pickles, and garlic mayo.',
-    price: '$17.49',
+    price: '$17.99',
     image: Shook,
   },
   {
@@ -73,7 +73,7 @@ export default [
   {
     name: 'The Melt',
     description: 'Beef patty with swiss cheese, mushrooms, sautéed onions, lettuce, tomato, and garlic mayo.',
-    price: '$15.49',
+    price: '$15.99',
     image: Melt,
   },
   {
