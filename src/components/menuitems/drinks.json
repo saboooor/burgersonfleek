@@ -1,15 +1,7 @@
 [
   {
-    "name": "Fountain Drink",
-    "price": "$2.85"
-  },
-  {
-    "name": "Bottled Water",
-    "price": "$2.00"
-  },
-  {
-    "name": "Apple Juice",
-    "price": "$2.99"
+    "name": "Yuzu Fizz",
+    "price": "$5.49"
   },
   {
     "name": "Chocolate or Vanilla Milkshake",
@@ -18,5 +10,17 @@
   {
     "name": "Ferrero Rocher Milkshake",
     "price": "$8.99"
+  },
+  {
+    "name": "Fountain Drink",
+    "price": "$2.85"
+  },
+  {
+    "name": "Apple Juice",
+    "price": "$2.99"
+  },
+  {
+    "name": "Bottled Water",
+    "price": "$2.00"
   }
 ]
