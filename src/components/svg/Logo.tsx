@@ -5,14 +5,14 @@ export default component$(({ size, height, id, class: Class }: any) => {
     <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 338 350" xml:space="preserve" width={size} height={height} class={Class}>
       <defs>
         <linearGradient id={`${id}-linear-gradient`} x1="0.5" y1="1" x2="0.5" gradientUnits="objectBoundingBox" gradientTransform="rotate(10)">
-          <stop offset="0" stop-color="rgba(201,128,33,0.60)"/>
-          <stop offset="1" stop-color="rgb(201,128,33)"/>
+          <stop offset="0" stop-color="var(--color-burger-400)"/>
+          <stop offset="1" stop-color="var(--color-burger-300)"/>
         </linearGradient>
 
         <filter id={`${id}-bevelLight`} x="-20%" y="-20%" width="140%" height="140%">
           <feGaussianBlur in="SourceAlpha" stdDeviation="2" result="blur"/>
           <feSpecularLighting in="blur" surfaceScale="1" specularConstant="0.6"
-            specularExponent="25" lighting-color="rgb(201,128,33)" result="specOut">
+            specularExponent="25" lighting-color="var(--color-burger-200)" result="specOut">
             <fePointLight x="-2000" y="-3000" z="5000"/>
           </feSpecularLighting>
           <feComposite in="specOut" in2="SourceAlpha" operator="in" result="specOut"/>
@@ -38,7 +38,7 @@ export default component$(({ size, height, id, class: Class }: any) => {
             M477.5,325.9c-16.3,10.5-35.9,16-55.6,16c-19.5,0-37.5-5.2-52.7-14.4c-15.2-9.2-27.4-22.5-35.2-38.9c-1.3-2.7-1.9-5.5-1.9-8.3
             c0-0.4,0-0.9,0.1-1.3c2.9,1.2,6.1,1.9,9.4,1.9v-4.1l0,4.1l171.9-0.1C506.6,300.4,493.7,315.5,477.5,325.9z"/>
         </g>
-        <g transform="translate(380,200) scale(0.5)" fill="rgb(201,128,33)">
+        <g transform="translate(380,200) scale(0.5)" fill="var(--color-burger-500)">
           <path d="M257.158,296.672v-14.273h-5.098v-2.906h13.652v2.906h-5.086v14.273H257.158z"/>
           <path d="M267.916,296.672v-17.18h5.191l3.117,11.719l3.082-11.719h5.203v17.18h-3.223v-13.523
             l-3.41,13.523h-3.34l-3.398-13.523v13.523H267.916z"/>

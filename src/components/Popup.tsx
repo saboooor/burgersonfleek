@@ -1,5 +1,7 @@
 import { $, component$, useOnDocument, useSignal } from '@qwik.dev/core';
 import IconInBag from './svg/IconInBag';
+import Citrus from 'lucide-icons-qwik/icons/Citrus';
+import { Link } from '@qwik.dev/router';
 
 export default component$(({ fixed, class: Class, col, types, pathname }: {
   fixed?: boolean
@@ -62,7 +64,6 @@ export default component$(({ fixed, class: Class, col, types, pathname }: {
         </div>
       }
     </div>
-    {/*
     <div class={{
       'top-16': !pathname?.includes('menu'),
       'top-30': pathname?.includes('menu'),
@@ -77,16 +78,17 @@ export default component$(({ fixed, class: Class, col, types, pathname }: {
           'flex-row': !col,
           'font-futura backdrop-blur-md': true,
         }}>
-          <PartyPopper size={20} />
+          <Citrus size={20} />
           <p class={{
             'sm:text-xl mx-2': true,
             'my-1': col,
           }}>
-            <span class="font-bold">Thank you all for your support on our 5th anniversary!</span><br/>
+            <span class="font-bold">
+              Try out our new Yuzu Fizz! <Link href="/menu#drinks" class="text-lum-accent underline">Order now</Link>
+            </span>
           </p>
         </div>
       }
     </div>
-    */}
   </>;
 });

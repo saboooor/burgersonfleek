@@ -1,27 +1,27 @@
 import { component$ } from '@qwik.dev/core';
 
-export default component$<any>(({ size, ...props }) => {
+export default component$<any>(({ size, id, ...props }) => {
   return (
     <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 338 338" width={size} height={size} {...props}>
       <defs>
-        <linearGradient id="linear-gradient" x1="0.5" y1="1" x2="0.5" gradientUnits="objectBoundingBox" gradientTransform="rotate(10)">
-          <stop offset="0" stop-color="rgba(201,128,33,0.60)"/>
-          <stop offset="1" stop-color="rgb(201,128,33)"/>
+        <linearGradient id={`${id}-linear-gradient`} x1="0.5" y1="1" x2="0.5" gradientUnits="objectBoundingBox" gradientTransform="rotate(10)">
+          <stop offset="0" stop-color="var(--color-burger-400)"/>
+          <stop offset="1" stop-color="var(--color-burger-300)"/>
         </linearGradient>
 
-        <filter id="bevelLight" x="-20%" y="-20%" width="140%" height="140%">
+        <filter id={`${id}-bevelLight`} x="-20%" y="-20%" width="140%" height="140%">
           <feGaussianBlur in="SourceAlpha" stdDeviation="2" result="blur"/>
           <feSpecularLighting in="blur" surfaceScale="1" specularConstant="0.6"
-            specularExponent="25" lighting-color="rgb(201,128,33)" result="specOut">
+            specularExponent="25" lighting-color="var(--color-burger-200)" result="specOut">
             <fePointLight x="-2000" y="-3000" z="5000"/>
           </feSpecularLighting>
           <feComposite in="specOut" in2="SourceAlpha" operator="in" result="specOut"/>
           <feComposite in="SourceGraphic" in2="specOut" operator="arithmetic" k1="0" k2="1" k3="1" k4="0"/>
         </filter>
       </defs>
-      <g fill="url(#linear-gradient)"
-        filter="url(#bevelLight)">
-        <path transform="translate(-252,-129)" stroke="url(#linear-gradient)"
+      <g fill={`url(#${id}-linear-gradient)`}
+        filter={`url(#${id}-bevelLight)`}>
+        <path transform="translate(-252,-129)" stroke={`url(#${id}-linear-gradient)`}
           d="M560.7,337.1l-261.2,0.1c-3.9,0-7.5-0.9-10.7-2.5c1.3-2.3,2.8-4.5,4.7-6.4c2.6-2.7,5.7-4.9,9.3-6.4
             c3.5-1.5,7.4-2.4,11.7-2.4l228.1-0.4h0c10.1,0,19.3-4.1,26-10.8c6.6-6.6,10.8-15.8,10.8-26c0-10.1-4.1-19.3-10.8-26
             c-0.2-0.2-0.4-0.4-0.6-0.6c0.7-3,1.1-6.1,1.1-9.2c0-5.9-1.3-11.9-4-17.6c-12.9-27-33.1-49-58-64.2c-24.9-15.2-54.5-23.7-86.2-23.7
@@ -39,7 +39,7 @@ export default component$<any>(({ size, ...props }) => {
             c4.4,1.9,9.2,2.9,14.3,2.9v-6.2l0,6.2l260-0.1C548.8,379.1,529.2,402,504.8,417.6z"
         />
       </g>
-      <g transform="translate(40,40)" fill="rgb(201,128,33)">
+      <g transform="translate(40,40)" fill="var(--color-burger-500)">
         <path d="M257.158,296.672v-14.273h-5.098v-2.906h13.652v2.906h-5.086v14.273H257.158z"/>
         <path d="M267.916,296.672v-17.18h5.191l3.117,11.719l3.082-11.719h5.203v17.18h-3.223v-13.523
           l-3.41,13.523h-3.34l-3.398-13.523v13.523H267.916z"/>
