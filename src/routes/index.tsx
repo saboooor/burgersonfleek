@@ -84,13 +84,13 @@ export default component$(() => {
       <source src={videos[Math.floor(Math.random() * videos.length)]} type="video/mp4" />
     </video>
     <section class="flex flex-col sm:flex-row gap-4 mx-auto max-w-6xl px-6 items-center justify-center min-h-svh pt-20">
-      <div class="flex flex-col items-center animate-in fade-in motion-safe:slide-in-from-top-16 motion-safe:anim-duration-600 gap-4">
+      <div class="flex flex-col items-center animate-in fade-in motion-safe:slide-in-from-top-16 motion-safe:duration-600 gap-4">
         <LogoHorizontal size={600} height={250} id="pc" class="hidden sm:flex"/>
         <LogoHorizontal size={300} height={125} id="mobile" class="flex sm:hidden"/>
         <Cutout class="max-w-3/4 sm:max-w-150 drop-shadow-md" />
       </div>
       <div class="flex flex-col sm:items-start sm:text-left items-center text-center">
-        <h1 class="font-futura font-bold! uppercase tracking-tighter text-2xl/6 sm:text-3xl/8 md:text-4xl/10 animate-in fade-in motion-safe:slide-in-from-top-16 motion-safe:anim-duration-700">
+        <h1 class="font-futura font-bold! uppercase tracking-tighter text-2xl/6 sm:text-3xl/8 md:text-4xl/10 animate-in fade-in motion-safe:slide-in-from-top-16 motion-safe:duration-700">
           The{' '}
           <span class="text-transparent bg-clip-text! bg-linear-to-br from-burger-200 via-burger-400 to-orange-100">
             burgers
@@ -102,38 +102,38 @@ export default component$(() => {
           </span>
           <span class="text-lg align-top">™</span>
         </h1>
-        <p class="mt-2 text-lum-text-secondary md:text-lg animate-in fade-in motion-safe:slide-in-from-top-16 motion-safe:anim-duration-800">
+        <p class="mt-2 text-lum-text-secondary md:text-lg animate-in fade-in motion-safe:slide-in-from-top-16 motion-safe:duration-800">
           Premium Quality Gourmet Burgers, Steak Sandwiches, Fries, and more. est. 2019
         </p>
 
         <div class="flex flex-col gap-1 my-2 text-left">
-          <div class="animate-in fade-in motion-safe:slide-in-from-top-16 motion-safe:anim-duration-900">
+          <div class="animate-in fade-in motion-safe:slide-in-from-top-16 motion-safe:duration-900">
             <Link href="/halal" class="lum-btn lum-btn-p-1 lum-bg-transparent hover:lum-bg-lum-card-bg text-lum-text-secondary! rounded-lum-1">
               <Halal class="w-5 sm:w-auto mr-2" />
               Only serving Halal
             </Link>
           </div>
-          <div class="animate-in fade-in motion-safe:slide-in-from-top-16 motion-safe:anim-duration-1000">
+          <div class="animate-in fade-in motion-safe:slide-in-from-top-16 motion-safe:duration-1000">
             <a data-umami-event="phone" href="tel:+1 (905) 427 4377" class="lum-btn lum-btn-p-1 lum-bg-transparent hover:lum-bg-lum-card-bg text-lum-text-secondary! rounded-lum-1">
               <Phone strokeWidth={1} class="w-5 sm:w-auto mr-2" />
               +1 (905) 427 4377
             </a>
           </div>
-          <div class="animate-in fade-in motion-safe:slide-in-from-top-16 motion-safe:anim-duration-1100">
+          <div class="animate-in fade-in motion-safe:slide-in-from-top-16 motion-safe:duration-1100">
             <a data-umami-event="maps" target="_blank" href="https://maps.app.goo.gl/Unrrg3uda7AQQs4DA" class="lum-btn lum-btn-p-1 lum-bg-transparent hover:lum-bg-lum-card-bg text-lum-text-secondary! rounded-lum-1">
               <MapPin strokeWidth={1} class="w-5 sm:w-auto mr-2" />
               135 Harwood Ave N, Ajax, ON
             </a>
           </div>
-          <div class="animate-in fade-in motion-safe:slide-in-from-top-16 motion-safe:anim-duration-1200">
+          <div class="animate-in fade-in motion-safe:slide-in-from-top-16 motion-safe:duration-1200">
             <a data-umami-event="giftcard" target="_blank" href="https://order.toasttab.com/egiftcards/burgers-on-fleek-135-harwood-ave-n-unit-b212" class="lum-btn lum-btn-p-1 lum-bg-transparent hover:lum-bg-lum-card-bg text-lum-text-secondary! rounded-lum-1">
               <Gift strokeWidth={1} class="w-5 sm:w-auto mr-2" />
               Generous Mood? <span class="text-lum-accent underline">Order gift cards</span>
             </a>
           </div>
-          <div class="lum-btn lum-btn-p-1 lum-bg-transparent hover:lum-bg-lum-card-bg text-lum-text-secondary! min-h-13.5 animate-in fade-in motion-safe:slide-in-from-top-16 motion-safe:anim-duration-1300">
+          <div class="lum-btn lum-btn-p-1 lum-bg-transparent hover:lum-bg-lum-card-bg text-lum-text-secondary! min-h-13.5 animate-in fade-in motion-safe:slide-in-from-top-16 motion-safe:duration-1300">
             {GoogleDetails.value.currentOpeningHours?.openNow !== undefined &&
-              <div class="*:animate-in *:fade-in *:motion-safe:anim-duration-800">
+              <div class="*:animate-in *:fade-in *:motion-safe:duration-800">
                 {nextCloseTime.getTime() < now
                 || GoogleDetails.value.currentOpeningHours?.openNow === false ?
                   <p class="flex items-center gap-2 text-red-200/80 font-medium">
@@ -161,9 +161,9 @@ export default component$(() => {
 
         <div class="flex flex-col items-center sm:items-start gap-1 sm:gap-2 font-futura">
           <Popup class={{
-            'animate-in fade-in motion-safe:slide-in-from-top-16 motion-safe:anim-duration-1400': true,
+            'animate-in fade-in motion-safe:slide-in-from-top-16 motion-safe:duration-1400': true,
           }} types={['order']} />
-          <div class="animate-in fade-in motion-safe:slide-in-from-top-16 motion-safe:anim-duration-1500">
+          <div class="animate-in fade-in motion-safe:slide-in-from-top-16 motion-safe:duration-1500">
             <Link href="/menu" class={{
               'lum-btn lum-btn-p-3 sm:text-lg': true,
               'hover:text-lum-text! active:text-lum-text border-none': true,

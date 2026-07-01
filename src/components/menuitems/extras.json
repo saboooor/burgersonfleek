@@ -28,11 +28,12 @@
     "price": "$3.50"
   },
   {
-    "name": "Alternative Bun",
-    "price": {
-      "Gluten Free Buns": "$2.50",
-      "Keto Buns": "$3.50"
-    }
+    "name": "Gluten Free Bun",
+    "price": "$2.50"
+  },
+  {
+    "name": "Keto Bun",
+    "price": "$3.50"
   },
   {
     "name": "Grilled Cheese Buns",
