@@ -1,4 +1,5 @@
 import Goat from '../images/Goat.png?jsx';
+import Original from '../images/Original.png?jsx';
 
 export default [
   {
@@ -10,6 +11,7 @@ export default [
     name: 'The Original',
     description: 'Fried chicken leg burger with lettuce, tomato, and chipotle sauce.',
     price: '$14.75',
+    image: Original,
   },
   {
     name: 'G.O.A.T',
