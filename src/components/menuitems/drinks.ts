@@ -1,14 +1,14 @@
-import Citrus from 'lucide-icons-qwik/icons/Citrus';
 import CupSoda from 'lucide-icons-qwik/icons/CupSoda';
 import Milk from 'lucide-icons-qwik/icons/Milk';
 import Apple from 'lucide-icons-qwik/icons/Apple';
 import Droplets from 'lucide-icons-qwik/icons/Droplets';
+import YuzuFizz from '../images/YuzuFizz.png?jsx';
 
 export default [
   {
     name: 'Yuzu Fizz',
     price: '$5.49',
-    icon: Citrus,
+    image: YuzuFizz,
     color: 'var(--color-burger-200)',
   },
   {

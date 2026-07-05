@@ -103,7 +103,7 @@ export default component$(() => {
               <div class="absolute inset-0 -z-10 w-full h-full object-cover saturate-200 rounded-lum-2 overflow-clip">
                 <div class="absolute top-0 -translate-y-1/2 scale-75 opacity-30 w-full h-full bg-orange-500 rounded-full" />
               </div>
-              <div class="absolute inset-0 -z-10 rounded-lum-2 backdrop-blur-2xl"/>
+              <div class="absolute inset-0 -z-10 rounded-lum-2 backdrop-blur-2xl" />
               <div class="mb-4">
                 {item.image && <item.image class="max-w-20 sm:max-h-32 sm:max-w-full sm:object-contain" alt={item.name} />}
                 {!item.image && <Icon size={128} class="w-20 h-20 sm:h-auto sm:w-auto sm:mx-auto" />}
@@ -112,11 +112,11 @@ export default component$(() => {
                 <h2 class={{
                   'flex gap-2 text-xl font-bold sm:text-2xl font-futura tracking-wider': true,
                 }}>
-                  {item.name}{item.bestseller && <BestSeller/>}
+                  {item.name}{item.bestseller && <BestSeller />}
                 </h2>
                 <p class="text-lum-accent text-xs sm:text-sm">
                   {item.double && <span class="text-lum-text-secondary">Single: </span>}{item.price}
-                  {item.double && <><br/><span class="text-lum-text-secondary">Double: </span>{item.double}</>}
+                  {item.double && <><br /><span class="text-lum-text-secondary">Double: </span>{item.double}</>}
                 </p>
                 <p class="text-lum-text-secondary text-sm sm:text-base h-full">{item.description}</p>
               </div>
@@ -139,7 +139,7 @@ export default component$(() => {
               <div class="absolute inset-0 -z-10 w-full h-full object-cover saturate-200 rounded-lum-2 overflow-clip">
                 <div class="absolute top-0 -translate-y-1/2 scale-75 opacity-30 w-full h-full bg-yellow-500 rounded-full" />
               </div>
-              <div class="absolute inset-0 -z-10 rounded-lum-2 backdrop-blur-2xl"/>
+              <div class="absolute inset-0 -z-10 rounded-lum-2 backdrop-blur-2xl" />
               <div class="mb-4">
                 {item.image && <item.image class="max-w-20 sm:max-h-32 sm:max-w-full sm:object-contain" alt={item.name} />}
                 {!item.image && <Drumstick strokeWidth={1} size={128} class="w-20 h-20 sm:h-auto sm:w-auto sm:mx-auto text-yellow-200" />}
@@ -148,7 +148,7 @@ export default component$(() => {
                 <h2 class={{
                   'flex gap-2 text-xl font-bold sm:text-2xl font-futura tracking-wider': true,
                 }}>
-                  {item.name}{item.bestseller && <BestSeller/>}
+                  {item.name}{item.bestseller && <BestSeller />}
                 </h2>
                 <p class="text-lum-accent text-xs sm:text-sm">
                   {item.price}
@@ -171,7 +171,7 @@ export default component$(() => {
               <div class="absolute inset-0 -z-10 w-full h-full object-cover saturate-200 rounded-lum-2 overflow-clip">
                 <div class="absolute top-0 -translate-y-1/2 scale-75 opacity-30 w-full h-full bg-green-500 rounded-full" />
               </div>
-              <div class="absolute inset-0 -z-10 rounded-lum-2 backdrop-blur-2xl"/>
+              <div class="absolute inset-0 -z-10 rounded-lum-2 backdrop-blur-2xl" />
               <div class="mb-4">
                 {item.image && <item.image class="max-w-20 sm:max-h-32 sm:max-w-full sm:object-contain" alt={item.name} />}
                 {!item.image && <Icon size={128} class="w-20 h-20 sm:h-auto sm:w-auto sm:mx-auto" />}
@@ -203,7 +203,7 @@ export default component$(() => {
               <div class="absolute inset-0 -z-10 w-full h-full object-cover saturate-200 rounded-lum-2 overflow-clip">
                 <div class="absolute top-0 -translate-y-1/2 scale-75 opacity-30 w-full h-full bg-red-500 rounded-full" />
               </div>
-              <div class="absolute inset-0 -z-10 rounded-lum-2 backdrop-blur-2xl"/>
+              <div class="absolute inset-0 -z-10 rounded-lum-2 backdrop-blur-2xl" />
               <div class="mb-4">
                 {item.image && <item.image class="max-w-20 sm:max-h-32 sm:max-w-full sm:object-contain" alt={item.name} />}
                 {!item.image && <Beef size={128} strokeWidth={1} class="w-20 h-20 sm:h-auto sm:w-auto sm:mx-auto rotate-5 text-red-300" />}
@@ -308,11 +308,12 @@ export default component$(() => {
                   <div class="absolute top-0 -translate-y-1/2 scale-75 opacity-30 w-full h-full" style={{ backgroundColor: item.color }} />
                 }
               </div>
-              <div class="absolute inset-0 -z-10 rounded-lum-2 backdrop-blur-2xl"/>
+              <div class="absolute inset-0 -z-10 rounded-lum-2 backdrop-blur-2xl" />
               <div class="mb-2">
-                {item.icon && <item.icon class="max-w-20 sm:max-h-32 sm:max-w-full sm:object-contain" style={{
+                {item.image && <item.image class="max-w-10 sm:max-h-20 sm:object-contain" alt={item.name} />}
+                {item.icon && <item.icon class="max-w-10 sm:max-h-20 sm:object-contain" style={{
                   color: item.color,
-                }} size={40} />}
+                }} size={20} />}
               </div>
               <div class="flex-1 flex flex-col gap-2">
                 <h2 class={{
