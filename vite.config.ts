@@ -2,23 +2,16 @@
  * This is the base config for vite.
  * When building, the adapter config is used which loads this file and extends it.
  */
-import { qwikVite } from '@qwik.dev/core/optimizer';
-import { qwikRouter } from '@qwik.dev/router/vite';
-import { defineConfig, type UserConfig } from 'vite';
-import pkg from './package.json';
-import tailwindcss from '@tailwindcss/vite';
-import tsconfigPaths from 'vite-tsconfig-paths';
+import { defineConfig } from "vite-plus";
+import { qwikVite } from "@qwik.dev/core/optimizer";
+import { qwikRouter } from "@qwik.dev/router/vite";
+import tailwindcss from "@tailwindcss/vite";
+import { lint, fmt } from "./vite.lint";
 
-let platform = {};
-
-if (process.env.NODE_ENV === 'development') {
-  const { getPlatformProxy } = await import('wrangler');
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  platform = await getPlatformProxy();
-}
+import pkg from "./package.json" with { type: "json" };
 
 type PkgDep = Record<string, string>;
-const { dependencies = {}, devDependencies = {} } = pkg as any as {
+const { dependencies = {}, devDependencies = {} } = pkg as unknown as {
   dependencies: PkgDep;
   devDependencies: PkgDep;
   [key: string]: unknown;
@@ -26,63 +19,69 @@ const { dependencies = {}, devDependencies = {} } = pkg as any as {
 errorOnDuplicatesPkgDeps(devDependencies, dependencies);
 
 const qwikDeps = [
-  'lucide-icons-qwik',
-  'simple-icons-qwik',
-  '@luminescent/ui-qwik',
-  '@luminescent/icons-qwik',
+  "lucide-icons-qwik",
+  "simple-icons-qwik",
+  "@luminescent/ui-qwik",
+  "@luminescent/icons-qwik",
 ];
 
 /**
- * Note that Vite normally starts from `index.html` but the qwikRouter plugin makes start at `src/entry.ssr.tsx` instead.
+ * Note that Vite normally starts from `index.html` but the qwikCity plugin makes start at `src/entry.ssr.tsx` instead.
  */
-export default defineConfig((): UserConfig => {
-  return {
-    //resolve: {
-    //  tsconfigPaths: true,
-    //},
-    plugins: [qwikRouter(), qwikVite(), tailwindcss(), tsconfigPaths({ root: '.' })],
-    // This tells Vite which dependencies to pre-build in dev mode.
-    optimizeDeps: {
-      // Put problematic deps that break bundling here, mostly those with binaries.
-      // For example ['better-sqlite3'] if you use that in server functions.
-      exclude: [],
-    },
+export default defineConfig({
+  root: import.meta.dirname,
+  staged: {
+    "*": "vp check --fix",
+  },
+  build: {
+    minify: false,
+  },
+  lint,
+  fmt,
+  resolve: {
+    tsconfigPaths: true,
+  },
+  plugins: [qwikRouter(), qwikVite(), tailwindcss()],
+  // This tells Vite which dependencies to pre-build in dev mode.
+  optimizeDeps: {
+    // Put problematic deps that break bundling here, mostly those with binaries.
+    // For example ['better-sqlite3'] if you use that in server functions.
+    exclude: [],
+  },
 
-    // All Qwik libraries should be bundled in the server build.
-    ssr: {
-      noExternal: qwikDeps,
-    },
+  // All Qwik libraries should be bundled in the server build.
+  ssr: {
+    noExternal: qwikDeps,
+  },
+  /**
+   * This is an advanced setting. It improves the bundling of your server code. To use it, make sure you understand when your consumed packages are dependencies or dev dependencies. (otherwise things will break in production)
+   */
+  // ssr:
+  //   command === "build" && mode === "production"
+  //     ? {
+  //         // All dev dependencies should be bundled in the server build
+  //         noExternal: Object.keys(devDependencies),
+  //         // Anything marked as a dependency will not be bundled
+  //         // These should only be production binary deps (including deps of deps), CLI deps, and their module graph
+  //         // If a dep-of-dep needs to be external, add it here
+  //         // For example, if something uses `bcrypt` but you don't have it as a dep, you can write
+  //         // external: [...Object.keys(dependencies), 'bcrypt']
+  //         external: Object.keys(dependencies),
+  //       }
+  //     : undefined,
 
-    /**
-     * This is an advanced setting. It improves the bundling of your server code. To use it, make sure you understand when your consumed packages are dependencies or dev dependencies. (otherwise things will break in production)
-     */
-    // ssr:
-    //   command === "build" && mode === "production"
-    //     ? {
-    //         // All dev dependencies should be bundled in the server build
-    //         noExternal: Object.keys(devDependencies),
-    //         // Anything marked as a dependency will not be bundled
-    //         // These should only be production binary deps (including deps of deps), CLI deps, and their module graph
-    //         // If a dep-of-dep needs to be external, add it here
-    //         // For example, if something uses `bcrypt` but you don't have it as a dep, you can write
-    //         // external: [...Object.keys(dependencies), 'bcrypt']
-    //         external: Object.keys(dependencies),
-    //       }
-    //     : undefined,
-
-    server: {
-      headers: {
-        // Don't cache the server response in dev mode
-        'Cache-Control': 'public, max-age=0',
-      },
+  server: {
+    headers: {
+      // Don't cache the server response in dev mode
+      "Cache-Control": "public, max-age=0",
     },
-    preview: {
-      headers: {
-        // Do cache the server response in preview (non-adapter production build)
-        'Cache-Control': 'public, max-age=600',
-      },
+  },
+  preview: {
+    headers: {
+      // Do cache the server response in preview (non-adapter production build)
+      "Cache-Control": "public, max-age=600",
     },
-  };
+  },
 });
 
 // *** utils ***
@@ -92,26 +91,18 @@ export default defineConfig((): UserConfig => {
  * @param {Object} devDependencies - List of development dependencies
  * @param {Object} dependencies - List of production dependencies
  */
-function errorOnDuplicatesPkgDeps(
-  devDependencies: PkgDep,
-  dependencies: PkgDep,
-) {
-  // eslint-disable-next-line no-useless-assignment
-  let msg = '';
+function errorOnDuplicatesPkgDeps(devDependencies: PkgDep, dependencies: PkgDep) {
+  let msg = "";
   // Create an array 'duplicateDeps' by filtering devDependencies.
   // If a dependency also exists in dependencies, it is considered a duplicate.
-  const duplicateDeps = Object.keys(devDependencies).filter(
-    (dep) => dependencies[dep],
-  );
+  const duplicateDeps = Object.keys(devDependencies).filter((dep) => dependencies[dep]);
 
   // include any known qwik packages
-  const qwikPkg = Object.keys(dependencies).filter((value) =>
-    /qwik/i.test(value),
-  );
+  const qwikPkg = Object.keys(dependencies).filter((value) => /qwik/i.test(value));
 
-  // any errors for missing "qwik-router-config"
+  // any errors for missing "qwik-city-plan"
   // [PLUGIN_ERROR]: Invalid module "@qwik-router-config" is not a valid package
-  msg = `Move qwik packages ${qwikPkg.join(', ')} to devDependencies`;
+  msg = `Move qwik packages ${qwikPkg.join(", ")} to devDependencies`;
 
   if (qwikPkg.length > 0) {
     throw new Error(msg);
@@ -120,7 +111,7 @@ function errorOnDuplicatesPkgDeps(
   // Format the error message with the duplicates list.
   // The `join` function is used to represent the elements of the 'duplicateDeps' array as a comma-separated string.
   msg = `
-    Warning: The dependency "${duplicateDeps.join(', ')}" is listed in both "devDependencies" and "dependencies".
+    Warning: The dependency "${duplicateDeps.join(", ")}" is listed in both "devDependencies" and "dependencies".
     Please move the duplicated dependencies to "devDependencies" only and remove it from "dependencies"
   `;
 
