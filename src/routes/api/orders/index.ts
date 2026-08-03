@@ -1,9 +1,11 @@
 import type { RequestHandler } from '@qwik.dev/router';
 import { getLiveToastOrders, type ToastApiConfig } from '~/utils/toast-api';
 
-export const onGet: RequestHandler = ({ send, request, env }) => {
+export const onGet: RequestHandler = ({ send, request, env, url }) => {
   const encoder = new TextEncoder();
   let intervalId: ReturnType<typeof setInterval> | null = null;
+  const isMockRequested =
+    url.searchParams.has('mock') && url.searchParams.get('mock') !== 'false';
 
   const toastConfig: ToastApiConfig = {
     clientId: env.get('TOAST_CLIENT_ID') || process.env.TOAST_CLIENT_ID,
@@ -24,7 +26,7 @@ export const onGet: RequestHandler = ({ send, request, env }) => {
     async start(controller) {
       const sendUpdate = async () => {
         try {
-          const data = await getLiveToastOrders(toastConfig);
+          const data = await getLiveToastOrders(toastConfig, isMockRequested);
           const chunk = `data: ${JSON.stringify(data)}\n\n`;
           controller.enqueue(encoder.encode(chunk));
         } catch (err: unknown) {

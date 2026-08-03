@@ -341,7 +341,10 @@ export async function fetchKitchenFulfillments(
 /**
  * Read-only fetcher combining Toast orders and kitchen fulfillments for Public Board
  */
-export async function getLiveToastOrders(config: ToastApiConfig): Promise<{
+export async function getLiveToastOrders(
+  config: ToastApiConfig,
+  forceMock = false
+): Promise<{
   orders: ToastOrderTicket[];
   isMock: boolean;
 }> {
@@ -349,7 +352,7 @@ export async function getLiveToastOrders(config: ToastApiConfig): Promise<{
   const clientSecret = sanitizeEnvVal(config.clientSecret);
   const restaurantId = sanitizeEnvVal(config.restaurantId);
 
-  if (!clientId || !clientSecret || !restaurantId) {
+  if (forceMock || !clientId || !clientSecret || !restaurantId) {
     return {
       orders: getMockToastOrders(),
       isMock: true,

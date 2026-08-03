@@ -6,7 +6,7 @@ import {
   useVisibleTask$,
   $,
 } from '@qwik.dev/core';
-import type { RequestHandler } from '@qwik.dev/router';
+import { useLocation, type RequestHandler } from '@qwik.dev/router';
 import { generateHead } from '~/root';
 import type { ToastOrderTicket } from '~/utils/toast-api';
 import { OrderBoardHeader } from '~/components/order-display/OrderBoardHeader';
@@ -25,6 +25,7 @@ const ITEMS_PER_PAGE = 4; // Max 4 tickets per section per page (2x2 grid for TV
 const PAGE_ROTATE_INTERVAL_MS = 7000; // Rotate pages every 7 seconds
 
 export default component$(() => {
+  const loc = useLocation();
   const connectionStatus = useSignal<'connecting' | 'connected' | 'error'>(
     'connecting'
   );
@@ -63,7 +64,10 @@ export default component$(() => {
 
   // Client-side EventSource listener for read-only Toast API polling
   useVisibleTask$(({ cleanup }) => {
-    const eventSource = new EventSource('/api/orders');
+    const search =
+      loc.url.search ||
+      (typeof window !== 'undefined' ? window.location.search : '');
+    const eventSource = new EventSource(`/api/orders${search}`);
 
     eventSource.onopen = () => {
       connectionStatus.value = 'connected';
