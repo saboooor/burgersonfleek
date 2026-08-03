@@ -115,22 +115,7 @@ export default component$(() => {
     const readyMs = new Date(timeStr).getTime();
     if (isNaN(readyMs)) return true;
 
-    // Find newest ready order time in dataset
-    const maxReadyMs = Math.max(
-      ...state.orders
-        .filter((ord) => ord.orderState === 'READY')
-        .map((ord) => new Date(ord.readyDate || ord.openedDate).getTime())
-        .filter((t) => !isNaN(t)),
-      0
-    );
-
-    // For live real-time orders, reference current Date.now().
-    // For historical testing data (newest ticket > 1h old), reference newest ready order.
-    const isHistorical =
-      maxReadyMs > 0 && Date.now() - maxReadyMs > 60 * 60 * 1000;
-    const referenceTime = isHistorical ? maxReadyMs : Date.now();
-
-    return referenceTime - readyMs <= MAX_READY_AGE_MS;
+    return Date.now() - readyMs <= MAX_READY_AGE_MS;
   });
   const preparingOrders = state.orders.filter(
     (o) => o.orderState === 'PREPARING'

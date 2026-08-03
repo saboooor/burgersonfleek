@@ -114,20 +114,18 @@ export function extractCustomerName(ord: any): string | undefined {
 }
 
 /**
- * Helper: Fetch orders from yesterday (day before)
+ * Helper: Fetch orders for present day (today)
  */
-function getYesterdayBusinessDate(): string {
+function getTodayBusinessDate(): string {
   const date = new Date();
-  date.setDate(date.getDate() - 1); // 1 day ago
   const year = date.getFullYear();
   const month = String(date.getMonth() + 1).padStart(2, '0');
   const day = String(date.getDate()).padStart(2, '0');
   return `${year}${month}${day}`;
 }
 
-function getYesterdayIsoRange(): { startDate: string; endDate: string } {
+function getTodayIsoRange(): { startDate: string; endDate: string } {
   const date = new Date();
-  date.setDate(date.getDate() - 1); // 1 day ago
   const startOfDay = new Date(
     date.getFullYear(),
     date.getMonth(),
@@ -137,7 +135,15 @@ function getYesterdayIsoRange(): { startDate: string; endDate: string } {
     0,
     0
   );
-  const endOfDay = new Date();
+  const endOfDay = new Date(
+    date.getFullYear(),
+    date.getMonth(),
+    date.getDate(),
+    23,
+    59,
+    59,
+    999
+  );
 
   return {
     startDate: startOfDay.toISOString(),
@@ -252,7 +258,7 @@ export async function fetchToastOrders(
     sanitizeEnvVal(config.baseUrl) || 'https://ws-api.toasttab.com'
   ).replace(/\/$/, '');
   const restaurantId = sanitizeEnvVal(config.restaurantId) || '';
-  const businessDate = getYesterdayBusinessDate();
+  const businessDate = getTodayBusinessDate();
 
   // Try businessDate parameter first (YYYYMMDD)
   const url = new URL(`${baseUrl}/orders/v2/ordersBulk`);
@@ -269,7 +275,7 @@ export async function fetchToastOrders(
 
   // If businessDate returns 400, fallback to startDate and endDate ISO range
   if (response.status === 400) {
-    const { startDate, endDate } = getYesterdayIsoRange();
+    const { startDate, endDate } = getTodayIsoRange();
     const fallbackUrl = new URL(`${baseUrl}/orders/v2/ordersBulk`);
     fallbackUrl.searchParams.set('startDate', startDate);
     fallbackUrl.searchParams.set('endDate', endDate);
@@ -313,7 +319,7 @@ export async function fetchKitchenFulfillments(
     sanitizeEnvVal(config.baseUrl) || 'https://ws-api.toasttab.com'
   ).replace(/\/$/, '');
   const restaurantId = sanitizeEnvVal(config.restaurantId) || '';
-  const { startDate } = getYesterdayIsoRange();
+  const { startDate } = getTodayIsoRange();
   const url = new URL(`${baseUrl}/kitchen/v1/export/itemFulfillments`);
   url.searchParams.set('since', startDate);
 
