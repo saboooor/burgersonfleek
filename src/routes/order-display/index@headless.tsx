@@ -157,6 +157,7 @@ export default component$(() => {
       class="selection:bg-burger-300 flex min-h-screen flex-col selection:text-gray-950"
       style={{
         '--lum-border-radius': '3rem',
+        '--lum-depth': '6',
       }}
     >
       {/* Background Video Layer - Alternates continuously between videos */}
