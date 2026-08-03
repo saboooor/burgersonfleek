@@ -49,28 +49,28 @@ export const PickupTicketCard = component$<PickupTicketCardProps>(
           'lum-card rounded-lum-7 lum-grad-bg-lum-card-bg font-futura relative justify-between overflow-hidden p-6 transition-all duration-300 sm:p-7': true,
         }}
       >
-        {/* Ticket Number & Enlarged Order Time / ETA */}
-        <div class="mb-3 flex items-center justify-between gap-4">
+        {/* Ticket Number & Order Time / ETA */}
+        <div class="mb-3 flex items-start justify-between gap-3">
           <span
             class={[
-              'font-futura leading-none font-bold tracking-tighter',
+              'font-futura shrink-0 leading-none font-bold tracking-tighter',
               isReady
-                ? 'bg-linear-to-br from-emerald-200 via-emerald-400 to-green-100 bg-clip-text! text-5xl text-transparent drop-shadow-[0_0_15px_rgba(52,211,153,0.4)] sm:text-6xl'
-                : 'from-burger-200 via-burger-400 bg-linear-to-br to-orange-100 bg-clip-text! text-4xl text-transparent sm:text-5xl',
+                ? 'bg-linear-to-br from-emerald-200 via-emerald-400 to-green-100 bg-clip-text! text-4xl text-transparent drop-shadow-[0_0_15px_rgba(52,211,153,0.4)] sm:text-5xl'
+                : 'from-burger-200 via-burger-400 bg-linear-to-br to-orange-100 bg-clip-text! text-3xl text-transparent sm:text-4xl',
             ]}
           >
             #{ticket.displayNumber}
           </span>
 
-          {/* Enlarged Times */}
+          {/* Times */}
           {displayTime && (
-            <div class="font-futura flex flex-col items-end text-lg font-extrabold tracking-wide text-white sm:text-xl lg:text-2xl">
-              <span class="flex items-center gap-2">
-                <Clock class="text-burger-300 h-5 w-5 sm:h-6 sm:w-6" />
-                <span>{displayTime}</span>
+            <div class="font-futura flex shrink-0 flex-col items-end whitespace-nowrap text-white">
+              <span class="flex items-center gap-1.5 text-sm font-extrabold tracking-wide sm:text-base lg:text-lg">
+                <Clock class="text-burger-300 h-4 w-4 shrink-0 sm:h-5 sm:w-5" />
+                <span class="whitespace-nowrap">{displayTime}</span>
               </span>
               {etaText && (
-                <span class="text-burger-300 mt-0.5 text-sm font-black tracking-wider uppercase sm:text-base">
+                <span class="text-burger-300 mt-0.5 text-xs font-black tracking-wider whitespace-nowrap uppercase sm:text-sm">
                   {etaText}
                 </span>
               )}

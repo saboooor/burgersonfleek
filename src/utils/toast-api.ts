@@ -452,6 +452,8 @@ export async function getLiveToastOrders(
 export function getMockToastOrders(): ToastOrderTicket[] {
   const now = Date.now();
   const minutesAgo = (m: number) => new Date(now - m * 60 * 1000).toISOString();
+  const minutesFromNow = (m: number) =>
+    new Date(now + m * 60 * 1000).toISOString();
 
   return [
     {
@@ -499,6 +501,7 @@ export function getMockToastOrders(): ToastOrderTicket[] {
       diningOption: 'TAKE_OUT',
       orderState: 'PREPARING',
       openedDate: minutesAgo(5),
+      estimatedFulfillmentDate: minutesFromNow(10),
       items: [
         {
           id: 'i4',
@@ -516,6 +519,7 @@ export function getMockToastOrders(): ToastOrderTicket[] {
       diningOption: 'DELIVERY',
       orderState: 'PREPARING',
       openedDate: minutesAgo(3),
+      estimatedFulfillmentDate: minutesFromNow(12),
       items: [
         {
           id: 'i5',
@@ -533,6 +537,7 @@ export function getMockToastOrders(): ToastOrderTicket[] {
       diningOption: 'TAKE_OUT',
       orderState: 'PREPARING',
       openedDate: minutesAgo(2),
+      estimatedFulfillmentDate: minutesFromNow(15),
       items: [
         {
           id: 'i6',
@@ -550,6 +555,7 @@ export function getMockToastOrders(): ToastOrderTicket[] {
       diningOption: 'DINE_IN',
       orderState: 'PREPARING',
       openedDate: minutesAgo(1),
+      estimatedFulfillmentDate: minutesFromNow(18),
       items: [
         {
           id: 'i7',
