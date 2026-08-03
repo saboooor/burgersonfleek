@@ -43,11 +43,13 @@ export function generateHead({
   title = 'Burgers on Fleek',
   description = defaultDescription,
   image = '/branding/png/logo.png',
+  noindex = false,
   head = {},
 }: {
   title?: string;
   description?: string;
   image?: string;
+  noindex?: boolean;
   head?: Partial<DocumentHeadValue>;
 }): DocumentHead {
   return {
@@ -66,6 +68,18 @@ export function generateHead({
         name: 'og:image',
         content: image,
       },
+      ...(noindex
+        ? [
+            {
+              name: 'robots',
+              content: 'noindex, nofollow',
+            },
+            {
+              name: 'googlebot',
+              content: 'noindex, nofollow',
+            },
+          ]
+        : []),
       ...(head.meta ?? []),
     ],
     scripts: [...(head.scripts ?? [])],

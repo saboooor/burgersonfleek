@@ -6,6 +6,7 @@ import {
   useVisibleTask$,
   $,
 } from '@qwik.dev/core';
+import type { RequestHandler } from '@qwik.dev/router';
 import { generateHead } from '~/root';
 import type { ToastOrderTicket } from '~/utils/toast-api';
 import { OrderBoardHeader } from '~/components/order-display/OrderBoardHeader';
@@ -276,6 +277,11 @@ export default component$(() => {
   );
 });
 
+export const onRequest: RequestHandler = ({ headers }) => {
+  headers.set('X-Robots-Tag', 'noindex, nofollow');
+};
+
 export const head = generateHead({
   title: 'Burgers on Fleek - Order Pickup Board',
+  noindex: true,
 });

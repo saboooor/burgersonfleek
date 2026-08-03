@@ -65,6 +65,7 @@ export const onGet: RequestHandler = ({ send, request, env }) => {
         'Content-Type': 'text/event-stream',
         'Cache-Control': 'no-cache',
         Connection: 'keep-alive',
+        'X-Robots-Tag': 'noindex, nofollow',
       },
     })
   );

@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /order-display
+Disallow: /order-display/
+Disallow: /api/
+Allow: /

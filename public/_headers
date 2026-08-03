@@ -2,3 +2,12 @@
 
 /build/*
   Cache-Control: public, max-age=31536000, s-maxage=31536000, immutable
+
+/order-display
+  X-Robots-Tag: noindex, nofollow
+
+/order-display/*
+  X-Robots-Tag: noindex, nofollow
+
+/api/*
+  X-Robots-Tag: noindex, nofollow
