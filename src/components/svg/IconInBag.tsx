@@ -2,11 +2,24 @@ import { component$ } from '@qwik.dev/core';
 
 export default component$(({ size }: any) => {
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" width={size ?? 24} height={size ?? 24} viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/>
-      <path d="M3 6h18"/>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width={size ?? 24}
+      height={size ?? 24}
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="1"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    >
+      <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z" />
+      <path d="M3 6h18" />
       <g fill="currentColor" transform="scale(0.035)">
-        <path transform="translate(-80,110)" stroke="currentColor" stroke-width="10"
+        <path
+          transform="translate(-80,110)"
+          stroke="currentColor"
+          stroke-width="10"
           d="M560.7,337.1l-261.2,0.1c-3.9,0-7.5-0.9-10.7-2.5c1.3-2.3,2.8-4.5,4.7-6.4c2.6-2.7,5.7-4.9,9.3-6.4
             c3.5-1.5,7.4-2.4,11.7-2.4l228.1-0.4h0c10.1,0,19.3-4.1,26-10.8c6.6-6.6,10.8-15.8,10.8-26c0-10.1-4.1-19.3-10.8-26
             c-0.2-0.2-0.4-0.4-0.6-0.6c0.7-3,1.1-6.1,1.1-9.2c0-5.9-1.3-11.9-4-17.6c-12.9-27-33.1-49-58-64.2c-24.9-15.2-54.5-23.7-86.2-23.7
@@ -24,7 +37,6 @@ export default component$(({ size }: any) => {
             c4.4,1.9,9.2,2.9,14.3,2.9v-6.2l0,6.2l260-0.1C548.8,379.1,529.2,402,504.8,417.6z"
         />
       </g>
-
     </svg>
   );
 });

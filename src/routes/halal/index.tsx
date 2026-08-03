@@ -4,7 +4,7 @@ import { generateHead } from '~/root';
 
 export default component$(() => {
   return (
-    <section class="flex flex-col mx-auto max-w-6xl px-6 items-center justify-center text-center min-h-svh pt-20">
+    <section class="mx-auto flex min-h-svh max-w-6xl flex-col items-center justify-center px-6 pt-20 text-center">
       <HalalSection />
     </section>
   );

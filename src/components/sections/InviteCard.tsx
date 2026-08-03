@@ -1,4 +1,9 @@
-import { component$, useSignal, useVisibleTask$, type Signal } from '@qwik.dev/core';
+import {
+  component$,
+  useSignal,
+  useVisibleTask$,
+  type Signal,
+} from '@qwik.dev/core';
 
 import * as THREE from 'three';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
@@ -36,7 +41,7 @@ export default component$(() => {
     controls.update();
 
     // Lights
-    const pointLight = new THREE.DirectionalLight(0xFDE2C1, 0.2);
+    const pointLight = new THREE.DirectionalLight(0xfde2c1, 0.2);
     pointLight.position.set(1, 0, -20);
     pointLight.castShadow = true;
     const ambientLight = new THREE.AmbientLight(0xffffff, 3);
@@ -52,18 +57,27 @@ export default component$(() => {
     backTexture.anisotropy = renderer.capabilities.getMaxAnisotropy();
     backTexture.colorSpace = THREE.SRGBColorSpace;
 
-    const frontMaterial = new THREE.MeshStandardMaterial({ map: frontTexture, roughness: 0.2 });
-    const backMaterial = new THREE.MeshStandardMaterial({ map: backTexture, roughness: 0.2 });
-    const sideMaterial = new THREE.MeshStandardMaterial({ color: 0x000000, roughness: 0.2 });
+    const frontMaterial = new THREE.MeshStandardMaterial({
+      map: frontTexture,
+      roughness: 0.2,
+    });
+    const backMaterial = new THREE.MeshStandardMaterial({
+      map: backTexture,
+      roughness: 0.2,
+    });
+    const sideMaterial = new THREE.MeshStandardMaterial({
+      color: 0x000000,
+      roughness: 0.2,
+    });
 
     // Create an array of materials for each side of the box (front and back)
     const materials = [
-      sideMaterial,  // Right side
-      sideMaterial,  // Left side
-      sideMaterial,  // Top side
-      sideMaterial,  // Bottom side
+      sideMaterial, // Right side
+      sideMaterial, // Left side
+      sideMaterial, // Top side
+      sideMaterial, // Bottom side
       frontMaterial, // Front face
-      backMaterial,   // Back face
+      backMaterial, // Back face
     ];
 
     // Adding the Card to the Scene
@@ -89,17 +103,22 @@ export default component$(() => {
   return (
     <>
       <div class="flex flex-col px-10" id="invite">
-        <h1 class="font-semibold text-white text-3xl sm:text-5xl my-4 sm:mb-8">
+        <h1 class="my-4 text-3xl font-semibold text-white sm:mb-8 sm:text-5xl">
           We're having our <span class="text-burger-300">5th anniversary!</span>
         </h1>
         <p class="text-lum-text-secondary text-lg md:text-xl">
-          We're having a special event to celebrate our 5th anniversary and are personally inviting you to join us!
+          We're having a special event to celebrate our 5th anniversary and are
+          personally inviting you to join us!
         </p>
       </div>
 
-      <canvas ref={preview} id="preview" class={{
-        'mt-10 w-full h-[60svh] lum-card p-0 backdrop-blur-md': true,
-      }} />
+      <canvas
+        ref={preview}
+        id="preview"
+        class={{
+          'lum-card mt-10 h-[60svh] w-full p-0 backdrop-blur-md': true,
+        }}
+      />
     </>
   );
 });

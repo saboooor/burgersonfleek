@@ -1,7 +1,10 @@
 import { RequestEventBase } from '@qwik.dev/router';
 
 // function to fetch place details
-async function fetchPlaceDetails(requestEvent: RequestEventBase, kv: Env['bof']) {
+async function fetchPlaceDetails(
+  requestEvent: RequestEventBase,
+  kv: Env['bof']
+) {
   const { env } = requestEvent;
   const apiKey = env.get('GOOGLE_MAPS_API_KEY');
   if (!apiKey) {
@@ -12,7 +15,10 @@ async function fetchPlaceDetails(requestEvent: RequestEventBase, kv: Env['bof'])
   // initialize Google Maps Places client
   const url = new URL(`https://places.googleapis.com/v1/places/${placeId}`);
   url.searchParams.set('key', apiKey);
-  url.searchParams.set('fields', 'reviews,userRatingCount,currentOpeningHours,regularOpeningHours');
+  url.searchParams.set(
+    'fields',
+    'reviews,userRatingCount,currentOpeningHours,regularOpeningHours'
+  );
   const res = await fetch(url);
   if (!res.ok) {
     throw new Error(`Places API error: ${res.status} ${res.statusText}`);
@@ -27,7 +33,9 @@ async function fetchPlaceDetails(requestEvent: RequestEventBase, kv: Env['bof'])
 
   // cache details in KV with 1 hour expiration
   console.log('Caching fresh data in KV');
-  await kv.put('placeDetails', JSON.stringify(response), { expirationTtl: 3600 });
+  await kv.put('placeDetails', JSON.stringify(response), {
+    expirationTtl: 3600,
+  });
 
   return response;
 }
@@ -57,7 +65,8 @@ export async function getPlaceDetails(requestEvent: RequestEventBase) {
     const pastNextOpenTime = nextOpenTime && Number(nextOpenTime) * 1000 < now;
 
     const nextCloseTime = details.currentOpeningHours?.nextCloseTime?.seconds;
-    const pastNextCloseTime = nextCloseTime && Number(nextCloseTime) * 1000 < now;
+    const pastNextCloseTime =
+      nextCloseTime && Number(nextCloseTime) * 1000 < now;
 
     // serve from cache if data is less than 1 hour old
     if (!pastNextOpenTime && !pastNextCloseTime) {

@@ -6,43 +6,51 @@
  *
  */
 
-@import url("https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap');
 
-@import "tailwindcss";
+@import 'tailwindcss';
 
-@import "tw-animate-css";
-@import "@luminescent/ui";
+@import 'tw-animate-css';
+@import '@luminescent/ui';
 
 @source "../node_modules/@luminescent/ui-qwik";
 
 @theme {
-  --font-display: "Figtree", "sans-serif";
+  --font-display: 'Figtree', 'sans-serif';
 
-  --color-gray-50:    oklch(98.5% 0.003  105); /* Crisp, clean ivory-tinted white */
-  --color-gray-100:   oklch(96.7% 0.005  105); /* Fresh, bright limestone gray */
-  --color-gray-200:   oklch(92.8% 0.008  103); /* Cool, clean light slate */
-  --color-gray-300:   oklch(87.2% 0.011  102); 
-  --color-gray-400:   oklch(70.7% 0.015  100); /* Sleek, neutral mid-gray with a fresh undertone */
-  --color-gray-500:   oklch(55.1% 0.018  100); 
-  --color-gray-600:   oklch(44.6% 0.018  98);  
-  --color-gray-700:   oklch(37.3% 0.016  96);  /* Deep slate that perfectly complements the gold accents */
-  --color-gray-800:   oklch(27.8% 0.014  94);  
-  --color-gray-900:   oklch(21%   0.012  92);  
-  --color-gray-950:   oklch(13%   0.010  90);  /* Deep, premium off-black anchor */
+  --color-gray-50: oklch(98.5% 0.003 105); /* Crisp, clean ivory-tinted white */
+  --color-gray-100: oklch(96.7% 0.005 105); /* Fresh, bright limestone gray */
+  --color-gray-200: oklch(92.8% 0.008 103); /* Cool, clean light slate */
+  --color-gray-300: oklch(87.2% 0.011 102);
+  --color-gray-400: oklch(
+    70.7% 0.015 100
+  ); /* Sleek, neutral mid-gray with a fresh undertone */
+  --color-gray-500: oklch(55.1% 0.018 100);
+  --color-gray-600: oklch(44.6% 0.018 98);
+  --color-gray-700: oklch(
+    37.3% 0.016 96
+  ); /* Deep slate that perfectly complements the gold accents */
+  --color-gray-800: oklch(27.8% 0.014 94);
+  --color-gray-900: oklch(21% 0.012 92);
+  --color-gray-950: oklch(13% 0.01 90); /* Deep, premium off-black anchor */
 
   --color-lum-card-bg: --alpha(var(--color-gray-900) / 50%);
 
-  --color-burger-50:  oklch(98%    0.055  102); /* Brightest ivory highlight */
-  --color-burger-100: oklch(95%    0.095  100); /* Luminous neon-citrus splash */
-  --color-burger-200: oklch(88%    0.155  96);  /* Vivid pure yuzu juice */
-  --color-burger-300: oklch(82%    0.178  92);  /* Radiant sun-gold */
-  --color-burger-400: oklch(76%    0.182  88);  /* Searing citrus rind */
-  --color-burger-500: oklch(70%    0.178  85);  /* Vivid glowing gold */
-  --color-burger-600: oklch(64%    0.165  82);  /* Bright candied peel */
-  --color-burger-700: oklch(58%    0.155  80);  /* LIGHTENED: Vibrant warm honey */
-  --color-burger-800: oklch(53%    0.145  78);  /* LIGHTENED: Rich, glowing amber */
-  --color-burger-900: oklch(48%    0.135  75);  /* LIGHTENED: Clean, punchy marigold */
-  --color-burger-950: oklch(44%    0.125  72);  /* LIGHTENED: The new floor—bright, intense gold base */
+  --color-burger-50: oklch(98% 0.055 102); /* Brightest ivory highlight */
+  --color-burger-100: oklch(95% 0.095 100); /* Luminous neon-citrus splash */
+  --color-burger-200: oklch(88% 0.155 96); /* Vivid pure yuzu juice */
+  --color-burger-300: oklch(82% 0.178 92); /* Radiant sun-gold */
+  --color-burger-400: oklch(76% 0.182 88); /* Searing citrus rind */
+  --color-burger-500: oklch(70% 0.178 85); /* Vivid glowing gold */
+  --color-burger-600: oklch(64% 0.165 82); /* Bright candied peel */
+  --color-burger-700: oklch(58% 0.155 80); /* LIGHTENED: Vibrant warm honey */
+  --color-burger-800: oklch(53% 0.145 78); /* LIGHTENED: Rich, glowing amber */
+  --color-burger-900: oklch(
+    48% 0.135 75
+  ); /* LIGHTENED: Clean, punchy marigold */
+  --color-burger-950: oklch(
+    44% 0.125 72
+  ); /* LIGHTENED: The new floor—bright, intense gold base */
   --color-lum-accent: var(--color-burger-300);
   --color-lum-border: var(--color-burger-200);
 
@@ -51,18 +59,21 @@
   --lum-depth: 1;
 }
 
-
 @supports (corner-shape: squircle) {
   :root {
     --lum-border-radius: var(--radius-4xl);
   }
 }
 
-.-animation-delay-5000 { animation-delay: -5s; }
-.-animation-delay-10000 { animation-delay: -10s; }
+.-animation-delay-5000 {
+  animation-delay: -5s;
+}
+.-animation-delay-10000 {
+  animation-delay: -10s;
+}
 
 .font-futura {
-  font-family: "futura-pt", sans-serif;
+  font-family: 'futura-pt', sans-serif;
   font-weight: 400;
   font-style: normal;
   font-display: swap !important;
@@ -109,8 +120,24 @@ html {
   width: 100vw;
 
   object-fit: cover;
-  transform: scale(1.12); /* remove letterboxing */
-  transform-origin: center;
   z-index: -10;
   pointer-events: none;
+}
+
+/* Progressive Blur Header */
+.progressive-blur-header {
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  mask-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 0.7) 60%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 0.7) 60%,
+    rgba(0, 0, 0, 0) 100%
+  );
 }

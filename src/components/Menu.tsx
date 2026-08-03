@@ -3,16 +3,23 @@ import BookOpen from 'lucide-icons-qwik/icons/BookOpen';
 
 export default component$(() => {
   return (
-    <aside class="hidden sm:flex flex-col sticky max-h-180 top-0 pt-30 px-6" aria-label="Sidebar">
-      <div class={{
-        'flex items-center gap-3 lum-btn-p-2 mb-2': true,
-      }}>
+    <aside
+      class="sticky top-0 hidden max-h-180 flex-col px-6 pt-30 sm:flex"
+      aria-label="Sidebar"
+    >
+      <div
+        class={{
+          'lum-btn-p-2 mb-2 flex items-center gap-3': true,
+        }}
+      >
         <BookOpen />
-        <h1 class="text-2xl flex-1 font-futura">MENU</h1>
+        <h1 class="font-futura flex-1 text-2xl">MENU</h1>
       </div>
-      <div class={{
-        'motion-safe:transition-all lum-card gap-2 p-4 font-futura': true,
-      }}>
+      <div
+        class={{
+          'lum-card font-futura gap-2 p-4 motion-safe:transition-all': true,
+        }}
+      >
         <Slot />
       </div>
     </aside>
@@ -22,10 +29,12 @@ export default component$(() => {
 export const MenuCategory = component$(({ name }: any) => {
   return (
     <div class="flex flex-col gap-2">
-      <span class="text-orange-200 px-2 py-1">{name}</span>
-      <div class={{
-        'flex flex-col gap-1 flex-wrap': true,
-      }}>
+      <span class="px-2 py-1 text-orange-200">{name}</span>
+      <div
+        class={{
+          'flex flex-col flex-wrap gap-1': true,
+        }}
+      >
         <Slot />
       </div>
     </div>
@@ -34,7 +43,7 @@ export const MenuCategory = component$(({ name }: any) => {
 
 export const MobileMenu = component$(() => {
   return (
-    <div class="sm:hidden fixed top-18 z-10 w-[calc(100vw-2rem)] mx-4 lum-card flex-row gap-1 *:lum-btn *:rounded-lum-1 p-1 overflow-auto font-futura backdrop-blur-md">
+    <div class="lum-card *:lum-btn *:rounded-lum-1 font-futura fixed top-18 z-10 mx-4 w-[calc(100vw-2rem)] flex-row gap-1 overflow-auto p-1 backdrop-blur-md sm:hidden">
       <Slot />
     </div>
   );

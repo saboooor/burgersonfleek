@@ -1,5 +1,10 @@
 import { component$ } from '@qwik.dev/core';
-import { DocumentHead, DocumentHeadValue, QwikRouterProvider, RouterOutlet } from '@qwik.dev/router';
+import {
+  DocumentHead,
+  DocumentHeadValue,
+  QwikRouterProvider,
+  RouterOutlet,
+} from '@qwik.dev/router';
 import { RouterHead } from './components/Head';
 
 import './global.css';
@@ -17,7 +22,11 @@ export default component$(() => {
       <head>
         <meta charset="utf-8" />
         <link rel="manifest" href="/manifest.json" />
-        <script defer src="https://umami.bwmp.dev/script.js" data-website-id="0f3cda1e-13fd-4ca3-9057-1701f2f7ee36"/>
+        <script
+          defer
+          src="https://umami.bwmp.dev/script.js"
+          data-website-id="0f3cda1e-13fd-4ca3-9057-1701f2f7ee36"
+        />
         <RouterHead />
       </head>
       <body class="text-lum-text" onTouchStart$={() => {}}>
@@ -27,7 +36,8 @@ export default component$(() => {
   );
 });
 
-export const defaultDescription = 'Premium Quality Gourmet Burgers, Steak Sandwiches, Fries, and more. Only serving Halal حلال';
+export const defaultDescription =
+  'Premium Quality Gourmet Burgers, Steak Sandwiches, Fries, and more. Only serving Halal حلال';
 
 export function generateHead({
   title = 'Burgers on Fleek',
@@ -58,8 +68,6 @@ export function generateHead({
       },
       ...(head.meta ?? []),
     ],
-    scripts: [
-      ...(head.scripts ?? []),
-    ],
+    scripts: [...(head.scripts ?? [])],
   };
 }

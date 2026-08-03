@@ -17,87 +17,151 @@ export default component$(() => {
 
   return (
     <Nav fixed floating colorClass="lum-grad-bg-lum-accent/20">
-      <Link q:slot="start" href="/" class="lum-btn lum-bg-transparent rounded-lum-1 -m-1">
+      <Link
+        q:slot="start"
+        href="/"
+        class="lum-btn lum-bg-transparent rounded-lum-1 -m-1"
+      >
         <Icon size={30} />
-        <p class="space-x-1 whitespace-nowrap text-white font-futura motion-safe:transition-opacity">
-          <span class="font-bold">BURGERS</span><span>ON</span><span>FLEEK</span>
+        <p class="font-futura space-x-1 whitespace-nowrap text-white motion-safe:transition-opacity">
+          <span class="font-bold">BURGERS</span>
+          <span>ON</span>
+          <span>FLEEK</span>
         </p>
-        <div class={{
-          'motion-safe:transition-all': true,
-          '-ml-6 opacity-0': !loc.isNavigating,
-        }}>
-          <div class="lum-loading w-4 h-4" />
+        <div
+          class={{
+            'motion-safe:transition-all': true,
+            '-ml-6 opacity-0': !loc.isNavigating,
+          }}
+        >
+          <div class="lum-loading h-4 w-4" />
         </div>
       </Link>
 
-      <Link q:slot="end" href="/menu" class={{
-        'lum-btn lum-bg-transparent font-futura hover:text-lum-text p-2 sm:lum-btn-p-2 rounded-lum-2': true,
-      }} title='Menu'>
+      <Link
+        q:slot="end"
+        href="/menu"
+        class={{
+          'lum-btn lum-bg-transparent font-futura hover:text-lum-text sm:lum-btn-p-2 rounded-lum-2 p-2': true,
+        }}
+        title="Menu"
+      >
         <BookOpen strokeWidth={1} /> <span class="hidden sm:inline">MENU</span>
       </Link>
-      <a q:slot="end" target='_blank' data-umami-event="order_online" href="https://order.toasttab.com/online/burgers-on-fleek-135-harwood-ave-n-unit-b212" class={{
-        'lum-btn lum-bg-transparent font-futura hover:text-lum-text p-2 sm:lum-btn-p-2 rounded-lum-2': true,
-      }} title='Order Online'>
+      <a
+        q:slot="end"
+        target="_blank"
+        data-umami-event="order_online"
+        href="https://order.toasttab.com/online/burgers-on-fleek-135-harwood-ave-n-unit-b212"
+        class={{
+          'lum-btn lum-bg-transparent font-futura hover:text-lum-text sm:lum-btn-p-2 rounded-lum-2 p-2': true,
+        }}
+        title="Order Online"
+      >
         <IconInBag /> <span class="hidden sm:inline">ORDER</span>
       </a>
-      <Link q:slot="end" href="/halal" class={{
-        'hidden lg:flex lum-btn lum-bg-transparent hover:text-lum-text p-2 rounded-lum-2': true,
-      }} title='Halal'>
+      <Link
+        q:slot="end"
+        href="/halal"
+        class={{
+          'lum-btn lum-bg-transparent hover:text-lum-text rounded-lum-2 hidden p-2 lg:flex': true,
+        }}
+        title="Halal"
+      >
         <Halal />
       </Link>
-      <div q:slot='end' class="hidden sm:flex gap-2">
+      <div q:slot="end" class="hidden gap-2 sm:flex">
         <SocialButtons />
       </div>
 
-      <Link q:slot="mobile" href="/menu" class="lum-btn lum-bg-transparent font-futura hover:text-lum-text rounded-lum-2">
+      <Link
+        q:slot="mobile"
+        href="/menu"
+        class="lum-btn lum-bg-transparent font-futura hover:text-lum-text rounded-lum-2"
+      >
         <BookOpen strokeWidth={1} /> MENU
       </Link>
-      <a q:slot="mobile" target='_blank' data-umami-event="order_online" href="https://order.toasttab.com/online/burgers-on-fleek-135-harwood-ave-n-unit-b212"
-        class="lum-btn lum-bg-transparent font-futura hover:text-lum-text rounded-lum-2">
+      <a
+        q:slot="mobile"
+        target="_blank"
+        data-umami-event="order_online"
+        href="https://order.toasttab.com/online/burgers-on-fleek-135-harwood-ave-n-unit-b212"
+        class="lum-btn lum-bg-transparent font-futura hover:text-lum-text rounded-lum-2"
+      >
         <IconInBag /> ORDER ONLINE
       </a>
-      <Link q:slot="mobile" href="/halal" class="lum-btn lum-bg-transparent font-futura hover:text-lum-text rounded-lum-2">
+      <Link
+        q:slot="mobile"
+        href="/halal"
+        class="lum-btn lum-bg-transparent font-futura hover:text-lum-text rounded-lum-2"
+      >
         <Halal /> HALAL
       </Link>
-      <div q:slot='mobile' class="flex justify-evenly">
+      <div q:slot="mobile" class="flex justify-evenly">
         <SocialButtons />
       </div>
-
     </Nav>
   );
 });
 
 export const SocialButtons = component$(({ big }: any) => {
-  return <>
-    <a href="tel:+1 (905) 427 4377" data-umami-event="phone" title="Call us" class={{
-      'lum-btn lum-bg-transparent hover:text-lum-text fill-current p-2 rounded-lum-2': true,
-      'p-4': big,
-    }}>
-      <Phone />
-    </a>
-    <a href="https://maps.app.goo.gl/Unrrg3uda7AQQs4DA" data-umami-event="maps" title="Google Maps" class={{
-      'lum-btn lum-bg-transparent hover:text-lum-text fill-current p-2 rounded-lum-2': true,
-      'p-4': big,
-    }}>
-      <MapPin />
-    </a>
-    <a href="https://instagram.com/burgersonfleek.ca" data-umami-event="social-instagram" title="Instagram" class={{
-      'lum-btn lum-bg-transparent hover:text-lum-text fill-current p-2 rounded-lum-2': true,
-      'p-4': big,
-    }}>
-      <SiInstagram />
-    </a>
-    <a href="https://facebook.com/burgersonfleek.ca" data-umami-event="social-facebook" title="Facebook" class={{
-      'lum-btn lum-bg-transparent hover:text-lum-text fill-current p-2 rounded-lum-2': true,
-      'p-4': big,
-    }}>
-      <SiFacebook />
-    </a>
-    <a href="https://tiktok.com/@burgersonfleek.ca" data-umami-event="social-tiktok" title="TikTok" class={{
-      'lum-btn lum-bg-transparent hover:text-lum-text fill-current p-2 rounded-lum-2': true,
-      'p-4': big,
-    }}>
-      <SiTiktok />
-    </a>
-  </>;
+  return (
+    <>
+      <a
+        href="tel:+1 (905) 427 4377"
+        data-umami-event="phone"
+        title="Call us"
+        class={{
+          'lum-btn lum-bg-transparent hover:text-lum-text rounded-lum-2 fill-current p-2': true,
+          'p-4': big,
+        }}
+      >
+        <Phone />
+      </a>
+      <a
+        href="https://maps.app.goo.gl/Unrrg3uda7AQQs4DA"
+        data-umami-event="maps"
+        title="Google Maps"
+        class={{
+          'lum-btn lum-bg-transparent hover:text-lum-text rounded-lum-2 fill-current p-2': true,
+          'p-4': big,
+        }}
+      >
+        <MapPin />
+      </a>
+      <a
+        href="https://instagram.com/burgersonfleek.ca"
+        data-umami-event="social-instagram"
+        title="Instagram"
+        class={{
+          'lum-btn lum-bg-transparent hover:text-lum-text rounded-lum-2 fill-current p-2': true,
+          'p-4': big,
+        }}
+      >
+        <SiInstagram />
+      </a>
+      <a
+        href="https://facebook.com/burgersonfleek.ca"
+        data-umami-event="social-facebook"
+        title="Facebook"
+        class={{
+          'lum-btn lum-bg-transparent hover:text-lum-text rounded-lum-2 fill-current p-2': true,
+          'p-4': big,
+        }}
+      >
+        <SiFacebook />
+      </a>
+      <a
+        href="https://tiktok.com/@burgersonfleek.ca"
+        data-umami-event="social-tiktok"
+        title="TikTok"
+        class={{
+          'lum-btn lum-bg-transparent hover:text-lum-text rounded-lum-2 fill-current p-2': true,
+          'p-4': big,
+        }}
+      >
+        <SiTiktok />
+      </a>
+    </>
+  );
 });
