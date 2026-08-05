@@ -1,17 +1,3 @@
-export interface ToastModifier {
-  id: string;
-  name: string;
-}
-
-export interface ToastOrderItem {
-  id: string;
-  itemGuid: string;
-  name: string;
-  quantity: number;
-  modifiers?: ToastModifier[];
-  fulfillmentStatus?: 'PENDING' | 'FULFILLED';
-}
-
 export interface ToastOrderTicket {
   id: string;
   orderGuid: string;
@@ -22,7 +8,6 @@ export interface ToastOrderTicket {
   openedDate: string;
   readyDate?: string;
   estimatedFulfillmentDate?: string;
-  items: ToastOrderItem[];
   totalAmount?: number;
 }
 
@@ -31,6 +16,29 @@ export interface ToastApiConfig {
   clientSecret?: string;
   restaurantId?: string;
   baseUrl?: string;
+}
+
+export interface ToastItemFulfillment {
+  restaurantGuid?: string;
+  orderGuid?: string;
+  selectionGuid?: string;
+  selectionMenuItemGuid?: string;
+  selectionMenuItemName?: string;
+  selectionMenuItemMultiLocationId?: string;
+  ticketGuid?: string;
+  ticketFiredAt?: string;
+  itemFulfilledAt?: string;
+  itemStartedAt?: string;
+  itemFulfillmentLevel?: number;
+  prepStationGuid?: string | null;
+  prepStationName?: string | null;
+  prepStationMultiLocationId?: string | null;
+  diningOptionGuid?: string | null;
+  diningOptionName?: string | null;
+  diningOptionBehavior?: string | null;
+  courseGuid?: string | null;
+  courseName?: string | null;
+  orderSource?: string;
 }
 
 let cachedToken: string | null = null;
@@ -177,7 +185,7 @@ export async function getToastToken(
   }
 
   // Primary attempt with TOAST_MACHINE_CLIENT
-  let response = await fetch(
+  const response = await fetch(
     `${cleanBaseUrl}/authentication/v1/authentication/login`,
     {
       method: 'POST',
@@ -189,25 +197,6 @@ export async function getToastToken(
       }),
     }
   );
-
-  // Secondary fallback attempt if 401
-  if (response.status === 401) {
-    const fallbackResponse = await fetch(
-      `${cleanBaseUrl}/authentication/v1/authentication/login`,
-      {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          clientId: cleanClientId,
-          clientSecret: cleanClientSecret,
-        }),
-      }
-    );
-
-    if (fallbackResponse.ok) {
-      response = fallbackResponse;
-    }
-  }
 
   if (!response.ok) {
     const errText = await response.text();
@@ -310,32 +299,49 @@ export async function fetchToastOrders(
 
 /**
  * Fetch kitchen fulfillment events (kitchen:read scope - Read-only)
+ * Requires businessDate query parameter in YYYYMMDD format.
  */
 export async function fetchKitchenFulfillments(
   config: ToastApiConfig,
-  token: string
-): Promise<{ itemFulfillments?: any[] }> {
+  token: string,
+  businessDate?: string
+): Promise<ToastItemFulfillment[]> {
   const baseUrl = (
     sanitizeEnvVal(config.baseUrl) || 'https://ws-api.toasttab.com'
   ).replace(/\/$/, '');
   const restaurantId = sanitizeEnvVal(config.restaurantId) || '';
-  const { startDate } = getTodayIsoRange();
+  const dateParam = businessDate || getTodayBusinessDate();
   const url = new URL(`${baseUrl}/kitchen/v1/export/itemFulfillments`);
-  url.searchParams.set('since', startDate);
+  url.searchParams.set('businessDate', dateParam);
 
   const response = await fetch(url.toString(), {
     method: 'GET',
     headers: {
       Authorization: `Bearer ${token}`,
       'Toast-Restaurant-External-ID': restaurantId,
+      'Content-Type': 'application/json',
+      Accept: 'application/json',
     },
   });
 
-  if (response.status === 204 || !response.ok) {
-    return { itemFulfillments: [] };
+  if (response.status === 204) {
+    return [];
   }
 
-  return response.json();
+  if (response.status === 401) {
+    resetToastTokenCache();
+    throw new Error('401 Unauthorized from Toast Kitchen API');
+  }
+
+  if (!response.ok) {
+    console.warn(
+      `Toast Kitchen Fulfillments API returned status ${response.status}: ${await response.text()}`
+    );
+    return [];
+  }
+
+  const data = await response.json();
+  return Array.isArray(data) ? data : [];
 }
 
 /**
@@ -368,37 +374,13 @@ export async function getLiveToastOrders(
       Array.isArray(rawOrders) ? rawOrders : []
     ).map((ord: any, idx: number) => {
       const displayNo = ord.displayNumber || String(100 + (idx % 900));
-      const items: ToastOrderItem[] = (ord.checks?.[0]?.items || []).map(
-        (itm: any) => {
-          const matchingFulfillment = (
-            fulfillments.itemFulfillments || []
-          ).find(
-            (f: any) => f.itemGuid === itm.guid || f.orderGuid === ord.guid
-          );
-
-          return {
-            id: itm.guid || Math.random().toString(),
-            itemGuid: itm.guid,
-            name: itm.name || 'Fleek Burger',
-            quantity: itm.quantity || 1,
-            modifiers: (itm.modifiers || []).map((m: any) => ({
-              id: m.guid,
-              name: m.name,
-            })),
-            fulfillmentStatus:
-              matchingFulfillment?.fulfillmentStatus === 'FULFILLED'
-                ? 'FULFILLED'
-                : 'PENDING',
-          };
-        }
+      const hasOrderFulfillment = fulfillments.some(
+        (f: ToastItemFulfillment) =>
+          f.orderGuid === ord.guid && Boolean(f.itemFulfilledAt)
       );
-
-      const allFulfilled =
-        items.length > 0 &&
-        items.every((i) => i.fulfillmentStatus === 'FULFILLED');
       const isPaidOrFulfilled = Boolean(
         ord.paidDate ||
-        allFulfilled ||
+        hasOrderFulfillment ||
         ord.approvalStatus === 'APPROVED' ||
         ord.closedDate
       );
@@ -431,7 +413,6 @@ export async function getLiveToastOrders(
         openedDate: ord.createdDate || new Date().toISOString(),
         readyDate: ord.paidDate || ord.modifiedDate,
         estimatedFulfillmentDate,
-        items,
         totalAmount: ord.totalAmount || 0,
       };
     });
@@ -465,15 +446,6 @@ export function getMockToastOrders(): ToastOrderTicket[] {
       orderState: 'READY',
       openedDate: minutesAgo(8),
       readyDate: minutesAgo(1),
-      items: [
-        {
-          id: 'i1',
-          itemGuid: 'g1',
-          name: 'Double Fleek Smash Burger',
-          quantity: 2,
-        },
-        { id: 'i2', itemGuid: 'g2', name: 'Cajun Loaded Fries', quantity: 1 },
-      ],
     },
     {
       id: 'mock-202',
@@ -484,14 +456,6 @@ export function getMockToastOrders(): ToastOrderTicket[] {
       orderState: 'READY',
       openedDate: minutesAgo(12),
       readyDate: minutesAgo(3),
-      items: [
-        {
-          id: 'i3',
-          itemGuid: 'g3',
-          name: 'Truffle Mushroom Smash',
-          quantity: 1,
-        },
-      ],
     },
     {
       id: 'mock-203',
@@ -502,14 +466,6 @@ export function getMockToastOrders(): ToastOrderTicket[] {
       orderState: 'PREPARING',
       openedDate: minutesAgo(5),
       estimatedFulfillmentDate: minutesFromNow(10),
-      items: [
-        {
-          id: 'i4',
-          itemGuid: 'g4',
-          name: 'Classic Single Cheeseburger',
-          quantity: 3,
-        },
-      ],
     },
     {
       id: 'mock-204',
@@ -520,14 +476,6 @@ export function getMockToastOrders(): ToastOrderTicket[] {
       orderState: 'PREPARING',
       openedDate: minutesAgo(3),
       estimatedFulfillmentDate: minutesFromNow(12),
-      items: [
-        {
-          id: 'i5',
-          itemGuid: 'g5',
-          name: 'Hot Honey Chicken Sandwich',
-          quantity: 2,
-        },
-      ],
     },
     {
       id: 'mock-205',
@@ -538,14 +486,6 @@ export function getMockToastOrders(): ToastOrderTicket[] {
       orderState: 'PREPARING',
       openedDate: minutesAgo(2),
       estimatedFulfillmentDate: minutesFromNow(15),
-      items: [
-        {
-          id: 'i6',
-          itemGuid: 'g6',
-          name: 'Triple Fleek Beast Burger',
-          quantity: 1,
-        },
-      ],
     },
     {
       id: 'mock-206',
@@ -556,14 +496,6 @@ export function getMockToastOrders(): ToastOrderTicket[] {
       orderState: 'PREPARING',
       openedDate: minutesAgo(1),
       estimatedFulfillmentDate: minutesFromNow(18),
-      items: [
-        {
-          id: 'i7',
-          itemGuid: 'g7',
-          name: 'Hand-spun Mango Shake',
-          quantity: 2,
-        },
-      ],
     },
   ];
 }
