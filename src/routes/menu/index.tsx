@@ -425,7 +425,7 @@ export default component$(() => {
                       'font-futura flex gap-2 text-xl font-bold tracking-wider sm:text-2xl': true,
                     }}
                   >
-                    {item.name}
+                    {item.name} + Pop
                   </h2>
                   <div class="flex flex-1 flex-col gap-2">
                     <p class="text-lum-accent text-xs sm:text-sm">
