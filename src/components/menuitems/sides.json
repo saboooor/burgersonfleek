@@ -17,19 +17,19 @@
   },
   {
     "name": "Poutine",
-    "description": "Fresh cut fries topped with cheese curds, and beef based gravy",
+    "description": "Fresh cut fries topped with cheese curds, and veg-based, GF gravy.",
     "price": "$8.15",
     "combo": "$10.29"
   },
   {
     "name": "Fried Chicken Poutine",
-    "description": "Fresh cut fries topped with cheese curds, beef based gravy, and fried chicken.",
+    "description": "Fresh cut fries topped with cheese curds, veg-based GF gravy and fried chicken on top.",
     "price": "$14.25",
     "combo": "$16.39"
   },
   {
     "name": "Pulled Beef Brisket Poutine",
-    "description": "Fresh cut fries topped with cheese curds, beef based gravy, pulled beef brisket, and smoky BBQ sauce.",
+    "description": "Fresh cut fries topped with cheese curds, veg-based GF gravy, pulled beef brisket and topped smoky BBQ sauce.",
     "price": "$16.00",
     "combo": "$18.14"
   }
