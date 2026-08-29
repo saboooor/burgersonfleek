@@ -4,6 +4,7 @@ import type { UserConfig } from 'vite-plus';
 const isCwd = process.cwd() === import.meta.dirname;
 
 export const lint: UserConfig['lint'] = {
+  //@ts-expect-error old
   extends: [strict],
   plugins: ['oxc', 'typescript', 'unicorn', 'react'],
   categories: {
