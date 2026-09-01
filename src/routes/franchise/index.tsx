@@ -13,46 +13,60 @@ import MapPin from 'lucide-icons-qwik/icons/MapPin';
 import GraduationCap from 'lucide-icons-qwik/icons/GraduationCap';
 import Megaphone from 'lucide-icons-qwik/icons/Megaphone';
 import Headphones from 'lucide-icons-qwik/icons/Headphones';
-import Send from 'lucide-icons-qwik/icons/Send';
 import Mail from 'lucide-icons-qwik/icons/Mail';
+import Copy from 'lucide-icons-qwik/icons/Copy';
+
+export const franchiseEmail = 'franchise@burgersonfleek.ca';
+export const emailSubject = 'Franchise Inquiry - Burgers on Fleek';
+export const emailTemplate = `Hi Burgers on Fleek Team,
+
+I am interested in opening a Burgers on Fleek franchise in the Greater Toronto Area. Here are my details:
+
+• Full Name: 
+• Phone Number: 
+• Target City / Neighbourhood in GTA: 
+• Estimated Liquid Capital: 
+• Estimated Timeline to Open: 
+• Business / Restaurant Experience: 
+• Questions or Additional Notes: 
+
+Looking forward to connecting with your franchise development team!`;
+
+export const mailtoUrl = `mailto:${franchiseEmail}?subject=${encodeURIComponent(emailSubject)}&body=${encodeURIComponent(emailTemplate)}`;
 
 export default component$(() => {
   const openItems = useSignal<string[]>([]);
   useContextProvider(openItemsContext, openItems);
 
-  const isSubmitted = useSignal(false);
-  const isSubmitting = useSignal(false);
-  const formData = useSignal({
-    name: '',
-    email: '',
-    phone: '',
-    marketOfInterest: '',
-    liquidCapital: '',
-    timeline: '',
-    background: '',
-    notes: '',
-    company_website: '',
+  const copiedTemplate = useSignal(false);
+  const copiedEmail = useSignal(false);
+
+  const handleCopyTemplate = $(async () => {
+    try {
+      if (typeof navigator !== 'undefined' && navigator.clipboard) {
+        await navigator.clipboard.writeText(emailTemplate);
+        copiedTemplate.value = true;
+        setTimeout(() => {
+          copiedTemplate.value = false;
+        }, 2500);
+      }
+    } catch (err) {
+      console.error('Failed to copy email template to clipboard:', err);
+    }
   });
 
-  const handleSubmit = $(async () => {
-    if (formData.value.company_website) {
-      // Honeypot spam trap triggered
-      isSubmitted.value = true;
-      return;
+  const handleCopyEmail = $(async () => {
+    try {
+      if (typeof navigator !== 'undefined' && navigator.clipboard) {
+        await navigator.clipboard.writeText(franchiseEmail);
+        copiedEmail.value = true;
+        setTimeout(() => {
+          copiedEmail.value = false;
+        }, 2500);
+      }
+    } catch (err) {
+      console.error('Failed to copy franchise email to clipboard:', err);
     }
-    isSubmitting.value = true;
-
-    // Simulate submission / send event
-    if (typeof window !== 'undefined' && window.umami) {
-      window.umami.track('franchise_application_submit', {
-        market: formData.value.marketOfInterest,
-        capital: formData.value.liquidCapital,
-      });
-    }
-
-    await new Promise((resolve) => setTimeout(resolve, 800));
-    isSubmitting.value = false;
-    isSubmitted.value = true;
   });
 
   return (
@@ -83,14 +97,14 @@ export default component$(() => {
 
             <div class="mt-8 flex flex-wrap justify-center gap-2 lg:justify-start">
               <a
-                href="#franchise-form"
+                href="#franchise-inquiry"
                 class={{
                   'lum-btn lum-btn-p-3 sm:text-lg': true,
                   'hover:text-lum-text! active:text-lum-text border-none': true,
                   'lum-grad-bg-burger-600 from-burger-600 to-burger-700 hover:from-burger-500 active:from-burger-500 bg-linear-to-b': true,
                 }}
               >
-                Apply Now <ArrowRight size={18} />
+                Inquire Now <ArrowRight size={18} />
               </a>
               <a
                 href="#how-it-works"
@@ -438,291 +452,136 @@ export default component$(() => {
         </div>
       </section>
 
-      {/* Franchise Application Form */}
+      {/* Franchise Inquiry Section */}
       <section
-        id="franchise-form"
+        id="franchise-inquiry"
         class="border-burger-900/40 relative scroll-mt-24 border-t bg-gray-950/60 py-16 md:py-24"
       >
         <div class="mx-auto max-w-4xl px-6">
           <div class="text-center">
             <p class="text-burger-300 font-futura text-xs font-bold tracking-widest uppercase">
-              Apply Now
+              Start The Conversation
             </p>
             <h2 class="font-futura mt-2 text-3xl font-bold tracking-tight text-white sm:text-5xl">
-              Tell us about yourself.
+              Franchise Inquiries
             </h2>
             <p class="text-lum-text-secondary mx-auto mt-4 max-w-xl text-base sm:text-lg">
-              A franchise development manager will review your submission and
-              reach out within two business days to schedule your discovery
-              call.
+              We are actively looking for passionate franchise partners across
+              the Greater Toronto Area (GTA). Reach out to our franchise
+              development team directly via email or use the pre-filled inquiry
+              template below.
             </p>
           </div>
 
           <div class="lum-card mt-12 p-8 backdrop-blur-xl md:p-12">
-            {isSubmitted.value ? (
-              <div class="flex flex-col items-center py-10 text-center">
-                <div class="lum-card mb-6 flex h-16 w-16 items-center justify-center rounded-full text-green-400">
-                  <CheckCircle2 size={36} />
-                </div>
-                <h3 class="font-futura text-2xl font-bold text-white sm:text-3xl">
-                  Application Received!
-                </h3>
-                <p class="text-lum-text-secondary mt-3 max-w-md text-base">
-                  Thank you for your interest in Burgers on Fleek. Our franchise
-                  team has received your inquiry and will be in touch shortly.
-                </p>
-                <button
-                  onClick$={() => {
-                    isSubmitted.value = false;
-                    formData.value = {
-                      name: '',
-                      email: '',
-                      phone: '',
-                      marketOfInterest: '',
-                      liquidCapital: '',
-                      timeline: '',
-                      background: '',
-                      notes: '',
-                      company_website: '',
-                    };
-                  }}
-                  class="lum-btn lum-btn-p-2 rounded-lum-2 font-futura mt-8 text-sm font-bold uppercase"
-                >
-                  Submit Another Inquiry
-                </button>
-              </div>
-            ) : (
-              <form
-                preventdefault:submit
-                onSubmit$={handleSubmit}
-                class="grid grid-cols-1 gap-6 md:grid-cols-2"
-              >
-                {/* Honeypot spam trap */}
-                <div class="hidden" aria-hidden="true">
-                  <label for="company_website">Company Website</label>
-                  <input
-                    id="company_website"
-                    type="text"
-                    tabIndex={-1}
-                    autoComplete="off"
-                    value={formData.value.company_website}
-                    onInput$={(e) => {
-                      formData.value = {
-                        ...formData.value,
-                        company_website: (e.target as HTMLInputElement).value,
-                      };
-                    }}
-                  />
+            <div class="flex flex-col gap-8">
+              {/* Header & Primary Actions */}
+              <div class="flex flex-col items-center justify-between gap-6 border-b border-white/10 pb-8 sm:flex-row sm:items-start">
+                <div class="text-center sm:text-left">
+                  <span class="text-burger-300 font-futura text-xs font-bold tracking-wider uppercase">
+                    Direct Contact
+                  </span>
+                  <h3 class="font-futura mt-1 text-2xl font-bold text-white">
+                    {franchiseEmail}
+                  </h3>
+                  <p class="text-lum-text-secondary mt-1 text-sm">
+                    Click to launch your email client with the template
+                    pre-loaded, or copy the template to compose manually.
+                  </p>
                 </div>
 
-                <div class="flex flex-col gap-2">
-                  <label class="text-lum-text text-xs font-bold tracking-wider uppercase">
-                    Full Name <span class="text-orange-400">*</span>
-                  </label>
-                  <input
-                    type="text"
-                    required
-                    placeholder="Jane Doe"
-                    class="lum-input lum-bg-lum-input-bg rounded-lum-1 px-4 py-3 text-white placeholder-gray-500"
-                    value={formData.value.name}
-                    onInput$={(e) => {
-                      formData.value = {
-                        ...formData.value,
-                        name: (e.target as HTMLInputElement).value,
-                      };
-                    }}
-                  />
-                </div>
-
-                <div class="flex flex-col gap-2">
-                  <label class="text-lum-text text-xs font-bold tracking-wider uppercase">
-                    Email Address <span class="text-orange-400">*</span>
-                  </label>
-                  <input
-                    type="email"
-                    required
-                    placeholder="jane@example.com"
-                    class="lum-input lum-bg-lum-input-bg rounded-lum-1 px-4 py-3 text-white placeholder-gray-500"
-                    value={formData.value.email}
-                    onInput$={(e) => {
-                      formData.value = {
-                        ...formData.value,
-                        email: (e.target as HTMLInputElement).value,
-                      };
-                    }}
-                  />
-                </div>
-
-                <div class="flex flex-col gap-2">
-                  <label class="text-lum-text text-xs font-bold tracking-wider uppercase">
-                    Phone Number <span class="text-orange-400">*</span>
-                  </label>
-                  <input
-                    type="tel"
-                    required
-                    placeholder="+1 (555) 000-0000"
-                    class="lum-input lum-bg-lum-input-bg rounded-lum-1 px-4 py-3 text-white placeholder-gray-500"
-                    value={formData.value.phone}
-                    onInput$={(e) => {
-                      formData.value = {
-                        ...formData.value,
-                        phone: (e.target as HTMLInputElement).value,
-                      };
-                    }}
-                  />
-                </div>
-
-                <div class="flex flex-col gap-2">
-                  <label class="text-lum-text text-xs font-bold tracking-wider uppercase">
-                    Target Markets / Cities{' '}
-                    <span class="text-orange-400">*</span>
-                  </label>
-                  <input
-                    type="text"
-                    required
-                    placeholder="e.g. Toronto, Mississauga, Scarborough, Ajax"
-                    class="lum-input lum-bg-lum-input-bg rounded-lum-1 px-4 py-3 text-white placeholder-gray-500"
-                    value={formData.value.marketOfInterest}
-                    onInput$={(e) => {
-                      formData.value = {
-                        ...formData.value,
-                        marketOfInterest: (e.target as HTMLInputElement).value,
-                      };
-                    }}
-                  />
-                </div>
-
-                <div class="flex flex-col gap-2">
-                  <label class="text-lum-text text-xs font-bold tracking-wider uppercase">
-                    Liquid Capital <span class="text-orange-400">*</span>
-                  </label>
-                  <select
-                    required
-                    class="lum-input lum-bg-lum-input-bg rounded-lum-1 px-4 py-3 text-white"
-                    value={formData.value.liquidCapital}
-                    onChange$={(e) => {
-                      formData.value = {
-                        ...formData.value,
-                        liquidCapital: (e.target as HTMLSelectElement).value,
-                      };
-                    }}
+                <div class="flex flex-wrap items-center justify-center gap-3 sm:justify-end">
+                  <a
+                    href={mailtoUrl}
+                    data-umami-event="franchise_mailto_click"
+                    class="lum-btn lum-btn-p-2 rounded-lum-2 font-futura lum-grad-bg-burger-600 from-burger-600 to-burger-700 hover:from-burger-500 active:from-burger-500 inline-flex items-center gap-2 border-none text-sm font-bold tracking-wider text-white uppercase shadow-lg"
                   >
-                    <option value="" class="bg-gray-900 text-gray-400">
-                      Select a capital range...
-                    </option>
-                    <option value="Under $100k" class="bg-gray-900">
-                      Under $100k
-                    </option>
-                    <option value="$100k – $250k" class="bg-gray-900">
-                      $100k – $250k
-                    </option>
-                    <option value="$250k – $500k" class="bg-gray-900">
-                      $250k – $500k
-                    </option>
-                    <option value="$500k – $1M" class="bg-gray-900">
-                      $500k – $1M
-                    </option>
-                    <option value="$1M+" class="bg-gray-900">
-                      $1M+
-                    </option>
-                  </select>
-                </div>
-
-                <div class="flex flex-col gap-2">
-                  <label class="text-lum-text text-xs font-bold tracking-wider uppercase">
-                    Timeline <span class="text-orange-400">*</span>
-                  </label>
-                  <select
-                    required
-                    class="lum-input lum-bg-lum-input-bg rounded-lum-1 px-4 py-3 text-white"
-                    value={formData.value.timeline}
-                    onChange$={(e) => {
-                      formData.value = {
-                        ...formData.value,
-                        timeline: (e.target as HTMLSelectElement).value,
-                      };
-                    }}
-                  >
-                    <option value="" class="bg-gray-900 text-gray-400">
-                      Select estimated timeline...
-                    </option>
-                    <option value="ASAP (next 3 months)" class="bg-gray-900">
-                      ASAP (next 3 months)
-                    </option>
-                    <option value="3 – 6 months" class="bg-gray-900">
-                      3 – 6 months
-                    </option>
-                    <option value="6 – 12 months" class="bg-gray-900">
-                      6 – 12 months
-                    </option>
-                    <option value="12+ months" class="bg-gray-900">
-                      12+ months
-                    </option>
-                    <option value="Just exploring" class="bg-gray-900">
-                      Just exploring
-                    </option>
-                  </select>
-                </div>
-
-                <div class="flex flex-col gap-2 md:col-span-2">
-                  <label class="text-lum-text text-xs font-bold tracking-wider uppercase">
-                    Background & Experience
-                  </label>
-                  <textarea
-                    rows={3}
-                    placeholder="Tell us about your restaurant, business, or management background..."
-                    class="lum-input lum-bg-lum-input-bg rounded-lum-1 px-4 py-3 text-white placeholder-gray-500"
-                    value={formData.value.background}
-                    onInput$={(e) => {
-                      formData.value = {
-                        ...formData.value,
-                        background: (e.target as HTMLTextAreaElement).value,
-                      };
-                    }}
-                  />
-                </div>
-
-                <div class="flex flex-col gap-2 md:col-span-2">
-                  <label class="text-lum-text text-xs font-bold tracking-wider uppercase">
-                    Questions or Additional Notes
-                  </label>
-                  <textarea
-                    rows={2}
-                    placeholder="Any specific questions or details you would like to share?"
-                    class="lum-input lum-bg-lum-input-bg rounded-lum-1 px-4 py-3 text-white placeholder-gray-500"
-                    value={formData.value.notes}
-                    onInput$={(e) => {
-                      formData.value = {
-                        ...formData.value,
-                        notes: (e.target as HTMLTextAreaElement).value,
-                      };
-                    }}
-                  />
-                </div>
-
-                <div class="mt-4 flex flex-col items-start gap-3 md:col-span-2">
+                    <Mail size={18} /> Open Email App
+                  </a>
                   <button
-                    type="submit"
-                    disabled={isSubmitting.value}
-                    class="lum-btn lum-btn-p-3 rounded-lum-2 font-futura lum-grad-bg-burger-600 from-burger-600 to-burger-700 hover:from-burger-500 active:from-burger-500 flex cursor-pointer items-center gap-2 border-none text-sm font-bold tracking-wider text-white uppercase shadow-lg disabled:opacity-50"
+                    onClick$={handleCopyTemplate}
+                    class="lum-btn lum-btn-p-2 rounded-lum-2 font-futura lum-bg-lum-card-bg hover:lum-bg-lum-input-bg inline-flex cursor-pointer items-center gap-2 text-sm font-bold tracking-wider text-white uppercase transition-colors"
                   >
-                    {isSubmitting.value ? (
+                    {copiedTemplate.value ? (
                       <>
-                        <div class="lum-loading h-4 w-4" /> Submitting...
+                        <CheckCircle2 size={18} class="text-green-400" />{' '}
+                        Template Copied!
                       </>
                     ) : (
                       <>
-                        <Send size={16} /> Submit Application
+                        <Copy size={18} /> Copy Template
                       </>
                     )}
                   </button>
-                  <p class="text-lum-text-secondary text-xs">
-                    Your information remains strictly confidential and is only
-                    used for your franchise evaluation.
+                  <button
+                    onClick$={handleCopyEmail}
+                    class="lum-btn lum-btn-p-2 rounded-lum-2 font-futura lum-bg-transparent hover:lum-bg-lum-card-bg text-lum-text-secondary! inline-flex cursor-pointer items-center gap-2 text-sm font-medium transition-colors"
+                  >
+                    {copiedEmail.value ? (
+                      <span class="text-green-400">Email Copied!</span>
+                    ) : (
+                      <span>Copy Email Address</span>
+                    )}
+                  </button>
+                </div>
+              </div>
+
+              {/* Template Preview Box */}
+              <div>
+                <div class="mb-3 flex items-center justify-between">
+                  <span class="text-xs font-bold tracking-wider text-gray-400 uppercase">
+                    Inquiry Email Template
+                  </span>
+                  <span class="text-xs text-gray-500">
+                    Click "Copy Template" or highlight below
+                  </span>
+                </div>
+                <div class="lum-card rounded-lum-1 border-white/10 bg-gray-900/90 p-5 font-mono text-xs leading-relaxed text-gray-200 select-all sm:text-sm">
+                  <div class="mb-3 border-b border-white/10 pb-3 text-gray-400">
+                    <p>
+                      <span class="text-gray-500">To:</span> {franchiseEmail}
+                    </p>
+                    <p>
+                      <span class="text-gray-500">Subject:</span> {emailSubject}
+                    </p>
+                  </div>
+                  <pre class="font-mono whitespace-pre-wrap">
+                    {emailTemplate}
+                  </pre>
+                </div>
+              </div>
+
+              {/* Discovery Process Highlights */}
+              <div class="grid grid-cols-1 gap-6 pt-2 sm:grid-cols-3">
+                <div class="lum-card flex flex-col gap-2 p-5 backdrop-blur-md">
+                  <span class="text-burger-300 font-futura text-xs font-bold tracking-widest uppercase">
+                    1. Send Email
+                  </span>
+                  <p class="text-lum-text-secondary text-xs leading-relaxed sm:text-sm">
+                    Send over your target GTA city/neighbourhood and estimated
+                    timeline.
                   </p>
                 </div>
-              </form>
-            )}
+                <div class="lum-card flex flex-col gap-2 p-5 backdrop-blur-md">
+                  <span class="text-burger-300 font-futura text-xs font-bold tracking-widest uppercase">
+                    2. Team Review
+                  </span>
+                  <p class="text-lum-text-secondary text-xs leading-relaxed sm:text-sm">
+                    Our team reviews territory availability and responds within
+                    2 business days.
+                  </p>
+                </div>
+                <div class="lum-card flex flex-col gap-2 p-5 backdrop-blur-md">
+                  <span class="text-burger-300 font-futura text-xs font-bold tracking-widest uppercase">
+                    3. Discovery Call
+                  </span>
+                  <p class="text-lum-text-secondary text-xs leading-relaxed sm:text-sm">
+                    We review economics, site selection, and answer all your
+                    questions.
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -755,7 +614,7 @@ export default component$(() => {
               },
               {
                 q: 'What territories and markets are currently available?',
-                a: 'We are currently focused on expanding throughout the Greater Toronto Area (GTA), including Toronto, Durham Region, York Region, Peel Region, and surrounding areas. Inquire through our form to verify territory availability for your target neighbourhood or city.',
+                a: 'We are currently focused on expanding throughout the Greater Toronto Area (GTA), including Toronto, Durham Region, York Region, Peel Region, and surrounding areas. Email our team at franchise@burgersonfleek.ca to verify territory availability for your target neighbourhood or city.',
               },
               {
                 q: 'How long does it take from signing to opening doors?',

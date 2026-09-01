@@ -4,12 +4,13 @@ import { ActionButtons, SocialButtons } from '../Nav';
 import Icon from '../svg/Icon';
 import MapPin from 'lucide-icons-qwik/icons/MapPin';
 import Phone from 'lucide-icons-qwik/icons/Phone';
+import Mail from 'lucide-icons-qwik/icons/Mail';
 
 export default component$(() => {
   return (
     <footer class="text-lum-text-secondary z-10 mt-20 border-t border-white/10 bg-gray-950/90 px-6 py-16 backdrop-blur-md md:px-12 md:py-24">
       <div class="mx-auto max-w-7xl">
-        <div class="grid grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-[1.8fr_1fr_1fr_1.1fr]">
+        <div class="grid grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-[1.8fr_1fr_1.1fr_1.1fr]">
           {/* Brand column */}
           <div class="flex flex-col items-start sm:col-span-2 lg:col-span-1">
             <Link
@@ -70,10 +71,10 @@ export default component$(() => {
             </div>
           </div>
 
-          {/* Locations column */}
+          {/* Locations & Contact */}
           <div>
             <h4 class="font-futura mb-5 text-base font-bold tracking-widest text-white uppercase md:text-lg">
-              Locations
+              Location & Contact
             </h4>
             <div class="-ml-3 flex flex-col items-start gap-1">
               <a
@@ -92,13 +93,20 @@ export default component$(() => {
                 <Phone strokeWidth={1} class="mr-2 h-5 w-5 shrink-0" /> +1 (905)
                 427 4377
               </a>
+              <a
+                href="mailto:eat@burgersonfleek.ca"
+                class="lum-btn lum-btn-p-1 lum-bg-transparent hover:lum-bg-lum-card-bg text-lum-text-secondary! rounded-lum-1 text-base md:text-lg"
+              >
+                <Mail strokeWidth={1} class="mr-2 h-5 w-5 shrink-0" />{' '}
+                eat@burgersonfleek.ca
+              </a>
             </div>
           </div>
 
           {/* Company column */}
           <div>
             <h4 class="font-futura mb-5 text-base font-bold tracking-widest text-white uppercase md:text-lg">
-              Company
+              Company & Inquiries
             </h4>
             <div class="-ml-3 flex flex-col items-start gap-1">
               <Link
@@ -107,6 +115,16 @@ export default component$(() => {
               >
                 Franchise Opportunities
               </Link>
+              <a
+                href="mailto:franchise@burgersonfleek.ca"
+                class="lum-btn lum-btn-p-1 lum-bg-transparent hover:lum-bg-lum-card-bg text-lum-text-secondary! rounded-lum-1 text-base md:text-lg"
+              >
+                <Mail
+                  strokeWidth={1}
+                  class="text-burger-300 mr-2 h-5 w-5 shrink-0"
+                />{' '}
+                franchise@burgersonfleek.ca
+              </a>
               <Link
                 href="/halal"
                 class="lum-btn lum-btn-p-1 lum-bg-transparent hover:lum-bg-lum-card-bg text-lum-text-secondary! rounded-lum-1 text-base md:text-lg"
@@ -119,12 +137,6 @@ export default component$(() => {
               >
                 FAQ & Support
               </Link>
-              <a
-                href="mailto:eat@burgersonfleek.ca"
-                class="lum-btn lum-btn-p-1 lum-bg-transparent hover:lum-bg-lum-card-bg text-lum-text-secondary! rounded-lum-1 text-base md:text-lg"
-              >
-                Contact Us
-              </a>
             </div>
           </div>
         </div>
