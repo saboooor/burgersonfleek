@@ -1,6 +1,7 @@
-import { component$, useSignal, $ } from '@qwik.dev/core';
+import { component$, useSignal, $, useContextProvider } from '@qwik.dev/core';
 import { generateHead } from '~/root';
 import Cutout from '~/components/images/Cutout.png?jsx';
+import Accordion, { openItemsContext } from '~/components/Elements/Accordion';
 import Star from 'lucide-icons-qwik/icons/Star';
 import CheckCircle2 from 'lucide-icons-qwik/icons/CheckCircle2';
 import ArrowRight from 'lucide-icons-qwik/icons/ArrowRight';
@@ -14,9 +15,11 @@ import Megaphone from 'lucide-icons-qwik/icons/Megaphone';
 import Headphones from 'lucide-icons-qwik/icons/Headphones';
 import Send from 'lucide-icons-qwik/icons/Send';
 import Mail from 'lucide-icons-qwik/icons/Mail';
-import ChevronDown from 'lucide-icons-qwik/icons/ChevronDown';
 
 export default component$(() => {
+  const openItems = useSignal<string[]>([]);
+  useContextProvider(openItemsContext, openItems);
+
   const isSubmitted = useSignal(false);
   const isSubmitting = useSignal(false);
   const formData = useSignal({
@@ -58,16 +61,17 @@ export default component$(() => {
       <section class="relative mx-auto max-w-7xl px-6 py-12 md:py-24">
         <div class="grid grid-cols-1 items-center gap-12 lg:grid-cols-[1.1fr_0.9fr]">
           <div class="flex flex-col items-center text-center lg:items-start lg:text-left">
-            <div class="bg-burger-500/20 text-burger-300 border-burger-400/30 font-futura mb-6 inline-flex items-center gap-2 rounded-full border px-4 py-1.5 text-xs font-bold tracking-wider uppercase">
+            <div class="lum-card font-futura text-burger-300 mb-6 flex-row items-center gap-2 rounded-full px-4 py-1.5 text-xs font-bold tracking-wider uppercase">
               <Sparkles size={14} class="text-burger-300" />
               <span>Franchise Opportunities · Est. 2019</span>
             </div>
 
-            <h1 class="font-futura text-4xl leading-tight font-extrabold tracking-tight text-white sm:text-6xl md:text-7xl">
+            <h1 class="font-futura animate-in fade-in motion-safe:slide-in-from-top-16 text-2xl/6 font-bold! tracking-tighter uppercase motion-safe:duration-700 sm:text-3xl/8 md:text-4xl/10">
               Own a{' '}
-              <span class="from-burger-200 via-burger-400 bg-linear-to-r to-orange-400 bg-clip-text text-transparent">
-                Burgers on Fleek.
+              <span class="from-burger-200 via-burger-400 bg-linear-to-br to-orange-100 bg-clip-text! text-transparent">
+                Burgers on Fleek
               </span>
+              <span class="align-top text-lg">™</span>
             </h1>
 
             <p class="text-lum-text-secondary mt-6 max-w-2xl text-lg sm:text-xl md:text-2xl">
@@ -77,16 +81,23 @@ export default component$(() => {
               support.
             </p>
 
-            <div class="mt-8 flex flex-wrap justify-center gap-4 lg:justify-start">
+            <div class="mt-8 flex flex-wrap justify-center gap-2 lg:justify-start">
               <a
                 href="#franchise-form"
-                class="lum-btn lum-btn-p-3 rounded-lum-2 font-futura lum-grad-bg-burger-600 from-burger-600 to-burger-700 hover:from-burger-500 active:from-burger-500 flex items-center gap-2 border-none text-base font-bold tracking-wider text-white uppercase shadow-lg shadow-orange-950/40"
+                class={{
+                  'lum-btn lum-btn-p-3 sm:text-lg': true,
+                  'hover:text-lum-text! active:text-lum-text border-none': true,
+                  'lum-grad-bg-burger-600 from-burger-600 to-burger-700 hover:from-burger-500 active:from-burger-500 bg-linear-to-b': true,
+                }}
               >
                 Apply Now <ArrowRight size={18} />
               </a>
               <a
                 href="#how-it-works"
-                class="lum-btn lum-btn-p-3 rounded-lum-2 font-futura lum-bg-transparent hover:lum-bg-lum-card-bg text-lum-text border-burger-300/30 flex items-center gap-2 border text-base font-bold tracking-wider uppercase"
+                class={{
+                  'lum-btn lum-btn-p-3 sm:text-lg': true,
+                  'hover:text-lum-text! active:text-lum-text border-none': true,
+                }}
               >
                 How It Works
               </a>
@@ -105,19 +116,17 @@ export default component$(() => {
           </div>
 
           <div class="relative mx-auto w-full max-w-md">
-            <div class="from-burger-600/30 absolute inset-0 -rotate-3 rounded-3xl bg-linear-to-tr to-orange-600/10 blur-xl" />
-            <div class="lum-card relative overflow-hidden p-6 text-center backdrop-blur-xl">
-              <div class="relative z-10">
-                <Cutout class="mx-auto max-h-72 object-contain drop-shadow-2xl" />
-                <div class="bg-burger-950/80 border-burger-400/20 mt-4 rounded-xl border p-4 backdrop-blur-md">
-                  <p class="font-futura text-lg font-bold text-white">
-                    Gourmet Smash Burgers & Sandwiches
-                  </p>
-                  <p class="text-lum-text-secondary text-xs">
-                    Hand-pressed fresh daily · Signature brioche · Distinctive
-                    sauces
-                  </p>
-                </div>
+            <div class="from-burger-600/30 absolute inset-0 -rotate-3 rounded-3xl bg-linear-to-tr to-orange-600/10 blur-2xl" />
+            <div class="relative z-10">
+              <Cutout class="mx-auto max-h-72 object-contain drop-shadow-2xl" />
+              <div class="lum-card mt-4 p-4 text-center backdrop-blur-md">
+                <p class="font-futura text-lg font-bold text-white">
+                  Gourmet Burgers & Sandwiches
+                </p>
+                <p class="text-lum-text-secondary text-xs">
+                  Hand-pressed fresh daily · Signature brioche · Distinctive
+                  sauces
+                </p>
               </div>
             </div>
           </div>
@@ -135,32 +144,31 @@ export default component$(() => {
               A high-growth segment in fast casual.
             </h2>
             <p class="text-lum-text-secondary mx-auto mt-4 max-w-2xl text-base sm:text-lg">
-              The demand for premium, certified halal fast-casual dining is
-              accelerating faster than traditional burger concepts.
+              The demand for premium, halal fast-casual dining is accelerating
+              faster than traditional burger concepts.
             </p>
           </div>
 
           <div class="mt-12 grid grid-cols-1 gap-6 md:grid-cols-3">
             <div class="lum-card relative flex flex-col justify-between p-8 backdrop-blur-md">
               <div>
-                <div class="bg-burger-500/10 border-burger-500/20 mb-6 inline-flex rounded-xl border p-3">
+                <div class="lum-card mb-6 inline-flex p-3">
                   <Flame class="text-burger-300" size={28} />
                 </div>
                 <h3 class="font-futura text-2xl font-bold text-white">
                   Distinctive, Craveable Recipes
                 </h3>
                 <p class="text-lum-text-secondary mt-3 text-sm leading-relaxed sm:text-base">
-                  Our hand-pressed gourmet smash burgers, loaded steak
-                  sandwiches, and signature sauces stand out in any market.
-                  Customers come back repeatedly for flavors they can't get
-                  anywhere else.
+                  Our hand-pressed gourmet burgers, loaded steak sandwiches, and
+                  signature sauces stand out in any market. Customers come back
+                  repeatedly for flavors they can't get anywhere else.
                 </p>
               </div>
             </div>
 
             <div class="lum-card relative flex flex-col justify-between p-8 backdrop-blur-md">
               <div>
-                <div class="bg-burger-500/10 border-burger-500/20 mb-6 inline-flex rounded-xl border p-3">
+                <div class="lum-card mb-6 inline-flex p-3">
                   <TrendingUp class="text-burger-300" size={28} />
                 </div>
                 <h3 class="font-futura text-2xl font-bold text-white">
@@ -176,7 +184,7 @@ export default component$(() => {
 
             <div class="lum-card relative flex flex-col justify-between p-8 backdrop-blur-md">
               <div>
-                <div class="bg-burger-500/10 border-burger-500/20 mb-6 inline-flex rounded-xl border p-3">
+                <div class="lum-card mb-6 inline-flex p-3">
                   <Store class="text-burger-300" size={28} />
                 </div>
                 <h3 class="font-futura text-2xl font-bold text-white">
@@ -220,8 +228,8 @@ export default component$(() => {
                 desc: 'Streamlined prep and assembly designed for speed, consistency, and low labor overhead.',
               },
               {
-                title: 'Integrated Digital & Toast POS',
-                desc: 'Omnichannel ordering, self-serve kiosks, digital loyalty, and delivery app routing.',
+                title: 'Integrated Digital & POS Systems',
+                desc: 'Direct online ordering, modern POS integration, and automated third-party delivery routing.',
               },
               {
                 title: 'Established Supply Chain',
@@ -270,7 +278,7 @@ export default component$(() => {
           </div>
 
           <div class="mt-12 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
-            <div class="lum-card border-burger-400/30 flex flex-col justify-between p-7 backdrop-blur-md">
+            <div class="lum-card flex flex-col justify-between p-7 backdrop-blur-md">
               <div>
                 <div class="flex items-center justify-between">
                   <span class="font-futura text-burger-300 text-2xl font-black">
@@ -288,7 +296,7 @@ export default component$(() => {
               </div>
             </div>
 
-            <div class="lum-card flex flex-col justify-between border-green-500/30 p-7 backdrop-blur-md">
+            <div class="lum-card flex flex-col justify-between p-7 backdrop-blur-md">
               <div>
                 <div class="flex items-center justify-between">
                   <span class="font-futura text-2xl font-black text-green-400">
@@ -307,7 +315,7 @@ export default component$(() => {
               </div>
             </div>
 
-            <div class="lum-card flex flex-col justify-between border-blue-500/30 p-7 backdrop-blur-md">
+            <div class="lum-card flex flex-col justify-between p-7 backdrop-blur-md">
               <div>
                 <div class="flex items-center justify-between">
                   <span class="font-futura text-2xl font-black text-blue-400">
@@ -326,7 +334,7 @@ export default component$(() => {
               </div>
             </div>
 
-            <div class="lum-card flex flex-col justify-between border-orange-500/30 p-7 backdrop-blur-md">
+            <div class="lum-card flex flex-col justify-between p-7 backdrop-blur-md">
               <div>
                 <div class="flex items-center justify-between">
                   <span class="font-futura text-2xl font-black text-orange-400">
@@ -411,7 +419,7 @@ export default component$(() => {
             ].map((item, index) => (
               <div
                 key={index}
-                class="lum-card hover:border-burger-400/40 flex min-h-[190px] flex-col justify-between p-6 backdrop-blur-md transition-all"
+                class="lum-card flex min-h-[190px] flex-col justify-between p-6 backdrop-blur-md transition-all"
               >
                 <div class="font-futura text-burger-300 text-lg font-black tracking-wider opacity-80">
                   {item.step}
@@ -426,87 +434,6 @@ export default component$(() => {
                 </div>
               </div>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Testimonials */}
-      <section class="border-burger-900/40 relative border-t py-16 md:py-24">
-        <div class="mx-auto max-w-7xl px-6">
-          <div class="text-center">
-            <p class="text-burger-300 font-futura text-xs font-bold tracking-widest uppercase">
-              What People Are Saying
-            </p>
-            <h2 class="font-futura mt-2 text-3xl font-bold tracking-tight text-white sm:text-5xl">
-              Built on genuine love for the food.
-            </h2>
-          </div>
-
-          <div class="mt-12 grid grid-cols-1 gap-6 md:grid-cols-3">
-            <div class="lum-card flex flex-col justify-between p-8 backdrop-blur-md">
-              <div>
-                <div class="text-burger-300 mb-4 flex gap-1">
-                  {[1, 2, 3, 4, 5].map((_, i) => (
-                    <Star key={i} size={16} class="fill-current" />
-                  ))}
-                </div>
-                <blockquote class="text-lum-text text-sm leading-relaxed sm:text-base">
-                  "The quality of the smashed beef and the flavor profiles are
-                  unlike anything else in the GTA. The operational playbook is
-                  clear, simple to execute, and customers keep returning
-                  weekly."
-                </blockquote>
-              </div>
-              <div class="mt-6 border-t border-white/10 pt-4">
-                <strong class="block font-bold text-white">Farhan K.</strong>
-                <span class="text-lum-text-secondary text-xs">
-                  Restaurant Operator · Ontario
-                </span>
-              </div>
-            </div>
-
-            <div class="lum-card flex flex-col justify-between p-8 backdrop-blur-md">
-              <div>
-                <div class="text-burger-300 mb-4 flex gap-1">
-                  {[1, 2, 3, 4, 5].map((_, i) => (
-                    <Star key={i} size={16} class="fill-current" />
-                  ))}
-                </div>
-                <blockquote class="text-lum-text text-sm leading-relaxed sm:text-base">
-                  "Having 100% hand-slaughtered certified halal certification
-                  gives our brand unmatched credibility. The community loyalty
-                  is tremendous, and the kitchen efficiency keeps margins
-                  strong."
-                </blockquote>
-              </div>
-              <div class="mt-6 border-t border-white/10 pt-4">
-                <strong class="block font-bold text-white">Imran M.</strong>
-                <span class="text-lum-text-secondary text-xs">
-                  Franchise Partner · Ajax
-                </span>
-              </div>
-            </div>
-
-            <div class="lum-card flex flex-col justify-between p-8 backdrop-blur-md">
-              <div>
-                <div class="text-burger-300 mb-4 flex gap-1">
-                  {[1, 2, 3, 4, 5].map((_, i) => (
-                    <Star key={i} size={16} class="fill-current" />
-                  ))}
-                </div>
-                <blockquote class="text-lum-text text-sm leading-relaxed sm:text-base">
-                  "The team is responsive, deeply committed to food quality, and
-                  always iterating. It’s an exciting brand to be part of as it
-                  expands across North America."
-                </blockquote>
-              </div>
-              <div class="mt-6 border-t border-white/10 pt-4">
-                <strong class="block font-bold text-white">Tariq S.</strong>
-                <span class="text-lum-text-secondary text-xs">
-                  Multi-Unit Investor
-                </span>
-              </div>
-            </div>
           </div>
         </div>
       </section>
@@ -534,7 +461,7 @@ export default component$(() => {
           <div class="lum-card mt-12 p-8 backdrop-blur-xl md:p-12">
             {isSubmitted.value ? (
               <div class="flex flex-col items-center py-10 text-center">
-                <div class="mb-6 flex h-16 w-16 items-center justify-center rounded-full border border-green-500/40 bg-green-500/20 text-green-400">
+                <div class="lum-card mb-6 flex h-16 w-16 items-center justify-center rounded-full text-green-400">
                   <CheckCircle2 size={36} />
                 </div>
                 <h3 class="font-futura text-2xl font-bold text-white sm:text-3xl">
@@ -596,7 +523,7 @@ export default component$(() => {
                     type="text"
                     required
                     placeholder="Jane Doe"
-                    class="lum-input lum-bg-lum-input-bg rounded-lum-1 focus:border-burger-400 border-white/10 px-4 py-3 text-white placeholder-gray-500 focus:outline-none"
+                    class="lum-input lum-bg-lum-input-bg rounded-lum-1 px-4 py-3 text-white placeholder-gray-500"
                     value={formData.value.name}
                     onInput$={(e) => {
                       formData.value = {
@@ -615,7 +542,7 @@ export default component$(() => {
                     type="email"
                     required
                     placeholder="jane@example.com"
-                    class="lum-input lum-bg-lum-input-bg rounded-lum-1 focus:border-burger-400 border-white/10 px-4 py-3 text-white placeholder-gray-500 focus:outline-none"
+                    class="lum-input lum-bg-lum-input-bg rounded-lum-1 px-4 py-3 text-white placeholder-gray-500"
                     value={formData.value.email}
                     onInput$={(e) => {
                       formData.value = {
@@ -634,7 +561,7 @@ export default component$(() => {
                     type="tel"
                     required
                     placeholder="+1 (555) 000-0000"
-                    class="lum-input lum-bg-lum-input-bg rounded-lum-1 focus:border-burger-400 border-white/10 px-4 py-3 text-white placeholder-gray-500 focus:outline-none"
+                    class="lum-input lum-bg-lum-input-bg rounded-lum-1 px-4 py-3 text-white placeholder-gray-500"
                     value={formData.value.phone}
                     onInput$={(e) => {
                       formData.value = {
@@ -653,8 +580,8 @@ export default component$(() => {
                   <input
                     type="text"
                     required
-                    placeholder="e.g. Toronto, Mississauga, Calgary"
-                    class="lum-input lum-bg-lum-input-bg rounded-lum-1 focus:border-burger-400 border-white/10 px-4 py-3 text-white placeholder-gray-500 focus:outline-none"
+                    placeholder="e.g. Toronto, Mississauga, Scarborough, Ajax"
+                    class="lum-input lum-bg-lum-input-bg rounded-lum-1 px-4 py-3 text-white placeholder-gray-500"
                     value={formData.value.marketOfInterest}
                     onInput$={(e) => {
                       formData.value = {
@@ -671,7 +598,7 @@ export default component$(() => {
                   </label>
                   <select
                     required
-                    class="lum-input lum-bg-lum-input-bg rounded-lum-1 focus:border-burger-400 border-white/10 px-4 py-3 text-white focus:outline-none"
+                    class="lum-input lum-bg-lum-input-bg rounded-lum-1 px-4 py-3 text-white"
                     value={formData.value.liquidCapital}
                     onChange$={(e) => {
                       formData.value = {
@@ -707,7 +634,7 @@ export default component$(() => {
                   </label>
                   <select
                     required
-                    class="lum-input lum-bg-lum-input-bg rounded-lum-1 focus:border-burger-400 border-white/10 px-4 py-3 text-white focus:outline-none"
+                    class="lum-input lum-bg-lum-input-bg rounded-lum-1 px-4 py-3 text-white"
                     value={formData.value.timeline}
                     onChange$={(e) => {
                       formData.value = {
@@ -744,7 +671,7 @@ export default component$(() => {
                   <textarea
                     rows={3}
                     placeholder="Tell us about your restaurant, business, or management background..."
-                    class="lum-input lum-bg-lum-input-bg rounded-lum-1 focus:border-burger-400 border-white/10 px-4 py-3 text-white placeholder-gray-500 focus:outline-none"
+                    class="lum-input lum-bg-lum-input-bg rounded-lum-1 px-4 py-3 text-white placeholder-gray-500"
                     value={formData.value.background}
                     onInput$={(e) => {
                       formData.value = {
@@ -762,7 +689,7 @@ export default component$(() => {
                   <textarea
                     rows={2}
                     placeholder="Any specific questions or details you would like to share?"
-                    class="lum-input lum-bg-lum-input-bg rounded-lum-1 focus:border-burger-400 border-white/10 px-4 py-3 text-white placeholder-gray-500 focus:outline-none"
+                    class="lum-input lum-bg-lum-input-bg rounded-lum-1 px-4 py-3 text-white placeholder-gray-500"
                     value={formData.value.notes}
                     onInput$={(e) => {
                       formData.value = {
@@ -812,7 +739,7 @@ export default component$(() => {
             </h2>
           </div>
 
-          <div class="mt-12 space-y-4">
+          <div class="mt-12 flex flex-col gap-4">
             {[
               {
                 q: 'What is the initial investment required to open a location?',
@@ -828,32 +755,42 @@ export default component$(() => {
               },
               {
                 q: 'What territories and markets are currently available?',
-                a: 'We are actively reviewing franchise inquiries across prime Canadian and US metropolitan markets, with strong immediate opportunities in Ontario, Alberta, and beyond. Inquire through our form to verify your target territory availability.',
+                a: 'We are currently focused on expanding throughout the Greater Toronto Area (GTA), including Toronto, Durham Region, York Region, Peel Region, and surrounding areas. Inquire through our form to verify territory availability for your target neighbourhood or city.',
               },
               {
                 q: 'How long does it take from signing to opening doors?',
                 a: 'On average, the process takes approximately 4 to 9 months depending on site availability, municipal permitting, and contractor build-out timelines.',
               },
               {
-                q: 'Is the entire Burgers on Fleek menu 100% Halal certified?',
-                a: 'Yes, 100%. All meats are hand-slaughtered halal certified through leading suppliers including St. Helen’s and Sargent Farms. We adhere to strict halal integrity across our entire menu and supply chain.',
+                q: 'Why do you not have restaurant-level halal certification?',
+                a: 'All our meats are 100% hand-slaughtered Halal and sourced directly from certified suppliers including St. Helen’s and Sargent Farms. Third-party restaurant-level certification programs charge recurring licensing fees that would drive up menu prices for customers. We maintain strict 100% halal integrity while keeping our gourmet offerings accessible and profitable.',
               },
-            ].map((faq, index) => (
-              <details
-                key={index}
-                class="lum-card group open:border-burger-400/50 relative p-6 backdrop-blur-md transition-colors"
-              >
-                <summary class="font-futura flex cursor-pointer list-none items-center justify-between gap-4 text-lg font-bold text-white">
-                  <span>{faq.q}</span>
-                  <div class="text-burger-300 transition-transform duration-300 group-open:rotate-180">
-                    <ChevronDown size={20} />
+            ].map((faq, index) => {
+              const isOpen = openItems.value.includes(index.toString());
+              return (
+                <div key={index} class="transition-all duration-200">
+                  <Accordion
+                    sectionName={index.toString()}
+                    class={{
+                      'font-futura w-full text-left text-lg font-bold text-white': true,
+                    }}
+                  >
+                    {faq.q}
+                  </Accordion>
+                  <div
+                    class={{
+                      'overflow-hidden transition-all duration-350 ease-in-out': true,
+                      'max-h-96': isOpen,
+                      'max-h-0': !isOpen,
+                    }}
+                  >
+                    <div class="text-lum-text-secondary p-4 leading-relaxed sm:text-base">
+                      {faq.a}
+                    </div>
                   </div>
-                </summary>
-                <p class="text-lum-text-secondary mt-4 text-sm leading-relaxed sm:text-base">
-                  {faq.a}
-                </p>
-              </details>
-            ))}
+                </div>
+              );
+            })}
           </div>
 
           <div class="lum-card mt-12 flex flex-col items-center justify-between gap-4 p-6 text-center backdrop-blur-md sm:flex-row sm:text-left">
@@ -866,7 +803,7 @@ export default component$(() => {
               </p>
             </div>
             <a
-              href="mailto:eat@burgersonfleek.ca"
+              href="mailto:franchise@burgersonfleek.ca"
               class="lum-btn lum-btn-p-2 rounded-lum-2 font-futura text-burger-300 flex items-center gap-2 text-sm font-bold uppercase hover:text-white"
             >
               <Mail size={16} /> Contact Us
@@ -881,5 +818,5 @@ export default component$(() => {
 export const head = generateHead({
   title: 'Burgers on Fleek - Franchise Opportunities',
   description:
-    'Own a Burgers on Fleek franchise. Join a proven gourmet halal smash burger brand with comprehensive training, lean operations, and strong customer demand.',
+    'Own a Burgers on Fleek franchise. Join a proven gourmet halal burger brand with comprehensive training, lean operations, and strong customer demand.',
 });

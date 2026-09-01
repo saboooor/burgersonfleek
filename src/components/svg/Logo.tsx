@@ -21,8 +21,8 @@ export default component$(({ size, height, id, class: Class }: any) => {
           gradientUnits="objectBoundingBox"
           gradientTransform="rotate(10)"
         >
-          <stop offset="0" stop-color="var(--color-burger-400)" />
-          <stop offset="1" stop-color="var(--color-burger-300)" />
+          <stop offset="0" stop-color="var(--color-burger-500)" />
+          <stop offset="1" stop-color="var(--color-burger-400)" />
         </linearGradient>
 
         <filter
@@ -38,7 +38,7 @@ export default component$(({ size, height, id, class: Class }: any) => {
             surfaceScale="1"
             specularConstant="0.6"
             specularExponent="25"
-            lighting-color="var(--color-burger-200)"
+            lighting-color="var(--color-burger-400)"
             result="specOut"
           >
             <fePointLight x="-2000" y="-3000" z="5000" />

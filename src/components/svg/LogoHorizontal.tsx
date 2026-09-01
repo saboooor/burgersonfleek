@@ -38,7 +38,7 @@ export default component$(({ size, height, id, class: Class }: any) => {
             surfaceScale="1"
             specularConstant="0.6"
             specularExponent="25"
-            lighting-color="var(--color-burger-200)"
+            lighting-color="var(--color-burger-400)"
             result="specOut"
           >
             <fePointLight x="-2000" y="-3000" z="5000" />
