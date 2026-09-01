@@ -2,6 +2,7 @@ import { component$ } from '@qwik.dev/core';
 import { Link, useLocation } from '@qwik.dev/router';
 import { Nav } from '@luminescent/ui-qwik';
 
+import Store from 'lucide-icons-qwik/icons/Store';
 import Phone from 'lucide-icons-qwik/icons/Phone';
 import BookOpen from 'lucide-icons-qwik/icons/BookOpen';
 import MapPin from 'lucide-icons-qwik/icons/MapPin';
@@ -16,7 +17,7 @@ export default component$(() => {
   const loc = useLocation();
 
   return (
-    <Nav fixed floating colorClass="lum-grad-bg-lum-accent/20">
+    <Nav fixed floating colorClass="lum-grad-bg-lum-accent/20" nohamburger>
       <Link
         q:slot="start"
         href="/"
@@ -42,11 +43,21 @@ export default component$(() => {
         q:slot="end"
         href="/menu"
         class={{
-          'lum-btn lum-bg-transparent font-futura hover:text-lum-text sm:lum-btn-p-2 rounded-lum-2 p-2': true,
+          'lum-btn lum-bg-transparent font-futura hover:text-lum-text lum-btn-p-2 rounded-lum-2 hidden p-2 sm:flex': true,
         }}
         title="Menu"
       >
-        <BookOpen strokeWidth={1} /> <span class="hidden sm:inline">MENU</span>
+        <BookOpen strokeWidth={1} /> MENU
+      </Link>
+      <Link
+        q:slot="end"
+        href="/franchise"
+        class={{
+          'lum-btn lum-bg-transparent font-futura hover:text-lum-text lum-btn-p-2 rounded-lum-2 hidden p-2 sm:flex': true,
+        }}
+        title="Franchise"
+      >
+        <Store strokeWidth={1} /> FRANCHISE
       </Link>
       <a
         q:slot="end"
@@ -54,52 +65,70 @@ export default component$(() => {
         data-umami-event="order_online"
         href="https://order.toasttab.com/online/burgers-on-fleek-135-harwood-ave-n-unit-b212"
         class={{
-          'lum-btn lum-bg-transparent font-futura hover:text-lum-text sm:lum-btn-p-2 rounded-lum-2 p-2': true,
+          'lum-btn lum-bg-transparent font-futura hover:text-lum-text lum-btn-p-2 rounded-lum-2 hidden p-2 sm:flex': true,
         }}
         title="Order Online"
       >
-        <IconInBag /> <span class="hidden sm:inline">ORDER</span>
+        <IconInBag /> ORDER
       </a>
       <Link
         q:slot="end"
         href="/halal"
         class={{
-          'lum-btn lum-bg-transparent hover:text-lum-text rounded-lum-2 hidden p-2 lg:flex': true,
+          'lum-btn lum-bg-transparent hover:text-lum-text rounded-lum-2 p-2': true,
         }}
         title="Halal"
       >
         <Halal />
       </Link>
+      <div q:slot="end" class="flex gap-2 sm:hidden">
+        <ActionButtons strokeWidth={1} />
+      </div>
       <div q:slot="end" class="hidden gap-2 sm:flex">
+        <ActionButtons />
         <SocialButtons />
       </div>
 
       <Link
         q:slot="mobile"
         href="/menu"
-        class="lum-btn lum-bg-transparent font-futura hover:text-lum-text rounded-lum-2"
+        class="hover:lum-bg-nav-bg! flex-col gap-1! p-1! text-[0.65rem]!"
       >
         <BookOpen strokeWidth={1} /> MENU
+      </Link>
+      <Link
+        q:slot="mobile"
+        href="/franchise"
+        class="hover:lum-bg-nav-bg! flex-col gap-1! p-1! text-[0.65rem]!"
+        title="Franchise"
+      >
+        <Store strokeWidth={1} /> FRANCHISE
       </Link>
       <a
         q:slot="mobile"
         target="_blank"
         data-umami-event="order_online"
         href="https://order.toasttab.com/online/burgers-on-fleek-135-harwood-ave-n-unit-b212"
-        class="lum-btn lum-bg-transparent font-futura hover:text-lum-text rounded-lum-2"
+        class="hover:lum-bg-nav-bg! flex-col gap-1! p-1! text-[0.65rem]!"
       >
-        <IconInBag /> ORDER ONLINE
+        <IconInBag /> ORDER
       </a>
-      <Link
+      <a
         q:slot="mobile"
-        href="/halal"
-        class="lum-btn lum-bg-transparent font-futura hover:text-lum-text rounded-lum-2"
+        href="https://maps.app.goo.gl/Unrrg3uda7AQQs4DA"
+        class="hover:lum-bg-nav-bg! flex-col gap-1! p-1! text-[0.65rem]!"
+        title="Navigate to our location"
       >
-        <Halal /> HALAL
-      </Link>
-      <div q:slot="mobile" class="flex justify-evenly">
-        <SocialButtons />
-      </div>
+        <MapPin strokeWidth={1} /> NAVIGATE
+      </a>
+      <a
+        q:slot="mobile"
+        href="tel:+1 (905) 427 4377"
+        class="hover:lum-bg-nav-bg! flex-col gap-1! p-1! text-[0.65rem]!"
+        title="Call us"
+      >
+        <Phone strokeWidth={1} /> CALL
+      </a>
     </Nav>
   );
 });
@@ -107,28 +136,6 @@ export default component$(() => {
 export const SocialButtons = component$(({ big }: any) => {
   return (
     <>
-      <a
-        href="tel:+1 (905) 427 4377"
-        data-umami-event="phone"
-        title="Call us"
-        class={{
-          'lum-btn lum-bg-transparent hover:text-lum-text rounded-lum-2 fill-current p-2': true,
-          'p-4': big,
-        }}
-      >
-        <Phone />
-      </a>
-      <a
-        href="https://maps.app.goo.gl/Unrrg3uda7AQQs4DA"
-        data-umami-event="maps"
-        title="Google Maps"
-        class={{
-          'lum-btn lum-bg-transparent hover:text-lum-text rounded-lum-2 fill-current p-2': true,
-          'p-4': big,
-        }}
-      >
-        <MapPin />
-      </a>
       <a
         href="https://instagram.com/burgersonfleek.ca"
         data-umami-event="social-instagram"
@@ -161,6 +168,35 @@ export const SocialButtons = component$(({ big }: any) => {
         }}
       >
         <SiTiktok />
+      </a>
+    </>
+  );
+});
+
+export const ActionButtons = component$(({ big, strokeWidth }: any) => {
+  return (
+    <>
+      <a
+        href="tel:+1 (905) 427 4377"
+        data-umami-event="phone"
+        title="Call us"
+        class={{
+          'lum-btn lum-bg-transparent hover:text-lum-text rounded-lum-2 fill-current p-2': true,
+          'p-4': big,
+        }}
+      >
+        <Phone strokeWidth={strokeWidth} />
+      </a>
+      <a
+        href="https://maps.app.goo.gl/Unrrg3uda7AQQs4DA"
+        data-umami-event="maps"
+        title="Google Maps"
+        class={{
+          'lum-btn lum-bg-transparent hover:text-lum-text rounded-lum-2 fill-current p-2': true,
+          'p-4': big,
+        }}
+      >
+        <MapPin strokeWidth={strokeWidth} />
       </a>
     </>
   );

@@ -114,7 +114,7 @@ export default component$(() => {
           </MenuCategory>
         </Menu>
         <div class="px-4 pt-35 sm:col-span-2 sm:px-6 sm:pt-25 lg:col-span-3">
-          <p class="text-lum-text-secondary mb-8 sm:text-xl">
+          <p class="text-lum-text-secondary my-8 sm:text-xl">
             We are not fast food.
             <br />
             All our food is made fresh, and it can take a minimum of 15 minutes

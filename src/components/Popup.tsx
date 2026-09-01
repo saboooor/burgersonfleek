@@ -31,10 +31,7 @@ export default component$(
           window.scrollY + 1000 < document.body.scrollHeight
         ) {
           if (PopupRefBottom.value) PopupRefBottom.value.style.bottom = '0';
-          if (PopupRefTop.value)
-            PopupRefTop.value.style.top = pathname?.includes('menu')
-              ? '120px'
-              : '64px';
+          if (PopupRefTop.value) PopupRefTop.value.style.top = '0';
         } else if (window.scrollY > 100) {
           if (PopupRefBottom.value)
             PopupRefBottom.value.style.bottom =
@@ -51,7 +48,7 @@ export default component$(
       <>
         <div
           class={{
-            'fixed bottom-0 flex w-full flex-col items-center justify-center p-4 transition-all':
+            'fixed bottom-0 flex w-full flex-col items-center justify-center p-4 pb-18 transition-all sm:pb-4':
               fixed,
             'hidden sm:flex': col,
             flex: !col,
@@ -94,9 +91,9 @@ export default component$(
         </div>
         <div
           class={{
-            'top-16': !pathname?.includes('menu'),
-            'top-30': pathname?.includes('menu'),
-            'fixed flex w-full flex-col items-center justify-center p-4 transition-all':
+            'mt-16': !pathname?.includes('menu'),
+            'mt-30 sm:mt-16': pathname?.includes('menu'),
+            'fixed top-0 flex w-full flex-col items-center justify-center p-4 transition-all':
               fixed,
             'hidden sm:flex': col,
             flex: !col,
