@@ -12,6 +12,7 @@
     "binding": "ASSET",
     "directory": "./dist",
   },
+  "preview_urls": true,
   "observability": {
     "enabled": true,
   },
