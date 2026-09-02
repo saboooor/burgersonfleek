@@ -14,7 +14,10 @@ export default component$(() => {
       <Popup
         fixed
         pathname={loc.url.pathname}
-        types={[...(loc.url.pathname != '/' ? ['order' as const] : []), 'deal']}
+        types={[
+          ...(loc.url.pathname.includes('/menu') ? ['order' as const] : []),
+          'deal',
+        ]}
       />
     </main>
   );

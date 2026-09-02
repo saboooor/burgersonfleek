@@ -120,9 +120,8 @@ export default component$(() => {
 
             <p class="text-lum-text-secondary mt-6 max-w-2xl text-lg sm:text-xl md:text-2xl">
               Step into the booming gourmet halal burger market with a brand
-              customers obsess over. Proven systems, craveable high-margin
-              recipes, lean operations, and dedicated end-to-end franchise
-              support.
+              customers obsess over. Proven systems, craveable recipes, lean
+              operations, and dedicated end-to-end franchise support.
             </p>
 
             <div class="mt-8 flex flex-wrap justify-center gap-2 lg:justify-start">
