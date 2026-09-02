@@ -60,7 +60,7 @@ export default component$(
     return (
       <DropdownButton
         class={{
-          'lum-bg-lum-card-bg active:scale-100!': true,
+          'lum-bg-lum-card-bg active:scale-100': true,
           'hidden sm:flex': !!pcOnly,
           ...getClassObject(className),
         }}

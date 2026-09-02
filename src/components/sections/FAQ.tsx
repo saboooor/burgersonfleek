@@ -1,5 +1,5 @@
-import { component$, useContextProvider, useSignal } from '@qwik.dev/core';
-import Accordion, { openItemsContext } from '~/components/Elements/Accordion';
+import { component$ } from '@qwik.dev/core';
+import FAQAccordion from '~/components/Elements/FAQAccordion';
 import { Link } from '@qwik.dev/router';
 import Mail from 'lucide-icons-qwik/icons/Mail';
 import Phone from 'lucide-icons-qwik/icons/Phone';
@@ -54,9 +54,6 @@ export default component$(() => {
     },
   ];
 
-  const openItems = useSignal<string[]>([]);
-  useContextProvider(openItemsContext, openItems);
-
   return (
     <div class="mx-auto flex w-full max-w-4xl flex-col gap-8 text-center">
       <div class="flex flex-col gap-2">
@@ -75,45 +72,7 @@ export default component$(() => {
         </p>
       </div>
 
-      <div class="flex flex-col gap-1 text-left">
-        {faqs.map((faq, idx) => {
-          const isOpen = openItems.value.includes(idx.toString());
-          return (
-            <div
-              key={idx}
-              class={{
-                'lum-card gap-0 p-0 backdrop-blur-xl transition-all duration-200': true,
-                'rounded-lg': idx !== 0 && idx !== faqs.length - 1,
-                'rounded-b-lg': idx === 0,
-                'rounded-t-lg': idx === faqs.length - 1,
-              }}
-            >
-              <Accordion
-                sectionName={idx.toString()}
-                class={{
-                  'w-full text-left text-lg text-white': true,
-                  'rounded-lg': idx !== 0 && idx !== faqs.length - 1,
-                  'rounded-b-lg': idx === 0,
-                  'rounded-t-lg': idx === faqs.length - 1,
-                }}
-              >
-                {faq.question}
-              </Accordion>
-              <div
-                class={{
-                  'overflow-hidden transition-all duration-350 ease-in-out': true,
-                  'max-h-120': isOpen,
-                  'max-h-0': !isOpen,
-                }}
-              >
-                <div class="text-lum-text-secondary p-4 leading-relaxed whitespace-pre-line sm:text-base">
-                  {faq.answer}
-                </div>
-              </div>
-            </div>
-          );
-        })}
-      </div>
+      <FAQAccordion items={faqs} />
 
       {/* Contact & Franchise Cards */}
       <div class="grid grid-cols-1 gap-4 text-left sm:grid-cols-2">

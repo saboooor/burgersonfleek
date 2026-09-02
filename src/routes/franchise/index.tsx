@@ -1,7 +1,7 @@
-import { component$, useSignal, $, useContextProvider } from '@qwik.dev/core';
+import { component$, useSignal, $ } from '@qwik.dev/core';
 import { generateHead } from '~/root';
 import Cutout from '~/components/images/Cutout.png?jsx';
-import Accordion, { openItemsContext } from '~/components/Elements/Accordion';
+import FAQAccordion from '~/components/Elements/FAQAccordion';
 import Star from 'lucide-icons-qwik/icons/Star';
 import CheckCircle2 from 'lucide-icons-qwik/icons/CheckCircle2';
 import ArrowRight from 'lucide-icons-qwik/icons/ArrowRight';
@@ -68,9 +68,6 @@ const faqs = [
 ];
 
 export default component$(() => {
-  const openItems = useSignal<string[]>([]);
-  useContextProvider(openItemsContext, openItems);
-
   const copiedTemplate = useSignal(false);
   const copiedEmail = useSignal(false);
 
@@ -630,44 +627,8 @@ export default component$(() => {
             </h2>
           </div>
 
-          <div class="mt-12 flex flex-col gap-1">
-            {faqs.map((faq, idx) => {
-              const isOpen = openItems.value.includes(idx.toString());
-              return (
-                <div
-                  key={idx}
-                  class={{
-                    'lum-card gap-0 p-0 backdrop-blur-xl transition-all duration-200': true,
-                    'rounded-lg': idx !== 0 && idx !== faqs.length - 1,
-                    'rounded-b-lg': idx === 0,
-                    'rounded-t-lg': idx === faqs.length - 1,
-                  }}
-                >
-                  <Accordion
-                    sectionName={idx.toString()}
-                    class={{
-                      'w-full text-left text-lg text-white': true,
-                      'rounded-lg': idx !== 0 && idx !== faqs.length - 1,
-                      'rounded-b-lg': idx === 0,
-                      'rounded-t-lg': idx === faqs.length - 1,
-                    }}
-                  >
-                    {faq.question}
-                  </Accordion>
-                  <div
-                    class={{
-                      'overflow-hidden transition-all duration-350 ease-in-out': true,
-                      'max-h-120': isOpen,
-                      'max-h-0': !isOpen,
-                    }}
-                  >
-                    <div class="text-lum-text-secondary p-4 leading-relaxed whitespace-pre-line sm:text-base">
-                      {faq.answer}
-                    </div>
-                  </div>
-                </div>
-              );
-            })}
+          <div class="mt-12">
+            <FAQAccordion items={faqs} />
           </div>
 
           <div class="lum-card mt-12 flex flex-col items-center justify-between gap-4 p-6 text-center backdrop-blur-md sm:flex-row sm:text-left">
