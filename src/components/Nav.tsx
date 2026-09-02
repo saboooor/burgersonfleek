@@ -6,6 +6,7 @@ import Store from 'lucide-icons-qwik/icons/Store';
 import Phone from 'lucide-icons-qwik/icons/Phone';
 import BookOpen from 'lucide-icons-qwik/icons/BookOpen';
 import MapPin from 'lucide-icons-qwik/icons/MapPin';
+import Loader2 from 'lucide-icons-qwik/icons/Loader2';
 import SiFacebook from 'simple-icons-qwik/icons/SiFacebook';
 import SiInstagram from 'simple-icons-qwik/icons/SiInstagram';
 import SiTiktok from 'simple-icons-qwik/icons/SiTiktok';
@@ -31,11 +32,11 @@ export default component$(() => {
         </p>
         <div
           class={{
-            'motion-safe:transition-all': true,
+            'transition-all': true,
             '-ml-6 opacity-0': !loc.isNavigating,
           }}
         >
-          <div class="lum-loading h-4 w-4" />
+          <Loader2 size={16} class="animate-spin" />
         </div>
       </Link>
 

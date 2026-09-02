@@ -34,6 +34,39 @@ Looking forward to connecting with your franchise development team!`;
 
 export const mailtoUrl = `mailto:${franchiseEmail}?subject=${encodeURIComponent(emailSubject)}&body=${encodeURIComponent(emailTemplate)}`;
 
+const faqs = [
+  {
+    question: 'What is the initial investment required to open a location?',
+    answer:
+      'Total startup investment varies depending on location size, regional real estate rates, equipment, and build-out requirements. We provide a full breakdown including the franchise fee, construction estimates, equipment packages, opening inventory, and initial working capital during the discovery call.',
+  },
+  {
+    question: 'What ongoing fees does a franchisee pay?',
+    answer:
+      'Ongoing fees include a standard royalty and a brand marketing contribution calculated as a percentage of gross weekly sales. These support ongoing field support, supply chain management, and national/regional advertising campaigns.',
+  },
+  {
+    question: 'Do I need prior restaurant or culinary experience?',
+    answer:
+      'While hospitality or business management experience is helpful, it is not strictly required. Our comprehensive training program covers everything from kitchen operations and food prep standards to staff hiring, inventory controls, and financial reporting.',
+  },
+  {
+    question: 'What territories and markets are currently available?',
+    answer:
+      'We are currently focused on expanding throughout the Greater Toronto Area (GTA), including Toronto, Durham Region, York Region, Peel Region, and surrounding areas. Email our team at franchise@burgersonfleek.ca to verify territory availability for your target neighbourhood or city.',
+  },
+  {
+    question: 'How long does it take from signing to opening doors?',
+    answer:
+      'On average, the process takes approximately 4 to 9 months depending on site availability, municipal permitting, and contractor build-out timelines.',
+  },
+  {
+    question: 'Why do you not have restaurant-level halal certification?',
+    answer:
+      'All our meats are 100% hand-slaughtered Halal and sourced directly from certified suppliers including St. Helen’s and Sargent Farms. Third-party restaurant-level certification programs charge recurring licensing fees that would drive up menu prices for customers. We maintain strict 100% halal integrity while keeping our gourmet offerings accessible and profitable.',
+  },
+];
+
 export default component$(() => {
   const openItems = useSignal<string[]>([]);
   useContextProvider(openItemsContext, openItems);
@@ -138,8 +171,7 @@ export default component$(() => {
                   Gourmet Burgers & Sandwiches
                 </p>
                 <p class="text-lum-text-secondary text-xs">
-                  Hand-pressed fresh daily · Signature brioche · Distinctive
-                  sauces
+                  Hand-pressed fresh daily · Distinctive sauces
                 </p>
               </div>
             </div>
@@ -598,53 +630,39 @@ export default component$(() => {
             </h2>
           </div>
 
-          <div class="mt-12 flex flex-col gap-4">
-            {[
-              {
-                q: 'What is the initial investment required to open a location?',
-                a: 'Total startup investment varies depending on location size, regional real estate rates, equipment, and build-out requirements. We provide a full breakdown including the franchise fee, construction estimates, equipment packages, opening inventory, and initial working capital during the discovery call.',
-              },
-              {
-                q: 'What ongoing fees does a franchisee pay?',
-                a: 'Ongoing fees include a standard royalty and a brand marketing contribution calculated as a percentage of gross weekly sales. These support ongoing field support, supply chain management, and national/regional advertising campaigns.',
-              },
-              {
-                q: 'Do I need prior restaurant or culinary experience?',
-                a: 'While hospitality or business management experience is helpful, it is not strictly required. Our comprehensive training program covers everything from kitchen operations and food prep standards to staff hiring, inventory controls, and financial reporting.',
-              },
-              {
-                q: 'What territories and markets are currently available?',
-                a: 'We are currently focused on expanding throughout the Greater Toronto Area (GTA), including Toronto, Durham Region, York Region, Peel Region, and surrounding areas. Email our team at franchise@burgersonfleek.ca to verify territory availability for your target neighbourhood or city.',
-              },
-              {
-                q: 'How long does it take from signing to opening doors?',
-                a: 'On average, the process takes approximately 4 to 9 months depending on site availability, municipal permitting, and contractor build-out timelines.',
-              },
-              {
-                q: 'Why do you not have restaurant-level halal certification?',
-                a: 'All our meats are 100% hand-slaughtered Halal and sourced directly from certified suppliers including St. Helen’s and Sargent Farms. Third-party restaurant-level certification programs charge recurring licensing fees that would drive up menu prices for customers. We maintain strict 100% halal integrity while keeping our gourmet offerings accessible and profitable.',
-              },
-            ].map((faq, index) => {
-              const isOpen = openItems.value.includes(index.toString());
+          <div class="mt-12 flex flex-col gap-1">
+            {faqs.map((faq, idx) => {
+              const isOpen = openItems.value.includes(idx.toString());
               return (
-                <div key={index} class="transition-all duration-200">
+                <div
+                  key={idx}
+                  class={{
+                    'lum-card gap-0 p-0 backdrop-blur-xl transition-all duration-200': true,
+                    'rounded-lg': idx !== 0 && idx !== faqs.length - 1,
+                    'rounded-b-lg': idx === 0,
+                    'rounded-t-lg': idx === faqs.length - 1,
+                  }}
+                >
                   <Accordion
-                    sectionName={index.toString()}
+                    sectionName={idx.toString()}
                     class={{
-                      'font-futura w-full text-left text-lg font-bold text-white': true,
+                      'w-full text-left text-lg text-white': true,
+                      'rounded-lg': idx !== 0 && idx !== faqs.length - 1,
+                      'rounded-b-lg': idx === 0,
+                      'rounded-t-lg': idx === faqs.length - 1,
                     }}
                   >
-                    {faq.q}
+                    {faq.question}
                   </Accordion>
                   <div
                     class={{
                       'overflow-hidden transition-all duration-350 ease-in-out': true,
-                      'max-h-96': isOpen,
+                      'max-h-120': isOpen,
                       'max-h-0': !isOpen,
                     }}
                   >
-                    <div class="text-lum-text-secondary p-4 leading-relaxed sm:text-base">
-                      {faq.a}
+                    <div class="text-lum-text-secondary p-4 leading-relaxed whitespace-pre-line sm:text-base">
+                      {faq.answer}
                     </div>
                   </div>
                 </div>

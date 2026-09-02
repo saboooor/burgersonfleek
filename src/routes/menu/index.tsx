@@ -115,15 +115,9 @@ export default component$(() => {
         </Menu>
         <div class="px-4 pt-35 sm:col-span-2 sm:px-6 sm:pt-25 lg:col-span-3">
           <p class="text-lum-text-secondary my-8 sm:text-xl">
-            We are not fast food.
-            <br />
-            All our food is made fresh, and it can take a minimum of 15 minutes
-            to complete your order.
-            <br />
-            All our food is cooked to the internal temperature required by the
-            CFIA.
-            <br />
-            If you have any food allergies, please advise us before ordering.
+            We are not fast food. All our food is made fresh (minimum 15-minute
+            prep). Cooked to CFIA standards. Please advise of any food allergies
+            before ordering.
           </p>
           <h2
             id="beefburgers"

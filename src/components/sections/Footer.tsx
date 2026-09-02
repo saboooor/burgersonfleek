@@ -132,7 +132,7 @@ export default component$(() => {
                 100% Halal
               </Link>
               <Link
-                href="/faq"
+                href="/#faq"
                 class="lum-btn lum-btn-p-1 lum-bg-transparent hover:lum-bg-lum-card-bg text-lum-text-secondary! rounded-lum-1 text-base md:text-lg"
               >
                 FAQ & Support

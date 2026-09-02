@@ -17,6 +17,7 @@ import MapPin from 'lucide-icons-qwik/icons/MapPin';
 import Phone from 'lucide-icons-qwik/icons/Phone';
 import Reviews from '~/components/sections/Reviews';
 import HalalSection from '~/components/sections/Halal';
+import FAQSection from '~/components/sections/FAQ';
 import { generateHead } from '~/root';
 import Popup from '~/components/Popup';
 import { getPlaceDetails } from '~/components/GoogleMaps';
@@ -259,6 +260,13 @@ export default component$(() => {
         class="mx-auto mt-20 flex max-w-5xl flex-col items-center px-6 text-center"
       >
         <HalalSection />
+      </section>
+
+      <section
+        id="faq"
+        class="mx-auto mt-24 flex max-w-5xl flex-col items-center px-6"
+      >
+        <FAQSection />
       </section>
     </>
   );

@@ -14,14 +14,21 @@ export default component$(() => {
 
   return (
     <>
-      <div class="flex">
-        <h1 class="my-4 text-3xl font-semibold text-white sm:mb-8 sm:text-5xl">
-          See for <span class="text-burger-300">yourself.</span>
-        </h1>
+      <div class="flex flex-col gap-2 text-center">
+        <p class="text-burger-300 font-futura text-xs font-bold tracking-widest uppercase">
+          Guest Feedback
+        </p>
+        <h2 class="font-futura text-3xl font-extrabold tracking-tight text-white sm:text-5xl">
+          See For{' '}
+          <span class="from-burger-200 via-burger-400 bg-linear-to-r to-orange-400 bg-clip-text text-transparent">
+            Yourself
+          </span>
+        </h2>
+        <p class="text-lum-text-secondary mx-auto max-w-lg text-sm sm:text-base">
+          Our guests love us! Real 5-star experiences and reviews from our
+          Google community.
+        </p>
       </div>
-      <p class="text-lum-text-secondary text-lg md:text-xl">
-        Our guests love us! Check out our reviews on Google.
-      </p>
       <div class="relative my-10 flex w-full flex-wrap justify-evenly gap-4">
         {GoogleDetails.value.reviews?.map((review: any, index: number) => (
           <Review review={review} key={index} />

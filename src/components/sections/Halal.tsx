@@ -2,34 +2,57 @@ import { component$ } from '@qwik.dev/core';
 
 export default component$(() => {
   return (
-    <>
-      <h1 class="text-lum-text fade-in animation-delay-100 mb-8 text-2xl font-bold sm:mb-8 sm:text-5xl">
-        We Only Serve <span class="text-orange-300">Halal حلال</span>
-      </h1>
-      <p class="text-lum-text-secondary fade-in animation-delay-200 mx-6 mb-6 flex flex-col text-xl sm:mb-10 md:mx-16 md:text-2xl">
-        Burgers On Fleek uses 100% Hand slaughtered Halal Meat.
-      </p>
-      <div class="text-lum-text-secondary fade-in animation-delay-300 mx-6 mb-6 text-lg sm:mb-10 md:mx-16 md:text-xl">
-        <p>Our meat providers are</p>
-        <p>
-          <a href="http://sthelensmeat.com" class="text-lum-accent underline">
+    <div class="flex flex-col gap-8 text-center">
+      <div class="flex flex-col gap-2">
+        <p class="text-burger-300 font-futura text-xs font-bold tracking-widest uppercase">
+          100% Halal Guarantee
+        </p>
+        <h2 class="font-futura text-3xl font-extrabold tracking-tight text-white sm:text-5xl">
+          We Only Serve{' '}
+          <span class="from-burger-200 via-burger-400 bg-linear-to-r to-orange-400 bg-clip-text text-transparent">
+            Halal حلال
+          </span>
+        </h2>
+        <p class="text-lum-text-secondary mx-auto max-w-lg text-sm sm:text-base">
+          Burgers on Fleek uses 100% hand-slaughtered Halal meat across our
+          entire menu.
+        </p>
+      </div>
+
+      <div class="lum-card mx-auto max-w-xl p-8 backdrop-blur-md">
+        <p class="mb-3 text-xs font-bold tracking-wider text-gray-400 uppercase">
+          Certified Meat Suppliers
+        </p>
+        <div class="flex flex-wrap items-center justify-center gap-4 text-lg font-bold sm:text-xl">
+          <a
+            href="http://sthelensmeat.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-burger-300 hover:text-burger-200 underline transition-colors"
+          >
             St. Helen's
-          </a>{' '}
-          and{' '}
-          <a href="https://sargentfarms.ca" class="text-lum-accent underline">
+          </a>
+          <span class="text-gray-500">·</span>
+          <a
+            href="https://sargentfarms.ca"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-burger-300 hover:text-burger-200 underline transition-colors"
+          >
             Sargent Farms
+          </a>
+        </div>
+        <p class="text-lum-text-secondary mt-6 text-sm">
+          For further inquiries regarding our halal standards, feel free to
+          contact us at{' '}
+          <a
+            href="mailto:eat@burgersonfleek.ca"
+            class="text-burger-300 font-medium hover:underline"
+          >
+            eat@burgersonfleek.ca
           </a>
         </p>
       </div>
-      <p class="text-lum-text-secondary fade-in animation-delay-400 mx-6 text-base md:mx-16 md:text-lg">
-        For further inquiries, feel free to reach us at{' '}
-        <a
-          href="mailto:eat@burgersonfleek.ca"
-          class="text-lum-accent underline"
-        >
-          eat@burgersonfleek.ca
-        </a>
-      </p>
-    </>
+    </div>
   );
 });
