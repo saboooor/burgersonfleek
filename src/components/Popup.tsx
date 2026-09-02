@@ -89,19 +89,19 @@ export default component$(
             </div>
           )}
         </div>
-        <div
-          class={{
-            'mt-16': !pathname?.includes('menu'),
-            'mt-30 sm:mt-16': pathname?.includes('menu'),
-            'fixed top-0 flex w-full flex-col items-center justify-center p-4 transition-all':
-              fixed,
-            'hidden sm:flex': col,
-            flex: !col,
-            ...Class,
-          }}
-          ref={PopupRefTop}
-        >
-          {types.includes('deal') && (
+        {types.includes('deal') && (
+          <div
+            class={{
+              'mt-16': !pathname?.includes('menu'),
+              'mt-30 sm:mt-16': pathname?.includes('menu'),
+              'fixed top-0 flex w-full flex-col items-center justify-center p-4 transition-all':
+                fixed,
+              'hidden sm:flex': col,
+              flex: !col,
+              ...Class,
+            }}
+            ref={PopupRefTop}
+          >
             <div
               class={{
                 'lum-card lum-btn-p-2 text-lum-text! max-w-7xl items-center justify-between gap-2': true,
@@ -124,8 +124,8 @@ export default component$(
                 </span>
               </p>
             </div>
-          )}
-        </div>
+          </div>
+        )}
       </>
     );
   }
