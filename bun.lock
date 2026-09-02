@@ -6,7 +6,7 @@
       "name": "burgersonfleek",
       "devDependencies": {
         "@luminescent/icons-qwik": "^0.1.1",
-        "@luminescent/ui": "^7.2.0-1",
+        "@luminescent/ui": "^7.2.0",
         "@luminescent/ui-qwik": "7.0.0-30",
         "@qwik.dev/core": "2.0.0-beta.43",
         "@qwik.dev/router": "2.0.0-beta.43",
@@ -189,7 +189,7 @@
 
     "@luminescent/icons-qwik": ["@luminescent/icons-qwik@0.1.1", "", {}, "sha512-W69uzPt9qAhqShl74bma9yzRqXv8FNJLz3R/R6vC4Z5rXYaZJ4W2fcITOUX33WBmKIlq6YNPrm6rWWY6tfMikw=="],
 
-    "@luminescent/ui": ["@luminescent/ui@7.2.0-1", "", {}, "sha512-rxXYWh+pLTc3d5bkXFXAx26Jr7rI997Q30QgjHCz5HIPc3bee6NK9M/G2wqN5m9UCnO4iHXqE6HlwDf4On5FNA=="],
+    "@luminescent/ui": ["@luminescent/ui@7.2.0", "", {}, "sha512-gyKOY4sA1jFEhlGfnh7j77NGnf/zjLbJ2KZpHcQIxuni32DvWtSvd3xBPsrIsuoqFoobhpU/c7fc4loBRMfNow=="],
 
     "@luminescent/ui-qwik": ["@luminescent/ui-qwik@7.0.0-30", "", { "peerDependencies": { "@luminescent/ui": "7.2.0-1" } }, "sha512-pElzGThwb+mx0KhHijYbSvTYXCUVw9WNS8aSUBuJicVAIDwDq+CAzUxtbdvf9PLWVuTPByKWLYUYUyfbIKVLAA=="],
 

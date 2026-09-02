@@ -34,21 +34,21 @@ export default component$(({ items, class: className }: FAQAccordionProps) => {
             key={idx}
             class={{
               'lum-card gap-0 overflow-hidden p-0 backdrop-blur-xl transition-all duration-200': true,
-              'rounded-lg': idx !== 0 && idx !== items.length - 1,
-              'rounded-b-lg': idx === 0,
-              'rounded-t-lg': idx === items.length - 1,
+              'rounded-lum-2': idx !== 0 && idx !== items.length - 1,
+              'rounded-lum-b-2': idx === 0,
+              'rounded-lum-t-2': idx === items.length - 1,
             }}
           >
             <Accordion
               sectionName={idx.toString()}
               class={{
                 'font-futura w-full px-4 py-3 text-left text-sm font-bold text-white sm:py-3.5 sm:text-base': true,
-                'rounded-lg': idx !== 0 && idx !== items.length - 1,
-                'rounded-b-lg': idx === 0,
-                'rounded-t-lg': idx === items.length - 1,
+                'rounded-lum-2': idx !== 0 && idx !== items.length - 1,
+                'rounded-lum-b-2': idx === 0,
+                'rounded-lum-t-2': idx === items.length - 1,
               }}
             >
-              <span class="pr-3 text-left break-words whitespace-normal">
+              <span class="pr-3 text-left wrap-break-word whitespace-normal">
                 {question}
               </span>
             </Accordion>
@@ -59,7 +59,7 @@ export default component$(({ items, class: className }: FAQAccordionProps) => {
                 'max-h-0': !isOpen,
               }}
             >
-              <div class="text-lum-text-secondary border-t border-white/5 p-4 text-xs leading-relaxed break-words whitespace-pre-line sm:text-sm">
+              <div class="text-lum-text-secondary border-t border-white/5 p-4 text-xs leading-relaxed wrap-break-word whitespace-pre-line sm:text-sm">
                 {answer}
               </div>
             </div>

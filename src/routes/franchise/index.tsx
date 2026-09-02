@@ -287,7 +287,7 @@ export default component$(() => {
                 key={index}
                 class="lum-card flex items-start gap-4 p-6 backdrop-blur-md"
               >
-                <div class="lum-grad-bg-lum-input-bg text-burger-300 flex h-8 w-8 shrink-0 items-center justify-center rounded-lg">
+                <div class="lum-grad-bg-lum-input-bg text-burger-300 rounded-lum-2 flex h-8 w-8 shrink-0 items-center justify-center">
                   <Star class="fill-current" size={18} />
                 </div>
                 <div>
@@ -462,7 +462,7 @@ export default component$(() => {
             ].map((item, index) => (
               <div
                 key={index}
-                class="lum-card flex min-h-[190px] flex-col justify-between p-6 backdrop-blur-md transition-all"
+                class="lum-card flex min-h-47.5 flex-col justify-between p-6 backdrop-blur-md transition-all"
               >
                 <div class="font-futura text-burger-300 text-lg font-black tracking-wider opacity-80">
                   {item.step}
