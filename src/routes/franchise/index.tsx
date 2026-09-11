@@ -1,4 +1,4 @@
-import { component$, useSignal, $ } from '@qwik.dev/core';
+import { component$ } from '@qwik.dev/core';
 import { generateHead } from '~/root';
 import Cutout from '~/components/images/Cutout.png?jsx';
 import FAQAccordion from '~/components/Elements/FAQAccordion';
@@ -14,7 +14,6 @@ import GraduationCap from 'lucide-icons-qwik/icons/GraduationCap';
 import Megaphone from 'lucide-icons-qwik/icons/Megaphone';
 import Headphones from 'lucide-icons-qwik/icons/Headphones';
 import Mail from 'lucide-icons-qwik/icons/Mail';
-import Copy from 'lucide-icons-qwik/icons/Copy';
 
 export const franchiseEmail = 'franchise@burgersonfleek.ca';
 export const emailSubject = 'Franchise Inquiry - Burgers on Fleek';
@@ -68,37 +67,6 @@ const faqs = [
 ];
 
 export default component$(() => {
-  const copiedTemplate = useSignal(false);
-  const copiedEmail = useSignal(false);
-
-  const handleCopyTemplate = $(async () => {
-    try {
-      if (typeof navigator !== 'undefined' && navigator.clipboard) {
-        await navigator.clipboard.writeText(emailTemplate);
-        copiedTemplate.value = true;
-        setTimeout(() => {
-          copiedTemplate.value = false;
-        }, 2500);
-      }
-    } catch (err) {
-      console.error('Failed to copy email template to clipboard:', err);
-    }
-  });
-
-  const handleCopyEmail = $(async () => {
-    try {
-      if (typeof navigator !== 'undefined' && navigator.clipboard) {
-        await navigator.clipboard.writeText(franchiseEmail);
-        copiedEmail.value = true;
-        setTimeout(() => {
-          copiedEmail.value = false;
-        }, 2500);
-      }
-    } catch (err) {
-      console.error('Failed to copy franchise email to clipboard:', err);
-    }
-  });
-
   return (
     <div class="min-h-svh pt-20">
       {/* Hero Section */}
@@ -506,12 +474,15 @@ export default component$(() => {
               {/* Header & Primary Actions */}
               <div class="flex flex-col items-center justify-between gap-6 border-b border-white/10 pb-8 sm:flex-row sm:items-start">
                 <div class="text-center sm:text-left">
-                  <span class="text-burger-300 font-futura text-xs font-bold tracking-wider uppercase">
+                  <h3 class="text-burger-300 font-futura text-xs font-bold tracking-wider uppercase">
                     Direct Contact
-                  </span>
-                  <h3 class="font-futura mt-1 text-2xl font-bold text-white">
-                    {franchiseEmail}
                   </h3>
+                  <a
+                    href={`mailto:${franchiseEmail}`}
+                    class="font-futura mt-1 text-2xl font-bold text-white"
+                  >
+                    {franchiseEmail}
+                  </a>
                   <p class="text-lum-text-secondary mt-1 text-sm">
                     Click to launch your email client with the template
                     pre-loaded, or copy the template to compose manually.
@@ -524,58 +495,8 @@ export default component$(() => {
                     data-umami-event="franchise_mailto_click"
                     class="lum-btn lum-btn-p-2 rounded-lum-2 font-futura lum-grad-bg-burger-600 from-burger-600 to-burger-700 hover:from-burger-500 active:from-burger-500 inline-flex items-center gap-2 border-none text-sm font-bold tracking-wider text-white uppercase shadow-lg"
                   >
-                    <Mail size={18} /> Open Email App
+                    <Mail size={18} /> Send Email
                   </a>
-                  <button
-                    onClick$={handleCopyTemplate}
-                    class="lum-btn lum-btn-p-2 rounded-lum-2 font-futura lum-bg-lum-card-bg hover:lum-bg-lum-input-bg inline-flex cursor-pointer items-center gap-2 text-sm font-bold tracking-wider text-white uppercase transition-colors"
-                  >
-                    {copiedTemplate.value ? (
-                      <>
-                        <CheckCircle2 size={18} class="text-green-400" />{' '}
-                        Template Copied!
-                      </>
-                    ) : (
-                      <>
-                        <Copy size={18} /> Copy Template
-                      </>
-                    )}
-                  </button>
-                  <button
-                    onClick$={handleCopyEmail}
-                    class="lum-btn lum-btn-p-2 rounded-lum-2 font-futura lum-bg-transparent hover:lum-bg-lum-card-bg text-lum-text-secondary! inline-flex cursor-pointer items-center gap-2 text-sm font-medium transition-colors"
-                  >
-                    {copiedEmail.value ? (
-                      <span class="text-green-400">Email Copied!</span>
-                    ) : (
-                      <span>Copy Email Address</span>
-                    )}
-                  </button>
-                </div>
-              </div>
-
-              {/* Template Preview Box */}
-              <div>
-                <div class="mb-3 flex items-center justify-between">
-                  <span class="text-xs font-bold tracking-wider text-gray-400 uppercase">
-                    Inquiry Email Template
-                  </span>
-                  <span class="text-xs text-gray-500">
-                    Click "Copy Template" or highlight below
-                  </span>
-                </div>
-                <div class="lum-card rounded-lum-1 border-white/10 bg-gray-900/90 p-5 font-mono text-xs leading-relaxed text-gray-200 select-all sm:text-sm">
-                  <div class="mb-3 border-b border-white/10 pb-3 text-gray-400">
-                    <p>
-                      <span class="text-gray-500">To:</span> {franchiseEmail}
-                    </p>
-                    <p>
-                      <span class="text-gray-500">Subject:</span> {emailSubject}
-                    </p>
-                  </div>
-                  <pre class="font-mono whitespace-pre-wrap">
-                    {emailTemplate}
-                  </pre>
                 </div>
               </div>
 
