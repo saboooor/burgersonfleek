@@ -483,10 +483,6 @@ export default component$(() => {
                   >
                     {franchiseEmail}
                   </a>
-                  <p class="text-lum-text-secondary mt-1 text-sm">
-                    Click to launch your email client with the template
-                    pre-loaded, or copy the template to compose manually.
-                  </p>
                 </div>
 
                 <div class="flex flex-wrap items-center justify-center gap-3 sm:justify-end">
