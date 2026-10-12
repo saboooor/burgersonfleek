@@ -32,7 +32,7 @@
     "price": "$2.50"
   },
   {
-    "name": "Keto Bun",
+    "name": "Keto Bun (not gluten-free)",
     "price": "$3.50"
   },
   {
@@ -64,7 +64,7 @@
     "price": "$2.00"
   },
   {
-    "name": "Gravy (veg-based, GF)",
+    "name": "Gravy (veg-based, not house-made)",
     "price": "$3.00"
   }
 ]
