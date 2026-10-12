@@ -35,7 +35,7 @@ export default component$(() => {
     {
       question: 'What menu items are and are not gluten-free?',
       answer:
-        'Gluten-Free Highlights:\n• Dedicated Gluten-Free Fryer: Our Fresh Cut Fries and Sweet Potato Fries are cooked in a dedicated gluten-free fryer to prevent cross-contamination.\n• 100% Gluten-Free Gravy: Our house-made gravy is 100% vegetarian-based and gluten-free, so our Classic Poutine (fresh fries, cheese curds, and GF gravy) is completely gluten-free friendly.\n• Gluten-Free Buns: We offer dedicated Gluten-Free Buns (as well as Keto Buns) for any gourmet beef burger or steak sandwich.\n\nItems Containing Gluten:\n• Standard buns & grilled cheese buns.\n• Breaded fried chicken burgers (Shawty, The Original, G.O.A.T) & fried chicken poutine.\n• Onion rings & crusted cheese/mushroom items.',
+        'Gluten-Free Highlights:\n• Dedicated Gluten-Free Fryer: Our Fresh Cut Fries are cooked in a dedicated gluten-free fryer to help prevent cross-contamination.\n• Gluten-Free Gravy: Our vegetarian-based gravy is gluten-free.\n• Gluten-Free Buns: We offer dedicated Gluten-Free Buns for any gourmet beef burger or steak sandwich.\n\nItems Containing Gluten:\n• Standard buns, grilled cheese buns, and keto buns.\n• Sweet potato fries.\n• Breaded fried chicken burgers (Shawty, The Original, G.O.A.T) & fried chicken poutine.\n• Onion rings & crusted cheese/mushroom items.',
     },
     {
       question: 'How do you handle food allergies and dietary restrictions?',
