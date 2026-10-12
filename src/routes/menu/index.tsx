@@ -385,6 +385,11 @@ export default component$(() => {
                     <p class="text-lum-accent text-xs sm:text-sm">
                       {item.price}
                     </p>
+                    {item.description && (
+                      <p class="text-lum-text-secondary h-full text-sm sm:text-base">
+                        {item.description}
+                      </p>
+                    )}
                   </div>
                 </div>
               );
